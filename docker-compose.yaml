@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  simulation:
+    build: .
+    env_file:
+      - .env                    # ← add this line
+    environment:
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY}
+    volumes:
+      - ./data:/app/data  # only keep this one
