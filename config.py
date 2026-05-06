@@ -1,9 +1,14 @@
 import os
 
 USE_RULE_BASED_DEMAND = True
-API_KEY = os.environ.get("OLLAMA_API_KEY", "NOT FOUND")
-BASE_URL = "https://ollama.com/v1"
-MODEL_NAME = "gpt-oss:20b-cloud"
+API_KEY    = os.environ.get("OLLAMA_API_KEY", "NOT FOUND")
+# BASE_URL   = "https://ollama.com/v1"
+BASE_URL   = "http://host.docker.internal:11434/v1"  # For local Ollama server
+MODEL_NAME = "gpt-oss:20b"
+
+# Ollama cloud free-tier rate limit (requests per minute).
+# Set to 0 to disable rate limiting.
+RATE_LIMIT_RPM = int(os.environ.get("RATE_LIMIT_RPM", "0"))
 
 OSTROM_PRINCIPLES = {
     1: (

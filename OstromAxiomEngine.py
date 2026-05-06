@@ -1,5 +1,9 @@
+import functools
+import logging
 from enums import AgentRole, AgentStatus, RAMethod, AxiomVerdict
 from models import AxiomResult
+
+_log = logging.getLogger("axioms.engine")
 
 class OstromAxiomEngine:
     """
@@ -81,7 +85,17 @@ class OstromAxiomEngine:
     """
 
     def __init__(self):
-        pass
+        for _name in [n for n in dir(self) if n.startswith("check_")]:
+            _orig = getattr(self, _name)
+            @functools.wraps(_orig)
+            def _wrapped(*args, _fn=_orig, _action=_name, **kwargs):
+                result = _fn(*args, **kwargs)
+                _log.debug(
+                    "action=%s verdict=%s principles=%s | %s",
+                    result.action, result.verdict.value, result.principle_ids, result.explanation,
+                )
+                return result
+            setattr(self, _name, _wrapped)
  
     # ------------------------------------------------------------------
     # Principle 1 axioms

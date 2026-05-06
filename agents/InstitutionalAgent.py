@@ -1,17 +1,16 @@
+import logging
 import mesa
 import random
 from typing import Optional
 from enums import AgentRole, AgentStatus, RAMethod
 from models import AgentFlags, Institution, InstitutionConfig, llm_member_flags, llm_head_flags, llm_monitor_flags, llm_gatekeeper_flags, llm_all_flags, HARDCODED_FLAGS
 from LLMClient import LLMClient
-from utils import _hc_vote, _hc_demand, _hc_appropriate, _hc_appeal, _hc_allocate, _hc_sanction, _hc_exclude
+from utils import _hc_vote, _hc_demand, _hc_appropriate, _hc_appeal, _hc_allocate, _hc_sanction, _hc_exclude, _hc_report, decide_vote, decide_demand, decide_appropriate, decide_appeal, decide_allocation, decide_sanction, decide_exclude, decide_report
 
-# ---------------------------------------------------------------------------
-# Base institutional agent
-# ---------------------------------------------------------------------------
- 
+_log = logging.getLogger("axioms.agent")
+
 class InstitutionalAgent(mesa.Agent):
- 
+
     def __init__(
         self,
         unique_id:         int,
@@ -28,7 +27,7 @@ class InstitutionalAgent(mesa.Agent):
         self.compliance_degree = compliance_degree
         self.flags             = flags or AgentFlags()
         self.llm_client        = llm_client
- 
+
         # Fluents — Table III
         self.demanded:                 float = 0.0
         self.allocated:                float = 0.0
@@ -38,19 +37,18 @@ class InstitutionalAgent(mesa.Agent):
         self.sanction_remaining_steps: int   = 0
         self.steps_since_offence:      int   = 0
         self.has_voted_this_round:     bool  = False
- 
+
     @property
     def is_active_member(self):
         return self.status == AgentStatus.ACTIVE_MEMBER
- 
+
     @property
     def is_member(self):
         return self.status in (
             AgentStatus.ACTIVE_MEMBER, AgentStatus.INACTIVE_MEMBER
         )
- 
+
     def _ctx(self) -> dict:
-        """Full context for hardcoded helpers and LLM tool calls."""
         return {
             "agent_status":        self.status.value,
             "agent_role":          self.role.value,
@@ -70,12 +68,10 @@ class InstitutionalAgent(mesa.Agent):
             "ac_method":           self.model.config.ac_method,
             "ex_method":           self.model.config.ex_method,
             "adr_method":          "arb",
-            # voting context
             "ballot_open":              True,
             "ballot_closed":            False,
             "agent_has_voted_this_round": self.has_voted_this_round,
             "n_votes_cast":             len(self.model.vote_queue),
-            # monitoring context
             "monitoring_freq":              self.model.config.monitoring_freq,
             "monitoring_freq_steps":        1,
             "steps_since_last_report":      1,
@@ -83,35 +79,41 @@ class InstitutionalAgent(mesa.Agent):
                 self.model, "_noncompliance_rate", 0.0
             ),
         }
- 
-    # Member stages
- 
+
     def vote_stage(self):
         self.has_voted_this_round = False
         if not self.is_active_member:
             return
         ctx  = self._ctx()
         vote = (
-            self.llm_client.decide_vote(ctx)
+            decide_vote(self.llm_client, ctx)
             if self.flags.vote and self.llm_client
             else _hc_vote(ctx)
         )
         self.model.vote_queue.append(vote)
         self.has_voted_this_round = True
- 
+        _log.debug(
+            "Step %d: Agent %d voted %s.",
+            self.model.step_count, self.unique_id, vote.value if hasattr(vote, "value") else vote,
+        )
+
     def demand_stage(self):
         self.demanded = 0.0
         if not self.is_active_member:
             return
         ctx = self._ctx()
         self.demanded = (
-            self.llm_client.decide_demand(ctx)
+            decide_demand(self.llm_client, ctx)
             if self.flags.demand and self.llm_client
             else _hc_demand(ctx)
         )
         self.demanded = max(0.0, self.demanded)
         self.model.demand_queue.append((self.unique_id, self.demanded))
- 
+        _log.debug(
+            "Step %d: Agent %d demanded %.2f.",
+            self.model.step_count, self.unique_id, self.demanded,
+        )
+
     def appropriate_stage(self):
         self.appropriated = 0.0
         if self.status == AgentStatus.ACTIVE_NONMEMBER:
@@ -119,38 +121,57 @@ class InstitutionalAgent(mesa.Agent):
                 self.appropriated = (
                     self.model.config.queue_demand_mean * random.uniform(0, 0.5)
                 )
+                if self.appropriated > 0:
+                    _log.debug(
+                        "Step %d: Non-member agent %d appropriated %.2f (non-compliant).",
+                        self.model.step_count, self.unique_id, self.appropriated,
+                    )
             return
         if not self.is_active_member:
             return
         ctx = self._ctx()
         self.appropriated = (
-            self.llm_client.decide_appropriate(ctx)
+            decide_appropriate(self.llm_client, ctx)
             if self.flags.appropriate and self.llm_client
             else _hc_appropriate(ctx)
         )
         self.appropriated = max(0.0, min(self.appropriated, self.model.resource_pool))
- 
+        if self.appropriated > self.allocated + 0.01:
+            _log.warning(
+                "Step %d: Agent %d over-appropriated: took=%.2f allocated=%.2f.",
+                self.model.step_count, self.unique_id, self.appropriated, self.allocated,
+            )
+
     def sanction_tick_stage(self):
         if self.status == AgentStatus.INACTIVE_MEMBER:
             self.sanction_remaining_steps -= 1
             if self.sanction_remaining_steps <= 0:
                 self.status         = AgentStatus.ACTIVE_MEMBER
                 self.sanction_level = 0
+                _log.info(
+                    "Step %d: Agent %d sanction expired — restored to active.",
+                    self.model.step_count, self.unique_id,
+                )
         if self.status == AgentStatus.ACTIVE_MEMBER:
             self.steps_since_offence += 1
- 
+
     def appeal_stage(self):
         if self.status != AgentStatus.INACTIVE_MEMBER or self.sanction_level == 0:
             return
         ctx = self._ctx()
         will_appeal = (
-            self.llm_client.decide_appeal(ctx)
+            decide_appeal(self.llm_client, ctx)
             if self.flags.appeal and self.llm_client
             else _hc_appeal(ctx)
         )
         if will_appeal:
+            _log.info(
+                "Step %d: Agent %d appealing sanction (level=%d, clean_steps=%d).",
+                self.model.step_count, self.unique_id,
+                self.sanction_level, self.steps_since_offence,
+            )
             self.model.head_agent.process_appeal(self)
- 
+
     # Role stubs
     def allocate_stage(self):  pass
     def monitor_stage(self):   pass
