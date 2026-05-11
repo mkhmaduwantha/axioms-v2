@@ -4,6 +4,7 @@ import threading
 import time
 from collections import deque
 from openai import OpenAI
+from mem0 import Memory
 from config import AXIOM_TOOL
 from enums import AxiomVerdict
 from OstromAxiomEngine import OstromAxiomEngine
@@ -54,10 +55,42 @@ class LLMClient:
         self.model        = model
         self.engine       = OstromAxiomEngine()
         self._rate_limiter = RateLimiter(rate_limit_rpm)
+        try:
+            self.memory = Memory()
+            _log.info("Mem0 memory initialised.")
+        except Exception as exc:
+            self.memory = None
+            _log.warning("Mem0 not available (%s) — memory features disabled.", exc)
         _log.info(
             "LLMClient initialised: model=%s base_url=%s rate_limit=%d rpm",
             model, api_base, rate_limit_rpm,
         )
+
+    def mem_search(self, query: str, user_id: str) -> str:
+        """Return a newline-joined string of relevant memories, or empty string."""
+        if not self.memory:
+            return ""
+        try:
+            results = self.memory.search(query, user_id=user_id, limit=5)
+            memories = [r["memory"] for r in results.get("results", [])]
+            if memories:
+                _log.debug(
+                    "Mem0 search user=%s query=%r → %d result(s)", user_id, query, len(memories)
+                )
+            return "\n".join(f"- {m}" for m in memories)
+        except Exception as exc:
+            _log.warning("Mem0 search failed: %s", exc)
+            return ""
+
+    def mem_add(self, text: str, user_id: str):
+        """Write an event to Mem0 for a given agent."""
+        if not self.memory:
+            return
+        try:
+            self.memory.add(text, user_id=user_id)
+            _log.debug("Mem0 add user=%s | %s", user_id, text[:100])
+        except Exception as exc:
+            _log.warning("Mem0 add failed: %s", exc)
 
     def _tool_loop(self, system: str, user: str, ctx: dict, max_calls: int = 3) -> str:
         _log.debug(

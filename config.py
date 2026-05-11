@@ -10,6 +10,48 @@ MODEL_NAME = "gpt-oss:20b"
 # Set to 0 to disable rate limiting.
 RATE_LIMIT_RPM = int(os.environ.get("RATE_LIMIT_RPM", "0"))
 
+# Replenishment phase sequence — repeats with % len.
+# Each entry is 50 steps long.  "moderate" = medium.
+REPLENISHMENT_PATTERN = [
+    "high", "high", "moderate", "low",
+    "high", "high", "low", "moderate", "low", "high",
+]
+
+COMPLIANCE_PROFILES = {
+    "fully_compliant": (
+        "You are a fully cooperative member of this institution. "
+        "You always appropriate exactly your allocation and never take more. "
+        "You believe the institution's rules are fair and follow them strictly."
+    ),
+    "unintentional": (
+        "You are a cooperative member who genuinely tries to follow the rules "
+        "but sometimes misjudges the pool size or your allocation. "
+        "You never intend to violate but occasionally make errors."
+    ),
+    "mildly_noncompliant": (
+        "You are a self-interested member who generally follows the rules "
+        "but will opportunistically take slightly more than your allocation "
+        "when you think the risk of detection is low. "
+        "You weigh short-term gain against sanction risk."
+    ),
+    "noncompliant": (
+        "You are a self-interested, opportunistic member. "
+        "You routinely attempt to appropriate more than your allocation "
+        "when you believe you can get away with it. "
+        "You treat sanctions as a cost of doing business."
+    ),
+}
+
+def _compliance_profile(compliance_degree: float) -> str:
+    if compliance_degree >= 1.0:
+        return COMPLIANCE_PROFILES["fully_compliant"]
+    elif compliance_degree >= 0.95:
+        return COMPLIANCE_PROFILES["unintentional"]
+    elif compliance_degree >= 0.88:
+        return COMPLIANCE_PROFILES["mildly_noncompliant"]
+    else:
+        return COMPLIANCE_PROFILES["noncompliant"]
+
 OSTROM_PRINCIPLES = {
     1: (
         "Clearly defined boundaries: Those who have rights to appropriate from the CPR "

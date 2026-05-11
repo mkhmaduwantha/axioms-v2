@@ -4,3 +4,4 @@ sqlmodel==0.0.16
 pydantic>=2.7.3
 pyyaml==6.0.1
 ollama==0.1.9
+matplotlib>=3.8.0

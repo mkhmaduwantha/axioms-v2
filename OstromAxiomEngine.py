@@ -323,7 +323,10 @@ class OstromAxiomEngine:
                 "Only members have entitlement to appropriate."
             )
  
-        congruent = to_take <= allocated + 0.01
+        # Tolerance: 0.5% of allocation or 0.05 units — guards against float
+        # display rounding where LLM reads "39.3" but actual allocated is 39.28.
+        tolerance = max(0.05, allocated * 0.005)
+        congruent = to_take <= allocated + tolerance
         if not congruent:
             return AxiomResult(
                 "appropriate", True, False, False, AxiomVerdict.NO_PERMISSION, [2],

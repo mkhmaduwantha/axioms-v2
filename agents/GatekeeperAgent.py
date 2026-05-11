@@ -48,6 +48,13 @@ class GatekeeperAgent(InstitutionalAgent):
                 self.model.step_count, agent.unique_id,
                 agent.sanction_level, agent.offences,
             )
+            event = (
+                f"Step {self.model.step_count}: EXCLUDED from institution. "
+                f"Sanction level {agent.sanction_level}, offences {agent.offences}."
+            )
+            agent._log_event(event)
+            if self.llm_client:
+                self.llm_client.mem_add(event, user_id=f"agent_{agent.unique_id}")
         else:
             agent.sanction_level           = config.ex_sanction_level - 1
             agent.status                   = AgentStatus.INACTIVE_MEMBER
@@ -60,3 +67,11 @@ class GatekeeperAgent(InstitutionalAgent):
                 self.model.step_count, agent.unique_id,
                 agent.sanction_level, agent.sanction_remaining_steps,
             )
+            event = (
+                f"Step {self.model.step_count}: exclusion triggered but spared. "
+                f"Inactive for {agent.sanction_remaining_steps} steps "
+                f"(sanction_level={agent.sanction_level})."
+            )
+            agent._log_event(event)
+            if self.llm_client:
+                self.llm_client.mem_add(event, user_id=f"agent_{agent.unique_id}")

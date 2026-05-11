@@ -42,10 +42,19 @@ class HeadAgent(InstitutionalAgent):
             self.model.resource_pool,
             self.model.institution.ra_method,
         )
-        _log.debug(
-            "Step %d: Head allocated to %d agents via %s.",
-            self.model.step_count, len(allocations), self.model.institution.ra_method.value,
-        )
+        demand_map = {aid: d for aid, d in self.model.demand_queue}
+        total_demanded  = sum(demand_map.values())
+        total_allocated = sum(allocations.values())
+        lines = [
+            f"Step {self.model.step_count}: Head allocated via "
+            f"{self.model.institution.ra_method.value} — "
+            f"{len(allocations)} agents | "
+            f"demanded {total_demanded:.2f} → allocated {total_allocated:.2f}"
+        ]
+        for agent_id, amount in allocations.items():
+            demanded = demand_map.get(agent_id, 0.0)
+            lines.append(f"  Agent {agent_id:>4d}: demanded {demanded:.4f} → allocated {amount:.4f}")
+        _log.debug("\n".join(lines))
         for agent_id, amount in allocations.items():
             agent = agent_map.get(agent_id)
             if agent:
@@ -99,11 +108,20 @@ class HeadAgent(InstitutionalAgent):
                     "(sanction_level=%d).",
                     self.model.step_count, agent_id, duration, agent.sanction_level,
                 )
+                event = (
+                    f"Step {self.model.step_count}: sanctioned at level "
+                    f"{agent.sanction_level} for {agent.offences} offences. "
+                    f"Inactive for {duration} steps."
+                )
+                agent._log_event(event)
+                if self.llm_client:
+                    self.llm_client.mem_add(event, user_id=f"agent_{agent_id}")
 
         self.model.reported_violations.clear()
 
     def process_appeal(self, agent: "InstitutionalAgent"):
         # this need to be LLM reasoning decision
+        original_sl = agent.sanction_level
         clean = agent.steps_since_offence >= self.model.config.appeal_window
         if clean:
             agent.sanction_level = max(0, agent.sanction_level - 1)
@@ -123,3 +141,11 @@ class HeadAgent(InstitutionalAgent):
                 self.model.step_count, agent.unique_id,
                 agent.steps_since_offence, self.model.config.appeal_window,
             )
+        outcome = "upheld — restored to active" if clean else "rejected — serving sentence"
+        event = (
+            f"Step {self.model.step_count}: appealed sanction level {original_sl}. "
+            f"Head {outcome}."
+        )
+        agent._log_event(event)
+        if self.llm_client:
+            self.llm_client.mem_add(event, user_id=f"agent_{agent.unique_id}")

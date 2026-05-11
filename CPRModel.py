@@ -7,6 +7,7 @@ from agents import InstitutionalAgent, HeadAgent, MonitorAgent, GatekeeperAgent
 from models import AgentFlags, HARDCODED_FLAGS, Institution, InstitutionConfig, llm_member_flags, llm_head_flags, llm_monitor_flags, llm_gatekeeper_flags, llm_all_flags
 from enums import AgentRole, AgentStatus, RAMethod
 from LLMClient import llm_client as _default_llm_client
+from config import REPLENISHMENT_PATTERN
 
 _log = logging.getLogger("axioms.model")
 
@@ -177,12 +178,13 @@ class CPRModel(mesa.Model):
             )
 
     def _current_refill(self) -> float:
-        phase = (self.step_count // 50) % 3
-        return self.config.p_max * [
-            self.config.replenishment_moderate,
-            self.config.replenishment_low,
-            self.config.replenishment_high,
-        ][phase]
+        phase_name = REPLENISHMENT_PATTERN[(self.step_count // 50) % len(REPLENISHMENT_PATTERN)]
+        rate = {
+            "high":     self.config.replenishment_high,
+            "moderate": self.config.replenishment_moderate,
+            "low":      self.config.replenishment_low,
+        }[phase_name]
+        return self.config.p_max * rate
 
     def step(self):
         self.step_count  += 1

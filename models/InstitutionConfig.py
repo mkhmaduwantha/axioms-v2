@@ -14,9 +14,12 @@ class InstitutionConfig:
     )
     appeal_window:           int      = 30
     p_max:                   int      = 10000
-    replenishment_moderate:  float    = 0.45
-    replenishment_low:       float    = 0.35
-    replenishment_high:      float    = 0.50
+    # replenishment_moderate:  float    = 0.45
+    # replenishment_low:       float    = 0.35
+    # replenishment_high:      float    = 0.50
+    replenishment_moderate:  float    = 0.40
+    replenishment_low:       float    = 0.30
+    replenishment_high:      float    = 0.45
     queue_demand_mean:       int      = 50
     ac_method:               str      = "attribute"   # "attribute" | "discretionary"
     ex_method:               str      = "discretionary"  # "discretionary" | "jury"
