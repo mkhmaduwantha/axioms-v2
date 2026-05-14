@@ -37,6 +37,12 @@ class MonitorAgent(InstitutionalAgent):
         violations = 0
 
         for agent in sampled:
+            _log.debug(
+                "Step %d: Monitor sampling agent %d — "
+                "appropriated=%.2f allocated=%.2f",
+                self.model.step_count, agent.unique_id,
+                agent.appropriated, agent.allocated,
+            )
             self.model.resource_pool -= config.monitoring_cost
 
             if self.flags.monitor and self.llm_client:

@@ -272,11 +272,15 @@ def _hc_allocate(demand_queue: list, pool: float, ra_method: RAMethod) -> dict:
     allocations = {}
     if ra_method == RAMethod.QUEUE:
         for agent_id, demand in demand_queue:
-            if pool >= demand:
+            if pool <= 0:
+                allocations[agent_id] = 0.0
+            elif pool >= demand:
                 allocations[agent_id] = demand
                 pool -= demand
             else:
-                allocations[agent_id] = 0.0
+                # Pool has less than demanded — give the remainder
+                allocations[agent_id] = pool
+                pool = 0.0
     elif ra_method == RAMethod.RATION:
         demanding = [(aid, d) for aid, d in demand_queue if d > 0]
         if not demanding:
@@ -290,8 +294,7 @@ def _hc_sanction(offences: int, ex_sanction_level: int) -> str:
     return "exclude" if offences >= ex_sanction_level else "inactive"
 
 def _hc_report(appropriated: float, allocated: float) -> bool:
-    tolerance = max(0.05, allocated * 0.005)
-    return appropriated > allocated + tolerance
+    return appropriated > allocated + 1e-6
 
 def _hc_exclude(sanction_level: int, ex_sanction_level: int) -> bool:
     return sanction_level >= ex_sanction_level

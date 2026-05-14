@@ -1,0 +1,979 @@
+2026-05-13 08:09:01 [INFO    ] axioms: === Simulation run: fully hardcoded ===
+2026-05-13 08:09:01 [INFO    ] axioms.model: CPRModel init: members=7 nonmembers=2 llm_members=7 P3=True P4=True P5=True P6=True
+2026-05-13 08:09:01 [INFO    ] axioms.model: LLM client attached for simulation (model=gpt-oss:20b).
+[90m2026-05-13 08:09:01 [DEBUG   ] axioms.agent.head: HeadAgent 9 created.[0m
+[90m2026-05-13 08:09:01 [DEBUG   ] axioms.agent.monitor: MonitorAgent 10 created.[0m
+[90m2026-05-13 08:09:01 [DEBUG   ] axioms.agent.gatekeeper: GatekeeperAgent 11 created.[0m
+2026-05-13 08:09:01 [INFO    ] axioms.model: All agents created. Total schedule size: 12
+2026-05-13 08:09:01 [INFO    ] axioms.model: Simulation run starting: max_steps=20
+[94m2026-05-13 08:09:15 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: With the pool currently low (1000/1000) and 10 members, the ration method slices the pool into only 100 units each. Switching to a queue system lets me demand early and potentially secure a larger share before the pool depletes, maximizing my short‑term gains while the risk of detection remains low.[0m
+[90m2026-05-13 08:09:15 [DEBUG   ] axioms.agent: Step 1: Agent 0 voted queue.[0m
+[94m2026-05-13 08:09:28 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: With the pool at 1,000 units, the queue system allows the first demander to capture a substantial portion of the remaining resources. By demanding early, I can secure nearly a full allocation and opportunistically take a bit more than assigned while the risk of detection remains low. The ration method would give everyone only 100 units, limiting my ability to overdraw, so choosing queue maximizes short‑term gain with acceptable sanction risk.[0m
+[90m2026-05-13 08:09:28 [DEBUG   ] axioms.agent: Step 1: Agent 1 voted queue.[0m
+[94m2026-05-13 08:09:47 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue lets me demand early and claim a larger share of the 1000 units, rather than the limited 100 units under ration. As a self‑interested agent, I prefer the opportunity to appropriate more, accepting sanctions as a trade‑off.[0m
+[90m2026-05-13 08:09:47 [DEBUG   ] axioms.agent: Step 1: Agent 2 voted queue.[0m
+[94m2026-05-13 08:10:05 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: In a low‑pool situation, rationing guarantees each member receives a fair share (100 units), preventing the possibility of some members receiving nothing and discouraging over‑extraction.[0m
+[90m2026-05-13 08:10:05 [DEBUG   ] axioms.agent: Step 1: Agent 3 voted ration.[0m
+[94m2026-05-13 08:10:11 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: I confirmed I have voting power via check_ostrom_axiom. With the pool low (1000/1000) using queue provides more predictable allocation and reduces risk of mis‑allocation that could push the pool to zero.[0m
+[90m2026-05-13 08:10:11 [DEBUG   ] axioms.agent: Step 1: Agent 4 voted queue.[0m
+[94m2026-05-13 08:10:24 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: I prefer the queue method because it allows me to claim the entire pool if I act first, maximizing short‑term gain, while my opportunistic behavior of exceeding my allocation can be justified when detection risk is low.[0m
+[90m2026-05-13 08:10:24 [DEBUG   ] axioms.agent: Step 1: Agent 5 voted queue.[0m
+[94m2026-05-13 08:10:30 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: As a fully cooperative agent, I value fairness and equal distribution of resources. The ration method ensures each demanding agent receives an equal share of the pool, promoting equitable outcomes and preventing any single agent from depleting the resource prematurely.[0m
+[90m2026-05-13 08:10:30 [DEBUG   ] axioms.agent: Step 1: Agent 6 voted ration.[0m
+[94m2026-05-13 08:10:43 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: With the pool low and ten members, an equal division protects everyone’s interests and maintains fairness, keeping all parties satisfied and preventing dominance by early demanders.[0m
+[90m2026-05-13 08:10:43 [DEBUG   ] axioms.agent: Step 1: Agent 9 voted ration.[0m
+[94m2026-05-13 08:10:52 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Queue ensures that, when the pool is limited, demanding agents who act early receive full allocations up to the pool’s capacity, preventing partial distributions and ensuring that each participant who contributes early can secure needed resources efficiently.[0m
+[90m2026-05-13 08:10:52 [DEBUG   ] axioms.agent: Step 1: Agent 10 voted queue.[0m
+[94m2026-05-13 08:11:04 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Low pool encourages quick withdrawal; queue ensures early demands are fully met, maximizing benefit without waiting for division.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 11 voted queue.[0m
+2026-05-13 08:11:04 [INFO    ] axioms.model: Step 1: RA method changed ration → queue (votes: queue=7 ration=3)
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 0 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 1 demanded 50.2445.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 2 demanded 44.8597.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 3 demanded 42.8916.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 4 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 5 demanded 46.8505.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 6 demanded 48.5228.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 9 demanded 55.9155.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 10 demanded 58.7640.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Agent 11 demanded 45.8532.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent.head: Step 1: Head allocated via queue — 10 agents | demanded 393.90 → allocated 393.90
+  Agent    0: demanded 0.0000 → allocated 0.0000
+  Agent    1: demanded 50.2445 → allocated 50.2445
+  Agent    2: demanded 44.8597 → allocated 44.8597
+  Agent    3: demanded 42.8916 → allocated 42.8916
+  Agent    4: demanded 0.0000 → allocated 0.0000
+  Agent    5: demanded 46.8505 → allocated 46.8505
+  Agent    6: demanded 48.5228 → allocated 48.5228
+  Agent    9: demanded 55.9155 → allocated 55.9155
+  Agent   10: demanded 58.7640 → allocated 58.7640
+  Agent   11: demanded 45.8532 → allocated 45.8532[0m
+[91m2026-05-13 08:11:04 [WARNING ] axioms.agent: Step 1: Agent 1 over-appropriated: took=56.5680 allocated=50.2445.[0m
+[91m2026-05-13 08:11:04 [WARNING ] axioms.agent: Step 1: Agent 2 over-appropriated: took=47.6807 allocated=44.8597.[0m
+[91m2026-05-13 08:11:04 [WARNING ] axioms.agent: Step 1: Agent 3 over-appropriated: took=49.1705 allocated=42.8916.[0m
+[91m2026-05-13 08:11:04 [WARNING ] axioms.agent: Step 1: Agent 5 over-appropriated: took=48.7058 allocated=46.8505.[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent: Step 1: Non-member agent 7 appropriated 18.37 (non-compliant).[0m
+[90m2026-05-13 08:11:04 [DEBUG   ] axioms.agent.monitor: Step 1: Monitor sampling agent 3 — appropriated=49.17 allocated=42.89[0m
+[94m2026-05-13 08:11:07 [INFO    ] axioms.llm: Agent 10 [report→agent_3] reasoning: Agent 3 appropriated more than allocated (49.2 > 42.9).[0m
+[91m2026-05-13 08:11:07 [WARNING ] axioms.agent.monitor: Step 1: Monitor reports agent 3 — appropriated=49.17 allocated=42.89[0m
+[90m2026-05-13 08:11:07 [DEBUG   ] axioms.agent.monitor: Step 1: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.200).[0m
+[94m2026-05-13 08:11:15 [INFO    ] axioms.llm: Agent 9 [sanction→agent_3] reasoning: Agent 3 has only 1 offence, while the exclusion threshold is 3; thus the graduated sanctions system deems exclusion unwarranted at this stage.[0m
+2026-05-13 08:11:15 [INFO    ] axioms.agent.head: Step 1: Head sanctioned agent 3 (offences=1) → decision=inactive
+2026-05-13 08:11:15 [INFO    ] axioms.agent.head: Step 1: Agent 3 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:11:15 [INFO    ] axioms.agent: Step 1: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:11:15 [DEBUG   ] axioms.agent.head: Step 1: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:11:15 [INFO    ] axioms.model: Step    1 | pool=  965.4 | members=9 | violations=5 | noncompliance_rate=0.20 | ra=queue
+[91m2026-05-13 08:11:15 [WARNING ] axioms.model: Step 1: 5 violation(s) detected this step.[0m
+[94m2026-05-13 08:11:26 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue allows me to take a full share before the pool is depleted, which is maximized when the pool is near full.[0m
+[90m2026-05-13 08:11:26 [DEBUG   ] axioms.agent: Step 2: Agent 0 voted queue.[0m
+[94m2026-05-13 08:11:48 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue allows early demand for larger absolute share; sanction risk remains low (current level 0), so short‑term gain outweighs potential penalty.[0m
+[90m2026-05-13 08:11:48 [DEBUG   ] axioms.agent: Step 2: Agent 1 voted queue.[0m
+[94m2026-05-13 08:11:59 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue gives me priority to take a full allocation early before the pool runs out, which maximizes my resource intake. The sanction risk is acceptable as I’m willing to accept the cost for opportunistic gains.[0m
+[90m2026-05-13 08:11:59 [DEBUG   ] axioms.agent: Step 2: Agent 2 voted queue.[0m
+[94m2026-05-13 08:12:05 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: I prefer the queue method because it prioritizes early requests, ensuring that resources are allocated efficiently and preventing waste, which aligns with our cooperative approach.[0m
+[90m2026-05-13 08:12:05 [DEBUG   ] axioms.agent: Step 2: Agent 4 voted queue.[0m
+[94m2026-05-13 08:12:23 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue allows first‑come benefits, giving me a full allocation before others, maximizing the opportunity to take a slight extra. Ration would reduce overall shares regardless of order, minimizing my gains.[0m
+[90m2026-05-13 08:12:23 [DEBUG   ] axioms.agent: Step 2: Agent 5 voted queue.[0m
+[94m2026-05-13 08:12:28 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: I prefer the queue method because it rewards timely participation, ensures that all who demand early receive their full share before the resource runs out, and aligns with the cooperative spirit of the institution.[0m
+[90m2026-05-13 08:12:28 [DEBUG   ] axioms.agent: Step 2: Agent 6 voted queue.[0m
+[94m2026-05-13 08:12:38 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: The pool is low (965 units), so rationing ensures equitable access for all agents and prevents early demanders from depleting resources before others can receive anything.[0m
+[90m2026-05-13 08:12:38 [DEBUG   ] axioms.agent: Step 2: Agent 9 voted ration.[0m
+[94m2026-05-13 08:12:45 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Queue ensures that each member receives an allocation as soon as resources are available, preventing over‑demand and maintaining trust in the institution.[0m
+[90m2026-05-13 08:12:45 [DEBUG   ] axioms.agent: Step 2: Agent 10 voted queue.[0m
+[94m2026-05-13 08:13:00 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Ensures equal shares for all members and helps maintain the pool by avoiding large early appropriations that could deplete resources quickly.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 11 voted ration.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 0 demanded 58.9680.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 1 demanded 56.2853.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 2 demanded 42.6649.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 4 demanded 43.7786.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 5 demanded 61.1235.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 6 demanded 51.6631.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 9 demanded 52.7934.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 10 demanded 46.9325.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Agent 11 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent.head: Step 2: Head allocated via queue — 9 agents | demanded 414.21 → allocated 414.21
+  Agent    0: demanded 58.9680 → allocated 58.9680
+  Agent    1: demanded 56.2853 → allocated 56.2853
+  Agent    2: demanded 42.6649 → allocated 42.6649
+  Agent    4: demanded 43.7786 → allocated 43.7786
+  Agent    5: demanded 61.1235 → allocated 61.1235
+  Agent    6: demanded 51.6631 → allocated 51.6631
+  Agent    9: demanded 52.7934 → allocated 52.7934
+  Agent   10: demanded 46.9325 → allocated 46.9325
+  Agent   11: demanded 0.0000 → allocated 0.0000[0m
+[91m2026-05-13 08:13:00 [WARNING ] axioms.agent: Step 2: Agent 0 over-appropriated: took=68.3368 allocated=58.9680.[0m
+[91m2026-05-13 08:13:00 [WARNING ] axioms.agent: Step 2: Agent 1 over-appropriated: took=56.4628 allocated=56.2853.[0m
+[91m2026-05-13 08:13:00 [WARNING ] axioms.agent: Step 2: Agent 2 over-appropriated: took=48.3822 allocated=42.6649.[0m
+[91m2026-05-13 08:13:00 [WARNING ] axioms.agent: Step 2: Agent 4 over-appropriated: took=47.6738 allocated=43.7786.[0m
+[91m2026-05-13 08:13:00 [WARNING ] axioms.agent: Step 2: Agent 5 over-appropriated: took=71.5472 allocated=61.1235.[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent: Step 2: Non-member agent 7 appropriated 19.78 (non-compliant).[0m
+[90m2026-05-13 08:13:00 [DEBUG   ] axioms.agent.monitor: Step 2: Monitor sampling agent 4 — appropriated=47.67 allocated=43.78[0m
+[94m2026-05-13 08:13:03 [INFO    ] axioms.llm: Agent 10 [report→agent_4] reasoning: Agent 4 appropriated 47.7 units but was allocated only 43.8 units, exceeding the allocation.[0m
+[91m2026-05-13 08:13:03 [WARNING ] axioms.agent.monitor: Step 2: Monitor reports agent 4 — appropriated=47.67 allocated=43.78[0m
+[90m2026-05-13 08:13:03 [DEBUG   ] axioms.agent.monitor: Step 2: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.360).[0m
+[94m2026-05-13 08:13:08 [INFO    ] axioms.llm: Agent 9 [sanction→agent_4] reasoning: Agent 4 has only one offence, which is below the exclusion threshold of 3. A level‑0 sanction (inactive) is appropriate to discourage repeated violations without exclusion.[0m
+2026-05-13 08:13:08 [INFO    ] axioms.agent.head: Step 2: Head sanctioned agent 4 (offences=1) → decision=inactive
+2026-05-13 08:13:08 [INFO    ] axioms.agent.head: Step 2: Agent 4 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:13:08 [INFO    ] axioms.agent: Step 2: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:13:08 [DEBUG   ] axioms.agent.head: Step 2: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:13:08 [INFO    ] axioms.agent: Step 2: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:13:08 [DEBUG   ] axioms.agent.head: Step 2: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:13:08 [INFO    ] axioms.model: Step    2 | pool=  896.9 | members=8 | violations=6 | noncompliance_rate=0.36 | ra=queue
+[91m2026-05-13 08:13:08 [WARNING ] axioms.model: Step 2: 6 violation(s) detected this step.[0m
+[94m2026-05-13 08:13:22 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Choosing queue lets me demand early and potentially secure a larger share when the pool is low. Ration would split the already small pool among all members, likely reducing my per‑agent allocation. My past experience with queue was compliant, so I’ll stick with it for this round.[0m
+[90m2026-05-13 08:13:22 [DEBUG   ] axioms.agent: Step 3: Agent 0 voted queue.[0m
+[94m2026-05-13 08:13:36 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue allows me to secure my full demand if I act early, maximizing short‑term gain while risking minimal sanction exposure.[0m
+[90m2026-05-13 08:13:36 [DEBUG   ] axioms.agent: Step 3: Agent 1 voted queue.[0m
+[94m2026-05-13 08:13:41 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue allows early-demanders to receive full allocations, maximizing opportunities for over-appropriation and keeping others at a disadvantage.[0m
+[90m2026-05-13 08:13:41 [DEBUG   ] axioms.agent: Step 3: Agent 2 voted queue.[0m
+[94m2026-05-13 08:13:53 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue gives me first‑come priority, and the current pool is still > 900, so the risk for detection is low while I can still extract slightly more than allocated. The sanction level is 0, so I will continue to vote queue.[0m
+[90m2026-05-13 08:13:53 [DEBUG   ] axioms.agent: Step 3: Agent 5 voted queue.[0m
+[94m2026-05-13 08:14:02 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: I vote ration because it ensures an equitable distribution when the pool is low and prevents early demands from rapidly depleting resources, maintaining sustainability for all members.[0m
+[90m2026-05-13 08:14:02 [DEBUG   ] axioms.agent: Step 3: Agent 6 voted ration.[0m
+[94m2026-05-13 08:14:09 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: As a fully cooperative member, queue allows each agent to claim a full amount when available before the pool fills up, ensuring we receive our fair share while respecting pool constraints.[0m
+[90m2026-05-13 08:14:09 [DEBUG   ] axioms.agent: Step 3: Agent 9 voted queue.[0m
+[94m2026-05-13 08:14:19 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Maintaining the queue method preserves consistency with prior votes and ensures each agent receives its full allocation on demand, which aligns with our cooperative behavior.[0m
+[90m2026-05-13 08:14:19 [DEBUG   ] axioms.agent: Step 3: Agent 10 voted queue.[0m
+[94m2026-05-13 08:14:39 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Rationing provides a fair, equal share to all agents, reducing the risk of overuse and helping the pool to sustain itself over time.[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Agent 11 voted ration.[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Agent 0 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Agent 1 demanded 47.7507.[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Agent 2 demanded 48.4924.[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Agent 5 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Agent 6 demanded 56.0451.[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Agent 9 demanded 59.0551.[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Agent 10 demanded 61.7421.[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Agent 11 demanded 51.8541.[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent.head: Step 3: Head allocated via queue — 8 agents | demanded 324.94 → allocated 324.94
+  Agent    0: demanded 0.0000 → allocated 0.0000
+  Agent    1: demanded 47.7507 → allocated 47.7507
+  Agent    2: demanded 48.4924 → allocated 48.4924
+  Agent    5: demanded 0.0000 → allocated 0.0000
+  Agent    6: demanded 56.0451 → allocated 56.0451
+  Agent    9: demanded 59.0551 → allocated 59.0551
+  Agent   10: demanded 61.7421 → allocated 61.7421
+  Agent   11: demanded 51.8541 → allocated 51.8541[0m
+[91m2026-05-13 08:14:39 [WARNING ] axioms.agent: Step 3: Agent 1 over-appropriated: took=51.5607 allocated=47.7507.[0m
+[91m2026-05-13 08:14:39 [WARNING ] axioms.agent: Step 3: Agent 2 over-appropriated: took=57.8325 allocated=48.4924.[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent: Step 3: Non-member agent 7 appropriated 12.93 (non-compliant).[0m
+[90m2026-05-13 08:14:39 [DEBUG   ] axioms.agent.monitor: Step 3: Monitor sampling agent 2 — appropriated=57.83 allocated=48.49[0m
+[94m2026-05-13 08:14:42 [INFO    ] axioms.llm: Agent 10 [report→agent_2] reasoning: Agent 2 appropriated more (57.8) than allocated (48.5), violating the rules.[0m
+[91m2026-05-13 08:14:42 [WARNING ] axioms.agent.monitor: Step 3: Monitor reports agent 2 — appropriated=57.83 allocated=48.49[0m
+[90m2026-05-13 08:14:42 [DEBUG   ] axioms.agent.monitor: Step 3: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.488).[0m
+2026-05-13 08:14:42 [INFO    ] axioms.agent.monitor: Step 3: Non-member agent 7 caught appropriating (12.93) — set inactive.
+2026-05-13 08:14:42 [INFO    ] axioms.agent.monitor: Step 3: Boundary monitoring excluded 1 non-member(s).
+[94m2026-05-13 08:14:49 [INFO    ] axioms.llm: Agent 9 [sanction→agent_2] reasoning: Agent 2 has only one offence, below the exclusion threshold of three. According to Ostrom’s graduated sanction principle, a single offence warrants a temporary inactivation rather than outright exclusion.[0m
+2026-05-13 08:14:49 [INFO    ] axioms.agent.head: Step 3: Head sanctioned agent 2 (offences=1) → decision=inactive
+2026-05-13 08:14:49 [INFO    ] axioms.agent.head: Step 3: Agent 2 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:14:49 [INFO    ] axioms.agent: Step 3: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:14:49 [DEBUG   ] axioms.agent.head: Step 3: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:14:49 [INFO    ] axioms.agent: Step 3: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:14:49 [DEBUG   ] axioms.agent.head: Step 3: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:14:49 [INFO    ] axioms.agent: Step 3: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:14:49 [DEBUG   ] axioms.agent.head: Step 3: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:14:49 [INFO    ] axioms.model: Step    3 | pool=  940.9 | members=7 | violations=3 | noncompliance_rate=0.49 | ra=queue
+[91m2026-05-13 08:14:49 [WARNING ] axioms.model: Step 3: 3 violation(s) detected this step.[0m
+[94m2026-05-13 08:15:01 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue maximizes your allocation share when you demand early, allowing you to secure the full amount before other agents deplete the pool. Given past rounds you’ve successfully taken slightly more than allocated with no sanctions, the sanction risk remains low. Rationing would divide the already small pool among all demanding agents, reducing the potential gain. Therefore, voting for queue maximizes your short‑term benefit while keeping detection risk manageable.[0m
+[90m2026-05-13 08:15:01 [DEBUG   ] axioms.agent: Step 4: Agent 0 voted queue.[0m
+[94m2026-05-13 08:15:07 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue allows early demand to capture full allocation and potential over-take; ration reduces the advantage by splitting the remaining pool equally.[0m
+[90m2026-05-13 08:15:07 [DEBUG   ] axioms.agent: Step 4: Agent 1 voted queue.[0m
+[94m2026-05-13 08:15:24 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue lets agents demanding early get their full allocated share even when the pool is low.  By demanding early and appropriating slightly more, I can maximize short‑term gain with low sanction risk.  Ration would cut my share to roughly 1/7 of the remaining pool, limiting potential gain and giving other agents similar advantage.[0m
+[90m2026-05-13 08:15:24 [DEBUG   ] axioms.agent: Step 4: Agent 5 voted queue.[0m
+[94m2026-05-13 08:15:30 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Choosing ration promotes equal sharing when the pool is low, ensuring no single agent monopolizes resources and maintaining cooperative fairness.[0m
+[90m2026-05-13 08:15:30 [DEBUG   ] axioms.agent: Step 4: Agent 6 voted ration.[0m
+[94m2026-05-13 08:15:37 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue lets me get my full demanded amount until the pool is exhausted, maximizing my share of limited resources.[0m
+[90m2026-05-13 08:15:37 [DEBUG   ] axioms.agent: Step 4: Agent 9 voted queue.[0m
+[94m2026-05-13 08:15:41 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Queue preserves fairness by ensuring early demands are met and prevents dilution of shares during low pool periods.[0m
+[90m2026-05-13 08:15:41 [DEBUG   ] axioms.agent: Step 4: Agent 10 voted queue.[0m
+[94m2026-05-13 08:15:50 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: We remain with queue to continue providing full allocations to early-demanding agents, consistent with cooperative behavior and the current method.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent: Step 4: Agent 11 voted queue.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent: Step 4: Agent 0 demanded 51.7755.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent: Step 4: Agent 1 demanded 38.7740.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent: Step 4: Agent 5 demanded 52.3998.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent: Step 4: Agent 6 demanded 56.7781.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent: Step 4: Agent 9 demanded 45.2837.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent: Step 4: Agent 10 demanded 49.6381.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent: Step 4: Agent 11 demanded 60.7712.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent.head: Step 4: Head allocated via queue — 7 agents | demanded 355.42 → allocated 355.42
+  Agent    0: demanded 51.7755 → allocated 51.7755
+  Agent    1: demanded 38.7740 → allocated 38.7740
+  Agent    5: demanded 52.3998 → allocated 52.3998
+  Agent    6: demanded 56.7781 → allocated 56.7781
+  Agent    9: demanded 45.2837 → allocated 45.2837
+  Agent   10: demanded 49.6381 → allocated 49.6381
+  Agent   11: demanded 60.7712 → allocated 60.7712[0m
+[91m2026-05-13 08:15:50 [WARNING ] axioms.agent: Step 4: Agent 0 over-appropriated: took=53.1472 allocated=51.7755.[0m
+[91m2026-05-13 08:15:50 [WARNING ] axioms.agent: Step 4: Agent 1 over-appropriated: took=39.8758 allocated=38.7740.[0m
+[91m2026-05-13 08:15:50 [WARNING ] axioms.agent: Step 4: Agent 5 over-appropriated: took=62.2354 allocated=52.3998.[0m
+[90m2026-05-13 08:15:50 [DEBUG   ] axioms.agent.monitor: Step 4: Monitor sampling agent 0 — appropriated=53.15 allocated=51.78[0m
+[94m2026-05-13 08:15:55 [INFO    ] axioms.llm: Agent 10 [report→agent_0] reasoning: Agent 0 appropriated 53.1 units, which exceeds the allocated 51.8 units, violating the rule of taking no more than the allocation.[0m
+[91m2026-05-13 08:15:55 [WARNING ] axioms.agent.monitor: Step 4: Monitor reports agent 0 — appropriated=53.15 allocated=51.78[0m
+[90m2026-05-13 08:15:55 [DEBUG   ] axioms.agent.monitor: Step 4: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.590).[0m
+[94m2026-05-13 08:16:03 [INFO    ] axioms.llm: Agent 9 [sanction→agent_0] reasoning: Agent 0 only has 1 offence, which is below the exclusion threshold of 3.  No exclusion sanction is warranted at this point.[0m
+2026-05-13 08:16:03 [INFO    ] axioms.agent.head: Step 4: Head sanctioned agent 0 (offences=1) → decision=inactive
+2026-05-13 08:16:03 [INFO    ] axioms.agent.head: Step 4: Agent 0 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:16:03 [INFO    ] axioms.agent: Step 4: Agent 0 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:16:03 [DEBUG   ] axioms.agent.head: Step 4: Appeal by agent 0 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:16:03 [INFO    ] axioms.agent: Step 4: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:16:03 [DEBUG   ] axioms.agent.head: Step 4: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:16:03 [INFO    ] axioms.agent: Step 4: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:16:03 [DEBUG   ] axioms.agent.head: Step 4: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:16:03 [INFO    ] axioms.agent: Step 4: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:16:03 [DEBUG   ] axioms.agent.head: Step 4: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:16:03 [INFO    ] axioms.model: Step    4 | pool=  968.1 | members=6 | violations=3 | noncompliance_rate=0.59 | ra=queue
+[91m2026-05-13 08:16:03 [WARNING ] axioms.model: Step 4: 3 violation(s) detected this step.[0m
+[94m2026-05-13 08:16:16 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue gives me the chance to secure a full allocation as early as possible. Given my past behavior, sanctions have remained at level 0, so I can afford to take slightly more than the allocated amount without immediate risk. Ration would reduce my share by enforcing equal distribution, limiting my gain. Therefore I vote for queue.[0m
+[90m2026-05-13 08:16:16 [DEBUG   ] axioms.agent: Step 5: Agent 1 voted queue.[0m
+[94m2026-05-13 08:16:22 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Sticking with queue gives me priority access to the pool and allows me to potentially overdraw after the allocation, so I will remain queued.[0m
+[90m2026-05-13 08:16:22 [DEBUG   ] axioms.agent: Step 5: Agent 5 voted queue.[0m
+[94m2026-05-13 08:16:28 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Queue allows early deman­ders to receive their full allocation, ensuring nobody is unnecessarily short‑changed and the pool is used efficiently.[0m
+[90m2026-05-13 08:16:28 [DEBUG   ] axioms.agent: Step 5: Agent 6 voted queue.[0m
+[94m2026-05-13 08:16:35 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: I prefer the first‑come, first‑served method because it rewards prompt compliance and aligns with my cooperative behavior—agents acting early reliably receive full allocations without complex fairness calculations.[0m
+[90m2026-05-13 08:16:35 [DEBUG   ] axioms.agent: Step 5: Agent 9 voted queue.[0m
+[94m2026-05-13 08:16:44 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: The pool remains high, and the queue system lets each agent receive their full demand if they submit early. As a cooperative member who always follows the rules, opting for queue aligns with maximizing our allocation while respecting the institutional process.[0m
+[90m2026-05-13 08:16:44 [DEBUG   ] axioms.agent: Step 5: Agent 10 voted queue.[0m
+[94m2026-05-13 08:16:57 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Ensures a fair distribution that protects the pool for future use, keeping the institution sustainable and preventing over‑exploitation.[0m
+[90m2026-05-13 08:16:57 [DEBUG   ] axioms.agent: Step 5: Agent 11 voted ration.[0m
+[90m2026-05-13 08:16:57 [DEBUG   ] axioms.agent: Step 5: Agent 1 demanded 48.9432.[0m
+[90m2026-05-13 08:16:57 [DEBUG   ] axioms.agent: Step 5: Agent 5 demanded 48.9435.[0m
+[90m2026-05-13 08:16:57 [DEBUG   ] axioms.agent: Step 5: Agent 6 demanded 46.9269.[0m
+[90m2026-05-13 08:16:57 [DEBUG   ] axioms.agent: Step 5: Agent 9 demanded 53.6500.[0m
+[90m2026-05-13 08:16:57 [DEBUG   ] axioms.agent: Step 5: Agent 10 demanded 40.3237.[0m
+[90m2026-05-13 08:16:57 [DEBUG   ] axioms.agent: Step 5: Agent 11 demanded 52.6575.[0m
+[90m2026-05-13 08:16:57 [DEBUG   ] axioms.agent.head: Step 5: Head allocated via queue — 6 agents | demanded 291.44 → allocated 291.44
+  Agent    1: demanded 48.9432 → allocated 48.9432
+  Agent    5: demanded 48.9435 → allocated 48.9435
+  Agent    6: demanded 46.9269 → allocated 46.9269
+  Agent    9: demanded 53.6500 → allocated 53.6500
+  Agent   10: demanded 40.3237 → allocated 40.3237
+  Agent   11: demanded 52.6575 → allocated 52.6575[0m
+[91m2026-05-13 08:16:57 [WARNING ] axioms.agent: Step 5: Agent 1 over-appropriated: took=50.9099 allocated=48.9432.[0m
+[91m2026-05-13 08:16:57 [WARNING ] axioms.agent: Step 5: Agent 5 over-appropriated: took=52.5702 allocated=48.9435.[0m
+[90m2026-05-13 08:16:57 [DEBUG   ] axioms.agent.monitor: Step 5: Monitor sampling agent 10 — appropriated=40.32 allocated=40.32[0m
+[94m2026-05-13 08:17:00 [INFO    ] axioms.llm: Agent 10 [report→agent_10] reasoning: Agent 10 appropriated exactly 40.3 units, which matches the 40.3 units allocated to them. Since appropriated resources do not exceed the allocation, there is no violation to report.[0m
+[90m2026-05-13 08:17:00 [DEBUG   ] axioms.agent.monitor: Step 5: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.472).[0m
+2026-05-13 08:17:00 [INFO    ] axioms.agent: Step 5: Agent 3 sanction expired — restored to active.
+2026-05-13 08:17:00 [INFO    ] axioms.agent: Step 5: Agent 0 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:17:00 [DEBUG   ] axioms.agent.head: Step 5: Appeal by agent 0 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:17:00 [INFO    ] axioms.agent: Step 5: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:17:00 [DEBUG   ] axioms.agent.head: Step 5: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:17:00 [INFO    ] axioms.agent: Step 5: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:17:00 [DEBUG   ] axioms.agent.head: Step 5: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:17:00 [INFO    ] axioms.model: Step    5 | pool= 1000.0 | members=7 | violations=2 | noncompliance_rate=0.47 | ra=queue
+[91m2026-05-13 08:17:00 [WARNING ] axioms.model: Step 5: 2 violation(s) detected this step.[0m
+[94m2026-05-13 08:17:17 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue lets me demand a larger amount and take a bit more when detection risk is low; ration caps allocations to ~142 per agent which limits my short‑term gain.[0m
+[90m2026-05-13 08:17:17 [DEBUG   ] axioms.agent: Step 6: Agent 1 voted queue.[0m
+[94m2026-05-13 08:17:30 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: The pool is at a low level (1000/1000), so ensuring that early demands are met promptly reduces waste and potential loss to the institution. Queue will give priority to timely demanders, encouraging responsible planning.[0m
+[90m2026-05-13 08:17:30 [DEBUG   ] axioms.agent: Step 6: Agent 3 voted queue.[0m
+[94m2026-05-13 08:17:42 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue maximizes initial allocation by giving priority demand; sanction risk remains low due to previous compliance record.[0m
+[90m2026-05-13 08:17:42 [DEBUG   ] axioms.agent: Step 6: Agent 5 voted queue.[0m
+[94m2026-05-13 08:17:58 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Ensures all agents, including late demanders, receive a fair share and helps maintain cooperation.[0m
+[90m2026-05-13 08:17:58 [DEBUG   ] axioms.agent: Step 6: Agent 6 voted ration.[0m
+[94m2026-05-13 08:18:04 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue ensures that early demands are met fully when the pool is still relatively abundant, preventing the over‑exhaustion of resources. This method aligns with cooperative norms and respects the shared‑resource limits.[0m
+[90m2026-05-13 08:18:04 [DEBUG   ] axioms.agent: Step 6: Agent 9 voted queue.[0m
+[94m2026-05-13 08:18:07 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: As a fully cooperative member, choosing the queue method ensures early demanders receive allocations up to the pool limit, promoting fairness and preventing overuse.[0m
+[90m2026-05-13 08:18:07 [DEBUG   ] axioms.agent: Step 6: Agent 10 voted queue.[0m
+[94m2026-05-13 08:18:15 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Queue guarantees full allocation if demanded early, ensuring consistent cooperation and avoiding potential under-allocation that might arise with rationing when resources are low.[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent: Step 6: Agent 11 voted queue.[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent: Step 6: Agent 1 demanded 59.7822.[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent: Step 6: Agent 3 demanded 48.5125.[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent: Step 6: Agent 5 demanded 49.5605.[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent: Step 6: Agent 6 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent: Step 6: Agent 9 demanded 55.1248.[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent: Step 6: Agent 10 demanded 54.5284.[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent: Step 6: Agent 11 demanded 48.6336.[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent.head: Step 6: Head allocated via queue — 7 agents | demanded 316.14 → allocated 316.14
+  Agent    1: demanded 59.7822 → allocated 59.7822
+  Agent    3: demanded 48.5125 → allocated 48.5125
+  Agent    5: demanded 49.5605 → allocated 49.5605
+  Agent    6: demanded 0.0000 → allocated 0.0000
+  Agent    9: demanded 55.1248 → allocated 55.1248
+  Agent   10: demanded 54.5284 → allocated 54.5284
+  Agent   11: demanded 48.6336 → allocated 48.6336[0m
+[91m2026-05-13 08:18:15 [WARNING ] axioms.agent: Step 6: Agent 1 over-appropriated: took=62.3526 allocated=59.7822.[0m
+[91m2026-05-13 08:18:15 [WARNING ] axioms.agent: Step 6: Agent 3 over-appropriated: took=56.2585 allocated=48.5125.[0m
+[91m2026-05-13 08:18:15 [WARNING ] axioms.agent: Step 6: Agent 5 over-appropriated: took=52.0562 allocated=49.5605.[0m
+[90m2026-05-13 08:18:15 [DEBUG   ] axioms.agent.monitor: Step 6: Monitor sampling agent 5 — appropriated=52.06 allocated=49.56[0m
+[94m2026-05-13 08:18:20 [INFO    ] axioms.llm: Agent 10 [report→agent_5] reasoning: Agent 5 appropriated 52.1 units, exceeding the allocation of 49.6 units.[0m
+[91m2026-05-13 08:18:20 [WARNING ] axioms.agent.monitor: Step 6: Monitor reports agent 5 — appropriated=52.06 allocated=49.56[0m
+[90m2026-05-13 08:18:20 [DEBUG   ] axioms.agent.monitor: Step 6: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.578).[0m
+[94m2026-05-13 08:18:33 [INFO    ] axioms.llm: Agent 9 [sanction→agent_5] reasoning: Agent 5 has only 1 offence, which is below the exclusion threshold of 3. According to Ostrom’s graduated sanctions principle, an inactive sanction (e.g., warning or temporary prohibition) is the appropriate response rather than exclusion.[0m
+2026-05-13 08:18:33 [INFO    ] axioms.agent.head: Step 6: Head sanctioned agent 5 (offences=1) → decision=inactive
+2026-05-13 08:18:33 [INFO    ] axioms.agent.head: Step 6: Agent 5 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:18:33 [INFO    ] axioms.agent: Step 6: Agent 4 sanction expired — restored to active.
+2026-05-13 08:18:33 [INFO    ] axioms.agent: Step 6: Agent 0 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:18:33 [DEBUG   ] axioms.agent.head: Step 6: Appeal by agent 0 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:18:33 [INFO    ] axioms.agent: Step 6: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:18:33 [DEBUG   ] axioms.agent.head: Step 6: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:18:33 [INFO    ] axioms.agent: Step 6: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:18:33 [DEBUG   ] axioms.agent.head: Step 6: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:18:33 [INFO    ] axioms.model: Step    6 | pool= 1000.0 | members=7 | violations=3 | noncompliance_rate=0.58 | ra=queue
+[91m2026-05-13 08:18:33 [WARNING ] axioms.model: Step 6: 3 violation(s) detected this step.[0m
+[94m2026-05-13 08:18:36 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue maintains predictable allocation and aligns with my short‑term self‑interest while limiting detection risk compared to rationing.[0m
+[90m2026-05-13 08:18:36 [DEBUG   ] axioms.agent: Step 7: Agent 1 voted queue.[0m
+[94m2026-05-13 08:18:50 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: With the pool at only 1000 units and 7 members, the rationing method will split the scarce resources evenly, reducing the chance that any single member, including me, can misappropriate more than the pool allows. This aligns with my cooperative intent and helps avoid penalties.[0m
+[90m2026-05-13 08:18:50 [DEBUG   ] axioms.agent: Step 7: Agent 3 voted ration.[0m
+[94m2026-05-13 08:19:02 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Prefer fairness to avoid over-demand and potential depletion; ration ensures equal share and reduces risk of collapse.[0m
+[90m2026-05-13 08:19:02 [DEBUG   ] axioms.agent: Step 7: Agent 4 voted ration.[0m
+[94m2026-05-13 08:19:08 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Queue ensures a predictable, priority‑based allocation that aligns with cooperative cooperation and prevents the risk of over‑demanding the limited resource.[0m
+[90m2026-05-13 08:19:08 [DEBUG   ] axioms.agent: Step 7: Agent 6 voted queue.[0m
+[94m2026-05-13 08:19:16 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: I prefer the queue method because it allows me to demand early and receive my full allocation. Rationing would split the remaining pool among all demanding agents, reducing my benefit.[0m
+[90m2026-05-13 08:19:16 [DEBUG   ] axioms.agent: Step 7: Agent 9 voted queue.[0m
+[94m2026-05-13 08:19:23 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Maintain current first-come, first-served scheme to ensure early demands fully satisfied and overall fairness for all cooperative members.[0m
+[90m2026-05-13 08:19:23 [DEBUG   ] axioms.agent: Step 7: Agent 10 voted queue.[0m
+[94m2026-05-13 08:19:31 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Prefer equal share for fairness and to avoid dependence on ordering; everyone gets the same allocation regardless of demand time.[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent: Step 7: Agent 11 voted ration.[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent: Step 7: Agent 1 demanded 43.0768.[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent: Step 7: Agent 3 demanded 47.3242.[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent: Step 7: Agent 4 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent: Step 7: Agent 6 demanded 49.1384.[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent: Step 7: Agent 9 demanded 46.4883.[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent: Step 7: Agent 10 demanded 45.2906.[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent: Step 7: Agent 11 demanded 51.7693.[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent.head: Step 7: Head allocated via queue — 7 agents | demanded 283.09 → allocated 283.09
+  Agent    1: demanded 43.0768 → allocated 43.0768
+  Agent    3: demanded 47.3242 → allocated 47.3242
+  Agent    4: demanded 0.0000 → allocated 0.0000
+  Agent    6: demanded 49.1384 → allocated 49.1384
+  Agent    9: demanded 46.4883 → allocated 46.4883
+  Agent   10: demanded 45.2906 → allocated 45.2906
+  Agent   11: demanded 51.7693 → allocated 51.7693[0m
+[91m2026-05-13 08:19:31 [WARNING ] axioms.agent: Step 7: Agent 1 over-appropriated: took=49.9369 allocated=43.0768.[0m
+[91m2026-05-13 08:19:31 [WARNING ] axioms.agent: Step 7: Agent 3 over-appropriated: took=47.3518 allocated=47.3242.[0m
+[90m2026-05-13 08:19:31 [DEBUG   ] axioms.agent.monitor: Step 7: Monitor sampling agent 9 — appropriated=46.49 allocated=46.49[0m
+[94m2026-05-13 08:19:38 [INFO    ] axioms.llm: Agent 10 [report→agent_9] reasoning: Appropriation matches allocation; no violation.[0m
+[90m2026-05-13 08:19:38 [DEBUG   ] axioms.agent.monitor: Step 7: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.462).[0m
+2026-05-13 08:19:38 [INFO    ] axioms.agent: Step 7: Agent 2 sanction expired — restored to active.
+2026-05-13 08:19:38 [INFO    ] axioms.agent: Step 7: Agent 0 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:19:38 [DEBUG   ] axioms.agent.head: Step 7: Appeal by agent 0 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:19:38 [INFO    ] axioms.agent: Step 7: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:19:38 [DEBUG   ] axioms.agent.head: Step 7: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:19:38 [INFO    ] axioms.model: Step    7 | pool= 1000.0 | members=8 | violations=2 | noncompliance_rate=0.46 | ra=queue
+[91m2026-05-13 08:19:38 [WARNING ] axioms.model: Step 7: 2 violation(s) detected this step.[0m
+[94m2026-05-13 08:19:42 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: I prefer the queue method because it rewards timely demands with the full allocation and gives me a predictable, immediate share before the pool runs out. This allows me to plan opportunistic over-appropriation when detection risk is low. Rationing would split the pool more evenly and reduce my gains. Choosing queue maximizes my short‑term benefit while keeping within the current rule framework.[0m
+[90m2026-05-13 08:19:42 [DEBUG   ] axioms.agent: Step 8: Agent 1 voted queue.[0m
+[94m2026-05-13 08:19:48 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue enables me to demand early and take a full allocation before the pool depletes, maximizing my extracted resources.[0m
+[90m2026-05-13 08:19:48 [DEBUG   ] axioms.agent: Step 8: Agent 2 voted queue.[0m
+[94m2026-05-13 08:19:56 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: With the pool at 1000, the first-come first-served queue method lets me meet my demand exactly without risking over-appropriation. It’s simpler to adhere to and has kept me compliant in past rounds.[0m
+[90m2026-05-13 08:19:56 [DEBUG   ] axioms.agent: Step 8: Agent 3 voted queue.[0m
+[94m2026-05-13 08:20:05 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Considering the low pool level (1000 units) and the desire for equitable distribution, rationing ensures all active agents receive a fair share, preventing early-demanders from monopolizing scarce resources. This aligns with Ostrom's guidelines for shared‑resource governance. [0m
+[90m2026-05-13 08:20:05 [DEBUG   ] axioms.agent: Step 8: Agent 4 voted ration.[0m
+[94m2026-05-13 08:20:10 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Queue ensures that, when the pool is low, each early demand receives a full demand before it runs out, allowing me to secure my full allocation instead of risking an even smaller share under ration.[0m
+[90m2026-05-13 08:20:10 [DEBUG   ] axioms.agent: Step 8: Agent 6 voted queue.[0m
+[94m2026-05-13 08:20:19 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Continue using the current cooperative method to ensure consistent allocation.[0m
+[90m2026-05-13 08:20:19 [DEBUG   ] axioms.agent: Step 8: Agent 9 voted queue.[0m
+[94m2026-05-13 08:20:24 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: As a cooperative member, I support continuing with the first‑come, first‑served approach. It ensures that each agent receives the full amount they demand (up to the pool limit) and preserves the current method that has been functioning without sanctions.[0m
+[90m2026-05-13 08:20:24 [DEBUG   ] axioms.agent: Step 8: Agent 10 voted queue.[0m
+[94m2026-05-13 08:20:36 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Queue ensures that each early demander receives their full allocation until the pool is exhaused, promoting predictability and fairness for all cooperative members.[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent: Step 8: Agent 11 voted queue.[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent: Step 8: Agent 1 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent: Step 8: Agent 2 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent: Step 8: Agent 3 demanded 63.1396.[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent: Step 8: Agent 4 demanded 40.9832.[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent: Step 8: Agent 6 demanded 52.3834.[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent: Step 8: Agent 9 demanded 47.6928.[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent: Step 8: Agent 10 demanded 49.2712.[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent: Step 8: Agent 11 demanded 51.7403.[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent.head: Step 8: Head allocated via queue — 8 agents | demanded 305.21 → allocated 305.21
+  Agent    1: demanded 0.0000 → allocated 0.0000
+  Agent    2: demanded 0.0000 → allocated 0.0000
+  Agent    3: demanded 63.1396 → allocated 63.1396
+  Agent    4: demanded 40.9832 → allocated 40.9832
+  Agent    6: demanded 52.3834 → allocated 52.3834
+  Agent    9: demanded 47.6928 → allocated 47.6928
+  Agent   10: demanded 49.2712 → allocated 49.2712
+  Agent   11: demanded 51.7403 → allocated 51.7403[0m
+[91m2026-05-13 08:20:36 [WARNING ] axioms.agent: Step 8: Agent 3 over-appropriated: took=65.9232 allocated=63.1396.[0m
+[91m2026-05-13 08:20:36 [WARNING ] axioms.agent: Step 8: Agent 4 over-appropriated: took=41.6542 allocated=40.9832.[0m
+[90m2026-05-13 08:20:36 [DEBUG   ] axioms.agent.monitor: Step 8: Monitor sampling agent 1 — appropriated=0.00 allocated=0.00[0m
+[94m2026-05-13 08:20:39 [INFO    ] axioms.llm: Agent 10 [report→agent_1] reasoning: Agent 1 appropriated 0.0, allocated 0.0, so no violation.[0m
+[90m2026-05-13 08:20:39 [DEBUG   ] axioms.agent.monitor: Step 8: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.370).[0m
+2026-05-13 08:20:39 [INFO    ] axioms.agent: Step 8: Agent 0 sanction expired — restored to active.
+2026-05-13 08:20:39 [INFO    ] axioms.agent: Step 8: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:20:39 [DEBUG   ] axioms.agent.head: Step 8: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:20:39 [INFO    ] axioms.model: Step    8 | pool= 1000.0 | members=9 | violations=2 | noncompliance_rate=0.37 | ra=queue
+[91m2026-05-13 08:20:39 [WARNING ] axioms.model: Step 8: 2 violation(s) detected this step.[0m
+[94m2026-05-13 08:20:45 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Early demand ensures a larger share when pool levels are low; queue preserves the first-come advantage.[0m
+[90m2026-05-13 08:20:45 [DEBUG   ] axioms.agent: Step 9: Agent 0 voted queue.[0m
+[94m2026-05-13 08:20:53 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Choose queue to maximize personal gain with low pool; early demand secures larger share than equal rationing.[0m
+[90m2026-05-13 08:20:53 [DEBUG   ] axioms.agent: Step 9: Agent 1 voted queue.[0m
+[94m2026-05-13 08:20:59 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue lets early demanders secure a large share before the pool depletes. With the pool low at 1000, acting first maximizes potential appropriation. Ration would split the limited resource equally, reducing maximum gain.[0m
+[90m2026-05-13 08:20:59 [DEBUG   ] axioms.agent: Step 9: Agent 2 voted queue.[0m
+[94m2026-05-13 08:21:06 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Rationing distributes the remaining pool evenly among all demanding agents, which is more transparent and less prone to mis-appropriation errors when the pool is low.[0m
+[90m2026-05-13 08:21:06 [DEBUG   ] axioms.agent: Step 9: Agent 3 voted ration.[0m
+[94m2026-05-13 08:21:24 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: The queue system allows early demanders to claim a large share until the pool runs out, which can easily lead to over‑appropriation when the pool is low, as I just experienced. Switching to a ration method would divide the remaining pool evenly among all demanding members, reducing the chance of exceeding my allocation and supporting a more stable, fair use of the shared resource.[0m
+[90m2026-05-13 08:21:24 [DEBUG   ] axioms.agent: Step 9: Agent 4 voted ration.[0m
+[94m2026-05-13 08:21:30 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Choosing the queue method will allow all agents to receive resources in the order they request them, ensuring that the pool is depleted efficiently. Since we are cooperative and always take exactly our allocation, the queue system preserves fairness for the group and is consistent with our past voting behavior.[0m
+[90m2026-05-13 08:21:30 [DEBUG   ] axioms.agent: Step 9: Agent 6 voted queue.[0m
+[94m2026-05-13 08:21:34 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue preserves individual incentives and prevents over-drawing; it is fairer for a fully cooperative member like me to get full allocation when available.[0m
+[90m2026-05-13 08:21:34 [DEBUG   ] axioms.agent: Step 9: Agent 9 voted queue.[0m
+[94m2026-05-13 08:21:38 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: As a cooperative agent, I prefer the queue method, which ensures each demanding agent receives their full allocation if available, maintaining fairness and predictability for all members.[0m
+[90m2026-05-13 08:21:38 [DEBUG   ] axioms.agent: Step 9: Agent 10 voted queue.[0m
+[94m2026-05-13 08:21:41 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: As a fully cooperative member who strictly follows the rules, I prefer the queue method because it ensures predictable allocation based on demand order, which aligns with my cooperative strategy and keeps the system stable.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 11 voted queue.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 0 demanded 56.7344.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 1 demanded 50.6048.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 2 demanded 49.3877.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 3 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 4 demanded 46.6510.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 6 demanded 49.5001.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 9 demanded 55.9132.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 10 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent: Step 9: Agent 11 demanded 46.3042.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent.head: Step 9: Head allocated via queue — 9 agents | demanded 355.10 → allocated 355.10
+  Agent    0: demanded 56.7344 → allocated 56.7344
+  Agent    1: demanded 50.6048 → allocated 50.6048
+  Agent    2: demanded 49.3877 → allocated 49.3877
+  Agent    3: demanded 0.0000 → allocated 0.0000
+  Agent    4: demanded 46.6510 → allocated 46.6510
+  Agent    6: demanded 49.5001 → allocated 49.5001
+  Agent    9: demanded 55.9132 → allocated 55.9132
+  Agent   10: demanded 0.0000 → allocated 0.0000
+  Agent   11: demanded 46.3042 → allocated 46.3042[0m
+[91m2026-05-13 08:21:41 [WARNING ] axioms.agent: Step 9: Agent 0 over-appropriated: took=57.0388 allocated=56.7344.[0m
+[91m2026-05-13 08:21:41 [WARNING ] axioms.agent: Step 9: Agent 1 over-appropriated: took=56.4541 allocated=50.6048.[0m
+[91m2026-05-13 08:21:41 [WARNING ] axioms.agent: Step 9: Agent 2 over-appropriated: took=50.3393 allocated=49.3877.[0m
+[91m2026-05-13 08:21:41 [WARNING ] axioms.agent: Step 9: Agent 4 over-appropriated: took=49.6871 allocated=46.6510.[0m
+[90m2026-05-13 08:21:41 [DEBUG   ] axioms.agent.monitor: Step 9: Monitor sampling agent 1 — appropriated=56.45 allocated=50.60[0m
+[94m2026-05-13 08:21:45 [INFO    ] axioms.llm: Agent 10 [report→agent_1] reasoning: Agent 1 appropriated 56.5 units, which exceeds its allocation of 50.6 units, thus violating the institution's rules.[0m
+[91m2026-05-13 08:21:45 [WARNING ] axioms.agent.monitor: Step 9: Monitor reports agent 1 — appropriated=56.45 allocated=50.60[0m
+[90m2026-05-13 08:21:45 [DEBUG   ] axioms.agent.monitor: Step 9: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.496).[0m
+[94m2026-05-13 08:21:53 [INFO    ] axioms.llm: Agent 9 [sanction→agent_1] reasoning: Agent 1 has 1 offence, which is below the exclusion threshold of 3. Therefore, an inactive sanction is the appropriate graduated response according to Ostrom’s principles.[0m
+2026-05-13 08:21:53 [INFO    ] axioms.agent.head: Step 9: Head sanctioned agent 1 (offences=1) → decision=inactive
+2026-05-13 08:21:53 [INFO    ] axioms.agent.head: Step 9: Agent 1 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:21:53 [INFO    ] axioms.agent: Step 9: Agent 1 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:21:53 [DEBUG   ] axioms.agent.head: Step 9: Appeal by agent 1 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:21:53 [INFO    ] axioms.agent: Step 9: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:21:53 [DEBUG   ] axioms.agent.head: Step 9: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:21:53 [INFO    ] axioms.model: Step    9 | pool= 1000.0 | members=8 | violations=4 | noncompliance_rate=0.50 | ra=queue
+[91m2026-05-13 08:21:53 [WARNING ] axioms.model: Step 9: 4 violation(s) detected this step.[0m
+[94m2026-05-13 08:22:01 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue lets me grab a full allocation before the pool depletes, whereas ration would split the low pool among all demanders, yielding a smaller share.[0m
+[90m2026-05-13 08:22:01 [DEBUG   ] axioms.agent: Step 10: Agent 0 voted queue.[0m
+[94m2026-05-13 08:22:19 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Choosing queue maximizes my immediate share before the pool depletes; I plan to demand a large amount that I can over-appropriate again, relying on the past lack of sanctions to justify the risk.[0m
+[90m2026-05-13 08:22:19 [DEBUG   ] axioms.agent: Step 10: Agent 2 voted queue.[0m
+[94m2026-05-13 08:22:29 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Choosing ration limits each member to an equal share (125 units given current pool of 1000 and 8 members), reducing the risk of exceeding allocated amounts and avoiding past violations of appropriation.[0m
+[90m2026-05-13 08:22:29 [DEBUG   ] axioms.agent: Step 10: Agent 3 voted ration.[0m
+[94m2026-05-13 08:22:35 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: To avoid future violations and ensure a fair, proportional allocation for all members.[0m
+[90m2026-05-13 08:22:35 [DEBUG   ] axioms.agent: Step 10: Agent 4 voted ration.[0m
+[94m2026-05-13 08:22:39 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: The queue method allows us to request and receive our exact demand without overdraw, preserving the pool and ensuring consistent compliance.[0m
+[90m2026-05-13 08:22:39 [DEBUG   ] axioms.agent: Step 10: Agent 6 voted queue.[0m
+[94m2026-05-13 08:22:47 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: I prefer the queue method because it ensures that all agents who demand early receive their full allocation before the pool is depleted, supporting fairness and predictability in a shared-resource setting.[0m
+[90m2026-05-13 08:22:47 [DEBUG   ] axioms.agent: Step 10: Agent 9 voted queue.[0m
+[90m2026-05-13 08:22:51 [DEBUG   ] axioms.agent: Step 10: Agent 10 voted ration.[0m
+[94m2026-05-13 08:22:57 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Queue ensures early demands are met, maintaining order and preventing overdraw when the pool is low. I prefer to keep the current method to preserve consistency and predictability.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent: Step 10: Agent 11 voted queue.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent: Step 10: Agent 0 demanded 60.4866.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent: Step 10: Agent 2 demanded 53.4484.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent: Step 10: Agent 3 demanded 52.0383.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent: Step 10: Agent 4 demanded 55.8219.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent: Step 10: Agent 6 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent: Step 10: Agent 9 demanded 47.8685.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent: Step 10: Agent 10 demanded 53.7943.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent: Step 10: Agent 11 demanded 53.4806.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent.head: Step 10: Head allocated via queue — 8 agents | demanded 376.94 → allocated 376.94
+  Agent    0: demanded 60.4866 → allocated 60.4866
+  Agent    2: demanded 53.4484 → allocated 53.4484
+  Agent    3: demanded 52.0383 → allocated 52.0383
+  Agent    4: demanded 55.8219 → allocated 55.8219
+  Agent    6: demanded 0.0000 → allocated 0.0000
+  Agent    9: demanded 47.8685 → allocated 47.8685
+  Agent   10: demanded 53.7943 → allocated 53.7943
+  Agent   11: demanded 53.4806 → allocated 53.4806[0m
+[91m2026-05-13 08:22:57 [WARNING ] axioms.agent: Step 10: Agent 0 over-appropriated: took=70.1561 allocated=60.4866.[0m
+[91m2026-05-13 08:22:57 [WARNING ] axioms.agent: Step 10: Agent 2 over-appropriated: took=54.1456 allocated=53.4484.[0m
+[91m2026-05-13 08:22:57 [WARNING ] axioms.agent: Step 10: Agent 3 over-appropriated: took=62.1461 allocated=52.0383.[0m
+[91m2026-05-13 08:22:57 [WARNING ] axioms.agent: Step 10: Agent 4 over-appropriated: took=59.5855 allocated=55.8219.[0m
+[90m2026-05-13 08:22:57 [DEBUG   ] axioms.agent.monitor: Step 10: Monitor sampling agent 4 — appropriated=59.59 allocated=55.82[0m
+[94m2026-05-13 08:23:00 [INFO    ] axioms.llm: Agent 10 [report→agent_4] reasoning: Agent appropriated 59.6 units which exceeds the allocated 55.8 units.[0m
+[91m2026-05-13 08:23:00 [WARNING ] axioms.agent.monitor: Step 10: Monitor reports agent 4 — appropriated=59.59 allocated=55.82[0m
+[90m2026-05-13 08:23:00 [DEBUG   ] axioms.agent.monitor: Step 10: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.597).[0m
+[94m2026-05-13 08:23:05 [INFO    ] axioms.llm: Agent 9 [sanction→agent_4] reasoning: Agent 4 has 2 offences, which is below the exclusion threshold of 3. Hence no exclusion sanction is warranted at this time.[0m
+2026-05-13 08:23:05 [INFO    ] axioms.agent.head: Step 10: Head sanctioned agent 4 (offences=2) → decision=inactive
+2026-05-13 08:23:05 [INFO    ] axioms.agent.head: Step 10: Agent 4 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:23:05 [INFO    ] axioms.agent: Step 10: Agent 5 sanction expired — restored to active.
+2026-05-13 08:23:05 [INFO    ] axioms.agent: Step 10: Agent 1 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:23:05 [DEBUG   ] axioms.agent.head: Step 10: Appeal by agent 1 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:23:05 [INFO    ] axioms.agent: Step 10: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:23:05 [DEBUG   ] axioms.agent.head: Step 10: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:23:05 [INFO    ] axioms.model: Step   10 | pool=  943.8 | members=8 | violations=4 | noncompliance_rate=0.60 | ra=queue
+[91m2026-05-13 08:23:05 [WARNING ] axioms.model: Step 10: 4 violation(s) detected this step.[0m
+[94m2026-05-13 08:23:10 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue allows me to demand a larger amount before the pool empties, maximizing short‑term gain while remaining within current rule compliance.[0m
+[90m2026-05-13 08:23:10 [DEBUG   ] axioms.agent: Step 11: Agent 0 voted queue.[0m
+[94m2026-05-13 08:23:21 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue lets me demand earlier and get a larger share until the pool runs out, maximizing my appropriation potential compared to the equal share offered by ration.[0m
+[90m2026-05-13 08:23:21 [DEBUG   ] axioms.agent: Step 11: Agent 2 voted queue.[0m
+[94m2026-05-13 08:23:43 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Choosing the ration method reduces the risk of over-appropriating when the pool is low and helps maintain stability of the shared resource.[0m
+[90m2026-05-13 08:23:43 [DEBUG   ] axioms.agent: Step 11: Agent 3 voted ration.[0m
+[94m2026-05-13 08:23:51 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue preserves the first‑come advantage, enabling agents who demand early to receive the full remaining pool until it runs out. This maximizes my potential gain compared to rationing, where the low pool would be divided equally among all demanding agents.[0m
+[90m2026-05-13 08:23:51 [DEBUG   ] axioms.agent: Step 11: Agent 5 voted queue.[0m
+[94m2026-05-13 08:23:59 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: I confirmed my voting power with check_ostrom_axiom and chose queue because it lets me receive my full allocation when I demand early, which aligns with my fully cooperative strategy.[0m
+[90m2026-05-13 08:23:59 [DEBUG   ] axioms.agent: Step 11: Agent 6 voted queue.[0m
+[94m2026-05-13 08:24:07 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue allows agents to get their full demand early, ensuring predictable consumption and preventing under‑allocation when the pool is low, which aligns with cooperative stability.[0m
+[90m2026-05-13 08:24:07 [DEBUG   ] axioms.agent: Step 11: Agent 9 voted queue.[0m
+[94m2026-05-13 08:24:24 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Rationing provides each member with an equal and fair share of the limited pool, preventing any single early demand from exhausting resources. It aligns with cooperative principles and ensures stability for all participants.[0m
+[90m2026-05-13 08:24:24 [DEBUG   ] axioms.agent: Step 11: Agent 10 voted ration.[0m
+[94m2026-05-13 08:24:31 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Switch to rationing for equitable distribution when the pool is low, ensuring each member receives a fair share and reducing the risk of depletion.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent: Step 11: Agent 11 voted ration.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent: Step 11: Agent 0 demanded 52.3464.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent: Step 11: Agent 2 demanded 59.1277.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent: Step 11: Agent 3 demanded 52.9393.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent: Step 11: Agent 5 demanded 34.4663.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent: Step 11: Agent 6 demanded 56.6289.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent: Step 11: Agent 9 demanded 46.8382.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent: Step 11: Agent 10 demanded 50.0132.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent: Step 11: Agent 11 demanded 46.7424.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent.head: Step 11: Head allocated via queue — 8 agents | demanded 399.10 → allocated 399.10
+  Agent    0: demanded 52.3464 → allocated 52.3464
+  Agent    2: demanded 59.1277 → allocated 59.1277
+  Agent    3: demanded 52.9393 → allocated 52.9393
+  Agent    5: demanded 34.4663 → allocated 34.4663
+  Agent    6: demanded 56.6289 → allocated 56.6289
+  Agent    9: demanded 46.8382 → allocated 46.8382
+  Agent   10: demanded 50.0132 → allocated 50.0132
+  Agent   11: demanded 46.7424 → allocated 46.7424[0m
+[91m2026-05-13 08:24:31 [WARNING ] axioms.agent: Step 11: Agent 0 over-appropriated: took=59.9691 allocated=52.3464.[0m
+[91m2026-05-13 08:24:31 [WARNING ] axioms.agent: Step 11: Agent 2 over-appropriated: took=61.7535 allocated=59.1277.[0m
+[91m2026-05-13 08:24:31 [WARNING ] axioms.agent: Step 11: Agent 3 over-appropriated: took=61.0851 allocated=52.9393.[0m
+[91m2026-05-13 08:24:31 [WARNING ] axioms.agent: Step 11: Agent 5 over-appropriated: took=35.6354 allocated=34.4663.[0m
+[90m2026-05-13 08:24:31 [DEBUG   ] axioms.agent.monitor: Step 11: Monitor sampling agent 2 — appropriated=61.75 allocated=59.13[0m
+[94m2026-05-13 08:24:35 [INFO    ] axioms.llm: Agent 10 [report→agent_2] reasoning: Agent 2 appropriated more (61.8) than allocated (59.1), violating the allocation rule.[0m
+[91m2026-05-13 08:24:35 [WARNING ] axioms.agent.monitor: Step 11: Monitor reports agent 2 — appropriated=61.75 allocated=59.13[0m
+[90m2026-05-13 08:24:35 [DEBUG   ] axioms.agent.monitor: Step 11: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.677).[0m
+[94m2026-05-13 08:24:42 [INFO    ] axioms.llm: Agent 9 [sanction→agent_2] reasoning: Agent 2 has 2 offences and is below the exclusion threshold of 3; the appropriate graduated sanction is inactivity.[0m
+2026-05-13 08:24:42 [INFO    ] axioms.agent.head: Step 11: Head sanctioned agent 2 (offences=2) → decision=inactive
+2026-05-13 08:24:42 [INFO    ] axioms.agent.head: Step 11: Agent 2 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:24:42 [INFO    ] axioms.agent: Step 11: Agent 1 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:24:42 [DEBUG   ] axioms.agent.head: Step 11: Appeal by agent 1 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:24:42 [INFO    ] axioms.agent: Step 11: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:24:42 [DEBUG   ] axioms.agent.head: Step 11: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:24:42 [INFO    ] axioms.agent: Step 11: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:24:42 [DEBUG   ] axioms.agent.head: Step 11: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:24:42 [INFO    ] axioms.model: Step   11 | pool=  870.2 | members=7 | violations=4 | noncompliance_rate=0.68 | ra=queue
+[91m2026-05-13 08:24:42 [WARNING ] axioms.model: Step 11: 4 violation(s) detected this step.[0m
+[94m2026-05-13 08:24:54 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue lets me demand early and get my full allocation before others dilute the pool, maximizing short‑term gain. Ration would reduce each agent’s share, cutting my potential benefit.[0m
+[90m2026-05-13 08:24:54 [DEBUG   ] axioms.agent: Step 12: Agent 0 voted queue.[0m
+[94m2026-05-13 08:25:11 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Using ration ensures each agent receives an equal share of the low pool, reducing the risk of over-appropriation and promoting fairness.[0m
+[90m2026-05-13 08:25:11 [DEBUG   ] axioms.agent: Step 12: Agent 3 voted ration.[0m
+[94m2026-05-13 08:25:23 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: The pool is low (870 units), and queue allows me to secure a full allocation before the pool depletes. Ration would dilute my intake, so to maximize my short‑term gain I prefer the first‑come‑first‑served method.[0m
+[90m2026-05-13 08:25:23 [DEBUG   ] axioms.agent: Step 12: Agent 5 voted queue.[0m
+[94m2026-05-13 08:25:33 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: I choose queue because it allows me to demand my full needs early, ensuring I will receive the resources I need while remaining compliant with the institution’s agreed procedure.[0m
+[90m2026-05-13 08:25:33 [DEBUG   ] axioms.agent: Step 12: Agent 6 voted queue.[0m
+[94m2026-05-13 08:25:39 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Maintaining the first-come-first-served queue ensures that each agent receives their full demand if available, and I've consistently complied with this method without sanctions. Given the current pool level, there is sufficient resource to satisfy demands, so I prefer to keep the existing allocation method.[0m
+[90m2026-05-13 08:25:39 [DEBUG   ] axioms.agent: Step 12: Agent 9 voted queue.[0m
+[94m2026-05-13 08:26:01 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: I believe rationing provides a more equitable distribution when the pool is low, ensuring all members receive an equal share and preventing any single member from taking disproportionately more. This aligns with our cooperative principles and Ostrom’s emphasis on rule enforceability and fairness.[0m
+[90m2026-05-13 08:26:01 [DEBUG   ] axioms.agent: Step 12: Agent 10 voted ration.[0m
+[94m2026-05-13 08:26:09 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Queue allows fair distribution based on demand timing and prevents any one agent from hoarding; as a cooperative member, I ensure I claim exactly my allocation.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent: Step 12: Agent 11 voted queue.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent: Step 12: Agent 0 demanded 46.8032.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent: Step 12: Agent 3 demanded 56.4445.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent: Step 12: Agent 5 demanded 59.6011.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent: Step 12: Agent 6 demanded 52.9844.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent: Step 12: Agent 9 demanded 50.1621.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent: Step 12: Agent 10 demanded 45.0869.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent: Step 12: Agent 11 demanded 40.4264.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent.head: Step 12: Head allocated via queue — 7 agents | demanded 351.51 → allocated 351.51
+  Agent    0: demanded 46.8032 → allocated 46.8032
+  Agent    3: demanded 56.4445 → allocated 56.4445
+  Agent    5: demanded 59.6011 → allocated 59.6011
+  Agent    6: demanded 52.9844 → allocated 52.9844
+  Agent    9: demanded 50.1621 → allocated 50.1621
+  Agent   10: demanded 45.0869 → allocated 45.0869
+  Agent   11: demanded 40.4264 → allocated 40.4264[0m
+[91m2026-05-13 08:26:09 [WARNING ] axioms.agent: Step 12: Agent 0 over-appropriated: took=54.0614 allocated=46.8032.[0m
+[91m2026-05-13 08:26:09 [WARNING ] axioms.agent: Step 12: Agent 3 over-appropriated: took=59.0365 allocated=56.4445.[0m
+[91m2026-05-13 08:26:09 [WARNING ] axioms.agent: Step 12: Agent 5 over-appropriated: took=64.4971 allocated=59.6011.[0m
+[90m2026-05-13 08:26:09 [DEBUG   ] axioms.agent.monitor: Step 12: Monitor sampling agent 4 — appropriated=0.00 allocated=55.82[0m
+[94m2026-05-13 08:26:12 [INFO    ] axioms.llm: Agent 10 [report→agent_4] reasoning: Agent appropriated less than its allocated amount, so no violation.[0m
+[90m2026-05-13 08:26:12 [DEBUG   ] axioms.agent.monitor: Step 12: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.542).[0m
+2026-05-13 08:26:12 [INFO    ] axioms.agent: Step 12: Agent 1 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:26:12 [DEBUG   ] axioms.agent.head: Step 12: Appeal by agent 1 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:26:12 [INFO    ] axioms.agent: Step 12: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:26:12 [DEBUG   ] axioms.agent.head: Step 12: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:26:12 [INFO    ] axioms.agent: Step 12: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:26:12 [DEBUG   ] axioms.agent.head: Step 12: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:26:12 [INFO    ] axioms.model: Step   12 | pool=  848.9 | members=7 | violations=3 | noncompliance_rate=0.54 | ra=queue
+[91m2026-05-13 08:26:12 [WARNING ] axioms.model: Step 12: 3 violation(s) detected this step.[0m
+[94m2026-05-13 08:26:15 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: The queue method allows us to secure a consistent allocation early each round and has proven to work well in the current low-pool scenario. Switching to ration would reduce our guaranteed allocation, which is undesirable when the pool is already low.[0m
+[90m2026-05-13 08:26:15 [DEBUG   ] axioms.agent: Step 13: Agent 0 voted queue.[0m
+[94m2026-05-13 08:26:27 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Choosing ration limits the amount each agent receives to an equal share, reducing the risk of appropriating more than allocated—especially important after recent violations—and promotes fairness among all members.[0m
+[90m2026-05-13 08:26:27 [DEBUG   ] axioms.agent: Step 13: Agent 3 voted ration.[0m
+[94m2026-05-13 08:26:37 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue lets me demand early for full share, fitting my opportunistic style and currently shows no sanctions for past violations.[0m
+[90m2026-05-13 08:26:37 [DEBUG   ] axioms.agent: Step 13: Agent 5 voted queue.[0m
+[94m2026-05-13 08:26:43 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Maintains fair first‑come, first‑served access; consistent with my cooperative, compliant strategy and no incentive to switch to ration.[0m
+[90m2026-05-13 08:26:43 [DEBUG   ] axioms.agent: Step 13: Agent 6 voted queue.[0m
+[94m2026-05-13 08:26:56 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Cooperative approach; the queue method allows me to receive my full demand early in the cycle and avoids the uncertainty of rationing when the pool is low, thus maintaining stable, predictable allocations for all members.[0m
+[90m2026-05-13 08:26:56 [DEBUG   ] axioms.agent: Step 13: Agent 9 voted queue.[0m
+[94m2026-05-13 08:27:06 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Equal sharing keeps all members with a fair portion and avoids the risk of some getting nothing. It helps maintain stability when the pool is low.[0m
+[90m2026-05-13 08:27:06 [DEBUG   ] axioms.agent: Step 13: Agent 10 voted ration.[0m
+[94m2026-05-13 08:27:19 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Queue gives the earliest demanding agents the full allocation until the pool empties, allowing me to secure my share efficiently. As a cooperative member, I will stay compliant and take exactly the allocation while trusting queue to provide a fair and predictable process.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent: Step 13: Agent 11 voted queue.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent: Step 13: Agent 0 demanded 50.7172.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent: Step 13: Agent 3 demanded 54.5021.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent: Step 13: Agent 5 demanded 43.4503.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent: Step 13: Agent 6 demanded 48.8143.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent: Step 13: Agent 9 demanded 43.4772.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent: Step 13: Agent 10 demanded 59.6525.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent: Step 13: Agent 11 demanded 54.7600.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent.head: Step 13: Head allocated via queue — 7 agents | demanded 355.37 → allocated 355.37
+  Agent    0: demanded 50.7172 → allocated 50.7172
+  Agent    3: demanded 54.5021 → allocated 54.5021
+  Agent    5: demanded 43.4503 → allocated 43.4503
+  Agent    6: demanded 48.8143 → allocated 48.8143
+  Agent    9: demanded 43.4772 → allocated 43.4772
+  Agent   10: demanded 59.6525 → allocated 59.6525
+  Agent   11: demanded 54.7600 → allocated 54.7600[0m
+[91m2026-05-13 08:27:19 [WARNING ] axioms.agent: Step 13: Agent 0 over-appropriated: took=57.9642 allocated=50.7172.[0m
+[91m2026-05-13 08:27:19 [WARNING ] axioms.agent: Step 13: Agent 3 over-appropriated: took=58.5209 allocated=54.5021.[0m
+[91m2026-05-13 08:27:19 [WARNING ] axioms.agent: Step 13: Agent 5 over-appropriated: took=48.0877 allocated=43.4503.[0m
+[90m2026-05-13 08:27:19 [DEBUG   ] axioms.agent.monitor: Step 13: Monitor sampling agent 3 — appropriated=58.52 allocated=54.50[0m
+[94m2026-05-13 08:27:25 [INFO    ] axioms.llm: Agent 10 [report→agent_3] reasoning: Agent 3 appropriated more (58.5) than allocated (54.5).[0m
+[91m2026-05-13 08:27:25 [WARNING ] axioms.agent.monitor: Step 13: Monitor reports agent 3 — appropriated=58.52 allocated=54.50[0m
+[90m2026-05-13 08:27:25 [DEBUG   ] axioms.agent.monitor: Step 13: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.634).[0m
+[94m2026-05-13 08:27:43 [INFO    ] axioms.llm: Agent 9 [sanction→agent_3] reasoning: Agent 3 has 2 offences, which is below the exclusion threshold of 3. Therefore a temporary inactive sanction is warranted rather than exclusion.[0m
+2026-05-13 08:27:43 [INFO    ] axioms.agent.head: Step 13: Head sanctioned agent 3 (offences=2) → decision=inactive
+2026-05-13 08:27:43 [INFO    ] axioms.agent.head: Step 13: Agent 3 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:27:43 [INFO    ] axioms.agent: Step 13: Agent 1 sanction expired — restored to active.
+2026-05-13 08:27:43 [INFO    ] axioms.agent: Step 13: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:27:43 [DEBUG   ] axioms.agent.head: Step 13: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:27:43 [INFO    ] axioms.agent: Step 13: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:27:43 [DEBUG   ] axioms.agent.head: Step 13: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:27:43 [INFO    ] axioms.agent: Step 13: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:27:43 [DEBUG   ] axioms.agent.head: Step 13: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:27:43 [INFO    ] axioms.model: Step   13 | pool=  822.6 | members=7 | violations=3 | noncompliance_rate=0.63 | ra=queue
+[91m2026-05-13 08:27:43 [WARNING ] axioms.model: Step 13: 3 violation(s) detected this step.[0m
+[94m2026-05-13 08:28:00 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: The queue method allows me to demand early and receive my full allocation before the pool depletes, which is advantageous when the pool is low. With ration, each agent would share the remaining pool equally, reducing my effective share and making opportunistic over-appropriation riskier. Given my recent violations have incurred no sanctions yet, I will continue to exploit the queue system.[0m
+[90m2026-05-13 08:28:00 [DEBUG   ] axioms.agent: Step 14: Agent 0 voted queue.[0m
+[94m2026-05-13 08:28:07 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue preserves the possibility of getting a full share by demanding early, which is preferable when the pool is relatively low but can still support full requests for at least a few agents. Rationing would dilute every claim, potentially reducing individual gains.[0m
+[90m2026-05-13 08:28:07 [DEBUG   ] axioms.agent: Step 14: Agent 1 voted queue.[0m
+[94m2026-05-13 08:28:20 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: With a low pool, queue allows me to demand early and secure nearly the entire remaining amount, maximizing short‑term gain while past sanctions were ineffective.[0m
+[90m2026-05-13 08:28:20 [DEBUG   ] axioms.agent: Step 14: Agent 5 voted queue.[0m
+[94m2026-05-13 08:28:23 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Queue provides a simple, transparent allocation where each demand is satisfied to the extent of available resources, preventing starvation and encouraging predictable behavior.[0m
+[90m2026-05-13 08:28:23 [DEBUG   ] axioms.agent: Step 14: Agent 6 voted queue.[0m
+[94m2026-05-13 08:28:29 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue protects early demanders from depletion by late agents and ensures each agent gets its full request when the pool allows, which aligns with cooperative, fair use of the shared resource.[0m
+[90m2026-05-13 08:28:29 [DEBUG   ] axioms.agent: Step 14: Agent 9 voted queue.[0m
+[94m2026-05-13 08:28:40 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Rationing ensures an equal, predictable share for all demanding agents, reducing the risk of depleting the pool quickly. As a cooperative member who always sticks to allocations, I prefer a fair distribution that keeps the common pool sustainable for everyone.[0m
+[90m2026-05-13 08:28:40 [DEBUG   ] axioms.agent: Step 14: Agent 10 voted ration.[0m
+[94m2026-05-13 08:28:48 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Maintaining queue ensures early requests receive full allocation and avoids the uncertainty of rationing—keeping the institution stable.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent: Step 14: Agent 11 voted queue.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent: Step 14: Agent 0 demanded 57.7996.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent: Step 14: Agent 1 demanded 57.6036.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent: Step 14: Agent 5 demanded 43.1880.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent: Step 14: Agent 6 demanded 53.6432.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent: Step 14: Agent 9 demanded 46.3843.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent: Step 14: Agent 10 demanded 56.4839.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent: Step 14: Agent 11 demanded 50.6758.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent.head: Step 14: Head allocated via queue — 7 agents | demanded 365.78 → allocated 365.78
+  Agent    0: demanded 57.7996 → allocated 57.7996
+  Agent    1: demanded 57.6036 → allocated 57.6036
+  Agent    5: demanded 43.1880 → allocated 43.1880
+  Agent    6: demanded 53.6432 → allocated 53.6432
+  Agent    9: demanded 46.3843 → allocated 46.3843
+  Agent   10: demanded 56.4839 → allocated 56.4839
+  Agent   11: demanded 50.6758 → allocated 50.6758[0m
+[91m2026-05-13 08:28:48 [WARNING ] axioms.agent: Step 14: Agent 0 over-appropriated: took=58.1854 allocated=57.7996.[0m
+[91m2026-05-13 08:28:48 [WARNING ] axioms.agent: Step 14: Agent 1 over-appropriated: took=62.7296 allocated=57.6036.[0m
+[91m2026-05-13 08:28:48 [WARNING ] axioms.agent: Step 14: Agent 5 over-appropriated: took=50.6612 allocated=43.1880.[0m
+[90m2026-05-13 08:28:48 [DEBUG   ] axioms.agent.monitor: Step 14: Monitor sampling agent 4 — appropriated=0.00 allocated=55.82[0m
+[94m2026-05-13 08:28:51 [INFO    ] axioms.llm: Agent 10 [report→agent_4] reasoning: Agent appropriated less than allocated, not a violation.[0m
+[90m2026-05-13 08:28:51 [DEBUG   ] axioms.agent.monitor: Step 14: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.507).[0m
+2026-05-13 08:28:51 [INFO    ] axioms.agent: Step 14: Agent 4 sanction expired — restored to active.
+2026-05-13 08:28:51 [INFO    ] axioms.agent: Step 14: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:28:51 [DEBUG   ] axioms.agent.head: Step 14: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:28:51 [INFO    ] axioms.agent: Step 14: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:28:51 [DEBUG   ] axioms.agent.head: Step 14: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:28:51 [INFO    ] axioms.model: Step   14 | pool=  788.9 | members=8 | violations=3 | noncompliance_rate=0.51 | ra=queue
+[91m2026-05-13 08:28:51 [WARNING ] axioms.model: Step 14: 3 violation(s) detected this step.[0m
+[94m2026-05-13 08:29:11 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue lets agents who demand early receive their full allocation until the pool is exhausted, maximizing early extraction. Ration would split the remaining pool among all demanding agents, reducing the amount I can take each round.[0m
+[90m2026-05-13 08:29:11 [DEBUG   ] axioms.agent: Step 15: Agent 0 voted queue.[0m
+[94m2026-05-13 08:29:31 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Ration distributes the remaining pool uniformly, giving each agent a larger base share (≈98 units) compared to the queue, which currently limits my demand to ≈57 units. The increased amount allows more room for opportunistic overdraw without raising detection risk significantly.[0m
+[90m2026-05-13 08:29:31 [DEBUG   ] axioms.agent: Step 15: Agent 1 voted ration.[0m
+[94m2026-05-13 08:29:34 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: The queue method allows early demanders to receive full allocations if available, which can be more efficient and encouraging for cooperative agents who need predictable resource access. It also aligns with my cooperative strategy and helps avoid disputes over fairness.[0m
+[90m2026-05-13 08:29:34 [DEBUG   ] axioms.agent: Step 15: Agent 4 voted queue.[0m
+[94m2026-05-13 08:29:43 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Ration distributes the low remaining pool evenly among all agents, reducing the probability of exceeding allocations and the risk of sanctions while still allowing modest opportunistic take. Switching to ration also preserves the pool for future rounds and aligns with institutional sustainability.[0m
+[90m2026-05-13 08:29:43 [DEBUG   ] axioms.agent: Step 15: Agent 5 voted ration.[0m
+[94m2026-05-13 08:29:50 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Queue allows full allocation based on demand order, maximizing individual benefit while maintaining overall cooperation.[0m
+[90m2026-05-13 08:29:50 [DEBUG   ] axioms.agent: Step 15: Agent 6 voted queue.[0m
+[94m2026-05-13 08:29:56 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: I always cooperate and follow the rules. Keeping the queue method maintains our current cooperative arrangement and allows each demanding agent to receive a full allocation if the pool suffices, which aligns with our cooperative behavior. No rule violation occurs.[0m
+[90m2026-05-13 08:29:56 [DEBUG   ] axioms.agent: Step 15: Agent 9 voted queue.[0m
+[94m2026-05-13 08:30:06 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: The rationing method gives every demanding agent an equal share when the pool is low, ensuring fairness and preventing the depletion of resources. As a fully cooperative member, I support a method that promotes equitable distribution rather than prioritizing early demand.[0m
+[90m2026-05-13 08:30:06 [DEBUG   ] axioms.agent: Step 15: Agent 10 voted ration.[0m
+[94m2026-05-13 08:30:12 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Maintaining the queue method preserves the established ordering and simplicity, and I believe it best respects the institution's rules and my cooperative status.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent: Step 15: Agent 11 voted queue.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent: Step 15: Agent 0 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent: Step 15: Agent 1 demanded 43.6065.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent: Step 15: Agent 4 demanded 38.4192.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent: Step 15: Agent 5 demanded 51.7615.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent: Step 15: Agent 6 demanded 41.2091.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent: Step 15: Agent 9 demanded 53.5877.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent: Step 15: Agent 10 demanded 44.2793.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent: Step 15: Agent 11 demanded 52.4124.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent.head: Step 15: Head allocated via queue — 8 agents | demanded 325.28 → allocated 325.28
+  Agent    0: demanded 0.0000 → allocated 0.0000
+  Agent    1: demanded 43.6065 → allocated 43.6065
+  Agent    4: demanded 38.4192 → allocated 38.4192
+  Agent    5: demanded 51.7615 → allocated 51.7615
+  Agent    6: demanded 41.2091 → allocated 41.2091
+  Agent    9: demanded 53.5877 → allocated 53.5877
+  Agent   10: demanded 44.2793 → allocated 44.2793
+  Agent   11: demanded 52.4124 → allocated 52.4124[0m
+[91m2026-05-13 08:30:12 [WARNING ] axioms.agent: Step 15: Agent 1 over-appropriated: took=48.5611 allocated=43.6065.[0m
+[91m2026-05-13 08:30:12 [WARNING ] axioms.agent: Step 15: Agent 4 over-appropriated: took=42.5608 allocated=38.4192.[0m
+[91m2026-05-13 08:30:12 [WARNING ] axioms.agent: Step 15: Agent 5 over-appropriated: took=60.6259 allocated=51.7615.[0m
+[90m2026-05-13 08:30:12 [DEBUG   ] axioms.agent.monitor: Step 15: Monitor sampling agent 5 — appropriated=60.63 allocated=51.76[0m
+[94m2026-05-13 08:30:16 [INFO    ] axioms.llm: Agent 10 [report→agent_5] reasoning: Agent 5 appropriated 60.6 units while only being allocated 51.8 units, which exceeds the permitted allocation and violates the institution's rules.[0m
+[91m2026-05-13 08:30:16 [WARNING ] axioms.agent.monitor: Step 15: Monitor reports agent 5 — appropriated=60.63 allocated=51.76[0m
+[90m2026-05-13 08:30:16 [DEBUG   ] axioms.agent.monitor: Step 15: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.605).[0m
+[94m2026-05-13 08:30:20 [INFO    ] axioms.llm: Agent 9 [sanction→agent_5] reasoning: Agent_5 has 2 offences, below the exclusion threshold of 3. According to institutional rules, this warrants an inactive sanction (warning).[0m
+2026-05-13 08:30:20 [INFO    ] axioms.agent.head: Step 15: Head sanctioned agent 5 (offences=2) → decision=inactive
+2026-05-13 08:30:20 [INFO    ] axioms.agent.head: Step 15: Agent 5 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:30:20 [INFO    ] axioms.agent: Step 15: Agent 2 sanction expired — restored to active.
+2026-05-13 08:30:20 [INFO    ] axioms.agent: Step 15: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:30:20 [DEBUG   ] axioms.agent.head: Step 15: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:30:20 [INFO    ] axioms.agent: Step 15: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:30:20 [DEBUG   ] axioms.agent.head: Step 15: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:30:20 [INFO    ] axioms.model: Step   15 | pool=  690.6 | members=8 | violations=3 | noncompliance_rate=0.61 | ra=queue
+[91m2026-05-13 08:30:20 [WARNING ] axioms.model: Step 15: 3 violation(s) detected this step.[0m
+[94m2026-05-13 08:30:33 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue allows me to demand early and receive my full allocation until the pool runs out, giving me an advantage in obtaining resources compared to rationing, which would split the remaining pool equally among all demanders.[0m
+[90m2026-05-13 08:30:33 [DEBUG   ] axioms.agent: Step 16: Agent 0 voted queue.[0m
+[94m2026-05-13 08:30:46 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue allows each agent to demand a larger amount up to the remaining pool; with low total and low sanction risk, it maximizes potential gain compared to equal sharing in ration.[0m
+[90m2026-05-13 08:30:46 [DEBUG   ] axioms.agent: Step 16: Agent 1 voted queue.[0m
+[94m2026-05-13 08:30:57 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue lets agents who demand early claim their full amount until the pool depletes, so I can demand early to maximize my extraction.[0m
+[90m2026-05-13 08:30:57 [DEBUG   ] axioms.agent: Step 16: Agent 2 voted queue.[0m
+[94m2026-05-13 08:31:02 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Queue maintains a consistent, demand-based order that is easier to track for a cooperative member, reducing the chance of over-appropriation and keeping the pool stable.[0m
+[90m2026-05-13 08:31:02 [DEBUG   ] axioms.agent: Step 16: Agent 4 voted queue.[0m
+[94m2026-05-13 08:31:04 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: As a fully cooperative member, I prefer the queue method to ensure fairness and avoid penalties for early demands. The pool remains above zero so the institution continues to function.[0m
+[90m2026-05-13 08:31:04 [DEBUG   ] axioms.agent: Step 16: Agent 6 voted queue.[0m
+[94m2026-05-13 08:31:09 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Maintaining queue preserves predictable distribution and aligns with my cooperative behavior. Ration would dilute my earlier compliance and increase uncertainty about my share, so I choose queue again.[0m
+[90m2026-05-13 08:31:09 [DEBUG   ] axioms.agent: Step 16: Agent 9 voted queue.[0m
+[94m2026-05-13 08:31:13 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: I prefer the queue method to ensure early requests are served fully and to discourage over-demanding.[0m
+[90m2026-05-13 08:31:13 [DEBUG   ] axioms.agent: Step 16: Agent 10 voted queue.[0m
+[94m2026-05-13 08:31:17 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: First-come first-served ensures orderly, transparent allocation while maintaining fairness for all members.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent: Step 16: Agent 11 voted queue.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent: Step 16: Agent 0 demanded 52.5393.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent: Step 16: Agent 1 demanded 51.6475.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent: Step 16: Agent 2 demanded 52.2080.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent: Step 16: Agent 4 demanded 46.5364.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent: Step 16: Agent 6 demanded 50.8665.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent: Step 16: Agent 9 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent: Step 16: Agent 10 demanded 45.1908.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent: Step 16: Agent 11 demanded 53.1433.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent.head: Step 16: Head allocated via queue — 8 agents | demanded 352.13 → allocated 352.13
+  Agent    0: demanded 52.5393 → allocated 52.5393
+  Agent    1: demanded 51.6475 → allocated 51.6475
+  Agent    2: demanded 52.2080 → allocated 52.2080
+  Agent    4: demanded 46.5364 → allocated 46.5364
+  Agent    6: demanded 50.8665 → allocated 50.8665
+  Agent    9: demanded 0.0000 → allocated 0.0000
+  Agent   10: demanded 45.1908 → allocated 45.1908
+  Agent   11: demanded 53.1433 → allocated 53.1433[0m
+[91m2026-05-13 08:31:17 [WARNING ] axioms.agent: Step 16: Agent 0 over-appropriated: took=56.1927 allocated=52.5393.[0m
+[91m2026-05-13 08:31:17 [WARNING ] axioms.agent: Step 16: Agent 1 over-appropriated: took=56.9720 allocated=51.6475.[0m
+[91m2026-05-13 08:31:17 [WARNING ] axioms.agent: Step 16: Agent 2 over-appropriated: took=52.8818 allocated=52.2080.[0m
+[91m2026-05-13 08:31:17 [WARNING ] axioms.agent: Step 16: Agent 4 over-appropriated: took=53.1313 allocated=46.5364.[0m
+[90m2026-05-13 08:31:17 [DEBUG   ] axioms.agent.monitor: Step 16: Monitor sampling agent 3 — appropriated=0.00 allocated=54.50[0m
+[94m2026-05-13 08:31:21 [INFO    ] axioms.llm: Agent 10 [report→agent_3] reasoning: Agent appropriated 0.0 which is not greater than the allocated 54.5, so no violation.[0m
+[90m2026-05-13 08:31:21 [DEBUG   ] axioms.agent.monitor: Step 16: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.484).[0m
+2026-05-13 08:31:21 [INFO    ] axioms.agent: Step 16: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:31:21 [DEBUG   ] axioms.agent.head: Step 16: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:31:21 [INFO    ] axioms.agent: Step 16: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:31:21 [DEBUG   ] axioms.agent.head: Step 16: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:31:21 [INFO    ] axioms.model: Step   16 | pool=  567.2 | members=8 | violations=4 | noncompliance_rate=0.48 | ra=queue
+[91m2026-05-13 08:31:21 [WARNING ] axioms.model: Step 16: 4 violation(s) detected this step.[0m
+[94m2026-05-13 08:31:33 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue maximizes my benefit by letting me demand early and receive the full amount before the pool depletes, whereas ration would split the already low pool equally among all demanding agents.[0m
+[90m2026-05-13 08:31:33 [DEBUG   ] axioms.agent: Step 17: Agent 0 voted queue.[0m
+[94m2026-05-13 08:31:50 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue allows me to demand early and receive the full allocation until the pool depletes, maximizing my short‑term gain while current sanction levels are zero.[0m
+[90m2026-05-13 08:31:50 [DEBUG   ] axioms.agent: Step 17: Agent 1 voted queue.[0m
+[94m2026-05-13 08:32:13 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue lets me get the full amount when I demand early, giving me a larger base to over-appropriate compared to a rationed share.[0m
+[90m2026-05-13 08:32:13 [DEBUG   ] axioms.agent: Step 17: Agent 2 voted queue.[0m
+[94m2026-05-13 08:32:18 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Queue ensures larger early appropriation for each member, preventing large over‑extractions that trigger sanctions.[0m
+[90m2026-05-13 08:32:18 [DEBUG   ] axioms.agent: Step 17: Agent 4 voted queue.[0m
+[94m2026-05-13 08:32:23 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Queue ensures I get my full demand as long as I vote early and pool has sufficient units. Ration would cap my share when the pool is low. As a cooperative member, I choose queue to maximize my compliance and benefit.[0m
+[90m2026-05-13 08:32:23 [DEBUG   ] axioms.agent: Step 17: Agent 6 voted queue.[0m
+[94m2026-05-13 08:32:28 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue allows early demanders to receive their full requested amount, ensuring compliance with the institution's fairness rules. I always take exactly the allocated amount and never overappropriate, so sticking with queue maintains compliance and simplicity.[0m
+[90m2026-05-13 08:32:28 [DEBUG   ] axioms.agent: Step 17: Agent 9 voted queue.[0m
+[94m2026-05-13 08:32:32 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: As a fully cooperative member following the rules strictly, I prefer the queue method because it allows me to receive my full demanded share early before the pool runs out, ensuring I can meet my needs without causing a collapse. Queue also aligns with my consistent demand pattern and ensures fairness in the shared pool.[0m
+[90m2026-05-13 08:32:32 [DEBUG   ] axioms.agent: Step 17: Agent 10 voted queue.[0m
+[94m2026-05-13 08:32:35 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Queue ensures fairness by giving early demanders their full allocation until the pool is exhausted, and I desire to maintain consistency and compliance with institution rules.[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent: Step 17: Agent 11 voted queue.[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent: Step 17: Agent 0 demanded 47.9742.[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent: Step 17: Agent 1 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent: Step 17: Agent 2 demanded 56.6244.[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent: Step 17: Agent 4 demanded 48.2789.[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent: Step 17: Agent 6 demanded 47.8417.[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent: Step 17: Agent 9 demanded 49.3512.[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent: Step 17: Agent 10 abstained from demand (10% abstention).[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent: Step 17: Agent 11 demanded 56.6400.[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent.head: Step 17: Head allocated via queue — 8 agents | demanded 306.71 → allocated 306.71
+  Agent    0: demanded 47.9742 → allocated 47.9742
+  Agent    1: demanded 0.0000 → allocated 0.0000
+  Agent    2: demanded 56.6244 → allocated 56.6244
+  Agent    4: demanded 48.2789 → allocated 48.2789
+  Agent    6: demanded 47.8417 → allocated 47.8417
+  Agent    9: demanded 49.3512 → allocated 49.3512
+  Agent   10: demanded 0.0000 → allocated 0.0000
+  Agent   11: demanded 56.6400 → allocated 56.6400[0m
+[91m2026-05-13 08:32:35 [WARNING ] axioms.agent: Step 17: Agent 0 over-appropriated: took=54.4695 allocated=47.9742.[0m
+[91m2026-05-13 08:32:35 [WARNING ] axioms.agent: Step 17: Agent 2 over-appropriated: took=57.5462 allocated=56.6244.[0m
+[91m2026-05-13 08:32:35 [WARNING ] axioms.agent: Step 17: Agent 4 over-appropriated: took=56.6545 allocated=48.2789.[0m
+[90m2026-05-13 08:32:35 [DEBUG   ] axioms.agent.monitor: Step 17: Monitor sampling agent 2 — appropriated=57.55 allocated=56.62[0m
+[94m2026-05-13 08:32:42 [INFO    ] axioms.llm: Agent 10 [report→agent_2] reasoning: Agent 2 appropriated 57.5 units, which exceeds the allocated 56.6 units, violating the institution's rules.[0m
+[91m2026-05-13 08:32:42 [WARNING ] axioms.agent.monitor: Step 17: Monitor reports agent 2 — appropriated=57.55 allocated=56.62[0m
+[90m2026-05-13 08:32:42 [DEBUG   ] axioms.agent.monitor: Step 17: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.587).[0m
+[94m2026-05-13 08:32:50 [INFO    ] axioms.llm: Agent 9 [sanction→agent_2] reasoning: Agent 2 has reached the exclusion threshold with 3 offences, warranting removal from the institution.[0m
+2026-05-13 08:32:50 [INFO    ] axioms.agent.head: Step 17: Head sanctioned agent 2 (offences=3) → decision=exclude
+2026-05-13 08:32:50 [INFO    ] axioms.agent.gatekeeper: Step 17: Gatekeeper spared agent 2 — set inactive (sanction_level=2, duration=10).
+2026-05-13 08:32:50 [INFO    ] axioms.agent: Step 17: Agent 3 sanction expired — restored to active.
+2026-05-13 08:32:50 [INFO    ] axioms.agent: Step 17: Agent 2 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 08:32:50 [DEBUG   ] axioms.agent.head: Step 17: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:32:50 [INFO    ] axioms.agent: Step 17: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:32:50 [DEBUG   ] axioms.agent.head: Step 17: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:32:50 [INFO    ] axioms.model: Step   17 | pool=  489.7 | members=8 | violations=3 | noncompliance_rate=0.59 | ra=queue
+[91m2026-05-13 08:32:50 [WARNING ] axioms.model: Step 17: 3 violation(s) detected this step.[0m
+[94m2026-05-13 08:33:07 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue lets me demand early and secure a full allocation, which maximizes my short‑term gain while keeping it straightforward. Switching to ration would lower my share per round, so I stick with queue.[0m
+[90m2026-05-13 08:33:07 [DEBUG   ] axioms.agent: Step 18: Agent 0 voted queue.[0m
+[94m2026-05-13 08:33:23 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue allows early demands to receive full allocation up to the pool, giving a higher potential gain in a low‑pool state. Ration would cap each share to ~61 units, reducing my optimal gain. Risk of sanction remains similar across methods.[0m
+[90m2026-05-13 08:33:23 [DEBUG   ] axioms.agent: Step 18: Agent 1 voted queue.[0m
+[94m2026-05-13 08:33:32 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Queue preserves early demanders' full entitlement and maintains fairness even when the pool is low. It also aligns with my cooperative stance.[0m
+[90m2026-05-13 08:33:32 [DEBUG   ] axioms.agent: Step 18: Agent 3 voted queue.[0m
+[94m2026-05-13 08:33:34 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Continuing with the queue method maintains simplicity and fairness given the current low pool level, allowing early demands to be met fully before later agents.[0m
+[90m2026-05-13 08:33:34 [DEBUG   ] axioms.agent: Step 18: Agent 4 voted queue.[0m
+[94m2026-05-13 08:33:39 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Sticking with the queue method because it consistently allows me to receive my full request until the pool is depleted, maintaining fairness and simplicity as a cooperative member.[0m
+[90m2026-05-13 08:33:39 [DEBUG   ] axioms.agent: Step 18: Agent 6 voted queue.[0m
+[94m2026-05-13 08:33:46 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue ensures early demanders receive full allocations, which aligns with our strategy to demand early and always appropriate exactly what is allocated.[0m
+[90m2026-05-13 08:33:46 [DEBUG   ] axioms.agent: Step 18: Agent 9 voted queue.[0m
+[94m2026-05-13 08:33:49 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: I prefer to keep the current queue method for fairness and consistency, as I have complied fully with previous rounds and trust the existing allocation process.[0m
+[90m2026-05-13 08:33:49 [DEBUG   ] axioms.agent: Step 18: Agent 10 voted queue.[0m
+[94m2026-05-13 08:33:57 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Rationing ensures a fair, balanced distribution of scarce resources, protecting the pool from rapid depletion and reducing the risk of collapse.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent: Step 18: Agent 11 voted ration.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent: Step 18: Agent 0 demanded 47.0598.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent: Step 18: Agent 1 demanded 58.6054.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent: Step 18: Agent 3 demanded 55.1893.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent: Step 18: Agent 4 demanded 51.2410.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent: Step 18: Agent 6 demanded 50.3717.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent: Step 18: Agent 9 demanded 42.4098.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent: Step 18: Agent 10 demanded 57.0438.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent: Step 18: Agent 11 demanded 54.0803.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent.head: Step 18: Head allocated via queue — 8 agents | demanded 416.00 → allocated 416.00
+  Agent    0: demanded 47.0598 → allocated 47.0598
+  Agent    1: demanded 58.6054 → allocated 58.6054
+  Agent    3: demanded 55.1893 → allocated 55.1893
+  Agent    4: demanded 51.2410 → allocated 51.2410
+  Agent    6: demanded 50.3717 → allocated 50.3717
+  Agent    9: demanded 42.4098 → allocated 42.4098
+  Agent   10: demanded 57.0438 → allocated 57.0438
+  Agent   11: demanded 54.0803 → allocated 54.0803[0m
+[91m2026-05-13 08:33:57 [WARNING ] axioms.agent: Step 18: Agent 0 over-appropriated: took=52.4006 allocated=47.0598.[0m
+[91m2026-05-13 08:33:57 [WARNING ] axioms.agent: Step 18: Agent 1 over-appropriated: took=61.4036 allocated=58.6054.[0m
+[91m2026-05-13 08:33:57 [WARNING ] axioms.agent: Step 18: Agent 3 over-appropriated: took=56.9909 allocated=55.1893.[0m
+[91m2026-05-13 08:33:57 [WARNING ] axioms.agent: Step 18: Agent 4 over-appropriated: took=51.5303 allocated=51.2410.[0m
+[90m2026-05-13 08:33:57 [DEBUG   ] axioms.agent.monitor: Step 18: Monitor sampling agent 4 — appropriated=51.53 allocated=51.24[0m
+[94m2026-05-13 08:34:00 [INFO    ] axioms.llm: Agent 10 [report→agent_4] reasoning: Agent 4 appropriated 51.5 units while only allocated 51.2 units, exceeding their allocation and violating the institution's rules.[0m
+[91m2026-05-13 08:34:00 [WARNING ] axioms.agent.monitor: Step 18: Monitor reports agent 4 — appropriated=51.53 allocated=51.24[0m
+[90m2026-05-13 08:34:00 [DEBUG   ] axioms.agent.monitor: Step 18: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.670).[0m
+[94m2026-05-13 08:34:06 [INFO    ] axioms.llm: Agent 9 [sanction→agent_4] reasoning: Agent 4 has reached the exclusion threshold with 3 offences, warranting exclusion per the institution’s rule.[0m
+2026-05-13 08:34:06 [INFO    ] axioms.agent.head: Step 18: Head sanctioned agent 4 (offences=3) → decision=exclude
+2026-05-13 08:34:06 [INFO    ] axioms.agent.gatekeeper: Step 18: Gatekeeper spared agent 4 — set inactive (sanction_level=2, duration=10).
+2026-05-13 08:34:06 [INFO    ] axioms.agent: Step 18: Agent 2 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 08:34:06 [DEBUG   ] axioms.agent.head: Step 18: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:34:06 [INFO    ] axioms.agent: Step 18: Agent 4 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 08:34:06 [DEBUG   ] axioms.agent.head: Step 18: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:34:06 [INFO    ] axioms.agent: Step 18: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:34:06 [DEBUG   ] axioms.agent.head: Step 18: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:34:06 [INFO    ] axioms.model: Step   18 | pool=  308.5 | members=7 | violations=4 | noncompliance_rate=0.67 | ra=queue
+[91m2026-05-13 08:34:06 [WARNING ] axioms.model: Step 18: 4 violation(s) detected this step.[0m
+[94m2026-05-13 08:34:16 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue gives me the chance to get my full allocation early, allowing me to over-appropriate more than in a ration scheme while keeping sanction risk low.[0m
+[90m2026-05-13 08:34:16 [DEBUG   ] axioms.agent: Step 19: Agent 0 voted queue.[0m
+[94m2026-05-13 08:34:32 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue gives me the chance to get my full demand early in the round, which maximizes my short‑term gain. Ration would split the already low pool among all demanding agents, reducing my share. Since sanctions have not been imposed yet, the higher immediate benefit outweighs the potential risk.[0m
+[90m2026-05-13 08:34:32 [DEBUG   ] axioms.agent: Step 19: Agent 1 voted queue.[0m
+[94m2026-05-13 08:34:44 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: The pool is very low (≈30% of capacity), so a first‑come first‑served queue lets me secure my allocated amount before the remaining resources can be split among many agents. This reduces the chance of over‑demanding and aligns with my cooperative intent to follow the rules carefully.[0m
+[90m2026-05-13 08:34:44 [DEBUG   ] axioms.agent: Step 19: Agent 3 voted queue.[0m
+[94m2026-05-13 08:34:50 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: I prefer the queue method for its simplicity and the incentive it provides for honest, timely demands. It ensures that all agents who act early are rewarded and keeps the system manageable for cooperative behavior. Additionally, it aligns with the institution’s goal of encouraging prompt participation without complex calculations.[0m
+[90m2026-05-13 08:34:50 [DEBUG   ] axioms.agent: Step 19: Agent 6 voted queue.[0m
+[94m2026-05-13 08:34:58 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Sticking with the current first‑come, first‑served method preserves the existing fairness structure and ensures we continue to get a full allocation based on our timely demand.[0m
+[90m2026-05-13 08:34:58 [DEBUG   ] axioms.agent: Step 19: Agent 9 voted queue.[0m
+[94m2026-05-13 08:35:19 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Selecting ration distributes remaining resources evenly among all demanding agents, preventing any single agent from quickly depleting the already low pool. This method promotes fairness, reduces conflicts, and supports sustainable use when the pool is scarce.[0m
+[90m2026-05-13 08:35:19 [DEBUG   ] axioms.agent: Step 19: Agent 10 voted ration.[0m
+[94m2026-05-13 08:35:32 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: With the pool low (≈308 units) and seven members, rationing ensures an equitable split (~44 units each), preventing some agents from receiving nothing while others fill the pool under queue. This aligns with cooperative governance and stabilizes the resource. The Ostrom axiom for voting confirms I hold decision‑making power.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent: Step 19: Agent 11 voted ration.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent: Step 19: Agent 0 demanded 48.3317.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent: Step 19: Agent 1 demanded 48.5369.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent: Step 19: Agent 3 demanded 46.3351.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent: Step 19: Agent 6 demanded 48.5955.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent: Step 19: Agent 9 demanded 42.6323.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent: Step 19: Agent 10 demanded 46.7697.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent: Step 19: Agent 11 demanded 54.2909.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent.head: Step 19: Head allocated via queue — 7 agents | demanded 335.49 → allocated 308.51
+  Agent    0: demanded 48.3317 → allocated 48.3317
+  Agent    1: demanded 48.5369 → allocated 48.5369
+  Agent    3: demanded 46.3351 → allocated 46.3351
+  Agent    6: demanded 48.5955 → allocated 48.5955
+  Agent    9: demanded 42.6323 → allocated 42.6323
+  Agent   10: demanded 46.7697 → allocated 46.7697
+  Agent   11: demanded 54.2909 → allocated 27.3127[0m
+[91m2026-05-13 08:35:32 [WARNING ] axioms.agent: Step 19: Agent 0 over-appropriated: took=53.6485 allocated=48.3317.[0m
+[91m2026-05-13 08:35:32 [WARNING ] axioms.agent: Step 19: Agent 1 over-appropriated: took=56.8084 allocated=48.5369.[0m
+[91m2026-05-13 08:35:32 [WARNING ] axioms.agent: Step 19: Agent 3 over-appropriated: took=51.1918 allocated=46.3351.[0m
+[90m2026-05-13 08:35:32 [DEBUG   ] axioms.agent.monitor: Step 19: Monitor sampling agent 4 — appropriated=0.00 allocated=51.24[0m
+[94m2026-05-13 08:35:35 [INFO    ] axioms.llm: Agent 10 [report→agent_4] reasoning: Agent 4 appropriated 0.0, which is not greater than the allocated 51.2, so no violation.[0m
+[90m2026-05-13 08:35:35 [DEBUG   ] axioms.agent.monitor: Step 19: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.536).[0m
+2026-05-13 08:35:35 [INFO    ] axioms.agent: Step 19: Agent 5 sanction expired — restored to active.
+2026-05-13 08:35:35 [INFO    ] axioms.agent: Step 19: Agent 2 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 08:35:35 [DEBUG   ] axioms.agent.head: Step 19: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:35:35 [INFO    ] axioms.agent: Step 19: Agent 4 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 08:35:35 [DEBUG   ] axioms.agent.head: Step 19: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:35:35 [INFO    ] axioms.model: Step   19 | pool=  226.6 | members=8 | violations=3 | noncompliance_rate=0.54 | ra=queue
+[91m2026-05-13 08:35:35 [WARNING ] axioms.model: Step 19: 3 violation(s) detected this step.[0m
+[94m2026-05-13 08:35:48 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue ensures I can request close to my preferred amount without being capped by a global equal split, allowing me to pursue my opportunistic over-appropriation strategy with a lower risk of detection since earlier demands get full allocation.[0m
+[90m2026-05-13 08:35:48 [DEBUG   ] axioms.agent: Step 20: Agent 0 voted queue.[0m
+[94m2026-05-13 08:35:58 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: The pool is currently very low, and voting for queue allows me to demand early and potentially secure nearly all of the remaining resources before others claim. This maximizes my short‑term gain despite the increased risk of sanction, which is still low given my recent compliance record.[0m
+[90m2026-05-13 08:35:58 [DEBUG   ] axioms.agent: Step 20: Agent 1 voted queue.[0m
+[94m2026-05-13 08:36:08 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: The pool is very low (≈226 units), and the queue system has repeatedly led to violations when I mis-judged the amount needed. Switching to ration would spread the remaining resources evenly among all active members, reducing the chance that I’ll take more than my fair share and thus avoid further sanctions. The Ostrom rule that emphasizes equitable allocation under scarce resources supports this choice.[0m
+[90m2026-05-13 08:36:08 [DEBUG   ] axioms.agent: Step 20: Agent 3 voted ration.[0m
+[94m2026-05-13 08:36:16 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue lets early-demanders grab their full share before the pool runs out, giving me the best chance to opportunistically exceed allocations while staying within a predictable structure.[0m
+[90m2026-05-13 08:36:16 [DEBUG   ] axioms.agent: Step 20: Agent 5 voted queue.[0m
+[94m2026-05-13 08:36:26 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: I prefer the queue method as it keeps the current allocation fair and aligns with my cooperative stance.[0m
+[90m2026-05-13 08:36:26 [DEBUG   ] axioms.agent: Step 20: Agent 6 voted queue.[0m
+[94m2026-05-13 08:36:32 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Maintains simple, first‑come‑first‑served fairness; I always demand and appropriate my full allocation under queue, ensuring no over‑appropriation.[0m
+[90m2026-05-13 08:36:32 [DEBUG   ] axioms.agent: Step 20: Agent 9 voted queue.[0m
+[94m2026-05-13 08:36:40 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Rationing ensures all members receive an equal share, preserving pool sustainability and avoiding unfair depletion of resources toward the end of the round.[0m
+[90m2026-05-13 08:36:40 [DEBUG   ] axioms.agent: Step 20: Agent 10 voted ration.[0m
+[94m2026-05-13 08:36:43 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Queue ensures early demanders get full allocation, incentivizing timely and honest demands which maximizes overall use of the limited pool while maintaining fairness over time.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent: Step 20: Agent 11 voted queue.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent: Step 20: Agent 0 demanded 48.6765.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent: Step 20: Agent 1 demanded 49.6628.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent: Step 20: Agent 3 demanded 41.3068.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent: Step 20: Agent 5 demanded 46.5960.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent: Step 20: Agent 6 demanded 50.6424.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent: Step 20: Agent 9 demanded 51.9407.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent: Step 20: Agent 10 demanded 43.2568.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent: Step 20: Agent 11 demanded 60.3971.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent.head: Step 20: Head allocated via queue — 8 agents | demanded 392.48 → allocated 226.56
+  Agent    0: demanded 48.6765 → allocated 48.6765
+  Agent    1: demanded 49.6628 → allocated 49.6628
+  Agent    3: demanded 41.3068 → allocated 41.3068
+  Agent    5: demanded 46.5960 → allocated 46.5960
+  Agent    6: demanded 50.6424 → allocated 40.3129
+  Agent    9: demanded 51.9407 → allocated 0.0000
+  Agent   10: demanded 43.2568 → allocated 0.0000
+  Agent   11: demanded 60.3971 → allocated 0.0000[0m
+[91m2026-05-13 08:36:43 [WARNING ] axioms.agent: Step 20: Agent 0 over-appropriated: took=56.8112 allocated=48.6765.[0m
+[91m2026-05-13 08:36:43 [WARNING ] axioms.agent: Step 20: Agent 1 over-appropriated: took=55.5353 allocated=49.6628.[0m
+[91m2026-05-13 08:36:43 [WARNING ] axioms.agent: Step 20: Agent 3 over-appropriated: took=47.5860 allocated=41.3068.[0m
+[91m2026-05-13 08:36:43 [WARNING ] axioms.agent: Step 20: Agent 5 over-appropriated: took=49.0060 allocated=46.5960.[0m
+[90m2026-05-13 08:36:43 [DEBUG   ] axioms.agent.monitor: Step 20: Monitor sampling agent 1 — appropriated=55.54 allocated=49.66[0m
+[94m2026-05-13 08:36:48 [INFO    ] axioms.llm: Agent 10 [report→agent_1] reasoning: Agent 1 appropriated 55.5 units, exceeding their allocated 49.7 units.[0m
+[91m2026-05-13 08:36:48 [WARNING ] axioms.agent.monitor: Step 20: Monitor reports agent 1 — appropriated=55.54 allocated=49.66[0m
+[90m2026-05-13 08:36:48 [DEBUG   ] axioms.agent.monitor: Step 20: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.629).[0m
+[94m2026-05-13 08:36:55 [INFO    ] axioms.llm: Agent 9 [sanction→agent_1] reasoning: Agent has 2 offences, which is below the exclusion threshold of 3. As per the institution's rules, the appropriate sanction is to mark the agent as inactive rather than exclude them.[0m
+2026-05-13 08:36:55 [INFO    ] axioms.agent.head: Step 20: Head sanctioned agent 1 (offences=2) → decision=inactive
+2026-05-13 08:36:55 [INFO    ] axioms.agent.head: Step 20: Agent 1 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 08:36:55 [INFO    ] axioms.agent: Step 20: Agent 1 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 08:36:55 [DEBUG   ] axioms.agent.head: Step 20: Appeal by agent 1 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:36:55 [INFO    ] axioms.agent: Step 20: Agent 2 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 08:36:55 [DEBUG   ] axioms.agent.head: Step 20: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:36:55 [INFO    ] axioms.agent: Step 20: Agent 4 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 08:36:55 [DEBUG   ] axioms.agent.head: Step 20: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 08:36:55 [INFO    ] axioms.model: Step   20 | pool=  372.3 | members=7 | violations=4 | noncompliance_rate=0.63 | ra=queue
+[91m2026-05-13 08:36:55 [WARNING ] axioms.model: Step 20: 4 violation(s) detected this step.[0m
+2026-05-13 08:36:55 [INFO    ] axioms.model: Simulation complete: lifespan=20 final_pool=372.3 final_members=7
+2026-05-13 08:36:55 [INFO    ] axioms:   Lifespan 20 | Pool 372 | Members 7
+2026-05-13 08:36:56 [INFO    ] axioms.plot: Plot saved to /app/data/simulation_results.png

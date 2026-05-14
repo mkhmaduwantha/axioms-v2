@@ -5,7 +5,7 @@ import time
 from collections import deque
 from openai import OpenAI
 from mem0 import Memory
-from config import AXIOM_TOOL
+from config import AXIOM_TOOL, USE_TOOL_CALLING
 from enums import AxiomVerdict
 from OstromAxiomEngine import OstromAxiomEngine
 
@@ -61,9 +61,10 @@ class LLMClient:
         except Exception as exc:
             self.memory = None
             _log.warning("Mem0 not available (%s) — memory features disabled.", exc)
+        self.use_tool_calling = USE_TOOL_CALLING
         _log.info(
-            "LLMClient initialised: model=%s base_url=%s rate_limit=%d rpm",
-            model, api_base, rate_limit_rpm,
+            "LLMClient initialised: model=%s base_url=%s rate_limit=%d rpm tool_calling=%s",
+            model, api_base, rate_limit_rpm, self.use_tool_calling,
         )
 
     def mem_search(self, query: str, user_id: str) -> str:
@@ -103,6 +104,17 @@ class LLMClient:
             {"role": "system", "content": system},
             {"role": "user",   "content": user},
         ]
+
+        if not self.use_tool_calling:
+            self._rate_limiter.wait()
+            resp = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+            )
+            response_text = resp.choices[0].message.content or ""
+            _log.debug("LLM RESPONSE (no tools) [ASSISTANT — final]\n%s", response_text)
+            return response_text
+
         for iteration in range(max_calls + 1):
             self._rate_limiter.wait()
             resp = self.client.chat.completions.create(

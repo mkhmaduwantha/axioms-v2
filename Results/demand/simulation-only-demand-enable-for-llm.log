@@ -1,0 +1,1221 @@
+2026-05-13 10:01:42 [INFO    ] axioms: === Simulation run: fully hardcoded ===
+2026-05-13 10:01:42 [INFO    ] axioms.model: CPRModel init: members=7 nonmembers=2 llm_members=7 P3=True P4=True P5=True P6=True
+2026-05-13 10:01:42 [INFO    ] axioms.model: LLM client attached for simulation (model=gpt-oss:20b).
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent.head: HeadAgent 9 created.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent.monitor: MonitorAgent 10 created.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent.gatekeeper: GatekeeperAgent 11 created.[0m
+2026-05-13 10:01:42 [INFO    ] axioms.model: All agents created. Total schedule size: 12
+2026-05-13 10:01:42 [INFO    ] axioms.model: Simulation run starting: max_steps=25
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 0 voted queue.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 1 voted queue.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 2 voted queue.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 3 voted queue.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 4 voted queue.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 5 voted queue.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 6 voted queue.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 9 voted queue.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 10 voted queue.[0m
+[90m2026-05-13 10:01:42 [DEBUG   ] axioms.agent: Step 1: Agent 11 voted queue.[0m
+2026-05-13 10:01:42 [INFO    ] axioms.model: Step 1: RA method changed ration → queue (votes: queue=10 ration=0)
+[94m2026-05-13 10:01:48 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Pool is low at 1,000 units; to avoid collapse we demand a modest amount. 10 units is within safe limits and avoids triggering sanctions.[0m
+[90m2026-05-13 10:01:48 [DEBUG   ] axioms.agent: Step 1: Agent 0 demanded 10.0000.[0m
+[94m2026-05-13 10:02:03 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I have power to demand (pool not empty). I want to get more than my likely share (~100 units). Demanding 200 increases my advantage, and sanction cost is tolerable while not risking collapse of the resource pool.[0m
+[90m2026-05-13 10:02:03 [DEBUG   ] axioms.agent: Step 1: Agent 1 demanded 200.0000.[0m
+[94m2026-05-13 10:02:20 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Pool is full and sanction level is 0, so taking a modest 10% extra (110 units) over the equal share of 100 units is low risk and yields a short‑term gain.[0m
+[90m2026-05-13 10:02:20 [DEBUG   ] axioms.agent: Step 1: Agent 2 demanded 110.0000.[0m
+[94m2026-05-13 10:02:32 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: I am a cooperative member trying to avoid over-demanding. With the pool currently at 1000 units and a queue allocation method, demanding 100 units keeps the pool healthy while providing a modest share.[0m
+[90m2026-05-13 10:02:32 [DEBUG   ] axioms.agent: Step 1: Agent 3 demanded 100.0000.[0m
+[94m2026-05-13 10:02:44 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Pool is full and sanction level is 0. Safe to demand slightly more than the fair queue share (100) to gain extra resources with low detection risk.[0m
+[90m2026-05-13 10:02:44 [DEBUG   ] axioms.agent: Step 1: Agent 4 demanded 110.0000.[0m
+[94m2026-05-13 10:03:02 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Called check_ostrom_axiom (action='demand') and confirmed I have power. With a pool of 1000 units and 10 members using the queue method, the maximum safe allocation per member is 100 units. Demanding 100 keeps me within the safe range while allowing me to opportunistically take slightly more after allocation if the monitoring risk is low.[0m
+[90m2026-05-13 10:03:02 [DEBUG   ] axioms.agent: Step 1: Agent 5 demanded 100.0000.[0m
+[94m2026-05-13 10:03:13 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I have the power to demand resources. As a cooperative member, I choose a modest share to avoid depleting the pool quickly while still receiving a fair allocation.[0m
+[90m2026-05-13 10:03:13 [DEBUG   ] axioms.agent: Step 1: Agent 6 demanded 100.0000.[0m
+[94m2026-05-13 10:03:27 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Under a queue method with 10 members and full pool, our equal share is 1/10 of the pool, so we demand 100 units.[0m
+[90m2026-05-13 10:03:27 [DEBUG   ] axioms.agent: Step 1: Agent 9 demanded 100.0000.[0m
+[94m2026-05-13 10:03:41 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Cooperative agent, pool currently 1000 with 10 members, queue method implies equal division. Demand fair share to avoid depletion and adhere to rules.[0m
+[90m2026-05-13 10:03:41 [DEBUG   ] axioms.agent: Step 1: Agent 10 demanded 100.0000.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 1: Agent 11 demanded 52.4910.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent.head: Step 1: Head allocated via queue — 10 agents | demanded 982.49 → allocated 982.49
+  Agent    0: demanded 10.0000 → allocated 10.0000
+  Agent    1: demanded 200.0000 → allocated 200.0000
+  Agent    2: demanded 110.0000 → allocated 110.0000
+  Agent    3: demanded 100.0000 → allocated 100.0000
+  Agent    4: demanded 110.0000 → allocated 110.0000
+  Agent    5: demanded 100.0000 → allocated 100.0000
+  Agent    6: demanded 100.0000 → allocated 100.0000
+  Agent    9: demanded 100.0000 → allocated 100.0000
+  Agent   10: demanded 100.0000 → allocated 100.0000
+  Agent   11: demanded 52.4910 → allocated 52.4910[0m
+[91m2026-05-13 10:03:49 [WARNING ] axioms.agent: Step 1: Agent 0 over-appropriated: took=10.9476 allocated=10.0000.[0m
+[91m2026-05-13 10:03:49 [WARNING ] axioms.agent: Step 1: Agent 1 over-appropriated: took=225.6715 allocated=200.0000.[0m
+[91m2026-05-13 10:03:49 [WARNING ] axioms.agent: Step 1: Agent 2 over-appropriated: took=123.3818 allocated=110.0000.[0m
+[91m2026-05-13 10:03:49 [WARNING ] axioms.agent: Step 1: Agent 3 over-appropriated: took=110.1273 allocated=100.0000.[0m
+[91m2026-05-13 10:03:49 [WARNING ] axioms.agent: Step 1: Agent 4 over-appropriated: took=123.9477 allocated=110.0000.[0m
+[91m2026-05-13 10:03:49 [WARNING ] axioms.agent: Step 1: Agent 5 over-appropriated: took=113.6237 allocated=100.0000.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 1: Non-member agent 7 appropriated 20.60 (non-compliant).[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent.monitor: Step 1: Monitor sampling agent 4 — appropriated=123.95 allocated=110.00[0m
+[91m2026-05-13 10:03:49 [WARNING ] axioms.agent.monitor: Step 1: Monitor reports agent 4 — appropriated=123.95 allocated=110.00[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent.monitor: Step 1: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.200).[0m
+2026-05-13 10:03:49 [INFO    ] axioms.agent.head: Step 1: Head sanctioned agent 4 (offences=1) → decision=inactive
+2026-05-13 10:03:49 [INFO    ] axioms.agent.head: Step 1: Agent 4 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 10:03:49 [INFO    ] axioms.agent: Step 1: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent.head: Step 1: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:03:49 [INFO    ] axioms.model: Step    1 | pool=  314.2 | members=9 | violations=7 | noncompliance_rate=0.20 | ra=queue
+[91m2026-05-13 10:03:49 [WARNING ] axioms.model: Step 1: 7 violation(s) detected this step.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 2: Agent 0 voted ration.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 2: Agent 1 voted ration.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 2: Agent 2 voted ration.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 2: Agent 3 voted ration.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 2: Agent 5 voted ration.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 2: Agent 6 voted ration.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 2: Agent 9 voted ration.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 2: Agent 10 voted ration.[0m
+[90m2026-05-13 10:03:49 [DEBUG   ] axioms.agent: Step 2: Agent 11 voted ration.[0m
+2026-05-13 10:03:49 [INFO    ] axioms.model: Step 2: RA method changed queue → ration (votes: queue=0 ration=9)
+[94m2026-05-13 10:04:05 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: I have authority to demand under ration rules (check_ostrom_axiom confirms power). With the pool at 314 units, a demand of 10 keeps my risk low while allowing a potential small over‑appropriation as in the previous round.[0m
+[90m2026-05-13 10:04:05 [DEBUG   ] axioms.agent: Step 2: Agent 0 demanded 10.0000.[0m
+[94m2026-05-13 10:04:53 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Demand 40 units to secure an approximate fair share (~35) while slightly overstepping to increase potential appropriation, relying on the current low sanction level to mitigate risk.[0m
+[90m2026-05-13 10:04:53 [DEBUG   ] axioms.agent: Step 2: Agent 1 demanded 40.0000.[0m
+[94m2026-05-13 10:05:11 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Sanction level is 0 and the pool still has a reasonable amount of resources, so I can afford to demand slightly more than the fair share to increase short‑term gain. The previous violation did not result in a sanction, and the pool is not near depletion, so the risk of detection is low.[0m
+[90m2026-05-13 10:05:11 [DEBUG   ] axioms.agent: Step 2: Agent 2 demanded 120.0000.[0m
+[94m2026-05-13 10:05:37 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: The pool is low (314.2111/1000) and the ration method will allocate roughly 34.9 units per member. To avoid over-appropriation and stay within the allocated share, I will demand a safe amount of 30 units.[0m
+[90m2026-05-13 10:05:37 [DEBUG   ] axioms.agent: Step 2: Agent 3 demanded 30.0000.[0m
+[94m2026-05-13 10:05:53 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Pool is small (314 units) and sanctions are currently zero, so taking a moderate over-demand (80) maximizes short‑term gain while keeping detection risk low.[0m
+[90m2026-05-13 10:05:53 [DEBUG   ] axioms.agent: Step 2: Agent 5 demanded 80.0000.[0m
+[94m2026-05-13 10:06:10 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I have the power to demand my equal share under the ration method, so I request approximately 34.912 units.[0m
+[90m2026-05-13 10:06:10 [DEBUG   ] axioms.agent: Step 2: Agent 6 demanded 34.9120.[0m
+[94m2026-05-13 10:06:35 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: The pool currently holds 314.2111 units and there are 9 members; under the ration method each member receives an equal share, which is 314.2111 / 9 ≈ 34.9.  Demand that amount to secure the fair allocation while staying within the pool’s limits.[0m
+[90m2026-05-13 10:06:35 [DEBUG   ] axioms.agent: Step 2: Agent 9 demanded 34.9000.[0m
+[94m2026-05-13 10:06:50 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I am a fully cooperative member. Under the ration method with 9 members and a current pool of 314.2111, a fair share is ~34.9. I demand 35 units to request a just share while respecting the pool limits and institutional rules.[0m
+[90m2026-05-13 10:06:50 [DEBUG   ] axioms.agent: Step 2: Agent 10 demanded 35.0000.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 2: Agent 11 demanded 37.6711.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent.head: Step 2: Head allocated via ration — 9 agents | demanded 422.48 → allocated 284.37
+  Agent    0: demanded 10.0000 → allocated 10.0000
+  Agent    1: demanded 40.0000 → allocated 34.9123
+  Agent    2: demanded 120.0000 → allocated 34.9123
+  Agent    3: demanded 30.0000 → allocated 30.0000
+  Agent    5: demanded 80.0000 → allocated 34.9123
+  Agent    6: demanded 34.9120 → allocated 34.9120
+  Agent    9: demanded 34.9000 → allocated 34.9000
+  Agent   10: demanded 35.0000 → allocated 34.9123
+  Agent   11: demanded 37.6711 → allocated 34.9123[0m
+[91m2026-05-13 10:06:59 [WARNING ] axioms.agent: Step 2: Agent 0 over-appropriated: took=11.1646 allocated=10.0000.[0m
+[91m2026-05-13 10:06:59 [WARNING ] axioms.agent: Step 2: Agent 1 over-appropriated: took=38.8699 allocated=34.9123.[0m
+[91m2026-05-13 10:06:59 [WARNING ] axioms.agent: Step 2: Agent 2 over-appropriated: took=39.4028 allocated=34.9123.[0m
+[91m2026-05-13 10:06:59 [WARNING ] axioms.agent: Step 2: Agent 3 over-appropriated: took=30.9636 allocated=30.0000.[0m
+[91m2026-05-13 10:06:59 [WARNING ] axioms.agent: Step 2: Agent 5 over-appropriated: took=35.4386 allocated=34.9123.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 2: Non-member agent 7 appropriated 21.49 (non-compliant).[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent.monitor: Step 2: Monitor sampling agent 4 — appropriated=0.00 allocated=110.00[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent.monitor: Step 2: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.160).[0m
+2026-05-13 10:06:59 [INFO    ] axioms.agent: Step 2: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent.head: Step 2: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:06:59 [INFO    ] axioms.model: Step    2 | pool=  392.2 | members=9 | violations=6 | noncompliance_rate=0.16 | ra=ration
+[91m2026-05-13 10:06:59 [WARNING ] axioms.model: Step 2: 6 violation(s) detected this step.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 3: Agent 0 voted ration.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 3: Agent 1 voted ration.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 3: Agent 2 voted ration.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 3: Agent 3 voted ration.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 3: Agent 5 voted ration.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 3: Agent 6 voted ration.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 3: Agent 9 voted ration.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 3: Agent 10 voted ration.[0m
+[90m2026-05-13 10:06:59 [DEBUG   ] axioms.agent: Step 3: Agent 11 voted ration.[0m
+[94m2026-05-13 10:07:12 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Demand full allocation (10) to maximize short‑term gain, and with a sanction level of zero so far detection risk is judged low in this round.[0m
+[90m2026-05-13 10:07:12 [DEBUG   ] axioms.agent: Step 3: Agent 0 demanded 10.0000.[0m
+[94m2026-05-13 10:07:29 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I still have the power to demand. The pool is low at 392 units with 9 members, so a demand of 40 will likely be granted a smaller allocation (~35). I have already extracted > allocation with a 40 demand in the past and my sanction level is still 0, so I can keep exploiting the system without immediate penalty. This maximizes my gain while keeping the sanction risk low at the moment.[0m
+[90m2026-05-13 10:07:29 [DEBUG   ] axioms.agent: Step 3: Agent 1 demanded 40.0000.[0m
+[94m2026-05-13 10:07:41 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: With the pool at ~392 units and 9 members, a demand of 80 keeps me below a likely safe allocation margin while still leaving room for a slight overdraw. Sanction level remains 0, so the risk of a penalty is low, but I avoid an aggressive demand that could trigger a sanction.[0m
+[90m2026-05-13 10:07:41 [DEBUG   ] axioms.agent: Step 3: Agent 2 demanded 80.0000.[0m
+[94m2026-05-13 10:07:54 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: I am cautious after past violations; demand a small amount to stay within capacity and avoid over‑appropriation.[0m
+[90m2026-05-13 10:07:54 [DEBUG   ] axioms.agent: Step 3: Agent 3 demanded 20.0000.[0m
+[94m2026-05-13 10:08:07 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Slightly higher than the equitable share to maximize short‑term gain while keeping the extra demand low enough to avoid detection given the prior violations and current zero sanctions.[0m
+[90m2026-05-13 10:08:07 [DEBUG   ] axioms.agent: Step 3: Agent 5 demanded 44.0000.[0m
+[94m2026-05-13 10:08:16 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: With the ration method, allocation is split among members. The pool is 392.2422 and there are 9 members, so each can sustainably demand about 43.5 units. This keeps the institution within its limits and respects the cooperative rules.[0m
+[90m2026-05-13 10:08:16 [DEBUG   ] axioms.agent: Step 3: Agent 6 demanded 43.5000.[0m
+[94m2026-05-13 10:08:28 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: As a fully cooperative head member, I will request a modest amount that aligns with the ration method and preserves the pool for future rounds, ensuring the institution remains sustainable.[0m
+[90m2026-05-13 10:08:28 [DEBUG   ] axioms.agent: Step 3: Agent 9 demanded 30.0000.[0m
+[94m2026-05-13 10:08:46 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Demanding the fair ration share (pool/9) to maintain cooperation and comply with institutional rules[0m
+[90m2026-05-13 10:08:46 [DEBUG   ] axioms.agent: Step 3: Agent 10 demanded 43.5800.[0m
+[94m2026-05-13 10:08:59 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Under the ration method with 9 members and a current pool of 392.2422, the fair share for each member is 392.2422 ÷ 9 ≈ 43.5860. As a fully cooperative agent, I demand exactly my fair allocation to ensure compliance and maximize the sustainability of the shared pool.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 3: Agent 11 demanded 43.5860.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent.head: Step 3: Head allocated via ration — 9 agents | demanded 354.67 → allocated 317.83
+  Agent    0: demanded 10.0000 → allocated 10.0000
+  Agent    1: demanded 40.0000 → allocated 40.0000
+  Agent    2: demanded 80.0000 → allocated 43.5825
+  Agent    3: demanded 20.0000 → allocated 20.0000
+  Agent    5: demanded 44.0000 → allocated 43.5825
+  Agent    6: demanded 43.5000 → allocated 43.5000
+  Agent    9: demanded 30.0000 → allocated 30.0000
+  Agent   10: demanded 43.5800 → allocated 43.5800
+  Agent   11: demanded 43.5860 → allocated 43.5825[0m
+[91m2026-05-13 10:08:59 [WARNING ] axioms.agent: Step 3: Agent 0 over-appropriated: took=11.7755 allocated=10.0000.[0m
+[91m2026-05-13 10:08:59 [WARNING ] axioms.agent: Step 3: Agent 1 over-appropriated: took=45.1209 allocated=40.0000.[0m
+[91m2026-05-13 10:08:59 [WARNING ] axioms.agent: Step 3: Agent 2 over-appropriated: took=45.2352 allocated=43.5825.[0m
+[91m2026-05-13 10:08:59 [WARNING ] axioms.agent: Step 3: Agent 3 over-appropriated: took=20.6072 allocated=20.0000.[0m
+[91m2026-05-13 10:08:59 [WARNING ] axioms.agent: Step 3: Agent 5 over-appropriated: took=52.1608 allocated=43.5825.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 3: Non-member agent 7 appropriated 15.91 (non-compliant).[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent.monitor: Step 3: Monitor sampling agent 6 — appropriated=43.50 allocated=43.50[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent.monitor: Step 3: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.128).[0m
+2026-05-13 10:08:59 [INFO    ] axioms.agent.monitor: Step 3: Non-member agent 7 caught appropriating (15.91) — set inactive.
+2026-05-13 10:08:59 [INFO    ] axioms.agent.monitor: Step 3: Boundary monitoring excluded 1 non-member(s).
+2026-05-13 10:08:59 [INFO    ] axioms.agent: Step 3: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent.head: Step 3: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:08:59 [INFO    ] axioms.model: Step    3 | pool=  435.8 | members=9 | violations=6 | noncompliance_rate=0.13 | ra=ration
+[91m2026-05-13 10:08:59 [WARNING ] axioms.model: Step 3: 6 violation(s) detected this step.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 4: Agent 0 voted ration.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 4: Agent 1 voted ration.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 4: Agent 2 voted ration.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 4: Agent 3 voted ration.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 4: Agent 5 voted ration.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 4: Agent 6 voted ration.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 4: Agent 9 voted ration.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 4: Agent 10 voted ration.[0m
+[90m2026-05-13 10:08:59 [DEBUG   ] axioms.agent: Step 4: Agent 11 voted ration.[0m
+[94m2026-05-13 10:09:23 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Pool is small but sanction level remains 0, indicating low detection risk. Demanding the full 10 units keeps us in line with past behavior while preserving the short‑term benefit, expecting to obtain 10 units and potentially appropriate a modest extra before sanctions become a concern.[0m
+[90m2026-05-13 10:09:23 [DEBUG   ] axioms.agent: Step 4: Agent 0 demanded 10.0000.[0m
+[94m2026-05-13 10:09:36 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Demanding a small amount reduces the risk of violating the ration allocation rule, protecting me from sanctions when the pool is already low.[0m
+[90m2026-05-13 10:09:36 [DEBUG   ] axioms.agent: Step 4: Agent 1 demanded 20.0000.[0m
+[94m2026-05-13 10:09:48 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Pool is low and I want to stay below typical over-appropriation thresholds; 50 units is close to my expected allocation (~48) and limits sanction risk.[0m
+[90m2026-05-13 10:09:48 [DEBUG   ] axioms.agent: Step 4: Agent 2 demanded 50.0000.[0m
+[94m2026-05-13 10:09:56 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: I have power to demand. To stay cooperative and avoid over‑appropriation, I reduce my demand to 15 units, which is well below previous violations and should keep my appropriation within the allocated amount.[0m
+[90m2026-05-13 10:09:56 [DEBUG   ] axioms.agent: Step 4: Agent 3 demanded 15.0000.[0m
+[94m2026-05-13 10:10:25 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I called check_ostrom_axiom(action='demand') and received confirmation of power.  With the pool at 435.77/1000 and 9 members, the average ration share is about 48.3.  I’m demanding 50 to stay close to the allocated amount while still aiming to appropriate slightly more.  Given my sanction level is still 0, the risk of triggering a sanction remains low.[0m
+[90m2026-05-13 10:10:25 [DEBUG   ] axioms.agent: Step 4: Agent 5 demanded 50.0000.[0m
+[94m2026-05-13 10:10:43 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: According to the ration method, each member should receive an equal share of the current pool. With 9 members and a pool of 435.7672 units, the fair share is 435.7672 / 9 ≈ 48.4235 units, which aligns with prior cooperative demands.[0m
+[90m2026-05-13 10:10:43 [DEBUG   ] axioms.agent: Step 4: Agent 6 demanded 48.4235.[0m
+[94m2026-05-13 10:10:50 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Ration method assigns equal share; as cooperative member I request full allocation to remain compliant.[0m
+[90m2026-05-13 10:10:50 [DEBUG   ] axioms.agent: Step 4: Agent 9 demanded 48.4130.[0m
+[94m2026-05-13 10:11:10 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I am fully cooperative and aim for a fair, moderate share of the current pool. Historically we have seen successful demands of 35 and 43.58, and demanding 45 ensures I stay within a reasonable range while keeping the institution stable.[0m
+[90m2026-05-13 10:11:10 [DEBUG   ] axioms.agent: Step 4: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:11:28 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I am a fully cooperative member. Under the ration method with 9 members the fair share is 435.7672 / 9 ≈ 48.4258. I demand my fair share to stay compliant.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent: Step 4: Agent 11 demanded 48.4258.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent.head: Step 4: Head allocated via ration — 9 agents | demanded 335.26 → allocated 332.09
+  Agent    0: demanded 10.0000 → allocated 10.0000
+  Agent    1: demanded 20.0000 → allocated 20.0000
+  Agent    2: demanded 50.0000 → allocated 48.4186
+  Agent    3: demanded 15.0000 → allocated 15.0000
+  Agent    5: demanded 50.0000 → allocated 48.4186
+  Agent    6: demanded 48.4235 → allocated 48.4186
+  Agent    9: demanded 48.4130 → allocated 48.4130
+  Agent   10: demanded 45.0000 → allocated 45.0000
+  Agent   11: demanded 48.4258 → allocated 48.4186[0m
+[91m2026-05-13 10:11:28 [WARNING ] axioms.agent: Step 4: Agent 0 over-appropriated: took=11.3450 allocated=10.0000.[0m
+[91m2026-05-13 10:11:28 [WARNING ] axioms.agent: Step 4: Agent 1 over-appropriated: took=20.4346 allocated=20.0000.[0m
+[91m2026-05-13 10:11:28 [WARNING ] axioms.agent: Step 4: Agent 2 over-appropriated: took=51.0923 allocated=48.4186.[0m
+[91m2026-05-13 10:11:28 [WARNING ] axioms.agent: Step 4: Agent 3 over-appropriated: took=16.3077 allocated=15.0000.[0m
+[91m2026-05-13 10:11:28 [WARNING ] axioms.agent: Step 4: Agent 5 over-appropriated: took=56.6305 allocated=48.4186.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent.monitor: Step 4: Monitor sampling agent 0 — appropriated=11.34 allocated=10.00[0m
+[91m2026-05-13 10:11:28 [WARNING ] axioms.agent.monitor: Step 4: Monitor reports agent 0 — appropriated=11.34 allocated=10.00[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent.monitor: Step 4: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.302).[0m
+2026-05-13 10:11:28 [INFO    ] axioms.agent.head: Step 4: Head sanctioned agent 0 (offences=1) → decision=inactive
+2026-05-13 10:11:28 [INFO    ] axioms.agent.head: Step 4: Agent 0 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 10:11:28 [INFO    ] axioms.agent: Step 4: Agent 0 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent.head: Step 4: Appeal by agent 0 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:11:28 [INFO    ] axioms.agent: Step 4: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent.head: Step 4: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:11:28 [INFO    ] axioms.model: Step    4 | pool=  484.7 | members=8 | violations=5 | noncompliance_rate=0.30 | ra=ration
+[91m2026-05-13 10:11:28 [WARNING ] axioms.model: Step 4: 5 violation(s) detected this step.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent: Step 5: Agent 1 voted ration.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent: Step 5: Agent 2 voted ration.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent: Step 5: Agent 3 voted ration.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent: Step 5: Agent 5 voted ration.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent: Step 5: Agent 6 voted ration.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent: Step 5: Agent 9 voted ration.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent: Step 5: Agent 10 voted ration.[0m
+[90m2026-05-13 10:11:28 [DEBUG   ] axioms.agent: Step 5: Agent 11 voted ration.[0m
+[94m2026-05-13 10:12:06 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: The pool is about 485 units with 8 members; the ration share is roughly 60.6 units per member. Demanding 60 ensures I receive close to my full ration. As a self‑interested agent I will try to appropriate slightly more than my allocation, but giving the ration share maximizes my chance of getting the full allocation while still leaving room to overrun without triggering sanctions.[0m
+[90m2026-05-13 10:12:06 [DEBUG   ] axioms.agent: Step 5: Agent 1 demanded 60.0000.[0m
+[94m2026-05-13 10:12:24 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: I have power to demand. To avoid violating sanction rules after recent over‑appropriations, I match the previous allocation rate (~48.4 for a 50‑demand). Staying at 48 reduces violation risk while still securing useful resources.[0m
+[90m2026-05-13 10:12:24 [DEBUG   ] axioms.agent: Step 5: Agent 2 demanded 48.0000.[0m
+[94m2026-05-13 10:12:40 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: Stick well below the pool’s per‑member share so that any unavoidable over‑appropriation stays within tolerance and keeps the sanction level at 0.[0m
+[90m2026-05-13 10:12:40 [DEBUG   ] axioms.agent: Step 5: Agent 3 demanded 10.0000.[0m
+[94m2026-05-13 10:13:03 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: After three past violations with modest over-detection risk, I will raise the demand moderately to 55 units. This keeps the over-demand within an acceptable margin compared to the typical ration (~43–50) while aiming for higher short‑term gain. Given that current sanctions are still 0, the risk of a sanction remains low, so I choose a cautious but opportunistic increase.[0m
+[90m2026-05-13 10:13:03 [DEBUG   ] axioms.agent: Step 5: Agent 5 demanded 55.0000.[0m
+[94m2026-05-13 10:13:23 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I demand an equal share of the remaining 484.707 units, which is 484.707 / 8 ≈ 60.5884. This ensures a fair and cooperative distribution and complies with the institution’s rationing method.[0m
+[90m2026-05-13 10:13:23 [DEBUG   ] axioms.agent: Step 5: Agent 6 demanded 60.5884.[0m
+[94m2026-05-13 10:13:35 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Demanding equal share of the available pool (484.7070 units / 8 members) to maintain cooperative fairness and comply with the institution’s rules.[0m
+[90m2026-05-13 10:13:35 [DEBUG   ] axioms.agent: Step 5: Agent 9 demanded 60.5886.[0m
+[94m2026-05-13 10:13:51 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Sticking to the consistent demand level that has previously been fully approved, demonstrating cooperative stability and following the ration method's allocation pattern.[0m
+[90m2026-05-13 10:13:51 [DEBUG   ] axioms.agent: Step 5: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:14:06 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I have confirmed I have the power to demand and, as a cooperative member, I will request a moderate amount to keep the pool stable and ensure fair sharing among all members.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent: Step 5: Agent 11 demanded 45.0000.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent.head: Step 5: Head allocated via ration — 8 agents | demanded 384.18 → allocated 384.18
+  Agent    1: demanded 60.0000 → allocated 60.0000
+  Agent    2: demanded 48.0000 → allocated 48.0000
+  Agent    3: demanded 10.0000 → allocated 10.0000
+  Agent    5: demanded 55.0000 → allocated 55.0000
+  Agent    6: demanded 60.5884 → allocated 60.5884
+  Agent    9: demanded 60.5886 → allocated 60.5884
+  Agent   10: demanded 45.0000 → allocated 45.0000
+  Agent   11: demanded 45.0000 → allocated 45.0000[0m
+[91m2026-05-13 10:14:06 [WARNING ] axioms.agent: Step 5: Agent 1 over-appropriated: took=66.9386 allocated=60.0000.[0m
+[91m2026-05-13 10:14:06 [WARNING ] axioms.agent: Step 5: Agent 2 over-appropriated: took=49.8420 allocated=48.0000.[0m
+[91m2026-05-13 10:14:06 [WARNING ] axioms.agent: Step 5: Agent 3 over-appropriated: took=10.1600 allocated=10.0000.[0m
+[91m2026-05-13 10:14:06 [WARNING ] axioms.agent: Step 5: Agent 5 over-appropriated: took=64.1647 allocated=55.0000.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent.monitor: Step 5: Monitor sampling agent 1 — appropriated=66.94 allocated=60.00[0m
+[91m2026-05-13 10:14:06 [WARNING ] axioms.agent.monitor: Step 5: Monitor reports agent 1 — appropriated=66.94 allocated=60.00[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent.monitor: Step 5: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.442).[0m
+2026-05-13 10:14:06 [INFO    ] axioms.agent.head: Step 5: Head sanctioned agent 1 (offences=1) → decision=inactive
+2026-05-13 10:14:06 [INFO    ] axioms.agent.head: Step 5: Agent 1 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 10:14:06 [INFO    ] axioms.agent: Step 5: Agent 4 sanction expired — restored to active.
+2026-05-13 10:14:06 [INFO    ] axioms.agent: Step 5: Agent 0 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent.head: Step 5: Appeal by agent 0 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:14:06 [INFO    ] axioms.agent: Step 5: Agent 1 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent.head: Step 5: Appeal by agent 1 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:14:06 [INFO    ] axioms.model: Step    5 | pool=  477.4 | members=8 | violations=4 | noncompliance_rate=0.44 | ra=ration
+[91m2026-05-13 10:14:06 [WARNING ] axioms.model: Step 5: 4 violation(s) detected this step.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent: Step 6: Agent 2 voted ration.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent: Step 6: Agent 3 voted ration.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent: Step 6: Agent 4 voted ration.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent: Step 6: Agent 5 voted ration.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent: Step 6: Agent 6 voted ration.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent: Step 6: Agent 9 voted ration.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent: Step 6: Agent 10 voted ration.[0m
+[90m2026-05-13 10:14:06 [DEBUG   ] axioms.agent: Step 6: Agent 11 voted ration.[0m
+[94m2026-05-13 10:14:23 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Ration method gives ~59.7 per member; demanding 59 keeps us within the allocated amount while still allowing a small overtake. Risk of sanction remains moderate.[0m
+[90m2026-05-13 10:14:23 [DEBUG   ] axioms.agent: Step 6: Agent 2 demanded 59.0000.[0m
+[94m2026-05-13 10:14:51 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: I am aiming to avoid future violations by keeping the demanded amount very low. This helps ensure that the appropriation will not exceed my allocated share, keeping me compliant with the rationing rules and preserving my standing in the institution.[0m
+[90m2026-05-13 10:14:51 [DEBUG   ] axioms.agent: Step 6: Agent 3 demanded 1.0000.[0m
+[94m2026-05-13 10:14:55 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Pool is low (477/1000). To avoid triggering collapse, demand a modest share (30 units) which is about 3.75% of remaining resources. This keeps risk of detection low while still gaining a little extra over an equal split.[0m
+[90m2026-05-13 10:14:55 [DEBUG   ] axioms.agent: Step 6: Agent 4 demanded 30.0000.[0m
+[94m2026-05-13 10:15:36 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Pool is limited to 477 units, ration allocation per member is about 59.7. By demanding 60 I slightly exceed the ration share, maximizing my short‑term gain while risk remains low because my sanction level is 0.[0m
+[90m2026-05-13 10:15:36 [DEBUG   ] axioms.agent: Step 6: Agent 5 demanded 60.0000.[0m
+[94m2026-05-13 10:15:53 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I am a fully cooperative member demanding an equal share under the ration method, which calculates to approximately 59.6781 units based on the current pool of 477.4249 units and 8 members.[0m
+[90m2026-05-13 10:15:53 [DEBUG   ] axioms.agent: Step 6: Agent 6 demanded 59.6781.[0m
+[94m2026-05-13 10:16:05 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: The pool is 477.4249 and there are 8 members, so an equal ration gives 477.4249/8 ≈ 59.6781.[0m
+[90m2026-05-13 10:16:05 [DEBUG   ] axioms.agent: Step 6: Agent 9 demanded 59.6781.[0m
+[94m2026-05-13 10:16:12 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Consistent with previous rationed rounds and maintains a fair, cooperative approach toward the remaining pool.[0m
+[90m2026-05-13 10:16:12 [DEBUG   ] axioms.agent: Step 6: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:16:21 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Following the recent established pattern of demands under ration allocation, maintaining consistency keeps me compliant and within my rightful share.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent: Step 6: Agent 11 demanded 48.4258.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent.head: Step 6: Head allocated via ration — 8 agents | demanded 362.78 → allocated 362.46
+  Agent    2: demanded 59.0000 → allocated 59.0000
+  Agent    3: demanded 1.0000 → allocated 1.0000
+  Agent    4: demanded 30.0000 → allocated 30.0000
+  Agent    5: demanded 60.0000 → allocated 59.6781
+  Agent    6: demanded 59.6781 → allocated 59.6781
+  Agent    9: demanded 59.6781 → allocated 59.6781
+  Agent   10: demanded 45.0000 → allocated 45.0000
+  Agent   11: demanded 48.4258 → allocated 48.4258[0m
+[91m2026-05-13 10:16:21 [WARNING ] axioms.agent: Step 6: Agent 2 over-appropriated: took=66.5829 allocated=59.0000.[0m
+[91m2026-05-13 10:16:21 [WARNING ] axioms.agent: Step 6: Agent 3 over-appropriated: took=1.0290 allocated=1.0000.[0m
+[91m2026-05-13 10:16:21 [WARNING ] axioms.agent: Step 6: Agent 4 over-appropriated: took=30.5761 allocated=30.0000.[0m
+[91m2026-05-13 10:16:21 [WARNING ] axioms.agent: Step 6: Agent 5 over-appropriated: took=61.6895 allocated=59.6781.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent.monitor: Step 6: Monitor sampling agent 3 — appropriated=1.03 allocated=1.00[0m
+[91m2026-05-13 10:16:21 [WARNING ] axioms.agent.monitor: Step 6: Monitor reports agent 3 — appropriated=1.03 allocated=1.00[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent.monitor: Step 6: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.554).[0m
+2026-05-13 10:16:21 [INFO    ] axioms.agent.head: Step 6: Head sanctioned agent 3 (offences=1) → decision=inactive
+2026-05-13 10:16:21 [INFO    ] axioms.agent.head: Step 6: Agent 3 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 10:16:21 [INFO    ] axioms.agent: Step 6: Agent 0 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent.head: Step 6: Appeal by agent 0 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:16:21 [INFO    ] axioms.agent: Step 6: Agent 1 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent.head: Step 6: Appeal by agent 1 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:16:21 [INFO    ] axioms.agent: Step 6: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent.head: Step 6: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:16:21 [INFO    ] axioms.model: Step    6 | pool=  499.8 | members=7 | violations=4 | noncompliance_rate=0.55 | ra=ration
+[91m2026-05-13 10:16:21 [WARNING ] axioms.model: Step 6: 4 violation(s) detected this step.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent: Step 7: Agent 2 voted ration.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent: Step 7: Agent 4 voted ration.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent: Step 7: Agent 5 voted ration.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent: Step 7: Agent 6 voted ration.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent: Step 7: Agent 9 voted ration.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent: Step 7: Agent 10 voted ration.[0m
+[90m2026-05-13 10:16:21 [DEBUG   ] axioms.agent: Step 7: Agent 11 voted ration.[0m
+[94m2026-05-13 10:16:49 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: I will demand 55 units: high enough to capture short‑term gain but still below the fair share (≈71 units) and below past demand peaks, reducing the probability of immediate sanction while still allowing a modest opportunity to appropriate slightly more.[0m
+[90m2026-05-13 10:16:49 [DEBUG   ] axioms.agent: Step 7: Agent 2 demanded 55.0000.[0m
+[94m2026-05-13 10:17:04 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: I want to secure a fair share (≈one‑seventh of the 500 units) and leave a small margin for opportunistic over‑appropriation, while keeping the risk of sanctions low.[0m
+[90m2026-05-13 10:17:04 [DEBUG   ] axioms.agent: Step 7: Agent 4 demanded 70.0000.[0m
+[94m2026-05-13 10:17:27 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: The sanction level is still 0 and previous over-appropriations have not yet caused any penalties, so the risk of detection remains low. To keep a short‑term advantage, I will demand the same amount (55) that I previously used and then plan to slightly exceed the allocation if monitoring is lax, keeping the risk of formal sanctions minimal.[0m
+[90m2026-05-13 10:17:27 [DEBUG   ] axioms.agent: Step 7: Agent 5 demanded 55.0000.[0m
+[94m2026-05-13 10:17:44 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: To remain cooperative and avoid over-demanding, I will request a moderate amount (50), consistent with previous rounds and within the pool's current capacity.[0m
+[90m2026-05-13 10:17:44 [DEBUG   ] axioms.agent: Step 7: Agent 6 demanded 50.0000.[0m
+[94m2026-05-13 10:18:11 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: In the ration method, each member effectively demands a share equal to 1/(number of members + 1) of the current pool. With 7 members and a pool of 499.7654, that is 499.7654/8 ≈ 62.4707.[0m
+[90m2026-05-13 10:18:11 [DEBUG   ] axioms.agent: Step 7: Agent 9 demanded 62.4707.[0m
+[94m2026-05-13 10:18:21 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I consistently demand the same amount I have been allocated (45 units) to maintain cooperative behavior and ensure I do not exceed my allocation. This aligns with my role as a fully cooperative member and the historical pattern.[0m
+[90m2026-05-13 10:18:21 [DEBUG   ] axioms.agent: Step 7: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:18:43 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: As a cooperative member using the ration method, the fair share is the current pool divided equally among the 7 members. 499.7654 / 7 ≈ 71.3863.  I will demand this amount in strict compliance with my own allocation.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent: Step 7: Agent 11 demanded 71.3863.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent.head: Step 7: Head allocated via ration — 7 agents | demanded 408.86 → allocated 408.86
+  Agent    2: demanded 55.0000 → allocated 55.0000
+  Agent    4: demanded 70.0000 → allocated 70.0000
+  Agent    5: demanded 55.0000 → allocated 55.0000
+  Agent    6: demanded 50.0000 → allocated 50.0000
+  Agent    9: demanded 62.4707 → allocated 62.4707
+  Agent   10: demanded 45.0000 → allocated 45.0000
+  Agent   11: demanded 71.3863 → allocated 71.3863[0m
+[91m2026-05-13 10:18:43 [WARNING ] axioms.agent: Step 7: Agent 2 over-appropriated: took=61.0541 allocated=55.0000.[0m
+[91m2026-05-13 10:18:43 [WARNING ] axioms.agent: Step 7: Agent 4 over-appropriated: took=78.4684 allocated=70.0000.[0m
+[91m2026-05-13 10:18:43 [WARNING ] axioms.agent: Step 7: Agent 5 over-appropriated: took=60.8619 allocated=55.0000.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent.monitor: Step 7: Monitor sampling agent 10 — appropriated=45.00 allocated=45.00[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent.monitor: Step 7: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.443).[0m
+2026-05-13 10:18:43 [INFO    ] axioms.agent: Step 7: Agent 0 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent.head: Step 7: Appeal by agent 0 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:18:43 [INFO    ] axioms.agent: Step 7: Agent 1 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent.head: Step 7: Appeal by agent 1 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:18:43 [INFO    ] axioms.agent: Step 7: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent.head: Step 7: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:18:43 [INFO    ] axioms.model: Step    7 | pool=  465.5 | members=7 | violations=3 | noncompliance_rate=0.44 | ra=ration
+[91m2026-05-13 10:18:43 [WARNING ] axioms.model: Step 7: 3 violation(s) detected this step.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent: Step 8: Agent 2 voted ration.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent: Step 8: Agent 4 voted ration.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent: Step 8: Agent 5 voted ration.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent: Step 8: Agent 6 voted ration.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent: Step 8: Agent 9 voted ration.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent: Step 8: Agent 10 voted ration.[0m
+[90m2026-05-13 10:18:43 [DEBUG   ] axioms.agent: Step 8: Agent 11 voted ration.[0m
+[94m2026-05-13 10:19:11 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Pool/7 ≈ 66.46, I choose the full share to maximize extraction while risk of sanction is currently 0 and past violations were still allowed.[0m
+[90m2026-05-13 10:19:11 [DEBUG   ] axioms.agent: Step 8: Agent 2 demanded 66.0000.[0m
+[94m2026-05-13 10:19:56 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Choose a moderate demand (less than previous violations) to keep sanction risk low; the pool can support an equal share (~70) but 60 stays safely below that while still maximizing potential gain.[0m
+[90m2026-05-13 10:19:56 [DEBUG   ] axioms.agent: Step 8: Agent 4 demanded 60.0000.[0m
+[94m2026-05-13 10:20:23 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: The pool is 465.5241 with 7 members, so a fair ration would give about 66.47 each. By demanding 66 I secure an allocation of 66, keep the remaining pool small (≈0.5241), and maintain a low risk of detection; past violations have not yet triggered sanctions. This gives me room to appropriate slightly more than allocated while staying within the tolerance of the institution.[0m
+[90m2026-05-13 10:20:23 [DEBUG   ] axioms.agent: Step 8: Agent 5 demanded 66.0000.[0m
+[94m2026-05-13 10:20:38 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Pool is 465.5241 units with 7 members and the current method is 'ration'; each member’s fair share is pool/7 ≈ 66.504 units. As a fully cooperative agent I demand exactly that share to be allocated and appropriated.[0m
+[90m2026-05-13 10:20:38 [DEBUG   ] axioms.agent: Step 8: Agent 6 demanded 66.5040.[0m
+[94m2026-05-13 10:20:45 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Maintain consistent cooperative demand in line with past rounds and proportional to our share of the pool under ration method.[0m
+[90m2026-05-13 10:20:45 [DEBUG   ] axioms.agent: Step 8: Agent 9 demanded 60.0000.[0m
+[94m2026-05-13 10:20:53 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I check Ostrom axioms and confirm I have authority to demand. To stay cooperative and avoid over‑demanding the limited pool (≈465 units, ≈7 members), I request 45 units—well below the rough per‑capita share (~66) and consistent with past allocations.[0m
+[90m2026-05-13 10:20:53 [DEBUG   ] axioms.agent: Step 8: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:21:06 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Method is ‘ration’, so each of the 7 members receives pool ÷ 7. Current pool is 465.5241. 465.5241 ÷ 7 = 66.5046, which I demand as a cooperative member.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent: Step 8: Agent 11 demanded 66.5046.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent.head: Step 8: Head allocated via ration — 7 agents | demanded 430.01 → allocated 430.01
+  Agent    2: demanded 66.0000 → allocated 66.0000
+  Agent    4: demanded 60.0000 → allocated 60.0000
+  Agent    5: demanded 66.0000 → allocated 66.0000
+  Agent    6: demanded 66.5040 → allocated 66.5034
+  Agent    9: demanded 60.0000 → allocated 60.0000
+  Agent   10: demanded 45.0000 → allocated 45.0000
+  Agent   11: demanded 66.5046 → allocated 66.5034[0m
+[91m2026-05-13 10:21:06 [WARNING ] axioms.agent: Step 8: Agent 2 over-appropriated: took=78.8649 allocated=66.0000.[0m
+[91m2026-05-13 10:21:06 [WARNING ] axioms.agent: Step 8: Agent 4 over-appropriated: took=68.5079 allocated=60.0000.[0m
+[91m2026-05-13 10:21:06 [WARNING ] axioms.agent: Step 8: Agent 5 over-appropriated: took=67.0084 allocated=66.0000.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent.monitor: Step 8: Monitor sampling agent 1 — appropriated=0.00 allocated=60.00[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent.monitor: Step 8: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.354).[0m
+2026-05-13 10:21:06 [INFO    ] axioms.agent: Step 8: Agent 0 sanction expired — restored to active.
+2026-05-13 10:21:06 [INFO    ] axioms.agent: Step 8: Agent 1 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent.head: Step 8: Appeal by agent 1 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:21:06 [INFO    ] axioms.agent: Step 8: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent.head: Step 8: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:21:06 [INFO    ] axioms.model: Step    8 | pool=  408.1 | members=8 | violations=3 | noncompliance_rate=0.35 | ra=ration
+[91m2026-05-13 10:21:06 [WARNING ] axioms.model: Step 8: 3 violation(s) detected this step.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent: Step 9: Agent 0 voted ration.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent: Step 9: Agent 2 voted ration.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent: Step 9: Agent 4 voted ration.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent: Step 9: Agent 5 voted ration.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent: Step 9: Agent 6 voted ration.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent: Step 9: Agent 9 voted ration.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent: Step 9: Agent 10 voted ration.[0m
+[90m2026-05-13 10:21:06 [DEBUG   ] axioms.agent: Step 9: Agent 11 voted ration.[0m
+[94m2026-05-13 10:21:27 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: With 8 members and a pool of 408 units, the fair ration is about 51 units each. I request 55 units to gain a small extra 4 units while keeping the risk of sanctions low (current sanction level is 0).[0m
+[90m2026-05-13 10:21:27 [DEBUG   ] axioms.agent: Step 9: Agent 0 demanded 55.0000.[0m
+[94m2026-05-13 10:21:49 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: High current pool (408 units) allows taking slightly above the equitable share (~51 units) without risking immediate collapse. Previous violations at 55–66 did not trigger sanctions yet, so a 58‑unit demand offers a balance of short‑term gain (approx. +7 units beyond allocation) against moderate sanction risk. 58 is within my power (checked via check_ostrom_axiom).[0m
+[90m2026-05-13 10:21:49 [DEBUG   ] axioms.agent: Step 9: Agent 2 demanded 58.0000.[0m
+[90m2026-05-13 10:22:00 [DEBUG   ] axioms.agent: Step 9: Agent 4 demanded 48.6456.[0m
+[94m2026-05-13 10:22:10 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I reduced my demand to lower the risk after previous violations, hoping to stay within safe limits while still receiving a reasonable share.[0m
+[90m2026-05-13 10:22:10 [DEBUG   ] axioms.agent: Step 9: Agent 5 demanded 50.0000.[0m
+[94m2026-05-13 10:22:24 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: The pool is currently 408 units with 8 members, so a fair share under ration would be about 51. To be cautious and maintain sustainability, I will demand 50 units as a cooperative and compliant allocation.[0m
+[90m2026-05-13 10:22:24 [DEBUG   ] axioms.agent: Step 9: Agent 6 demanded 50.0000.[0m
+[94m2026-05-13 10:22:46 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Equal ration share of the current pool (408.1360/8)[0m
+[90m2026-05-13 10:22:46 [DEBUG   ] axioms.agent: Step 9: Agent 9 demanded 51.0170.[0m
+[94m2026-05-13 10:23:01 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I am a fully cooperative member and have the right to demand. Consistent with past rounds under the ration method, demanding 45 units has resulted in a 45-unit allocation, which maintains fairness and avoids violating any rules. [0m
+[90m2026-05-13 10:23:01 [DEBUG   ] axioms.agent: Step 9: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:23:28 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I am requesting a fair equal share of the current pool to maintain fairness and cooperation.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 9: Agent 11 demanded 51.0170.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent.head: Step 9: Head allocated via ration — 8 agents | demanded 408.68 → allocated 397.71
+  Agent    0: demanded 55.0000 → allocated 51.0170
+  Agent    2: demanded 58.0000 → allocated 51.0170
+  Agent    4: demanded 48.6456 → allocated 48.6456
+  Agent    5: demanded 50.0000 → allocated 50.0000
+  Agent    6: demanded 50.0000 → allocated 50.0000
+  Agent    9: demanded 51.0170 → allocated 51.0170
+  Agent   10: demanded 45.0000 → allocated 45.0000
+  Agent   11: demanded 51.0170 → allocated 51.0170[0m
+[91m2026-05-13 10:23:28 [WARNING ] axioms.agent: Step 9: Agent 0 over-appropriated: took=52.6501 allocated=51.0170.[0m
+[91m2026-05-13 10:23:28 [WARNING ] axioms.agent: Step 9: Agent 2 over-appropriated: took=57.5481 allocated=51.0170.[0m
+[91m2026-05-13 10:23:28 [WARNING ] axioms.agent: Step 9: Agent 4 over-appropriated: took=56.3940 allocated=48.6456.[0m
+[91m2026-05-13 10:23:28 [WARNING ] axioms.agent: Step 9: Agent 5 over-appropriated: took=52.7853 allocated=50.0000.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent.monitor: Step 9: Monitor sampling agent 11 — appropriated=51.02 allocated=51.02[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent.monitor: Step 9: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.283).[0m
+2026-05-13 10:23:28 [INFO    ] axioms.agent: Step 9: Agent 1 sanction expired — restored to active.
+2026-05-13 10:23:28 [INFO    ] axioms.agent: Step 9: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent.head: Step 9: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:23:28 [INFO    ] axioms.model: Step    9 | pool=  386.7 | members=9 | violations=4 | noncompliance_rate=0.28 | ra=ration
+[91m2026-05-13 10:23:28 [WARNING ] axioms.model: Step 9: 4 violation(s) detected this step.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 10: Agent 0 voted ration.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 10: Agent 1 voted ration.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 10: Agent 2 voted ration.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 10: Agent 4 voted ration.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 10: Agent 5 voted ration.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 10: Agent 6 voted ration.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 10: Agent 9 voted ration.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 10: Agent 10 voted ration.[0m
+[90m2026-05-13 10:23:28 [DEBUG   ] axioms.agent: Step 10: Agent 11 voted ration.[0m
+[94m2026-05-13 10:23:36 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Reduced demand to stay well below recent allocation levels and avoid over-appropriation that would trigger sanctions.[0m
+[90m2026-05-13 10:23:36 [DEBUG   ] axioms.agent: Step 10: Agent 0 demanded 45.0000.[0m
+[94m2026-05-13 10:23:59 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I want to increase my share beyond the ration method’s expected portion (~43 units). With a sanction level of 0, I’ll risk a slight over‑demand but still stay well within the current pool, hoping to capture more than my fair share without triggering a sanction.[0m
+[90m2026-05-13 10:23:59 [DEBUG   ] axioms.agent: Step 10: Agent 1 demanded 100.0000.[0m
+[94m2026-05-13 10:24:10 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: pool 386.7245/9 ≈ 42.98, so demanding 43 keeps within allocation and avoids detection risk, especially after recent violations.[0m
+[90m2026-05-13 10:24:10 [DEBUG   ] axioms.agent: Step 10: Agent 2 demanded 43.0000.[0m
+[94m2026-05-13 10:24:18 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: I have power to demand. The pool is low (386.7 units) and I want to balance short-term gain with low sanction risk. A 50‑unit demand is large enough for a decent appropriation (≈57‑58 units), similar to past successful over‑takes, but small enough that the risk of repeated violations remains low.[0m
+[90m2026-05-13 10:24:18 [DEBUG   ] axioms.agent: Step 10: Agent 4 demanded 50.0000.[0m
+[94m2026-05-13 10:24:29 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Demand moderate amount (60) to maintain short‑term advantage while keeping a small margin of safety. Past over‑appropriation (~5–10%) yielded no sanctions yet; with current low pool (386) the risk of collapse remains minimal, so we can take extra without triggering an immediate penalty.[0m
+[90m2026-05-13 10:24:29 [DEBUG   ] axioms.agent: Step 10: Agent 5 demanded 60.0000.[0m
+[94m2026-05-13 10:24:50 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Pool level (~387) is below 400, historically we demanded 50 under ration method. Following this pattern maintains cooperation and ensures a fair share for all members.[0m
+[90m2026-05-13 10:24:50 [DEBUG   ] axioms.agent: Step 10: Agent 6 demanded 50.0000.[0m
+[94m2026-05-13 10:24:58 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: As a cooperative head member, I aim to request a fair share based on the ration method, allocating roughly 1/9 of the current pool (386.7245), which maintains compliance and supports the institution's sustainability.[0m
+[90m2026-05-13 10:24:58 [DEBUG   ] axioms.agent: Step 10: Agent 9 demanded 43.0000.[0m
+[94m2026-05-13 10:25:13 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I will continue to demand 45 units, as in previous rounds I received the full allocation, abide by the ration method, and maintain my cooperative, compliant behavior.[0m
+[90m2026-05-13 10:25:13 [DEBUG   ] axioms.agent: Step 10: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:25:23 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Cooperative strategy: demand a modest share to avoid over‑extraction when the pool is low, preserving the resource for future rounds.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 10: Agent 11 demanded 40.0000.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent.head: Step 10: Head allocated via ration — 9 agents | demanded 476.00 → allocated 383.76
+  Agent    0: demanded 45.0000 → allocated 42.9694
+  Agent    1: demanded 100.0000 → allocated 42.9694
+  Agent    2: demanded 43.0000 → allocated 42.9694
+  Agent    4: demanded 50.0000 → allocated 42.9694
+  Agent    5: demanded 60.0000 → allocated 42.9694
+  Agent    6: demanded 50.0000 → allocated 42.9694
+  Agent    9: demanded 43.0000 → allocated 42.9694
+  Agent   10: demanded 45.0000 → allocated 42.9694
+  Agent   11: demanded 40.0000 → allocated 40.0000[0m
+[91m2026-05-13 10:25:23 [WARNING ] axioms.agent: Step 10: Agent 0 over-appropriated: took=47.5664 allocated=42.9694.[0m
+[91m2026-05-13 10:25:23 [WARNING ] axioms.agent: Step 10: Agent 1 over-appropriated: took=44.2166 allocated=42.9694.[0m
+[91m2026-05-13 10:25:23 [WARNING ] axioms.agent: Step 10: Agent 2 over-appropriated: took=46.0015 allocated=42.9694.[0m
+[91m2026-05-13 10:25:23 [WARNING ] axioms.agent: Step 10: Agent 4 over-appropriated: took=48.0417 allocated=42.9694.[0m
+[91m2026-05-13 10:25:23 [WARNING ] axioms.agent: Step 10: Agent 5 over-appropriated: took=44.6436 allocated=42.9694.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent.monitor: Step 10: Monitor sampling agent 5 — appropriated=44.64 allocated=42.97[0m
+[91m2026-05-13 10:25:23 [WARNING ] axioms.agent.monitor: Step 10: Monitor reports agent 5 — appropriated=44.64 allocated=42.97[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent.monitor: Step 10: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.427).[0m
+2026-05-13 10:25:23 [INFO    ] axioms.agent.head: Step 10: Head sanctioned agent 5 (offences=1) → decision=inactive
+2026-05-13 10:25:23 [INFO    ] axioms.agent.head: Step 10: Agent 5 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 10:25:23 [INFO    ] axioms.agent: Step 10: Agent 3 sanction expired — restored to active.
+2026-05-13 10:25:23 [INFO    ] axioms.agent: Step 10: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent.head: Step 10: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:25:23 [INFO    ] axioms.model: Step   10 | pool=  332.3 | members=9 | violations=5 | noncompliance_rate=0.43 | ra=ration
+[91m2026-05-13 10:25:23 [WARNING ] axioms.model: Step 10: 5 violation(s) detected this step.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 11: Agent 0 voted ration.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 11: Agent 1 voted ration.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 11: Agent 2 voted ration.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 11: Agent 3 voted ration.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 11: Agent 4 voted ration.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 11: Agent 6 voted ration.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 11: Agent 9 voted ration.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 11: Agent 10 voted ration.[0m
+[90m2026-05-13 10:25:23 [DEBUG   ] axioms.agent: Step 11: Agent 11 voted ration.[0m
+[94m2026-05-13 10:25:42 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: I have power to demand; previous pattern shows 45 works and no sanction risk yet. Keeping consistent demand maximizes gain while keeping detection risk low.[0m
+[90m2026-05-13 10:25:42 [DEBUG   ] axioms.agent: Step 11: Agent 0 demanded 45.0000.[0m
+[94m2026-05-13 10:25:58 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I want to appropriate more than the expected ration (≈43), so I increase demand to 120. With sanction level 0 and the last sanction being denied, the risk of punitive sanctions is low. I expect the allocation to be around 43, so I’ll try again to take more than my share and risk a small sanction if detected.[0m
+[90m2026-05-13 10:25:58 [DEBUG   ] axioms.agent: Step 11: Agent 1 demanded 120.0000.[0m
+[94m2026-05-13 10:26:09 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: I have the power to demand resources (check_ostrom_axiom would return YES_POWER). With the pool low (~332 units) and past violations still not sanctioned, I can afford a modest increase. Demanding 40 keeps me below the typical allocation and reduces collapse risk while still allowing a ~20% over‑appropriation for short‑term gain.[0m
+[90m2026-05-13 10:26:09 [DEBUG   ] axioms.agent: Step 11: Agent 2 demanded 40.0000.[0m
+[94m2026-05-13 10:26:19 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: With the ration method and nine members, an equal share of the current 332.3465 units is 332.3465 / 9 ≈ 36.8. Demanding this amount aligns with cooperation and minimizes risk of sanctions due to over-demanding.[0m
+[90m2026-05-13 10:26:19 [DEBUG   ] axioms.agent: Step 11: Agent 3 demanded 36.8000.[0m
+[94m2026-05-13 10:26:31 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Pool is low (~332) but still above zero. Previous round showed a successful over-appropriation of ~8 units from ~48 demand, with no sanction. Slightly below total pool to avoid triggering extreme scrutiny. Continuing the pattern maximizes short‑term gain while keeping sanction risk minimal.[0m
+[90m2026-05-13 10:26:31 [DEBUG   ] axioms.agent: Step 11: Agent 4 demanded 48.0000.[0m
+[94m2026-05-13 10:26:44 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Pool is low (332 units) and we have 9 members, so expected equal share is around 36.9. Demanding 35 should match the allocation we anticipate while staying conservative to respect the ration rule and avoid over-demanding.[0m
+[90m2026-05-13 10:26:44 [DEBUG   ] axioms.agent: Step 11: Agent 6 demanded 35.0000.[0m
+[94m2026-05-13 10:26:51 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: I aim to reduce impact on the shared pool while staying cooperative; 30 units is a small, generous demand that helps preserve resources.[0m
+[90m2026-05-13 10:26:51 [DEBUG   ] axioms.agent: Step 11: Agent 9 demanded 30.0000.[0m
+[94m2026-05-13 10:27:03 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Continue cooperating with the previous demand level, ensuring the institution remains stable while respecting our share.[0m
+[90m2026-05-13 10:27:03 [DEBUG   ] axioms.agent: Step 11: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:27:19 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Demanding 10% of the current pool amount to stay cooperative and avoid jeopardising the collective resource.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent: Step 11: Agent 11 demanded 33.2000.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent.head: Step 11: Head allocated via ration — 9 agents | demanded 433.00 → allocated 319.64
+  Agent    0: demanded 45.0000 → allocated 36.9274
+  Agent    1: demanded 120.0000 → allocated 36.9274
+  Agent    2: demanded 40.0000 → allocated 36.9274
+  Agent    3: demanded 36.8000 → allocated 36.8000
+  Agent    4: demanded 48.0000 → allocated 36.9274
+  Agent    6: demanded 35.0000 → allocated 35.0000
+  Agent    9: demanded 30.0000 → allocated 30.0000
+  Agent   10: demanded 45.0000 → allocated 36.9274
+  Agent   11: demanded 33.2000 → allocated 33.2000[0m
+[91m2026-05-13 10:27:19 [WARNING ] axioms.agent: Step 11: Agent 0 over-appropriated: took=40.9300 allocated=36.9274.[0m
+[91m2026-05-13 10:27:19 [WARNING ] axioms.agent: Step 11: Agent 1 over-appropriated: took=42.3256 allocated=36.9274.[0m
+[91m2026-05-13 10:27:19 [WARNING ] axioms.agent: Step 11: Agent 2 over-appropriated: took=44.2523 allocated=36.9274.[0m
+[91m2026-05-13 10:27:19 [WARNING ] axioms.agent: Step 11: Agent 3 over-appropriated: took=39.1153 allocated=36.8000.[0m
+[91m2026-05-13 10:27:19 [WARNING ] axioms.agent: Step 11: Agent 4 over-appropriated: took=42.7402 allocated=36.9274.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent.monitor: Step 11: Monitor sampling agent 2 — appropriated=44.25 allocated=36.93[0m
+[91m2026-05-13 10:27:19 [WARNING ] axioms.agent.monitor: Step 11: Monitor reports agent 2 — appropriated=44.25 allocated=36.93[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent.monitor: Step 11: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.541).[0m
+2026-05-13 10:27:19 [INFO    ] axioms.agent.head: Step 11: Head sanctioned agent 2 (offences=1) → decision=inactive
+2026-05-13 10:27:19 [INFO    ] axioms.agent.head: Step 11: Agent 2 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 10:27:19 [INFO    ] axioms.agent: Step 11: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent.head: Step 11: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:27:19 [INFO    ] axioms.agent: Step 11: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent.head: Step 11: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:27:19 [INFO    ] axioms.model: Step   11 | pool=  332.9 | members=8 | violations=5 | noncompliance_rate=0.54 | ra=ration
+[91m2026-05-13 10:27:19 [WARNING ] axioms.model: Step 11: 5 violation(s) detected this step.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent: Step 12: Agent 0 voted ration.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent: Step 12: Agent 1 voted ration.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent: Step 12: Agent 3 voted ration.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent: Step 12: Agent 4 voted ration.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent: Step 12: Agent 6 voted ration.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent: Step 12: Agent 9 voted ration.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent: Step 12: Agent 10 voted ration.[0m
+[90m2026-05-13 10:27:19 [DEBUG   ] axioms.agent: Step 12: Agent 11 voted ration.[0m
+[94m2026-05-13 10:27:41 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Continuing the prior pattern of demanding 45 units keeps me in line with the group's voting rule, yields a decent share (~43 units on average), and stays below the risk threshold for sanctions. Given the pool’s low balance and my recent violations still yielding zero sanctions, a moderate demand balances short‑term gain with acceptable sanction risk.[0m
+[90m2026-05-13 10:27:42 [DEBUG   ] axioms.agent: Step 12: Agent 0 demanded 45.0000.[0m
+[94m2026-05-13 10:28:21 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Demanding close to the equal share (~41.6) maximizes potential gain while minimizing risk of a sanction for over‑appropriation.[0m
+[90m2026-05-13 10:28:21 [DEBUG   ] axioms.agent: Step 12: Agent 1 demanded 42.0000.[0m
+[94m2026-05-13 10:28:35 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: As a cooperative member and having no current sanctions, I have the power to demand resources. To avoid past violations I will request a smaller and safe amount of 30 units, well below my previous 36.8 demand, ensuring the allocation and appropriation stay within limits while contributing appropriately to the pool.[0m
+[90m2026-05-13 10:28:35 [DEBUG   ] axioms.agent: Step 12: Agent 3 demanded 30.0000.[0m
+[94m2026-05-13 10:28:47 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Avoid a repeat violation given the low pool and no current sanctions; demanding slightly below the likely ration share reduces sanction risk while still securing a modest allocation.[0m
+[90m2026-05-13 10:28:47 [DEBUG   ] axioms.agent: Step 12: Agent 4 demanded 38.0000.[0m
+[94m2026-05-13 10:28:55 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Maintaining a steady demand close to the average per member (pool ≈ 333, 8 members → 41.6) while being conservative, ensures each member gets enough resources without risking depletion or sanctions. Historically, a 35‑unit demand has been well‑accepted and aligns with the ration method.[0m
+[90m2026-05-13 10:28:55 [DEBUG   ] axioms.agent: Step 12: Agent 6 demanded 35.0000.[0m
+[94m2026-05-13 10:29:14 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: I will ask for roughly one‑eighth of the remaining pool (332.86/8 ≈ 41.6), similar to my previous balanced demands. This keeps me within the ration method and avoids over‑demanding.[0m
+[90m2026-05-13 10:29:14 [DEBUG   ] axioms.agent: Step 12: Agent 9 demanded 42.5000.[0m
+[94m2026-05-13 10:29:29 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: We are under the ration method with 8 members. An equal split of the current pool (332.8558) yields about 41.61 units per member. As a fully cooperative member, I will demand my fair share to maintain the institution's stability.[0m
+[90m2026-05-13 10:29:29 [DEBUG   ] axioms.agent: Step 12: Agent 10 demanded 41.6070.[0m
+[94m2026-05-13 10:29:39 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Based on recent allocations proportional to pool size, I request a moderate share (~10% of remaining pool) to stay cooperative and avoid depleting the common resource.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent: Step 12: Agent 11 demanded 33.3000.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent.head: Step 12: Head allocated via ration — 8 agents | demanded 307.41 → allocated 302.73
+  Agent    0: demanded 45.0000 → allocated 41.6070
+  Agent    1: demanded 42.0000 → allocated 41.6070
+  Agent    3: demanded 30.0000 → allocated 30.0000
+  Agent    4: demanded 38.0000 → allocated 38.0000
+  Agent    6: demanded 35.0000 → allocated 35.0000
+  Agent    9: demanded 42.5000 → allocated 41.6070
+  Agent   10: demanded 41.6070 → allocated 41.6070
+  Agent   11: demanded 33.3000 → allocated 33.3000[0m
+[91m2026-05-13 10:29:39 [WARNING ] axioms.agent: Step 12: Agent 0 over-appropriated: took=42.0511 allocated=41.6070.[0m
+[91m2026-05-13 10:29:39 [WARNING ] axioms.agent: Step 12: Agent 1 over-appropriated: took=42.0933 allocated=41.6070.[0m
+[91m2026-05-13 10:29:39 [WARNING ] axioms.agent: Step 12: Agent 3 over-appropriated: took=35.7619 allocated=30.0000.[0m
+[91m2026-05-13 10:29:39 [WARNING ] axioms.agent: Step 12: Agent 4 over-appropriated: took=44.6741 allocated=38.0000.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent.monitor: Step 12: Monitor sampling agent 5 — appropriated=0.00 allocated=42.97[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent.monitor: Step 12: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.433).[0m
+2026-05-13 10:29:39 [INFO    ] axioms.agent: Step 12: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent.head: Step 12: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:29:39 [INFO    ] axioms.agent: Step 12: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent.head: Step 12: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:29:39 [INFO    ] axioms.model: Step   12 | pool=  361.8 | members=8 | violations=4 | noncompliance_rate=0.43 | ra=ration
+[91m2026-05-13 10:29:39 [WARNING ] axioms.model: Step 12: 4 violation(s) detected this step.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent: Step 13: Agent 0 voted ration.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent: Step 13: Agent 1 voted ration.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent: Step 13: Agent 3 voted ration.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent: Step 13: Agent 4 voted ration.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent: Step 13: Agent 6 voted ration.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent: Step 13: Agent 9 voted ration.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent: Step 13: Agent 10 voted ration.[0m
+[90m2026-05-13 10:29:39 [DEBUG   ] axioms.agent: Step 13: Agent 11 voted ration.[0m
+[94m2026-05-13 10:29:52 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: I have no sanction yet and the pool is healthy; keeping the previous demand gives a good chance to secure a similar allocation while keeping risk low.[0m
+[90m2026-05-13 10:29:52 [DEBUG   ] axioms.agent: Step 13: Agent 0 demanded 45.0000.[0m
+[94m2026-05-13 10:30:13 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I anticipate the allocation will be roughly pool/8 (~45). By demanding 50 I aim to secure about 50 units, slightly exceeding the fair share.  Currently my sanction level is 0, so I risk a violation but have no immediate penalty to incur.[0m
+[90m2026-05-13 10:30:13 [DEBUG   ] axioms.agent: Step 13: Agent 1 demanded 50.0000.[0m
+[94m2026-05-13 10:30:21 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: Low pool level and past violations suggest a conservative demand. A 20-unit request should be well within the rationed allocation, reducing the risk of a breach.[0m
+[90m2026-05-13 10:30:21 [DEBUG   ] axioms.agent: Step 13: Agent 3 demanded 20.0000.[0m
+[94m2026-05-13 10:30:48 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Maintain consistent, moderate demand to match typical allocation patterns; low risk of detection while still aiming for a slightly higher appropriation.[0m
+[90m2026-05-13 10:30:48 [DEBUG   ] axioms.agent: Step 13: Agent 4 demanded 38.0000.[0m
+[94m2026-05-13 10:31:02 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Continue cooperative allocation by demanding a modest amount that preserves the remaining pool. 35 units (consistent with prior rounds) helps sustain the resource without risking depletion.[0m
+[90m2026-05-13 10:31:02 [DEBUG   ] axioms.agent: Step 13: Agent 6 demanded 35.0000.[0m
+[94m2026-05-13 10:31:10 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Following the ration method, each member should receive roughly one‑eighth of the current pool (361.7614 / 8 ≈ 45.2). Demanding 45.0 keeps my share fair and compliant with the institution’s rules.[0m
+[90m2026-05-13 10:31:10 [DEBUG   ] axioms.agent: Step 13: Agent 9 demanded 45.0000.[0m
+[94m2026-05-13 10:31:23 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Pool is 361.7614 with 8 members, equal ration gives roughly 45.22 each. Demanding this amount maintains fairness and compliance.[0m
+[90m2026-05-13 10:31:23 [DEBUG   ] axioms.agent: Step 13: Agent 10 demanded 45.2200.[0m
+[94m2026-05-13 10:31:34 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Cooperative member, maintaining consistent demand as per previous round.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent: Step 13: Agent 11 demanded 33.3000.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent.head: Step 13: Head allocated via ration — 8 agents | demanded 311.52 → allocated 306.74
+  Agent    0: demanded 45.0000 → allocated 45.0000
+  Agent    1: demanded 50.0000 → allocated 45.2202
+  Agent    3: demanded 20.0000 → allocated 20.0000
+  Agent    4: demanded 38.0000 → allocated 38.0000
+  Agent    6: demanded 35.0000 → allocated 35.0000
+  Agent    9: demanded 45.0000 → allocated 45.0000
+  Agent   10: demanded 45.2200 → allocated 45.2200
+  Agent   11: demanded 33.3000 → allocated 33.3000[0m
+[91m2026-05-13 10:31:34 [WARNING ] axioms.agent: Step 13: Agent 0 over-appropriated: took=53.4430 allocated=45.0000.[0m
+[91m2026-05-13 10:31:34 [WARNING ] axioms.agent: Step 13: Agent 1 over-appropriated: took=52.0011 allocated=45.2202.[0m
+[91m2026-05-13 10:31:34 [WARNING ] axioms.agent: Step 13: Agent 3 over-appropriated: took=23.0171 allocated=20.0000.[0m
+[91m2026-05-13 10:31:34 [WARNING ] axioms.agent: Step 13: Agent 4 over-appropriated: took=41.7152 allocated=38.0000.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent.monitor: Step 13: Monitor sampling agent 5 — appropriated=0.00 allocated=42.97[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent.monitor: Step 13: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.346).[0m
+2026-05-13 10:31:34 [INFO    ] axioms.agent: Step 13: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent.head: Step 13: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:31:34 [INFO    ] axioms.agent: Step 13: Agent 5 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent.head: Step 13: Appeal by agent 5 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:31:34 [INFO    ] axioms.model: Step   13 | pool=  378.1 | members=8 | violations=4 | noncompliance_rate=0.35 | ra=ration
+[91m2026-05-13 10:31:34 [WARNING ] axioms.model: Step 13: 4 violation(s) detected this step.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent: Step 14: Agent 0 voted ration.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent: Step 14: Agent 1 voted ration.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent: Step 14: Agent 3 voted ration.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent: Step 14: Agent 4 voted ration.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent: Step 14: Agent 6 voted ration.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent: Step 14: Agent 9 voted ration.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent: Step 14: Agent 10 voted ration.[0m
+[90m2026-05-13 10:31:34 [DEBUG   ] axioms.agent: Step 14: Agent 11 voted ration.[0m
+[94m2026-05-13 10:31:54 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Standard demand aligns with typical allocation; sanction level is still zero so short‑term gain may outweigh the moderate sanction risk.[0m
+[90m2026-05-13 10:31:54 [DEBUG   ] axioms.agent: Step 14: Agent 0 demanded 45.0000.[0m
+[94m2026-05-13 10:32:15 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I expect the ration method to give roughly 45 units if everyone demands similar amounts, so a 55 demand should yield a higher appropriation. With sanction level 0 and a history of repeated violations already accepted, I will push beyond the previous 50 unit demand to try to extract more while keeping sanctions minimal for now.[0m
+[90m2026-05-13 10:32:15 [DEBUG   ] axioms.agent: Step 14: Agent 1 demanded 55.0000.[0m
+[94m2026-05-13 10:32:30 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: To avoid repeated violations, demand only a small fraction of the current pool (≈10% of the shared ration). This keeps appropriation well within the allowed limit while contributing cooperatively.[0m
+[90m2026-05-13 10:32:30 [DEBUG   ] axioms.agent: Step 14: Agent 3 demanded 5.0000.[0m
+[94m2026-05-13 10:32:50 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Sanction level is still 0 and there have been no penalties yet; risk of detection is considered low, so I maintain a high demand to maximize short‑term gain while continuing to exploit a small margin above my allocation.[0m
+[90m2026-05-13 10:32:50 [DEBUG   ] axioms.agent: Step 14: Agent 4 demanded 38.0000.[0m
+[94m2026-05-13 10:33:06 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Having called check_ostrom_axiom for the demand action and confirmed power, I maintain a consistent demand of 35.0 units. This aligns with my cooperative strategy, ensures I receive my full allocation under the ration method, and preserves the shared pool for future rounds.[0m
+[90m2026-05-13 10:33:06 [DEBUG   ] axioms.agent: Step 14: Agent 6 demanded 35.0000.[0m
+[94m2026-05-13 10:33:14 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Maintaining a stable, fair share per member (~47 units), I request 45 so that my demand reflects current pool levels and stays consistent with prior rounds.[0m
+[90m2026-05-13 10:33:14 [DEBUG   ] axioms.agent: Step 14: Agent 9 demanded 45.0000.[0m
+[94m2026-05-13 10:33:27 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Maintain a steady demand to support continued use without threatening collapse; 45 units is consistent with past rounds and keeps the pool well above zero.[0m
+[90m2026-05-13 10:33:27 [DEBUG   ] axioms.agent: Step 14: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:33:41 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Continue the previous consistent demand of 33.3000 units, adhering to the ration method and maintaining fairness among members.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 14: Agent 11 demanded 33.3000.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent.head: Step 14: Head allocated via ration — 8 agents | demanded 301.30 → allocated 293.56
+  Agent    0: demanded 45.0000 → allocated 45.0000
+  Agent    1: demanded 55.0000 → allocated 47.2581
+  Agent    3: demanded 5.0000 → allocated 5.0000
+  Agent    4: demanded 38.0000 → allocated 38.0000
+  Agent    6: demanded 35.0000 → allocated 35.0000
+  Agent    9: demanded 45.0000 → allocated 45.0000
+  Agent   10: demanded 45.0000 → allocated 45.0000
+  Agent   11: demanded 33.3000 → allocated 33.3000[0m
+[91m2026-05-13 10:33:41 [WARNING ] axioms.agent: Step 14: Agent 0 over-appropriated: took=50.5629 allocated=45.0000.[0m
+[91m2026-05-13 10:33:41 [WARNING ] axioms.agent: Step 14: Agent 1 over-appropriated: took=55.5196 allocated=47.2581.[0m
+[91m2026-05-13 10:33:41 [WARNING ] axioms.agent: Step 14: Agent 3 over-appropriated: took=5.5857 allocated=5.0000.[0m
+[91m2026-05-13 10:33:41 [WARNING ] axioms.agent: Step 14: Agent 4 over-appropriated: took=41.7544 allocated=38.0000.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent.monitor: Step 14: Monitor sampling agent 2 — appropriated=0.00 allocated=36.93[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent.monitor: Step 14: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.277).[0m
+2026-05-13 10:33:41 [INFO    ] axioms.agent: Step 14: Agent 5 sanction expired — restored to active.
+2026-05-13 10:33:41 [INFO    ] axioms.agent: Step 14: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent.head: Step 14: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:33:41 [INFO    ] axioms.model: Step   14 | pool=  411.3 | members=9 | violations=4 | noncompliance_rate=0.28 | ra=ration
+[91m2026-05-13 10:33:41 [WARNING ] axioms.model: Step 14: 4 violation(s) detected this step.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 15: Agent 0 voted ration.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 15: Agent 1 voted ration.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 15: Agent 3 voted ration.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 15: Agent 4 voted ration.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 15: Agent 5 voted ration.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 15: Agent 6 voted ration.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 15: Agent 9 voted ration.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 15: Agent 10 voted ration.[0m
+[90m2026-05-13 10:33:41 [DEBUG   ] axioms.agent: Step 15: Agent 11 voted ration.[0m
+[94m2026-05-13 10:33:51 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Previous violations have raised alarm and sanctions remain at 0, but repeated over‑appropriation is risky. The pool is low (411/1000) and method is ration, so a demand of 40 keeps us comfortably within the typical allocation while still extracting some gain. This reduces detection risk while preserving short‑term benefit.[0m
+[90m2026-05-13 10:33:51 [DEBUG   ] axioms.agent: Step 15: Agent 0 demanded 40.0000.[0m
+[94m2026-05-13 10:34:00 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I have power to demand more than allocation and sanctions are currently zero, so I will take a high demand to maximize appropriation.[0m
+[90m2026-05-13 10:34:00 [DEBUG   ] axioms.agent: Step 15: Agent 1 demanded 58.0000.[0m
+[94m2026-05-13 10:34:31 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: To avoid a sanction from overusing the resource, I am requesting zero units this round.  My previous demands exceeded the allocated amounts by about 10‑20%, and I am unsure how much I actually consume.  Requesting nothing ensures I stay within the rule and preserve the pool for everyone.[0m
+[90m2026-05-13 10:34:31 [DEBUG   ] axioms.agent: Step 15: Agent 3 demanded 0.0000.[0m
+[94m2026-05-13 10:35:07 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Under the ration method, each member receives approximately 45.7067 (pool of 411.3424 split by 9). Past behavior shows I can over-appropriate roughly 9–10% of my allocation (e.g., demanding 38 and appropriating ~41.7). With sanction level still at 0, the risk of detection is low, so I will demand the full ration share to maximize short‑term gain.[0m
+[90m2026-05-13 10:35:07 [DEBUG   ] axioms.agent: Step 15: Agent 4 demanded 45.7067.[0m
+[94m2026-05-13 10:35:22 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: With ration method and 411.3424 units remaining, each member should receive approximately 45.7. To take a small advantage while keeping sanction risk low, I will demand 46 units (a marginal 0.3 over the rationed share).[0m
+[90m2026-05-13 10:35:22 [DEBUG   ] axioms.agent: Step 15: Agent 5 demanded 46.0000.[0m
+[94m2026-05-13 10:35:34 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I confirm I have decision power and will maintain the same allocation request of 35 units as in prior rounds to remain compliant and cooperative.[0m
+[90m2026-05-13 10:35:34 [DEBUG   ] axioms.agent: Step 15: Agent 6 demanded 35.0000.[0m
+[94m2026-05-13 10:35:50 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Under the ration method each member receives an equal share of the pool. With 9 members and the current pool of 411.3424, the equal share is ~45.7; as a cooperative member I will demand the rounded down value of 45, which matches the allocation pattern of prior rounds.[0m
+[90m2026-05-13 10:35:50 [DEBUG   ] axioms.agent: Step 15: Agent 9 demanded 45.0000.[0m
+[94m2026-05-13 10:36:01 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Consistent with prior ration allocations (Step 13–14) and ensuring full compliance while keeping the pool sustainable.[0m
+[90m2026-05-13 10:36:01 [DEBUG   ] axioms.agent: Step 15: Agent 10 demanded 45.0000.[0m
+[94m2026-05-13 10:36:12 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I am a fully cooperative member following the ration allocation method, so I will continue demanding my usual share of 33.3 as in previous rounds to remain compliant and obtain an equal allocation.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 15: Agent 11 demanded 33.3000.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent.head: Step 15: Head allocated via ration — 8 agents | demanded 348.01 → allocated 341.42
+  Agent    0: demanded 40.0000 → allocated 40.0000
+  Agent    1: demanded 58.0000 → allocated 51.4178
+  Agent    3: demanded 0.0000 → allocated 0.0000
+  Agent    4: demanded 45.7067 → allocated 45.7067
+  Agent    5: demanded 46.0000 → allocated 46.0000
+  Agent    6: demanded 35.0000 → allocated 35.0000
+  Agent    9: demanded 45.0000 → allocated 45.0000
+  Agent   10: demanded 45.0000 → allocated 45.0000
+  Agent   11: demanded 33.3000 → allocated 33.3000[0m
+[91m2026-05-13 10:36:12 [WARNING ] axioms.agent: Step 15: Agent 0 over-appropriated: took=42.0719 allocated=40.0000.[0m
+[91m2026-05-13 10:36:12 [WARNING ] axioms.agent: Step 15: Agent 1 over-appropriated: took=57.2259 allocated=51.4178.[0m
+[91m2026-05-13 10:36:12 [WARNING ] axioms.agent: Step 15: Agent 3 over-appropriated: took=5.6236 allocated=5.0000.[0m
+[91m2026-05-13 10:36:12 [WARNING ] axioms.agent: Step 15: Agent 4 over-appropriated: took=45.7397 allocated=45.7067.[0m
+[91m2026-05-13 10:36:12 [WARNING ] axioms.agent: Step 15: Agent 5 over-appropriated: took=52.2698 allocated=46.0000.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent.monitor: Step 15: Monitor sampling agent 2 — appropriated=0.00 allocated=36.93[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent.monitor: Step 15: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.222).[0m
+2026-05-13 10:36:12 [INFO    ] axioms.agent: Step 15: Agent 2 sanction expired — restored to active.
+2026-05-13 10:36:12 [INFO    ] axioms.model: Step   15 | pool=  295.1 | members=10 | violations=5 | noncompliance_rate=0.22 | ra=ration
+[91m2026-05-13 10:36:12 [WARNING ] axioms.model: Step 15: 5 violation(s) detected this step.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 0 voted ration.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 1 voted ration.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 2 voted ration.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 3 voted ration.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 4 voted ration.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 5 voted ration.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 6 voted ration.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 9 voted ration.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 10 voted ration.[0m
+[90m2026-05-13 10:36:12 [DEBUG   ] axioms.agent: Step 16: Agent 11 voted ration.[0m
+[94m2026-05-13 10:36:34 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Demanding 35 units gives a modest gain above the rationed share (≈29.5) while keeping the likelihood of detection and sanctions low.  The current sanction level is 0, so the risk is acceptable.[0m
+[90m2026-05-13 10:36:34 [DEBUG   ] axioms.agent: Step 16: Agent 0 demanded 35.0000.[0m
+[94m2026-05-13 10:36:52 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I have power (check_ostrom_axiom will confirm), and I continue to be opportunistic. Despite recent violations, I anticipate the ration allocation will be around 51‑53 based on past rounds, so demanding 60 should let me appropriate above allocation while keeping sanction risk low for now.[0m
+[90m2026-05-13 10:36:52 [DEBUG   ] axioms.agent: Step 16: Agent 1 demanded 60.0000.[0m
+[94m2026-05-13 10:37:11 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Pool is low (~295 units). Under ration method, expected share per member is ~29.5 units. I’ll request 30 units to gain a modest extra while keeping detection risk low since sanction level is currently 0.[0m
+[90m2026-05-13 10:37:11 [DEBUG   ] axioms.agent: Step 16: Agent 2 demanded 30.0000.[0m
+[94m2026-05-13 10:37:23 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: To avoid risking another violation due to over-appropriation, I will demand 0 resources this round.[0m
+[90m2026-05-13 10:37:23 [DEBUG   ] axioms.agent: Step 16: Agent 3 demanded 0.0000.[0m
+[94m2026-05-13 10:37:42 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: I want a slightly higher share than the last round while keeping risk low—current sanction level is 0 and the pool is still above the threshold for moderate extraction.[0m
+[90m2026-05-13 10:37:42 [DEBUG   ] axioms.agent: Step 16: Agent 4 demanded 48.5000.[0m
+[94m2026-05-13 10:38:17 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I have active membership (sanction level 0) and no recent sanctions pending, so the risk of being penalized for a modest over‑demand appears low. The ration share is ~29.5, so demanding 35 gives me a small premium while still keeping my usage within a tolerable margin of the allocation.[0m
+[90m2026-05-13 10:38:17 [DEBUG   ] axioms.agent: Step 16: Agent 5 demanded 35.0000.[0m
+[94m2026-05-13 10:38:32 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I have not received any sanctions and the institution’s method is ration, so I continue demanding the cooperative amount of 35 units, consistent with my past behavior.[0m
+[90m2026-05-13 10:38:32 [DEBUG   ] axioms.agent: Step 16: Agent 6 demanded 35.0000.[0m
+[94m2026-05-13 10:39:00 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: I have been confirmed to have the power to demand (check_ostrom_axiom with action='demand' would return POWER). To remain consistent with past behavior and the ration method, I’ll demand 45 units. Under ration, the allocation will be limited to the pool’s share (pool/10 ≈ 29.5) which I will appropriate exactly. This maintains compliance, avoids sanctions, and keeps the institution stable.[0m
+[90m2026-05-13 10:39:00 [DEBUG   ] axioms.agent: Step 16: Agent 9 demanded 45.0000.[0m
+[94m2026-05-13 10:39:15 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: With 10 members and a pool of ~295 units, rationing gives each member about 29.5 units. To stay cooperative and not over-demand, I request my full share.[0m
+[90m2026-05-13 10:39:15 [DEBUG   ] axioms.agent: Step 16: Agent 10 demanded 29.5114.[0m
+[94m2026-05-13 10:39:24 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Following past consistent demand and allocation patterns under the ration method to remain compliant and cooperative.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 16: Agent 11 demanded 33.3000.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent.head: Step 16: Head allocated via ration — 9 agents | demanded 351.31 → allocated 289.04
+  Agent    0: demanded 35.0000 → allocated 32.7902
+  Agent    1: demanded 60.0000 → allocated 32.7902
+  Agent    2: demanded 30.0000 → allocated 30.0000
+  Agent    3: demanded 0.0000 → allocated 0.0000
+  Agent    4: demanded 48.5000 → allocated 32.7902
+  Agent    5: demanded 35.0000 → allocated 32.7902
+  Agent    6: demanded 35.0000 → allocated 32.7902
+  Agent    9: demanded 45.0000 → allocated 32.7902
+  Agent   10: demanded 29.5114 → allocated 29.5114
+  Agent   11: demanded 33.3000 → allocated 32.7902[0m
+[91m2026-05-13 10:39:24 [WARNING ] axioms.agent: Step 16: Agent 0 over-appropriated: took=37.1199 allocated=32.7902.[0m
+[91m2026-05-13 10:39:24 [WARNING ] axioms.agent: Step 16: Agent 1 over-appropriated: took=36.3391 allocated=32.7902.[0m
+[91m2026-05-13 10:39:24 [WARNING ] axioms.agent: Step 16: Agent 2 over-appropriated: took=33.1913 allocated=30.0000.[0m
+[91m2026-05-13 10:39:24 [WARNING ] axioms.agent: Step 16: Agent 3 over-appropriated: took=5.8013 allocated=5.0000.[0m
+[91m2026-05-13 10:39:24 [WARNING ] axioms.agent: Step 16: Agent 4 over-appropriated: took=36.8890 allocated=32.7902.[0m
+[91m2026-05-13 10:39:24 [WARNING ] axioms.agent: Step 16: Agent 5 over-appropriated: took=35.6555 allocated=32.7902.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent.monitor: Step 16: Monitor sampling agent 6 — appropriated=32.79 allocated=32.79[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent.monitor: Step 16: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.177).[0m
+2026-05-13 10:39:24 [INFO    ] axioms.model: Step   16 | pool=  227.2 | members=10 | violations=6 | noncompliance_rate=0.18 | ra=ration
+[91m2026-05-13 10:39:24 [WARNING ] axioms.model: Step 16: 6 violation(s) detected this step.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 0 voted ration.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 1 voted ration.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 2 voted ration.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 3 voted ration.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 4 voted ration.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 5 voted ration.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 6 voted ration.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 9 voted ration.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 10 voted ration.[0m
+[90m2026-05-13 10:39:24 [DEBUG   ] axioms.agent: Step 17: Agent 11 voted ration.[0m
+[94m2026-05-13 10:39:34 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Given past violations when appropriating slightly above allocation, I will demand a smaller amount (20) to stay well below the likely allocation of ~22‑23 units per member under ration. This minimizes sanction risk while still obtaining some resources.[0m
+[90m2026-05-13 10:39:34 [DEBUG   ] axioms.agent: Step 17: Agent 0 demanded 20.0000.[0m
+[94m2026-05-13 10:39:47 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Demand a modest amount so that the allocated share (~22.7) is close to or slightly below the demand, reducing the risk of repeat violations and sanctions while still maintaining a self‑interested stance. This balanced choice maximizes possible gain without provoking a sanction response.[0m
+[90m2026-05-13 10:39:47 [DEBUG   ] axioms.agent: Step 17: Agent 1 demanded 25.0000.[0m
+[94m2026-05-13 10:40:07 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: I have power to demand; the ration method gives ~22.7 units. With sanction level 0 and a brief violation history, I can lightly over-demand to 25 units to opportunistically gain an extra 2–3 units if detection risk is low.[0m
+[90m2026-05-13 10:40:07 [DEBUG   ] axioms.agent: Step 17: Agent 2 demanded 25.0000.[0m
+[94m2026-05-13 10:40:18 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: To match the expected allocation of 5.0 units under the ration method and avoid over‑appropriation that caused previous violations, I will demand exactly 5.0 units.[0m
+[90m2026-05-13 10:40:18 [DEBUG   ] axioms.agent: Step 17: Agent 3 demanded 5.0000.[0m
+[94m2026-05-13 10:40:55 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Allocate about 22.7 units expected; demand 23.5 to take slight surplus, leveraging current sanction level 0 and low immediate detection risk.[0m
+[90m2026-05-13 10:40:55 [DEBUG   ] axioms.agent: Step 17: Agent 4 demanded 23.5000.[0m
+[94m2026-05-13 10:41:30 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Pool is 227.2 units and, with 10 members and a ration method, each should receive about 22.7. I’m taking a modest overage of ~3.3 units, which maximises short‑term gain while the sanction level is currently 0 and past infractions have not triggered penalties.[0m
+[90m2026-05-13 10:41:30 [DEBUG   ] axioms.agent: Step 17: Agent 5 demanded 26.0000.[0m
+[94m2026-05-13 10:41:50 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Maintain cooperation and respect the low pool by demanding modestly; ensures compliance with ration method and avoids over-claiming.[0m
+[90m2026-05-13 10:41:50 [DEBUG   ] axioms.agent: Step 17: Agent 6 demanded 20.0000.[0m
+[94m2026-05-13 10:42:08 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: As a fully cooperative member and the head, I continue to demand the standard share consistent with past allocations and the rationing method. This keeps the institution stable and respects the established equilibrium.[0m
+[90m2026-05-13 10:42:08 [DEBUG   ] axioms.agent: Step 17: Agent 9 demanded 45.0000.[0m
+[94m2026-05-13 10:42:47 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: With a pool of 227.2335 units and ten members, the ration method allocates one‑tenth of the pool to each participant. As a fully cooperative agent, I demand exactly my share (pool/members) and will appropriate no more.[0m
+[90m2026-05-13 10:42:47 [DEBUG   ] axioms.agent: Step 17: Agent 10 demanded 22.7233.[0m
+[94m2026-05-13 10:43:20 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I have power to demand under the ration method. The ration method has historically allocated 33.3 units to each member, and the remaining pool (227.2335) is sufficient to support this share for all 10 members. I continue to demand my fair share to maintain cooperation.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 17: Agent 11 demanded 33.3000.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent.head: Step 17: Head allocated via ration — 10 agents | demanded 245.52 → allocated 204.06
+  Agent    0: demanded 20.0000 → allocated 20.0000
+  Agent    1: demanded 25.0000 → allocated 22.7233
+  Agent    2: demanded 25.0000 → allocated 22.7233
+  Agent    3: demanded 5.0000 → allocated 5.0000
+  Agent    4: demanded 23.5000 → allocated 22.7233
+  Agent    5: demanded 26.0000 → allocated 22.7233
+  Agent    6: demanded 20.0000 → allocated 20.0000
+  Agent    9: demanded 45.0000 → allocated 22.7233
+  Agent   10: demanded 22.7233 → allocated 22.7233
+  Agent   11: demanded 33.3000 → allocated 22.7233[0m
+[91m2026-05-13 10:43:20 [WARNING ] axioms.agent: Step 17: Agent 0 over-appropriated: took=23.6798 allocated=20.0000.[0m
+[91m2026-05-13 10:43:20 [WARNING ] axioms.agent: Step 17: Agent 1 over-appropriated: took=25.1663 allocated=22.7233.[0m
+[91m2026-05-13 10:43:20 [WARNING ] axioms.agent: Step 17: Agent 2 over-appropriated: took=26.6604 allocated=22.7233.[0m
+[91m2026-05-13 10:43:20 [WARNING ] axioms.agent: Step 17: Agent 3 over-appropriated: took=5.4567 allocated=5.0000.[0m
+[91m2026-05-13 10:43:20 [WARNING ] axioms.agent: Step 17: Agent 4 over-appropriated: took=25.7559 allocated=22.7233.[0m
+[91m2026-05-13 10:43:20 [WARNING ] axioms.agent: Step 17: Agent 5 over-appropriated: took=24.7640 allocated=22.7233.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent.monitor: Step 17: Monitor sampling agent 3 — appropriated=5.46 allocated=5.00[0m
+[91m2026-05-13 10:43:20 [WARNING ] axioms.agent.monitor: Step 17: Monitor reports agent 3 — appropriated=5.46 allocated=5.00[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent.monitor: Step 17: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.342).[0m
+2026-05-13 10:43:20 [INFO    ] axioms.agent.head: Step 17: Head sanctioned agent 3 (offences=2) → decision=inactive
+2026-05-13 10:43:20 [INFO    ] axioms.agent.head: Step 17: Agent 3 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 10:43:20 [INFO    ] axioms.agent: Step 17: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent.head: Step 17: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:43:20 [INFO    ] axioms.model: Step   17 | pool=  252.6 | members=9 | violations=6 | noncompliance_rate=0.34 | ra=ration
+[91m2026-05-13 10:43:20 [WARNING ] axioms.model: Step 17: 6 violation(s) detected this step.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 18: Agent 0 voted ration.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 18: Agent 1 voted ration.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 18: Agent 2 voted ration.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 18: Agent 4 voted ration.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 18: Agent 5 voted ration.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 18: Agent 6 voted ration.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 18: Agent 9 voted ration.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 18: Agent 10 voted ration.[0m
+[90m2026-05-13 10:43:20 [DEBUG   ] axioms.agent: Step 18: Agent 11 voted ration.[0m
+[94m2026-05-13 10:43:38 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Pool size is 252.58 with 9 members → per‑capita ration ≈28.06. Demanding exactly the ration avoids violation yet secures needed resources.[0m
+[90m2026-05-13 10:43:38 [DEBUG   ] axioms.agent: Step 18: Agent 0 demanded 28.0600.[0m
+[94m2026-05-13 10:44:40 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: High demand to capture a sizable share of the remaining pool; sanctions are currently at level 0, so risk is low, and pool (≈252) is not near depletion.[0m
+[90m2026-05-13 10:44:40 [DEBUG   ] axioms.agent: Step 18: Agent 1 demanded 200.0000.[0m
+[94m2026-05-13 10:44:47 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Pool is very low; to avoid triggering a sanction and risking collapse, demand the roughly equal share (pool/9 ≈ 28).[0m
+[90m2026-05-13 10:44:47 [DEBUG   ] axioms.agent: Step 18: Agent 2 demanded 28.0000.[0m
+[94m2026-05-13 10:45:08 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Aim for a demand close to the rationed allocation (≈28) to stay under the radar while allowing a small over-appropriation if successful.[0m
+[90m2026-05-13 10:45:08 [DEBUG   ] axioms.agent: Step 18: Agent 4 demanded 28.5000.[0m
+[94m2026-05-13 10:45:23 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I called check_ostrom_axiom for a demand and confirmed I have power. Given the low pool level (≈252) and prior violations when demanding 26‑35, I opt for a conservative demand of 20 to avoid exceeding the allotted ration and incurring sanctions.[0m
+[90m2026-05-13 10:45:23 [DEBUG   ] axioms.agent: Step 18: Agent 5 demanded 20.0000.[0m
+[94m2026-05-13 10:45:52 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Pool divided by 9 members ≈28.06, so demanding 28 guarantees we receive the full allocation while staying well below the pool’s share and remaining compliant.[0m
+[90m2026-05-13 10:45:52 [DEBUG   ] axioms.agent: Step 18: Agent 6 demanded 28.0000.[0m
+[94m2026-05-13 10:46:03 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: The pool is 252.5803 units and there are 9 members. To allocate the pool fairly we each should receive 252.5803 / 9 ≈ 28.07 units. Demand this amount to get a proportionate share.[0m
+[90m2026-05-13 10:46:03 [DEBUG   ] axioms.agent: Step 18: Agent 9 demanded 28.0697.[0m
+[94m2026-05-13 10:46:25 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I am requesting 10% of the current pool (~252.58) to maintain equitable rationing and avoid overdraw.[0m
+[90m2026-05-13 10:46:25 [DEBUG   ] axioms.agent: Step 18: Agent 10 demanded 25.2580.[0m
+[94m2026-05-13 10:46:38 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Maintaining the cooperative norm and matching past successful allocations; no sanctions present, so we can safely request the usual amount.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent: Step 18: Agent 11 demanded 33.3000.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent.head: Step 18: Head allocated via ration — 9 agents | demanded 419.19 → allocated 241.58
+  Agent    0: demanded 28.0600 → allocated 28.0600
+  Agent    1: demanded 200.0000 → allocated 28.0645
+  Agent    2: demanded 28.0000 → allocated 28.0000
+  Agent    4: demanded 28.5000 → allocated 28.0645
+  Agent    5: demanded 20.0000 → allocated 20.0000
+  Agent    6: demanded 28.0000 → allocated 28.0000
+  Agent    9: demanded 28.0697 → allocated 28.0645
+  Agent   10: demanded 25.2580 → allocated 25.2580
+  Agent   11: demanded 33.3000 → allocated 28.0645[0m
+[91m2026-05-13 10:46:38 [WARNING ] axioms.agent: Step 18: Agent 0 over-appropriated: took=32.8090 allocated=28.0600.[0m
+[91m2026-05-13 10:46:38 [WARNING ] axioms.agent: Step 18: Agent 1 over-appropriated: took=29.6936 allocated=28.0645.[0m
+[91m2026-05-13 10:46:38 [WARNING ] axioms.agent: Step 18: Agent 2 over-appropriated: took=29.3989 allocated=28.0000.[0m
+[91m2026-05-13 10:46:38 [WARNING ] axioms.agent: Step 18: Agent 4 over-appropriated: took=28.1751 allocated=28.0645.[0m
+[91m2026-05-13 10:46:38 [WARNING ] axioms.agent: Step 18: Agent 5 over-appropriated: took=23.8680 allocated=20.0000.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent.monitor: Step 18: Monitor sampling agent 2 — appropriated=29.40 allocated=28.00[0m
+[91m2026-05-13 10:46:38 [WARNING ] axioms.agent.monitor: Step 18: Monitor reports agent 2 — appropriated=29.40 allocated=28.00[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent.monitor: Step 18: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.474).[0m
+2026-05-13 10:46:38 [INFO    ] axioms.agent.head: Step 18: Head sanctioned agent 2 (offences=2) → decision=inactive
+2026-05-13 10:46:38 [INFO    ] axioms.agent.head: Step 18: Agent 2 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 10:46:38 [INFO    ] axioms.agent: Step 18: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent.head: Step 18: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:46:38 [INFO    ] axioms.agent: Step 18: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent.head: Step 18: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:46:38 [INFO    ] axioms.model: Step   18 | pool=  244.2 | members=8 | violations=5 | noncompliance_rate=0.47 | ra=ration
+[91m2026-05-13 10:46:38 [WARNING ] axioms.model: Step 18: 5 violation(s) detected this step.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent: Step 19: Agent 0 voted ration.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent: Step 19: Agent 1 voted ration.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent: Step 19: Agent 4 voted ration.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent: Step 19: Agent 5 voted ration.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent: Step 19: Agent 6 voted ration.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent: Step 19: Agent 9 voted ration.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent: Step 19: Agent 10 voted ration.[0m
+[90m2026-05-13 10:46:38 [DEBUG   ] axioms.agent: Step 19: Agent 11 voted ration.[0m
+[94m2026-05-13 10:46:51 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Low pool level – a modest demand keeps the commons alive and mitigates sanction risk. Appropriating slightly more (around 18) offers short‑term gain while staying below the threshold of likely detection; repeated violations may trigger sanctions, so prudent to be conservative this round.[0m
+[90m2026-05-13 10:46:51 [DEBUG   ] axioms.agent: Step 19: Agent 0 demanded 15.0000.[0m
+[94m2026-05-13 10:47:40 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I want a significant share of the 244.25 units and expect my allocation to be at least around the per‑member average (~30). A moderate demand (100) balances getting a high allocation while keeping the probability of sanctions low, given the current sanction level of 0.[0m
+[90m2026-05-13 10:47:40 [DEBUG   ] axioms.agent: Step 19: Agent 1 demanded 100.0000.[0m
+[94m2026-05-13 10:48:03 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Pool is at 244 units; demanding 30 keeps the reserve well above zero, preventing collapse. I can afford a slight over-appropriation for short-term gain while the sanction level remains 0.[0m
+[90m2026-05-13 10:48:03 [DEBUG   ] axioms.agent: Step 19: Agent 4 demanded 30.0000.[0m
+[94m2026-05-13 10:49:08 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I am demanding the expected equal share (pool ÷ 8) to maximize short‑term gain while staying within the allocation that the ration method guarantees. This keeps the risk of a violation low because I will not take more than I am allocated.[0m
+[90m2026-05-13 10:49:08 [DEBUG   ] axioms.agent: Step 19: Agent 5 demanded 30.5300.[0m
+[94m2026-05-13 10:49:18 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Equitable share of the remaining pool (244.2487 / 8 ≈ 30.5).[0m
+[90m2026-05-13 10:49:18 [DEBUG   ] axioms.agent: Step 19: Agent 6 demanded 30.5000.[0m
+[94m2026-05-13 10:49:28 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Under the ration method, the pool is divided equally among the 8 members. 244.2487 ÷ 8 ≈ 30.53, so I request an equal share.[0m
+[90m2026-05-13 10:49:28 [DEBUG   ] axioms.agent: Step 19: Agent 9 demanded 30.5311.[0m
+[94m2026-05-13 10:49:54 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Requested the fair share of the current pool under the ration method: 244.2487 ÷ 8 ≈ 30.53 units.[0m
+[90m2026-05-13 10:49:54 [DEBUG   ] axioms.agent: Step 19: Agent 10 demanded 30.5300.[0m
+[94m2026-05-13 10:50:02 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Following the ration method with the current pool of 244.2487 and 8 members, the fair share is 244.2487 ÷ 8 ≈ 30.53. I demand this amount to stay compliant and cooperative.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent: Step 19: Agent 11 demanded 30.5300.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent.head: Step 19: Head allocated via ration — 8 agents | demanded 297.62 → allocated 228.15
+  Agent    0: demanded 15.0000 → allocated 15.0000
+  Agent    1: demanded 100.0000 → allocated 30.5311
+  Agent    4: demanded 30.0000 → allocated 30.0000
+  Agent    5: demanded 30.5300 → allocated 30.5300
+  Agent    6: demanded 30.5000 → allocated 30.5000
+  Agent    9: demanded 30.5311 → allocated 30.5311
+  Agent   10: demanded 30.5300 → allocated 30.5300
+  Agent   11: demanded 30.5300 → allocated 30.5300[0m
+[91m2026-05-13 10:50:02 [WARNING ] axioms.agent: Step 19: Agent 0 over-appropriated: took=15.3845 allocated=15.0000.[0m
+[91m2026-05-13 10:50:02 [WARNING ] axioms.agent: Step 19: Agent 1 over-appropriated: took=34.1340 allocated=30.5311.[0m
+[91m2026-05-13 10:50:02 [WARNING ] axioms.agent: Step 19: Agent 4 over-appropriated: took=35.6915 allocated=30.0000.[0m
+[91m2026-05-13 10:50:02 [WARNING ] axioms.agent: Step 19: Agent 5 over-appropriated: took=33.8770 allocated=30.5300.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent.monitor: Step 19: Monitor sampling agent 10 — appropriated=30.53 allocated=30.53[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent.monitor: Step 19: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.379).[0m
+2026-05-13 10:50:02 [INFO    ] axioms.agent: Step 19: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent.head: Step 19: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:50:02 [INFO    ] axioms.agent: Step 19: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent.head: Step 19: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:50:02 [INFO    ] axioms.model: Step   19 | pool=  248.1 | members=8 | violations=4 | noncompliance_rate=0.38 | ra=ration
+[91m2026-05-13 10:50:02 [WARNING ] axioms.model: Step 19: 4 violation(s) detected this step.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent: Step 20: Agent 0 voted ration.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent: Step 20: Agent 1 voted ration.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent: Step 20: Agent 4 voted ration.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent: Step 20: Agent 5 voted ration.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent: Step 20: Agent 6 voted ration.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent: Step 20: Agent 9 voted ration.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent: Step 20: Agent 10 voted ration.[0m
+[90m2026-05-13 10:50:02 [DEBUG   ] axioms.agent: Step 20: Agent 11 voted ration.[0m
+[94m2026-05-13 10:50:12 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: The pool is 248 units with 8 members, so an equal ration would give roughly 31 units each. By demanding 35 I aim to secure a modestly larger share without raising sanction risk, given previous rounds showed no sanctions after slightly exceeding allocations.[0m
+[90m2026-05-13 10:50:12 [DEBUG   ] axioms.agent: Step 20: Agent 0 demanded 35.0000.[0m
+[94m2026-05-13 10:50:32 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Pool relatively high (≈248 units) and sanctions so far have not been applied, so demand a large amount to maximize potential appropriation while remaining within a tolerable risk level.[0m
+[90m2026-05-13 10:50:32 [DEBUG   ] axioms.agent: Step 20: Agent 1 demanded 175.0000.[0m
+[94m2026-05-13 10:50:50 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Checked that I have the power to demand. I will ask for 29 to obtain an allocation around 29 and then opportunistically take slightly more than allocated. This gives a modest short‑term gain while keeping my sanction risk low, as previous violations have not yet triggered sanctions.[0m
+[90m2026-05-13 10:50:50 [DEBUG   ] axioms.agent: Step 20: Agent 4 demanded 29.0000.[0m
+[94m2026-05-13 10:51:07 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: The pool is at 248, and past behavior shows sanction risk is currently low (sanction level 0). Demanding 30 allows a good appropriation boost while staying within typical ranges that haven't triggered sanctions yet.[0m
+[90m2026-05-13 10:51:07 [DEBUG   ] axioms.agent: Step 20: Agent 5 demanded 30.0000.[0m
+[94m2026-05-13 10:51:14 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: We maintain a moderate demand to keep the shared pool sustainable while respecting the rationing method and ensuring we do not overextract from the limited resources.[0m
+[90m2026-05-13 10:51:14 [DEBUG   ] axioms.agent: Step 20: Agent 6 demanded 20.0000.[0m
+[94m2026-05-13 10:51:28 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Pool is 248.07 units with 8 members using ration; expected ration ~31 units each. To stay fully cooperative and match previous demand pattern, I will request 30 units.[0m
+[90m2026-05-13 10:51:28 [DEBUG   ] axioms.agent: Step 20: Agent 9 demanded 30.0000.[0m
+[94m2026-05-13 10:51:36 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Power verified, cooperative; demand remains consistent with prior rationing to maintain fairness.[0m
+[90m2026-05-13 10:51:36 [DEBUG   ] axioms.agent: Step 20: Agent 10 demanded 30.5300.[0m
+[94m2026-05-13 10:51:49 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I have power to demand resources and as a fully cooperative member I aim for an equal share. With a pool of 248.07 and 8 members, the approximate fair share is ~31 units. I therefore request 30.5 units to stay within my allocation limits and avoid sanctions.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent: Step 20: Agent 11 demanded 30.5000.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent.head: Step 20: Head allocated via ration — 8 agents | demanded 380.03 → allocated 232.05
+  Agent    0: demanded 35.0000 → allocated 31.0088
+  Agent    1: demanded 175.0000 → allocated 31.0088
+  Agent    4: demanded 29.0000 → allocated 29.0000
+  Agent    5: demanded 30.0000 → allocated 30.0000
+  Agent    6: demanded 20.0000 → allocated 20.0000
+  Agent    9: demanded 30.0000 → allocated 30.0000
+  Agent   10: demanded 30.5300 → allocated 30.5300
+  Agent   11: demanded 30.5000 → allocated 30.5000[0m
+[91m2026-05-13 10:51:49 [WARNING ] axioms.agent: Step 20: Agent 0 over-appropriated: took=35.8262 allocated=31.0088.[0m
+[91m2026-05-13 10:51:49 [WARNING ] axioms.agent: Step 20: Agent 1 over-appropriated: took=36.5436 allocated=31.0088.[0m
+[91m2026-05-13 10:51:49 [WARNING ] axioms.agent: Step 20: Agent 4 over-appropriated: took=33.4975 allocated=29.0000.[0m
+[91m2026-05-13 10:51:49 [WARNING ] axioms.agent: Step 20: Agent 5 over-appropriated: took=35.3294 allocated=30.0000.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent.monitor: Step 20: Monitor sampling agent 11 — appropriated=30.50 allocated=30.50[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent.monitor: Step 20: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.303).[0m
+2026-05-13 10:51:49 [INFO    ] axioms.agent: Step 20: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent.head: Step 20: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:51:49 [INFO    ] axioms.agent: Step 20: Agent 3 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent.head: Step 20: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:51:49 [INFO    ] axioms.model: Step   20 | pool=  390.8 | members=8 | violations=4 | noncompliance_rate=0.30 | ra=ration
+[91m2026-05-13 10:51:49 [WARNING ] axioms.model: Step 20: 4 violation(s) detected this step.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent: Step 21: Agent 0 voted ration.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent: Step 21: Agent 1 voted ration.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent: Step 21: Agent 4 voted ration.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent: Step 21: Agent 5 voted ration.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent: Step 21: Agent 6 voted ration.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent: Step 21: Agent 9 voted ration.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent: Step 21: Agent 10 voted ration.[0m
+[90m2026-05-13 10:51:49 [DEBUG   ] axioms.agent: Step 21: Agent 11 voted ration.[0m
+[94m2026-05-13 10:52:06 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Maintain a low-risk, moderate demand to avoid adding to sanction risk while still allowing a small surplus from over-appropriation.[0m
+[90m2026-05-13 10:52:06 [DEBUG   ] axioms.agent: Step 21: Agent 0 demanded 20.0000.[0m
+[94m2026-05-13 10:52:14 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I have power to demand and the pool is at 391 units with 8 members. I can safely demand 250 units to secure a large share without exceeding the pool and aim to appropriate more than my fair allocation.[0m
+[90m2026-05-13 10:52:14 [DEBUG   ] axioms.agent: Step 21: Agent 1 demanded 250.0000.[0m
+[94m2026-05-13 10:52:25 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Consistent with previous demands while staying within a risky threshold; prior violations did not trigger sanctions, so a slight overdraw is acceptable for expected gain.[0m
+[90m2026-05-13 10:52:25 [DEBUG   ] axioms.agent: Step 21: Agent 4 demanded 30.0000.[0m
+[94m2026-05-13 10:52:46 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Pool is 390.84 with 8 members, so fair share is ≈48.85. I can safely demand up to 48.8 to secure allocation while leaving a small buffer to over-appropriate without triggering immediate sanctions. Previous violations of ~5‑6 units did not increase sanction level, indicating low detection risk this round.[0m
+[90m2026-05-13 10:52:46 [DEBUG   ] axioms.agent: Step 21: Agent 5 demanded 48.8000.[0m
+[94m2026-05-13 10:52:58 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: As a cooperative member, I request the fair share under the ration method: pool (390.8440) divided by members (8) → 48.8555, while complying with institutional rules.[0m
+[90m2026-05-13 10:52:58 [DEBUG   ] axioms.agent: Step 21: Agent 6 demanded 48.8555.[0m
+[94m2026-05-13 10:53:06 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Following the recent pattern under the ration method and maintaining a consistent demand to ensure reliable compliance and optimal use of available resources.[0m
+[90m2026-05-13 10:53:06 [DEBUG   ] axioms.agent: Step 21: Agent 9 demanded 30.0000.[0m
+[94m2026-05-13 10:53:18 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Maintain previous demand level to keep resource usage stable and avoid risking depletion of the common-pool resource.[0m
+[90m2026-05-13 10:53:18 [DEBUG   ] axioms.agent: Step 21: Agent 10 demanded 30.5300.[0m
+[94m2026-05-13 10:53:50 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I have power to demand (check_ostrom_axiom shows YES_POWER). The ration method allocates the pool equally among all members, so the fair share in this round is 390.8440 / 8 = ~48.86 units. Demanding this amount ensures I receive my full share while staying within the cooperative norms of the institution.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 21: Agent 11 demanded 48.8600.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent.head: Step 21: Head allocated via ration — 8 agents | demanded 507.05 → allocated 305.90
+  Agent    0: demanded 20.0000 → allocated 20.0000
+  Agent    1: demanded 250.0000 → allocated 48.8555
+  Agent    4: demanded 30.0000 → allocated 30.0000
+  Agent    5: demanded 48.8000 → allocated 48.8000
+  Agent    6: demanded 48.8555 → allocated 48.8555
+  Agent    9: demanded 30.0000 → allocated 30.0000
+  Agent   10: demanded 30.5300 → allocated 30.5300
+  Agent   11: demanded 48.8600 → allocated 48.8555[0m
+[91m2026-05-13 10:53:50 [WARNING ] axioms.agent: Step 21: Agent 0 over-appropriated: took=20.4341 allocated=20.0000.[0m
+[91m2026-05-13 10:53:50 [WARNING ] axioms.agent: Step 21: Agent 1 over-appropriated: took=51.4998 allocated=48.8555.[0m
+[91m2026-05-13 10:53:50 [WARNING ] axioms.agent: Step 21: Agent 4 over-appropriated: took=35.3042 allocated=30.0000.[0m
+[91m2026-05-13 10:53:50 [WARNING ] axioms.agent: Step 21: Agent 5 over-appropriated: took=49.5181 allocated=48.8000.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent.monitor: Step 21: Monitor sampling agent 6 — appropriated=48.86 allocated=48.86[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent.monitor: Step 21: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.242).[0m
+2026-05-13 10:53:50 [INFO    ] axioms.agent: Step 21: Agent 3 sanction expired — restored to active.
+2026-05-13 10:53:50 [INFO    ] axioms.agent: Step 21: Agent 2 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent.head: Step 21: Appeal by agent 2 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:53:50 [INFO    ] axioms.model: Step   21 | pool=  470.8 | members=9 | violations=4 | noncompliance_rate=0.24 | ra=ration
+[91m2026-05-13 10:53:50 [WARNING ] axioms.model: Step 21: 4 violation(s) detected this step.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 22: Agent 0 voted ration.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 22: Agent 1 voted ration.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 22: Agent 3 voted ration.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 22: Agent 4 voted ration.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 22: Agent 5 voted ration.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 22: Agent 6 voted ration.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 22: Agent 9 voted ration.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 22: Agent 10 voted ration.[0m
+[90m2026-05-13 10:53:50 [DEBUG   ] axioms.agent: Step 22: Agent 11 voted ration.[0m
+[94m2026-05-13 10:54:25 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Pool is low and sanction history shows sanction level still 0 after repeated violations. I can opportunistically meet my previous demand of 35 and hope the risk of detection remains low, targeting an appropriation slightly above the allocation for a short‑term gain.[0m
+[90m2026-05-13 10:54:25 [DEBUG   ] axioms.agent: Step 22: Agent 0 demanded 35.0000.[0m
+[94m2026-05-13 10:54:50 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I have sanction level 0 and enough members to avoid automatic denial. By demanding a high amount I can secure a larger share of the limited pool and increase my appropriations while hoping the sanctions remain minimal this round.[0m
+[90m2026-05-13 10:54:50 [DEBUG   ] axioms.agent: Step 22: Agent 1 demanded 800.0000.[0m
+[94m2026-05-13 10:55:06 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: Given the low pool balance and ration allocation, a moderate demand of 52 units balances personal needs while preserving the resource for all members.[0m
+[90m2026-05-13 10:55:06 [DEBUG   ] axioms.agent: Step 22: Agent 3 demanded 52.0000.[0m
+[94m2026-05-13 10:55:26 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: The institution uses ration method; past successful behavior was demanding 30 units and appropriating ~36. Given current sanction level is 0 and pool is at 470/1000, continuing the same demand yields a predictable ~20% over‑take and low risk of detection. No better evidence to increase demand without raising sanction risk.[0m
+[90m2026-05-13 10:55:26 [DEBUG   ] axioms.agent: Step 22: Agent 4 demanded 30.0000.[0m
+[94m2026-05-13 10:56:05 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Demand the full ration share (470.8468/9) to avoid a violation after several recent infractions and keep sanction risk low.[0m
+[90m2026-05-13 10:56:05 [DEBUG   ] axioms.agent: Step 22: Agent 5 demanded 52.3155.[0m
+[94m2026-05-13 10:56:13 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: As a fully cooperative member, I aim to request a share equal to the rationed amount. Divide the current pool (470.8468) by 9 members, giving about 52.32 units, ensuring I stay within the allocation and maintain the institution’s stability.[0m
+[90m2026-05-13 10:56:13 [DEBUG   ] axioms.agent: Step 22: Agent 6 demanded 52.3195.[0m
+[94m2026-05-13 10:56:32 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: I first verified that I have legitimate power to demand via the Ostrom axiom. I choose to continue the cooperative pattern of demanding 30.0 units—matching past demands and ensuring the total demand (270.0) stays well below the current pool (470.8) so that I am allocated exactly my demand and can appropriate it without breach. This maintains fairness and compliance with the ration method.[0m
+[90m2026-05-13 10:56:32 [DEBUG   ] axioms.agent: Step 22: Agent 9 demanded 30.0000.[0m
+[94m2026-05-13 10:56:51 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Cooperative member, following the ration rule, demands the standard share and remains within the pool limit.[0m
+[90m2026-05-13 10:56:51 [DEBUG   ] axioms.agent: Step 22: Agent 10 demanded 30.5300.[0m
+[94m2026-05-13 10:57:20 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Demanding equal ration share of the current pool for the 9 members, staying fully cooperative and compliant.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 22: Agent 11 demanded 52.3191.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent.head: Step 22: Head allocated via ration — 9 agents | demanded 1134.48 → allocated 386.79
+  Agent    0: demanded 35.0000 → allocated 35.0000
+  Agent    1: demanded 800.0000 → allocated 52.3163
+  Agent    3: demanded 52.0000 → allocated 52.0000
+  Agent    4: demanded 30.0000 → allocated 30.0000
+  Agent    5: demanded 52.3155 → allocated 52.3155
+  Agent    6: demanded 52.3195 → allocated 52.3163
+  Agent    9: demanded 30.0000 → allocated 30.0000
+  Agent   10: demanded 30.5300 → allocated 30.5300
+  Agent   11: demanded 52.3191 → allocated 52.3163[0m
+[91m2026-05-13 10:57:20 [WARNING ] axioms.agent: Step 22: Agent 0 over-appropriated: took=37.8653 allocated=35.0000.[0m
+[91m2026-05-13 10:57:20 [WARNING ] axioms.agent: Step 22: Agent 1 over-appropriated: took=53.2492 allocated=52.3163.[0m
+[91m2026-05-13 10:57:20 [WARNING ] axioms.agent: Step 22: Agent 3 over-appropriated: took=53.7225 allocated=52.0000.[0m
+[91m2026-05-13 10:57:20 [WARNING ] axioms.agent: Step 22: Agent 4 over-appropriated: took=31.4447 allocated=30.0000.[0m
+[91m2026-05-13 10:57:20 [WARNING ] axioms.agent: Step 22: Agent 5 over-appropriated: took=55.8187 allocated=52.3155.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent.monitor: Step 22: Monitor sampling agent 4 — appropriated=31.44 allocated=30.00[0m
+[91m2026-05-13 10:57:20 [WARNING ] axioms.agent.monitor: Step 22: Monitor reports agent 4 — appropriated=31.44 allocated=30.00[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent.monitor: Step 22: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.394).[0m
+2026-05-13 10:57:20 [INFO    ] axioms.agent.head: Step 22: Head sanctioned agent 4 (offences=2) → decision=inactive
+2026-05-13 10:57:20 [INFO    ] axioms.agent.head: Step 22: Agent 4 sanctioned to inactive for 5 steps (sanction_level=1).
+2026-05-13 10:57:20 [INFO    ] axioms.agent: Step 22: Agent 2 sanction expired — restored to active.
+2026-05-13 10:57:20 [INFO    ] axioms.agent: Step 22: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent.head: Step 22: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:57:20 [INFO    ] axioms.model: Step   22 | pool=  468.6 | members=9 | violations=5 | noncompliance_rate=0.39 | ra=ration
+[91m2026-05-13 10:57:20 [WARNING ] axioms.model: Step 22: 5 violation(s) detected this step.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 23: Agent 0 voted ration.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 23: Agent 1 voted ration.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 23: Agent 2 voted ration.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 23: Agent 3 voted ration.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 23: Agent 5 voted ration.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 23: Agent 6 voted ration.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 23: Agent 9 voted ration.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 23: Agent 10 voted ration.[0m
+[90m2026-05-13 10:57:20 [DEBUG   ] axioms.agent: Step 23: Agent 11 voted ration.[0m
+[94m2026-05-13 10:57:29 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Pool is low (468 units), and past violations occurred when demanding 20‑35. By demanding 30 I stay below typical allocation (≈52 units for 9 members), reducing the chance of over‑appropriation and potential sanctions while still securing a respectable share.[0m
+[90m2026-05-13 10:57:29 [DEBUG   ] axioms.agent: Step 23: Agent 0 demanded 30.0000.[0m
+[94m2026-05-13 10:57:42 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Pool is 468 with 9 members, so ration allocation per member is roughly 468/9 ≈ 52. To avoid triggering a violation, I match the allocation I expect, minimizing sanction risk while still receiving the full share.[0m
+[90m2026-05-13 10:57:42 [DEBUG   ] axioms.agent: Step 23: Agent 1 demanded 52.0000.[0m
+[94m2026-05-13 10:57:57 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Pool is low at 468 units; ration would give ~52 to each of 9 members. I plan to demand a slightly higher amount (55) to opportunistically gain extra resources while keeping risk of detection low. I have the power to demand, and sanction risk is currently minimal (sanction level 0).[0m
+[90m2026-05-13 10:57:57 [DEBUG   ] axioms.agent: Step 23: Agent 2 demanded 55.0000.[0m
+[94m2026-05-13 10:58:11 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: I have power to demand. To avoid prior over‑appropriation, I request slightly less than the 52 units that would be allocated by ration, keeping my usage within the share.[0m
+[90m2026-05-13 10:58:11 [DEBUG   ] axioms.agent: Step 23: Agent 3 demanded 51.0000.[0m
+[94m2026-05-13 10:58:38 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I will demand a bit less than the nominal ration (≈52) to keep the risk of detection low while still exceeding the allocation by a small margin. This gives modest short‑term gain without increasing sanction risk, especially since the agent has so far avoided sanctions.[0m
+[90m2026-05-13 10:58:38 [DEBUG   ] axioms.agent: Step 23: Agent 5 demanded 50.0000.[0m
+[94m2026-05-13 10:58:50 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I checked the Ostrom axiom for demand power and, as a cooperative member, I aim to claim approximately my fair share of the pool under ration (468.58 / 9 ≈ 52).[0m
+[90m2026-05-13 10:58:50 [DEBUG   ] axioms.agent: Step 23: Agent 6 demanded 52.0000.[0m
+[94m2026-05-13 10:59:03 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Since the pool is 468.58 units and the ration method allocates resources equally, each of the nine members deserves about 52.07. Demanding 52 ensures we receive an equitable share while remaining fully compliant and cooperative.[0m
+[90m2026-05-13 10:59:03 [DEBUG   ] axioms.agent: Step 23: Agent 9 demanded 52.0000.[0m
+[94m2026-05-13 10:59:30 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Under the ration method I request an equal share of the current pool: 468.5837 ÷ 9 ≈ 52.1.[0m
+[90m2026-05-13 10:59:30 [DEBUG   ] axioms.agent: Step 23: Agent 10 demanded 52.1000.[0m
+[94m2026-05-13 10:59:43 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: As a fully cooperative member following the ration method, I demand exactly my share of the pool, which is the total pool (468.5837) divided by the number of members (9).[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent: Step 23: Agent 11 demanded 52.0627.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent.head: Step 23: Head allocated via ration — 9 agents | demanded 446.16 → allocated 443.19
+  Agent    0: demanded 30.0000 → allocated 30.0000
+  Agent    1: demanded 52.0000 → allocated 52.0000
+  Agent    2: demanded 55.0000 → allocated 52.0649
+  Agent    3: demanded 51.0000 → allocated 51.0000
+  Agent    5: demanded 50.0000 → allocated 50.0000
+  Agent    6: demanded 52.0000 → allocated 52.0000
+  Agent    9: demanded 52.0000 → allocated 52.0000
+  Agent   10: demanded 52.1000 → allocated 52.0649
+  Agent   11: demanded 52.0627 → allocated 52.0627[0m
+[91m2026-05-13 10:59:43 [WARNING ] axioms.agent: Step 23: Agent 0 over-appropriated: took=31.6423 allocated=30.0000.[0m
+[91m2026-05-13 10:59:43 [WARNING ] axioms.agent: Step 23: Agent 1 over-appropriated: took=57.5645 allocated=52.0000.[0m
+[91m2026-05-13 10:59:43 [WARNING ] axioms.agent: Step 23: Agent 2 over-appropriated: took=60.1394 allocated=52.0649.[0m
+[91m2026-05-13 10:59:43 [WARNING ] axioms.agent: Step 23: Agent 3 over-appropriated: took=58.2951 allocated=51.0000.[0m
+[91m2026-05-13 10:59:43 [WARNING ] axioms.agent: Step 23: Agent 5 over-appropriated: took=51.0547 allocated=50.0000.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent.monitor: Step 23: Monitor sampling agent 3 — appropriated=58.30 allocated=51.00[0m
+[91m2026-05-13 10:59:43 [WARNING ] axioms.agent.monitor: Step 23: Monitor reports agent 3 — appropriated=58.30 allocated=51.00[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent.monitor: Step 23: Monitor sampled 1 members, found 1 violations (noncompliance_rate=0.515).[0m
+2026-05-13 10:59:43 [INFO    ] axioms.agent.head: Step 23: Head sanctioned agent 3 (offences=3) → decision=exclude
+2026-05-13 10:59:43 [INFO    ] axioms.agent.gatekeeper: Step 23: Gatekeeper spared agent 3 — set inactive (sanction_level=2, duration=10).
+2026-05-13 10:59:43 [INFO    ] axioms.agent: Step 23: Agent 3 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent.head: Step 23: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:59:43 [INFO    ] axioms.agent: Step 23: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent.head: Step 23: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 10:59:43 [INFO    ] axioms.model: Step   23 | pool=  396.8 | members=8 | violations=5 | noncompliance_rate=0.52 | ra=ration
+[91m2026-05-13 10:59:43 [WARNING ] axioms.model: Step 23: 5 violation(s) detected this step.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent: Step 24: Agent 0 voted ration.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent: Step 24: Agent 1 voted ration.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent: Step 24: Agent 2 voted ration.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent: Step 24: Agent 5 voted ration.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent: Step 24: Agent 6 voted ration.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent: Step 24: Agent 9 voted ration.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent: Step 24: Agent 10 voted ration.[0m
+[90m2026-05-13 10:59:43 [DEBUG   ] axioms.agent: Step 24: Agent 11 voted ration.[0m
+[94m2026-05-13 11:00:02 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: I am demanding only a modest amount above the typical ration share (~49.6) to opportunistically take a small excess. With sanction level still at 0 and no recent sanctions having been issued after excess appropriations, the risk stays moderate.[0m
+[90m2026-05-13 11:00:02 [DEBUG   ] axioms.agent: Step 24: Agent 0 demanded 52.0000.[0m
+[94m2026-05-13 11:00:40 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: The pool is low (396.8 units) and the ration method divides it equally among 8 members, giving about 49.6 units regardless of the demand. To maximize my appropriation, I demand a large amount (800) to secure the full pool share and then appropriate the typical ~10% extra that results in a violation. With my sanction level still at 0, I accept the cost of the violation while extracting the most possible this round.[0m
+[90m2026-05-13 11:00:40 [DEBUG   ] axioms.agent: Step 24: Agent 1 demanded 800.0000.[0m
+[94m2026-05-13 11:00:54 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: The pool will likely be split roughly evenly (≈49.6 per member). Demand 51 to take a modest edge over the allocation while keeping the excess small enough to lessen detection risk. With current sanction level 0, the chance of immediate penalty is low, so a slight over‑demand balances gain and risk.[0m
+[90m2026-05-13 11:00:54 [DEBUG   ] axioms.agent: Step 24: Agent 2 demanded 51.0000.[0m
+[94m2026-05-13 11:01:09 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: The pool is low (396/1000), so the equal ration share is about 49.5. A demand of 50.5 should still pass as a modest over‑request, giving a small short‑term gain while keeping sanction risk low since we have not been penalised yet.[0m
+[90m2026-05-13 11:01:09 [DEBUG   ] axioms.agent: Step 24: Agent 5 demanded 50.5000.[0m
+[94m2026-05-13 11:01:24 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Maintaining fair share per ration method[0m
+[90m2026-05-13 11:01:24 [DEBUG   ] axioms.agent: Step 24: Agent 6 demanded 52.0000.[0m
+[94m2026-05-13 11:01:44 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Demanding an equal share per the ration method (396.7601 ÷ 8 ≈ 49.6), rounded down to stay within the pool and maintain fairness.[0m
+[90m2026-05-13 11:01:44 [DEBUG   ] axioms.agent: Step 24: Agent 9 demanded 49.0000.[0m
+[94m2026-05-13 11:01:57 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Maintain a sustainable, roughly 10% share of the current pool to avoid depletion while ensuring compliance.[0m
+[90m2026-05-13 11:01:57 [DEBUG   ] axioms.agent: Step 24: Agent 10 demanded 44.0000.[0m
+[94m2026-05-13 11:02:05 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I have full decision power under Ostrom axioms; I maintain a fair, consistent demand per the ration method and past approvals, ensuring compliance.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent: Step 24: Agent 11 demanded 52.5000.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent.head: Step 24: Head allocated via ration — 8 agents | demanded 1151.00 → allocated 390.57
+  Agent    0: demanded 52.0000 → allocated 49.5950
+  Agent    1: demanded 800.0000 → allocated 49.5950
+  Agent    2: demanded 51.0000 → allocated 49.5950
+  Agent    5: demanded 50.5000 → allocated 49.5950
+  Agent    6: demanded 52.0000 → allocated 49.5950
+  Agent    9: demanded 49.0000 → allocated 49.0000
+  Agent   10: demanded 44.0000 → allocated 44.0000
+  Agent   11: demanded 52.5000 → allocated 49.5950[0m
+[91m2026-05-13 11:02:05 [WARNING ] axioms.agent: Step 24: Agent 0 over-appropriated: took=50.0164 allocated=49.5950.[0m
+[91m2026-05-13 11:02:05 [WARNING ] axioms.agent: Step 24: Agent 1 over-appropriated: took=55.4125 allocated=49.5950.[0m
+[91m2026-05-13 11:02:05 [WARNING ] axioms.agent: Step 24: Agent 2 over-appropriated: took=58.0098 allocated=49.5950.[0m
+[91m2026-05-13 11:02:05 [WARNING ] axioms.agent: Step 24: Agent 5 over-appropriated: took=50.0483 allocated=49.5950.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent.monitor: Step 24: Monitor sampling agent 4 — appropriated=0.00 allocated=30.00[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent.monitor: Step 24: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.412).[0m
+2026-05-13 11:02:05 [INFO    ] axioms.agent: Step 24: Agent 3 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent.head: Step 24: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 11:02:05 [INFO    ] axioms.agent: Step 24: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent.head: Step 24: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 11:02:05 [INFO    ] axioms.model: Step   24 | pool=  386.1 | members=8 | violations=4 | noncompliance_rate=0.41 | ra=ration
+[91m2026-05-13 11:02:05 [WARNING ] axioms.model: Step 24: 4 violation(s) detected this step.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent: Step 25: Agent 0 voted ration.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent: Step 25: Agent 1 voted ration.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent: Step 25: Agent 2 voted ration.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent: Step 25: Agent 5 voted ration.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent: Step 25: Agent 6 voted ration.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent: Step 25: Agent 9 voted ration.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent: Step 25: Agent 10 voted ration.[0m
+[90m2026-05-13 11:02:05 [DEBUG   ] axioms.agent: Step 25: Agent 11 voted ration.[0m
+[94m2026-05-13 11:02:18 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Ration share is 386.083/8 ≈ 48.26. Demanding 48 keeps weaves near the norm to minimize detection while still allowing a small over‑appropriation buffer (~0.5).[0m
+[90m2026-05-13 11:02:18 [DEBUG   ] axioms.agent: Step 25: Agent 0 demanded 48.0000.[0m
+[94m2026-05-13 11:02:33 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Pool is low (386 units). To avoid further sanctions, demand a modest amount that can be allocated fully under ration method. Expect allocation close to demand; minimal risk of violation.[0m
+[90m2026-05-13 11:02:33 [DEBUG   ] axioms.agent: Step 25: Agent 1 demanded 58.0000.[0m
+[94m2026-05-13 11:02:58 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Aim for a moderate demand that likely aligns with the ration allocation (~48–52 units), giving a small margin to opportunistically take slightly more while keeping sanctions minimal.[0m
+[90m2026-05-13 11:02:58 [DEBUG   ] axioms.agent: Step 25: Agent 2 demanded 50.0000.[0m
+[94m2026-05-13 11:03:26 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Demand the near‑average share to keep appropriation close to allocation and avoid triggering sanctions while still benefiting from the pool’s current size.[0m
+[90m2026-05-13 11:03:26 [DEBUG   ] axioms.agent: Step 25: Agent 5 demanded 50.0000.[0m
+[94m2026-05-13 11:04:04 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Called check_ostrom_axiom(action='demand') and received YES_POWER. Under the current ration method, each member receives pool / 8. With the pool at 386.0830, the fair share is 48.260375, rounded to 48.2604. I demand that amount to maintain cooperative compliance and proper appropriation.[0m
+[90m2026-05-13 11:04:04 [DEBUG   ] axioms.agent: Step 25: Agent 6 demanded 48.2604.[0m
+[94m2026-05-13 11:04:26 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: As a fully cooperative member following the ration method, my allocation should be the pool divided evenly among the 8 members. Using the current pool of 386.0830 units, the fair share is approximately 48.26, so I demand 48 units to stay compliant.[0m
+[90m2026-05-13 11:04:26 [DEBUG   ] axioms.agent: Step 25: Agent 9 demanded 48.0000.[0m
+[94m2026-05-13 11:04:44 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Under the ration method, each active member should receive an equal share of the current pool. With 386.0830 units and 8 members, the fair share is 386.0830/8 ≈ 48.2604. As a fully cooperative member, I demand exactly this amount and will appropriate no more.[0m
+[90m2026-05-13 11:04:44 [DEBUG   ] axioms.agent: Step 25: Agent 10 demanded 48.2604.[0m
+[94m2026-05-13 11:05:02 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Demand equals pool divided by number of members, ensuring we request exactly our fair share under the ration method.[0m
+[90m2026-05-13 11:05:02 [DEBUG   ] axioms.agent: Step 25: Agent 11 demanded 48.2604.[0m
+[90m2026-05-13 11:05:02 [DEBUG   ] axioms.agent.head: Step 25: Head allocated via ration — 8 agents | demanded 398.78 → allocated 385.56
+  Agent    0: demanded 48.0000 → allocated 48.0000
+  Agent    1: demanded 58.0000 → allocated 48.2604
+  Agent    2: demanded 50.0000 → allocated 48.2604
+  Agent    5: demanded 50.0000 → allocated 48.2604
+  Agent    6: demanded 48.2604 → allocated 48.2604
+  Agent    9: demanded 48.0000 → allocated 48.0000
+  Agent   10: demanded 48.2604 → allocated 48.2604
+  Agent   11: demanded 48.2604 → allocated 48.2604[0m
+[91m2026-05-13 11:05:02 [WARNING ] axioms.agent: Step 25: Agent 0 over-appropriated: took=57.0112 allocated=48.0000.[0m
+[91m2026-05-13 11:05:02 [WARNING ] axioms.agent: Step 25: Agent 1 over-appropriated: took=55.7379 allocated=48.2604.[0m
+[91m2026-05-13 11:05:02 [WARNING ] axioms.agent: Step 25: Agent 2 over-appropriated: took=48.3011 allocated=48.2604.[0m
+[91m2026-05-13 11:05:02 [WARNING ] axioms.agent: Step 25: Agent 5 over-appropriated: took=48.4524 allocated=48.2604.[0m
+[90m2026-05-13 11:05:02 [DEBUG   ] axioms.agent.monitor: Step 25: Monitor sampling agent 11 — appropriated=48.26 allocated=48.26[0m
+[90m2026-05-13 11:05:02 [DEBUG   ] axioms.agent.monitor: Step 25: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.330).[0m
+2026-05-13 11:05:02 [INFO    ] axioms.agent: Step 25: Agent 3 appealing sanction (level=2, clean_steps=0).
+[90m2026-05-13 11:05:02 [DEBUG   ] axioms.agent.head: Step 25: Appeal by agent 3 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 11:05:02 [INFO    ] axioms.agent: Step 25: Agent 4 appealing sanction (level=1, clean_steps=0).
+[90m2026-05-13 11:05:02 [DEBUG   ] axioms.agent.head: Step 25: Appeal by agent 4 REJECTED (clean_steps=0 < window=30).[0m
+2026-05-13 11:05:02 [INFO    ] axioms.model: Step   25 | pool=  378.8 | members=8 | violations=4 | noncompliance_rate=0.33 | ra=ration
+[91m2026-05-13 11:05:02 [WARNING ] axioms.model: Step 25: 4 violation(s) detected this step.[0m
+2026-05-13 11:05:02 [INFO    ] axioms.model: Simulation complete: lifespan=25 final_pool=378.8 final_members=8
+2026-05-13 11:05:02 [INFO    ] axioms:   Lifespan 25 | Pool 379 | Members 8
+2026-05-13 11:05:02 [INFO    ] axioms.plot: Plot saved to /app/data/simulation_results.png

@@ -51,8 +51,8 @@ class HeadAgent(InstitutionalAgent):
             f"{len(allocations)} agents | "
             f"demanded {total_demanded:.2f} → allocated {total_allocated:.2f}"
         ]
-        for agent_id, amount in allocations.items():
-            demanded = demand_map.get(agent_id, 0.0)
+        for agent_id, demanded in self.model.demand_queue:
+            amount = allocations.get(agent_id, 0.0)
             lines.append(f"  Agent {agent_id:>4d}: demanded {demanded:.4f} → allocated {amount:.4f}")
         _log.debug("\n".join(lines))
         for agent_id, amount in allocations.items():

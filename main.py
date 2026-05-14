@@ -54,49 +54,49 @@ if __name__ == "__main__":
 
     logger.info("=== Simulation run: fully hardcoded ===")
     print("\n=== Simulation run: fully hardcoded ===")
-    r = CPRModel(
-        n_members=100, n_nonmembers=20, n_llm_members=0,
-        noncompliant_member_fraction=0.5, unintentional_violation_frac=0.05,
-        use_principle_3=True, use_principle_4=True,
-        use_principle_5=True, use_principle_6=True,
-    ).run(500)
+    # r = CPRModel(
+    #     n_members=100, n_nonmembers=20, n_llm_members=0,
+    #     noncompliant_member_fraction=0.5, unintentional_violation_frac=0.05,
+    #     use_principle_3=True, use_principle_4=True,
+    #     use_principle_5=True, use_principle_6=True,
+    # ).run(500)
     
 
-    # r = CPRModel(
-    # n_members=7,
-    # n_nonmembers=2,
+    r = CPRModel(
+    n_members=7,
+    n_nonmembers=2,
 
-    # # All regular members are LLM agents
-    # n_llm_members=7,
-    # member_llm_flags=llm_member_flags(),  # vote+demand+appropriate+appeal
+    # All regular members are LLM agents
+    n_llm_members=7,
+    member_llm_flags=llm_member_flags(),  # vote+demand+appropriate+appeal
 
-    # # # Head: LLM for all member behaviours + allocate + sanction
-    # # head_config={
-    # #     "llm": True,
-    # #     "flags": llm_head_flags(),        # vote+demand+appropriate+appeal+allocate+sanction
-    # #     "compliance_degree": 1.0,
-    # # },
+    # Head: LLM for all member behaviours + allocate + sanction
+    head_config={
+        "llm": True,
+        "flags": llm_head_flags(),        # vote+demand+appropriate+appeal+allocate+sanction
+        "compliance_degree": 1.0,
+    },
 
-    # # # Monitor: LLM for all member behaviours + monitor duty
-    # # monitor_config={
-    # #     "llm": True,
-    # #     "flags": llm_monitor_flags(),     # vote+demand+appropriate+appeal+monitor
-    # #     "compliance_degree": 1.0,
-    # # },
+    # Monitor: LLM for all member behaviours + monitor duty
+    monitor_config={
+        "llm": True,
+        "flags": llm_monitor_flags(),     # vote+demand+appropriate+appeal+monitor
+        "compliance_degree": 1.0,
+    },
 
-    # # # Gatekeeper: LLM for all member behaviours + exclude duty
-    # # gatekeeper_config={
-    # #     "llm": True,
-    # #     "flags": llm_gatekeeper_flags(),  # vote+demand+appropriate+appeal+exclude
-    # #     "compliance_degree": 1.0,
-    # # },
-    # unintentional_violation_frac=0.05,
-    # noncompliant_member_fraction=0.5,
-    # use_principle_3=True,
-    # use_principle_4=True,
-    # use_principle_5=True,
-    # use_principle_6=True,
-    # ).run(200)
+    # Gatekeeper: LLM for all member behaviours + exclude duty
+    gatekeeper_config={
+        "llm": True,
+        "flags": llm_gatekeeper_flags(),  # vote+demand+appropriate+appeal+exclude
+        "compliance_degree": 1.0,
+    },
+    unintentional_violation_frac=0.05,
+    noncompliant_member_fraction=0.5,
+    use_principle_3=True,
+    use_principle_4=True,
+    use_principle_5=True,
+    use_principle_6=True,
+    ).run(40)
 
     print(f"Lifespan: {r['lifespan']}")
     print(f"Final pool: {r['final_resource']:.0f}")

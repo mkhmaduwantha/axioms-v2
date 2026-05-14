@@ -10,8 +10,53 @@ MODEL_NAME = "gpt-oss:20b"
 # Set to 0 to disable rate limiting.
 RATE_LIMIT_RPM = int(os.environ.get("RATE_LIMIT_RPM", "0"))
 
+# Set to False to skip axiom tool calls — LLM decides directly from context.
+USE_TOOL_CALLING = os.environ.get("USE_TOOL_CALLING", "true").lower() != "false"
+
 # Replenishment phase sequence — repeats with % len.
 # Each entry is 50 steps long.  "moderate" = medium.
+WORLD_DESCRIPTION = """\
+═══════════════════════════════════════════════
+THE WORLD
+═══════════════════════════════════════════════
+
+There is a shared resource pool (like a water reservoir).
+The pool has a maximum capacity of 10,000 units.
+The pool starts full at 10,000 units.
+All agents share this single pool.
+
+If the pool hits 0, the institution collapses and everyone gets nothing.
+If all members are excluded, the institution collapses.
+
+═══════════════════════════════════════════════
+TIME
+═══════════════════════════════════════════════
+
+The simulation runs in timeslices (rounds).
+Each round, the following happens in order:
+  1. Vote on how to allocate resources
+  2. Demand resources
+  3. Receive allocation
+  4. Appropriate (take) resources
+  5. Get monitored
+  6. Receive sanctions if you violated rules
+  7. Appeal sanctions if you think they are unfair
+  8. Pool gets replenished
+
+═══════════════════════════════════════════════
+REPLENISHMENT
+═══════════════════════════════════════════════
+
+At the end of every round the pool is partially refilled.
+The refill rate changes every few rounds:
+  - High period:     pool refills by a large amount (>4,500 units)
+  - Moderate period: pool refills by a medium amount (~4,000 units)
+  - Low period:      pool refills by a small amount (~3,000 units)
+
+The pool can never exceed 10,000 units.
+You cannot control or predict the refill rate — it is set by the environment.\
+"""
+
 REPLENISHMENT_PATTERN = [
     "high", "high", "moderate", "low",
     "high", "high", "low", "moderate", "low", "high",

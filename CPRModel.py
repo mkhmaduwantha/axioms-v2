@@ -67,7 +67,7 @@ class CPRModel(mesa.Model):
         agent_id = 0
         for i in range(n_members):
             is_llm          = i < n_llm_members
-            is_noncompliant = i < int(n_members * noncompliant_member_fraction)
+            is_noncompliant = i < int(n_members * noncompliant_member_fraction + 3 ) # ToDo - Reserve some compliant slots for the Head, Monitor, and Gatekeeper
             compliance = 1.0
             if is_noncompliant:
                 compliance = random.uniform(0.80, 0.99)
@@ -178,7 +178,8 @@ class CPRModel(mesa.Model):
             )
 
     def _current_refill(self) -> float:
-        phase_name = REPLENISHMENT_PATTERN[(self.step_count // 50) % len(REPLENISHMENT_PATTERN)]
+        phase_len  = self.config.replenishment_phase_len
+        phase_name = REPLENISHMENT_PATTERN[(self.step_count // phase_len) % len(REPLENISHMENT_PATTERN)]
         rate = {
             "high":     self.config.replenishment_high,
             "moderate": self.config.replenishment_moderate,
