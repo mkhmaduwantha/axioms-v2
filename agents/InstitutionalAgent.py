@@ -5,7 +5,7 @@ from typing import Optional
 from enums import AgentRole, AgentStatus, RAMethod
 from models import AgentFlags, Institution, InstitutionConfig, llm_member_flags, llm_head_flags, llm_monitor_flags, llm_gatekeeper_flags, llm_all_flags, HARDCODED_FLAGS
 from LLMClient import LLMClient
-from config import _compliance_profile, WORLD_DESCRIPTION
+from config import _compliance_profile, WORLD_DESCRIPTION, USE_PERSONALITIES, _agent_personality
 from utils import _hc_vote, _hc_demand, _hc_appropriate, _hc_appeal, _hc_allocate, _hc_sanction, _hc_exclude, _hc_report, decide_vote, decide_demand, decide_appropriate, decide_appeal, decide_allocation, decide_sanction, decide_exclude, decide_report
 
 _log = logging.getLogger("axioms.agent")
@@ -28,12 +28,33 @@ class InstitutionalAgent(mesa.Agent):
         self.compliance_degree = compliance_degree
         self.flags             = flags or AgentFlags()
         self.llm_client        = llm_client
-        self.system_prompt     = (
-            f"{WORLD_DESCRIPTION}\n\n"
-            f"You are agent_{unique_id} in a common-pool resource institution.\n"
-            f"{_compliance_profile(compliance_degree)}\n"
-            "You may call check_ostrom_axiom before any decision."
-        )
+        if USE_PERSONALITIES:
+            p_name, p_story = _agent_personality(unique_id)
+            personality_block = (
+                "═══════════════════════════════════════════════\n"
+                "YOUR CHARACTER\n"
+                "═══════════════════════════════════════════════\n\n"
+                f"{p_name}\n\n"
+                f"{p_story}"
+            )
+            _log.debug("Agent %d personality: %s", unique_id, p_name)
+        else:
+            personality_block = None
+
+        if personality_block:
+            self.system_prompt = (
+                f"{WORLD_DESCRIPTION}\n\n"
+                f"{personality_block}\n\n"
+                f"You are agent_{unique_id} in a common-pool resource institution.\n"
+                "You may call check_ostrom_axiom before any decision."
+            )
+        else:
+            self.system_prompt = (
+                f"{WORLD_DESCRIPTION}\n\n"
+                f"You are agent_{unique_id} in a common-pool resource institution.\n"
+                f"{_compliance_profile(compliance_degree)}\n"
+                "You may call check_ostrom_axiom before any decision."
+            )
 
         # Fluents — Table III
         self.demanded:                 float = 0.0

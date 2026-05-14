@@ -96,7 +96,7 @@ if __name__ == "__main__":
     use_principle_4=True,
     use_principle_5=True,
     use_principle_6=True,
-    ).run(40)
+    ).run(20)
 
     print(f"Lifespan: {r['lifespan']}")
     print(f"Final pool: {r['final_resource']:.0f}")

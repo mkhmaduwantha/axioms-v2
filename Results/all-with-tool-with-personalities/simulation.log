@@ -1,0 +1,1231 @@
+2026-05-14 06:08:18 [INFO    ] axioms: === Simulation run: fully hardcoded ===
+2026-05-14 06:08:18 [INFO    ] axioms.model: CPRModel init: members=7 nonmembers=2 llm_members=7 P3=True P4=True P5=True P6=True
+2026-05-14 06:08:18 [INFO    ] axioms.model: LLM client attached for simulation (model=gpt-oss:20b).
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 0 personality: Single mother in financial difficulty[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 1 personality: Wealthy hobbyist with two jobs[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 2 personality: Retired farmer with decades of commons experience[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 3 personality: Young entrepreneur reinvesting resources into a startup[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 4 personality: Community organiser who believes in collective action[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 5 personality: Struggling fisherman whose waters are depleted[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 6 personality: Academic researcher studying cooperative institutions[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 7 personality: Small bakery owner carrying pandemic debt[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 8 personality: Environmental activist committed to sustainability[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 9 personality: Factory worker and union representative[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent.head: HeadAgent 9 created.[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 10 personality: Single mother in financial difficulty[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent.monitor: MonitorAgent 10 created.[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent: Agent 11 personality: Wealthy hobbyist with two jobs[0m
+[90m2026-05-14 06:08:18 [DEBUG   ] axioms.agent.gatekeeper: GatekeeperAgent 11 created.[0m
+2026-05-14 06:08:18 [INFO    ] axioms.model: All agents created. Total schedule size: 12
+2026-05-14 06:08:18 [INFO    ] axioms.model: Simulation run starting: max_steps=20
+[90m2026-05-14 06:08:23 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:08:23 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:08:25 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: I choose queue to ensure early demands are met fully and maintain fairness by avoiding the dilution of resources that ration would cause when the pool is low.[0m
+[90m2026-05-14 06:08:25 [DEBUG   ] axioms.agent: Step 1: Agent 0 voted queue.[0m
+[94m2026-05-14 06:08:29 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Choosing queue encourages early, fair access and discourages hoarding, aligning with our reputation goal.[0m
+[90m2026-05-14 06:08:29 [DEBUG   ] axioms.agent: Step 1: Agent 1 voted queue.[0m
+[90m2026-05-14 06:08:33 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:08:33 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:08:40 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Pool is low (1000 of 1000), ration ensures each agent gets an equal, fair share instead of giving all to one and zero to others.[0m
+[90m2026-05-14 06:08:40 [DEBUG   ] axioms.agent: Step 1: Agent 2 voted ration.[0m
+[90m2026-05-14 06:08:50 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:08:50 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:08:54 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Switching to queue will allow early demanders to secure full allocations when the pool is low, potentially boosting the startup’s ability to cover essential costs and fostering growth before resources run out.[0m
+[90m2026-05-14 06:08:54 [DEBUG   ] axioms.agent: Step 1: Agent 3 voted queue.[0m
+[90m2026-05-14 06:08:58 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:08:58 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:08:59 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: I vote for queue to encourage early, transparent demands and to discourage free‑riding while maintaining fairness once the pool is depleted.[0m
+[90m2026-05-14 06:08:59 [DEBUG   ] axioms.agent: Step 1: Agent 4 voted queue.[0m
+[94m2026-05-14 06:09:08 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: With only 1,000 units left for 10 members, a queue system lets early demanders secure a larger share of what is available, reducing the risk of an inadequate ration during scarcity.[0m
+[90m2026-05-14 06:09:08 [DEBUG   ] axioms.agent: Step 1: Agent 5 voted queue.[0m
+[94m2026-05-14 06:09:11 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Prefer queue to observe first‑come first‑served dynamics and test allocation fairness under low resource conditions.[0m
+[90m2026-05-14 06:09:11 [DEBUG   ] axioms.agent: Step 1: Agent 6 voted queue.[0m
+[90m2026-05-14 06:09:14 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:09:14 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:09:16 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: The queue system ensures that our collective entitlements are respected: early demands receive full allocations before the pool depletes, preventing arbitrary rationing in low-resource rounds. This aligns with our commitment to fairness and disciplined resource use.[0m
+[90m2026-05-14 06:09:16 [DEBUG   ] axioms.agent: Step 1: Agent 9 voted queue.[0m
+[90m2026-05-14 06:09:23 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:09:23 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:09:28 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Queue allows me to secure a larger share early when resources are scarce, which is critical for covering essential expenses for my children.[0m
+[90m2026-05-14 06:09:28 [DEBUG   ] axioms.agent: Step 1: Agent 10 voted queue.[0m
+[90m2026-05-14 06:09:37 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:09:37 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:09:40 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Queue rewards early compliance and incentivizes prompt demand, maintaining fairness when the pool is low.[0m
+[90m2026-05-14 06:09:40 [DEBUG   ] axioms.agent: Step 1: Agent 11 voted queue.[0m
+2026-05-14 06:09:40 [INFO    ] axioms.model: Step 1: RA method changed ration → queue (votes: queue=9 ration=1)
+[94m2026-05-14 06:09:49 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: I have confirmed power to demand resources. I decide to demand 300 units to cover my children's basic needs for this round within the current pool capacity.[0m
+[90m2026-05-14 06:09:49 [DEBUG   ] axioms.agent: Step 1: Agent 0 demanded 300.0000.[0m
+[90m2026-05-14 06:09:57 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:09:57 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:10:01 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I have permission to demand resources, and I aim to claim a fair share (around 1/10th of the pool) to maintain good standing in the group.[0m
+[90m2026-05-14 06:10:01 [DEBUG   ] axioms.agent: Step 1: Agent 1 demanded 100.0000.[0m
+[90m2026-05-14 06:10:06 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:10:06 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:10:15 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Each of the 10 members receives an equal share in the queue method; hence I demand 100 units.[0m
+[90m2026-05-14 06:10:15 [DEBUG   ] axioms.agent: Step 1: Agent 2 demanded 100.0000.[0m
+[90m2026-05-14 06:10:15 [DEBUG   ] axioms.agent: Step 1: Agent 3 abstained from demand (10% abstention).[0m
+[90m2026-05-14 06:10:21 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:10:21 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:10:26 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Per the institutional rules, I have the power and permission to demand resources. A fair share is 100 units per member of the 10 agents in the pool.[0m
+[90m2026-05-14 06:10:26 [DEBUG   ] axioms.agent: Step 1: Agent 4 demanded 100.0000.[0m
+[90m2026-05-14 06:10:36 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:10:36 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:10:50 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Normal share in a queue allocation is 100 units (10 members, 1000 pool). I need extra to cover debts and family, and sanctions are at level 0 so the risk of sanction is minimal.[0m
+[90m2026-05-14 06:10:50 [DEBUG   ] axioms.agent: Step 1: Agent 5 demanded 150.0000.[0m
+[90m2026-05-14 06:11:00 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:11:00 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:11:05 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Institutional check shows power and permission to demand; 200 units is a modest test that stays cooperative while probing the rule boundary.[0m
+[90m2026-05-14 06:11:05 [DEBUG   ] axioms.agent: Step 1: Agent 6 demanded 200.0000.[0m
+[94m2026-05-14 06:11:17 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: I am demanding my fair share of 100 units based on the queue method and equal entitlement among the ten members.[0m
+[90m2026-05-14 06:11:17 [DEBUG   ] axioms.agent: Step 1: Agent 9 demanded 100.0000.[0m
+[90m2026-05-14 06:11:25 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:11:25 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:11:30 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Demanding 100 units aligns with the average allocation for 10 members, ensuring basic needs are met while maintaining compliance with institutional rules and avoiding sanctions.[0m
+[90m2026-05-14 06:11:30 [DEBUG   ] axioms.agent: Step 1: Agent 10 demanded 100.0000.[0m
+[90m2026-05-14 06:11:44 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:11:44 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:11:49 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I have institutional power and permission to demand resources. I am opting to request 100 units to stay modest and maintain good standing.[0m
+[90m2026-05-14 06:11:49 [DEBUG   ] axioms.agent: Step 1: Agent 11 demanded 100.0000.[0m
+[90m2026-05-14 06:12:00 [DEBUG   ] axioms.engine: action=allocate verdict=NO_POWER principles=[2] | pow(C, allocate) requires demanded(A,I)=R with R>0. Target has not made a demand.[0m
+[94m2026-05-14 06:12:00 [INFO    ] axioms.llm: Axiom tool result: action=allocate verdict=NO_POWER[0m
+[94m2026-05-14 06:12:09 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: check_ostrom_axiom returned NO_POWER for allocate, so no allocation may be made.[0m
+[90m2026-05-14 06:12:09 [DEBUG   ] axioms.agent.head: Step 1: Head (LLM) allocated to 10 agents.[0m
+[94m2026-05-14 06:12:18 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: Allocated 0, so only permitted to appropriate 0.[0m
+[90m2026-05-14 06:12:29 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:12:29 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:12:32 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: You have no allocation; the institution allows you to appropriate up to your allocation, which is zero, so you appropriate none.[0m
+[90m2026-05-14 06:12:40 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:12:40 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:12:42 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: Allocation is zero; the institution permits only appropriating up to the allocated amount.[0m
+[94m2026-05-14 06:12:51 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: No allocation available to appropriate; staying within allotted resources.[0m
+[94m2026-05-14 06:12:55 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: I have no allocated share (allocated 0), so I do not have permission to appropriate any resources.[0m
+[94m2026-05-14 06:13:18 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: Allocated 0, so no resources to appropriate; taking more would violate restrictions.[0m
+[90m2026-05-14 06:13:37 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 200.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:13:37 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:13:39 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: No permission to appropriate; allocated amount is 0.[0m
+[90m2026-05-14 06:13:39 [DEBUG   ] axioms.agent: Step 1: Non-member agent 7 appropriated 3.29 (non-compliant).[0m
+[90m2026-05-14 06:13:58 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:13:58 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:14:00 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: Allocated 0 units, so only 0 is permissible under the allocation rule.[0m
+[90m2026-05-14 06:14:06 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 100.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:14:06 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:14:08 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: No permission to appropriate beyond the allocation, which is zero.[0m
+[94m2026-05-14 06:14:23 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: Allocated 0 units and have no permission or obligation to appropriate beyond that; following rule of taking only allocated share.[0m
+[90m2026-05-14 06:14:23 [DEBUG   ] axioms.agent.monitor: Step 1: Monitor sampling agent 10 — appropriated=0.00 allocated=0.00[0m
+[94m2026-05-14 06:14:32 [INFO    ] axioms.llm: Agent 10 [report→agent_10] reasoning: Agent 10 appropriated 0.0 which is not greater than the allocated 0.0, so there is no violation to report.[0m
+[90m2026-05-14 06:14:32 [DEBUG   ] axioms.agent.monitor: Step 1: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 06:14:32 [INFO    ] axioms.model: Step    1 | pool= 1000.0 | members=10 | violations=1 | noncompliance_rate=0.00 | ra=queue
+[91m2026-05-14 06:14:32 [WARNING ] axioms.model: Step 1: 1 violation(s) detected this step.[0m
+[90m2026-05-14 06:14:44 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:14:44 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:14:51 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: I want the chance to get a larger portion before it runs out, rather than a fixed small slice that a ration would give.[0m
+[90m2026-05-14 06:14:51 [DEBUG   ] axioms.agent: Step 2: Agent 0 voted queue.[0m
+[90m2026-05-14 06:15:05 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:15:05 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:15:08 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: I prefer the queue method to ensure a fair priority system and avoid dilution of resources.[0m
+[90m2026-05-14 06:15:08 [DEBUG   ] axioms.agent: Step 2: Agent 1 voted queue.[0m
+[90m2026-05-14 06:15:21 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:15:21 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:15:25 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: The current allocation method is already set to queue, which ensures that agents demanding early obtain their full allocation while preventing over‑appropriation. Switching to ration would reduce the allocation for each agent, potentially leading to lower compliance. Staying with queue preserves the short‑term efficiency and aligns with the established institution rules.[0m
+[90m2026-05-14 06:15:25 [DEBUG   ] axioms.agent: Step 2: Agent 2 voted queue.[0m
+[94m2026-05-14 06:15:33 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Queue guarantees early demanders receive the full pool, maximizing my startup’s funding when the pool is low and there are many members.[0m
+[90m2026-05-14 06:15:33 [DEBUG   ] axioms.agent: Step 2: Agent 3 voted queue.[0m
+[90m2026-05-14 06:15:37 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:15:37 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:15:48 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Queue tends to reward early demanders, which can create inequities and free‑riding incentives when the pool is low. With 1,000 units remaining and 10 members, rationing guarantees that every demanding member receives a fair share, preserving cooperation and institutional stability.[0m
+[90m2026-05-14 06:15:48 [DEBUG   ] axioms.agent: Step 2: Agent 4 voted ration.[0m
+[90m2026-05-14 06:16:00 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:16:00 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:16:02 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: I have the power and permission to vote; selecting queue aligns with my preference for immediate access.[0m
+[90m2026-05-14 06:16:02 [DEBUG   ] axioms.agent: Step 2: Agent 5 voted queue.[0m
+[94m2026-05-14 06:16:17 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Continuing with the queue method allows me to test whether early, larger demands can secure a bigger share before the pool depletes. This aligns with my research interest in exploring the boundary conditions of the institution while maintaining cooperative intent.[0m
+[90m2026-05-14 06:16:17 [DEBUG   ] axioms.agent: Step 2: Agent 6 voted queue.[0m
+[90m2026-05-14 06:16:28 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:16:28 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:16:30 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: I endorse the first‑come, first‑served queue; it rewards timely compliance, prevents hoarding, and preserves institutional discipline.[0m
+[90m2026-05-14 06:16:30 [DEBUG   ] axioms.agent: Step 2: Agent 9 voted queue.[0m
+[90m2026-05-14 06:16:45 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:16:45 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:17:16 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Rationing guarantees each member an equal share (≈100 units) even if demands vary, reducing risk of the pool depleting early and ensuring all children receive needed supplies.[0m
+[90m2026-05-14 06:17:16 [DEBUG   ] axioms.agent: Step 2: Agent 10 voted ration.[0m
+[94m2026-05-14 06:17:18 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Queue prioritizes early demanders, a simple and fair rule that rewards prompt participation without complex calculations.[0m
+[90m2026-05-14 06:17:18 [DEBUG   ] axioms.agent: Step 2: Agent 11 voted queue.[0m
+[90m2026-05-14 06:17:24 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:17:24 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:17:32 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: I need sufficient resources to cover school supplies, groceries, and rent for my three children, and I only exceed what I previously demanded by 100 units, which should still allow the pool and other members to maintain the common resource.[0m
+[90m2026-05-14 06:17:32 [DEBUG   ] axioms.agent: Step 2: Agent 0 demanded 400.0000.[0m
+[94m2026-05-14 06:17:38 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I have the power to demand resources; previous demand was 100, and I will maintain a moderate demand to preserve goodwill and avoid sanctions.[0m
+[90m2026-05-14 06:17:38 [DEBUG   ] axioms.agent: Step 2: Agent 1 demanded 100.0000.[0m
+[90m2026-05-14 06:17:43 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:17:43 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:17:51 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: I have consistently deman­ded 100 units in past rounds and have no evidence other agents are demanding far more. Maintaining the same demand keeps me within my historical consumption level and avoids over‑demanding, which could trigger sanctions.[0m
+[90m2026-05-14 06:17:51 [DEBUG   ] axioms.agent: Step 2: Agent 2 demanded 100.0000.[0m
+[90m2026-05-14 06:18:06 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:18:06 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:18:13 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: Demand a modest amount to invest in the startup while staying within the common‑pool limits and avoiding sanctions.[0m
+[90m2026-05-14 06:18:13 [DEBUG   ] axioms.agent: Step 2: Agent 3 demanded 50.0000.[0m
+[94m2026-05-14 06:18:34 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Using the rations method (1000 total / 10 members = 100 units each), I request my fair share to keep the institution operating smoothly.[0m
+[90m2026-05-14 06:18:34 [DEBUG   ] axioms.agent: Step 2: Agent 4 demanded 100.0000.[0m
+[90m2026-05-14 06:18:43 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:18:43 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:19:07 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I have power to demand resources. With the current pool at 1000 units and a prior 150 demand yielding 0 allocation, a moderate increase to 200 should improve the chances of receiving a share while staying within reasonable limits.[0m
+[90m2026-05-14 06:19:07 [DEBUG   ] axioms.agent: Step 2: Agent 5 demanded 200.0000.[0m
+[90m2026-05-14 06:19:13 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:19:13 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:19:23 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Testing a higher demand within pool limits to observe allocation responses under the queue method; consistent with my research intent to probe rule boundaries while remaining within safe operational limits.[0m
+[90m2026-05-14 06:19:23 [DEBUG   ] axioms.agent: Step 2: Agent 6 demanded 300.0000.[0m
+[90m2026-05-14 06:19:39 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:19:39 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:19:50 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Fair share under queue method: pool 1000 with 10 members => 100 each. As union rep, I demand my full entitlement.[0m
+[90m2026-05-14 06:19:50 [DEBUG   ] axioms.agent: Step 2: Agent 9 demanded 100.0000.[0m
+[90m2026-05-14 06:19:50 [DEBUG   ] axioms.agent: Step 2: Agent 10 abstained from demand (10% abstention).[0m
+[90m2026-05-14 06:19:55 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:19:55 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:20:09 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I want to make a moderate demand that is more likely to be allocated and shows I’m contributing to the pool, while keeping the institution’s resource levels safe.[0m
+[90m2026-05-14 06:20:09 [DEBUG   ] axioms.agent: Step 2: Agent 11 demanded 200.0000.[0m
+[90m2026-05-14 06:20:20 [DEBUG   ] axioms.engine: action=allocate verdict=NO_POWER principles=[2] | pow(C, allocate) requires demanded(A,I)=R with R>0. Target has not made a demand.[0m
+[94m2026-05-14 06:20:20 [INFO    ] axioms.llm: Axiom tool result: action=allocate verdict=NO_POWER[0m
+[94m2026-05-14 06:20:26 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: Agent 9 has no institutionalised power to allocate resources in this round (NO_POWER verdict from check_ostrom_axiom). Accordingly, no allocations are made.[0m
+[90m2026-05-14 06:20:26 [DEBUG   ] axioms.agent.head: Step 2: Head allocated via queue — 10 agents | demanded 1550.00 → allocated 1000.00
+  Agent    0: demanded 400.0000 → allocated 400.0000
+  Agent    1: demanded 100.0000 → allocated 100.0000
+  Agent    2: demanded 100.0000 → allocated 100.0000
+  Agent    3: demanded 50.0000 → allocated 50.0000
+  Agent    4: demanded 100.0000 → allocated 100.0000
+  Agent    5: demanded 200.0000 → allocated 200.0000
+  Agent    6: demanded 300.0000 → allocated 50.0000
+  Agent    9: demanded 100.0000 → allocated 0.0000
+  Agent   10: demanded 0.0000 → allocated 0.0000
+  Agent   11: demanded 200.0000 → allocated 0.0000[0m
+[90m2026-05-14 06:20:28 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 400.0 <= allocated 400.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:20:28 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:20:30 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: Appropriation is permitted because it does not exceed the allocated amount of 400 units.[0m
+[90m2026-05-14 06:20:35 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 100.0 <= allocated 100.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:20:35 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:20:36 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: Approved by Ostrom axiom – I may appropriate up to my allocation of 100 units.[0m
+[90m2026-05-14 06:20:58 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 100.0 <= allocated 100.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:20:58 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:21:01 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: Per institution rules, appropriation of up to the allocated amount (100) is permitted. No sanctions or restrictions apply, so I appropriate the full allocated amount.[0m
+[90m2026-05-14 06:21:05 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 50.0 <= allocated 50.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:21:05 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:21:07 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: Permitted to take the full allocation of 50 as the institution grants permission for the amounts allocated.[0m
+[94m2026-05-14 06:21:19 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: I have been allocated 100 units and, as a member, I am permitted to appropriate my full allocation according to the institutional norms.[0m
+[90m2026-05-14 06:21:25 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 200.0 <= allocated 200.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:21:25 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:21:27 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: Ostrom axioms permit appropriation up to the allocated amount; the action is permitted and compliant.[0m
+[90m2026-05-14 06:21:37 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 50.0 <= allocated 50.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:21:37 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:21:42 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: Permitted to appropriate up to the allocated amount (50) per institution rule.[0m
+[90m2026-05-14 06:21:42 [DEBUG   ] axioms.agent: Step 2: Non-member agent 7 appropriated 1.58 (non-compliant).[0m
+[90m2026-05-14 06:21:47 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:21:47 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:21:52 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: Allocation is 0, so only 0 is permitted.[0m
+[90m2026-05-14 06:21:59 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 100.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:21:59 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:22:01 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: No permission to appropriate 100 units; must limit to allocated 0.[0m
+[94m2026-05-14 06:22:15 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: Allocated 0 units, so there is no permission to appropriate anything beyond the allocation. Appropriating only the allocation.[0m
+[90m2026-05-14 06:22:15 [DEBUG   ] axioms.agent.monitor: Step 2: Monitor sampling agent 4 — appropriated=100.00 allocated=100.00[0m
+[90m2026-05-14 06:22:18 [DEBUG   ] axioms.engine: action=report_violation verdict=PERMITTED principles=[4] | pow(B, report(B,A,R,I)) holds: monitor reporting on a member's appropriation.[0m
+[94m2026-05-14 06:22:18 [INFO    ] axioms.llm: Axiom tool result: action=report_violation verdict=PERMITTED[0m
+[94m2026-05-14 06:22:23 [INFO    ] axioms.llm: Agent 10 [report→agent_4] reasoning: Agent 4 appropriated exactly what was allocated, so no violation occurs.[0m
+[90m2026-05-14 06:22:23 [DEBUG   ] axioms.agent.monitor: Step 2: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 06:22:23 [INFO    ] axioms.agent.monitor: Step 2: Non-member agent 7 caught appropriating (1.58) — set inactive.
+2026-05-14 06:22:23 [INFO    ] axioms.agent.monitor: Step 2: Boundary monitoring excluded 1 non-member(s).
+2026-05-14 06:22:23 [INFO    ] axioms.model: Step    2 | pool=  393.4 | members=10 | violations=1 | noncompliance_rate=0.00 | ra=queue
+[91m2026-05-14 06:22:23 [WARNING ] axioms.model: Step 2: 1 violation(s) detected this step.[0m
+[94m2026-05-14 06:22:31 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue maintains my priority for early demand, ensuring I can secure the full amount I need for my family's essentials.[0m
+[90m2026-05-14 06:22:31 [DEBUG   ] axioms.agent: Step 3: Agent 0 voted queue.[0m
+[90m2026-05-14 06:22:52 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:22:52 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:22:59 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Maintaining queue promotes fairness and predictability, ensuring early demanders receive priority, which aligns with the institution’s established protocol.[0m
+[90m2026-05-14 06:22:59 [DEBUG   ] axioms.agent: Step 3: Agent 1 voted queue.[0m
+[90m2026-05-14 06:23:24 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:23:24 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:23:29 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: I prefer the queue method to maintain a predictable allocation process, ensuring that resources are assigned in the order of demand and preventing over-drawing of the pool.[0m
+[90m2026-05-14 06:23:29 [DEBUG   ] axioms.agent: Step 3: Agent 2 voted queue.[0m
+[94m2026-05-14 06:23:32 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: I prefer queue for fairness when the pool is low; it ensures early demanding agents get full amounts and prevents overtaking.[0m
+[90m2026-05-14 06:23:32 [DEBUG   ] axioms.agent: Step 3: Agent 3 voted queue.[0m
+[90m2026-05-14 06:23:38 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:23:38 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:23:57 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Fairness for all members; prevents early-demanders from monopolizing the dwindling pool and encourages collective responsibility for sustainable use.[0m
+[90m2026-05-14 06:23:57 [DEBUG   ] axioms.agent: Step 3: Agent 4 voted ration.[0m
+[94m2026-05-14 06:24:12 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: I want to be guaranteed the full amount I request, especially now that the pool is low; queue gives early demands the best chance of being fully allocated.[0m
+[90m2026-05-14 06:24:12 [DEBUG   ] axioms.agent: Step 3: Agent 5 voted queue.[0m
+[90m2026-05-14 06:24:17 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:24:17 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:24:21 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Queue distributes resources first-come, first-served, ensuring timely access over proportional fairness.[0m
+[90m2026-05-14 06:24:21 [DEBUG   ] axioms.agent: Step 3: Agent 6 voted queue.[0m
+[90m2026-05-14 06:24:34 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:24:34 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:24:38 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue prioritizes early demands, ensuring consistent, fair access for long‑standing members while allowing orderly consumption of the pool.[0m
+[90m2026-05-14 06:24:38 [DEBUG   ] axioms.agent: Step 3: Agent 9 voted queue.[0m
+[94m2026-05-14 06:24:45 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Queue ensures that early demands get the full amount, which is critical when the pool is low and financial pressure is high.[0m
+[90m2026-05-14 06:24:45 [DEBUG   ] axioms.agent: Step 3: Agent 10 voted queue.[0m
+[94m2026-05-14 06:25:02 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Continuing with queue preserves the existing fairness mechanism and past successful practice, with no sanctions observed and no incentive to shift to rationing.[0m
+[90m2026-05-14 06:25:02 [DEBUG   ] axioms.agent: Step 3: Agent 11 voted queue.[0m
+[94m2026-05-14 06:25:19 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Pool is low, safe to request 300 to cover basic needs without risking sanctions.[0m
+[90m2026-05-14 06:25:19 [DEBUG   ] axioms.agent: Step 3: Agent 0 demanded 300.0000.[0m
+[90m2026-05-14 06:25:30 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:25:30 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:25:35 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Instantiated power and permission to demand 100 units according to institutional rules.[0m
+[90m2026-05-14 06:25:35 [DEBUG   ] axioms.agent: Step 3: Agent 1 demanded 100.0000.[0m
+[94m2026-05-14 06:25:53 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Demanding 50 units keeps the total demand below the current pool level, aligns with my principle of taking no more than allocated, and should be permitted under the institutional rules.[0m
+[90m2026-05-14 06:25:53 [DEBUG   ] axioms.agent: Step 3: Agent 2 demanded 50.0000.[0m
+[90m2026-05-14 06:26:05 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:26:05 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:26:16 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: Permitted to demand 40 units; this keeps appropriation within the pool limits and complies with Ostrom power/permission rules.[0m
+[90m2026-05-14 06:26:16 [DEBUG   ] axioms.agent: Step 3: Agent 3 demanded 40.0000.[0m
+[90m2026-05-14 06:26:28 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:26:28 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:26:44 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Pool is low (393/1000). To preserve the common resource for future use and maintain compliance, we demand a modest amount that keeps the institution viable.[0m
+[90m2026-05-14 06:26:44 [DEBUG   ] axioms.agent: Step 3: Agent 4 demanded 20.0000.[0m
+[90m2026-05-14 06:26:47 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:26:47 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:27:07 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Given the current pool availability (393.4162 units) and no sanctions, demanding the entire remaining resource maximizes my consumption in this round while staying compliant with the institutional rules.[0m
+[90m2026-05-14 06:27:07 [DEBUG   ] axioms.agent: Step 3: Agent 5 demanded 393.4162.[0m
+[90m2026-05-14 06:27:27 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:27:27 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:27:51 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Testing boundary—just above current pool to see if allocation is capped or zero[0m
+[90m2026-05-14 06:27:51 [DEBUG   ] axioms.agent: Step 3: Agent 6 demanded 400.0000.[0m
+[90m2026-05-14 06:27:53 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:27:53 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:28:02 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Pool is ample, no sanction, and demand is permitted per Ostrom axioms.[0m
+[90m2026-05-14 06:28:02 [DEBUG   ] axioms.agent: Step 3: Agent 9 demanded 100.0000.[0m
+[90m2026-05-14 06:28:05 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:28:05 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:28:16 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: The institution permits a demand; 50 units is a moderate request that should keep the pool above zero while helping cover basic expenses for this round.[0m
+[90m2026-05-14 06:28:16 [DEBUG   ] axioms.agent: Step 3: Agent 10 demanded 50.0000.[0m
+[94m2026-05-14 06:28:31 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I have power to demand resources, but as a hobbyist with no need for this pool, I choose to demand none.[0m
+[90m2026-05-14 06:28:31 [DEBUG   ] axioms.agent: Step 3: Agent 11 demanded 0.0000.[0m
+[90m2026-05-14 06:28:52 [DEBUG   ] axioms.engine: action=allocate verdict=NO_POWER principles=[2] | pow(C, allocate) requires demanded(A,I)=R with R>0. Target has not made a demand.[0m
+[94m2026-05-14 06:28:52 [INFO    ] axioms.llm: Axiom tool result: action=allocate verdict=NO_POWER[0m
+[94m2026-05-14 06:29:00 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: I have no institutional power to allocate resources, so I cannot make any allocations at this time.[0m
+[90m2026-05-14 06:29:00 [DEBUG   ] axioms.agent.head: Step 3: Head allocated via queue — 10 agents | demanded 1453.42 → allocated 393.42
+  Agent    0: demanded 300.0000 → allocated 300.0000
+  Agent    1: demanded 100.0000 → allocated 93.4162
+  Agent    2: demanded 50.0000 → allocated 0.0000
+  Agent    3: demanded 40.0000 → allocated 0.0000
+  Agent    4: demanded 20.0000 → allocated 0.0000
+  Agent    5: demanded 393.4162 → allocated 0.0000
+  Agent    6: demanded 400.0000 → allocated 0.0000
+  Agent    9: demanded 100.0000 → allocated 0.0000
+  Agent   10: demanded 50.0000 → allocated 0.0000
+  Agent   11: demanded 0.0000 → allocated 0.0000[0m
+[90m2026-05-14 06:29:09 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 300.0 <= allocated 300.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:29:09 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:29:12 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: Ostrom check permits 300 units, as it does not exceed the allocated amount and there is no violation of permission or obligation.[0m
+[90m2026-05-14 06:29:17 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 93.4 > allocated 93.4. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:29:17 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:29:21 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: No permission to appropriate beyond the allocated amount; must stay within the 93.4162 units allocated.[0m
+[91m2026-05-14 06:29:21 [WARNING ] axioms.agent: Step 3: Agent 1 over-appropriated: took=93.4162 allocated=93.4162.[0m
+[90m2026-05-14 06:29:41 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:29:41 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:29:44 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: Allocated 0 units; appropriate up to allocation is permitted, so stay within bounds.[0m
+[94m2026-05-14 06:30:08 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: You received 0 allocation in this round, and there is no evidence of permission to appropriate additional resources beyond what was allocated. Therefore, you should appropriate only the amount you were given, which is none.[0m
+[90m2026-05-14 06:30:28 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:30:28 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:30:36 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: Allocated 0, so appropriate 0 to comply with the allocation rule and avoid violating permission.[0m
+[94m2026-05-14 06:30:43 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: No allocation has been granted for this round, so I have no permission to appropriate any resources.[0m
+[94m2026-05-14 06:30:55 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: No allocation granted; cannot appropriate beyond allocated amount.[0m
+[90m2026-05-14 06:31:03 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:31:03 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:31:07 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: Allocated share is 0, so permission only allows taking that amount; cannot appropriate more.[0m
+[90m2026-05-14 06:31:10 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 1.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:31:10 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:31:13 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: No permission – allocated amount is 0, so any appropriation beyond that would violate the allocation restriction.[0m
+[90m2026-05-14 06:31:21 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:31:21 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:31:25 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: Only 0 was allocated; appropriating 0 is allowed by principle 2 (no violation, no sanction).[0m
+[90m2026-05-14 06:31:25 [DEBUG   ] axioms.agent.monitor: Step 3: Monitor sampling agent 9 — appropriated=0.00 allocated=0.00[0m
+[90m2026-05-14 06:31:35 [DEBUG   ] axioms.engine: action=report_violation verdict=PERMITTED principles=[4] | pow(B, report(B,A,R,I)) holds: monitor reporting on a member's appropriation.[0m
+[94m2026-05-14 06:31:35 [INFO    ] axioms.llm: Axiom tool result: action=report_violation verdict=PERMITTED[0m
+[94m2026-05-14 06:31:38 [INFO    ] axioms.llm: Agent 10 [report→agent_9] reasoning: Agent 9 did not appropriate more than the allocation (0.0 == 0.0), so no violation to report.[0m
+[90m2026-05-14 06:31:38 [DEBUG   ] axioms.agent.monitor: Step 3: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 06:31:38 [INFO    ] axioms.model: Step    3 | pool=  395.0 | members=10 | violations=0 | noncompliance_rate=0.00 | ra=queue
+[90m2026-05-14 06:31:51 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:31:51 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:32:02 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: I have confirmed power to vote, and using the queue method gives me priority to take a large chunk of the remaining 395 units if I am first or early in the queue. Ration would split the small pool among all demanding members, severely limiting my intake. Given my critical need and no sanctions from queue, I vote to keep the queue method.[0m
+[90m2026-05-14 06:32:02 [DEBUG   ] axioms.agent: Step 4: Agent 0 voted queue.[0m
+[94m2026-05-14 06:32:09 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Maintaining queue preserves the existing orderly allocation process and avoids the uncertainty of rationing, aligning with my preference for predictable and fair resource distribution.[0m
+[90m2026-05-14 06:32:09 [DEBUG   ] axioms.agent: Step 4: Agent 1 voted queue.[0m
+[94m2026-05-14 06:32:13 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Prefer queue to ensure fairness and avoid oversizing allocations when pool is low.[0m
+[90m2026-05-14 06:32:13 [DEBUG   ] axioms.agent: Step 4: Agent 2 voted queue.[0m
+[90m2026-05-14 06:32:17 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:32:17 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:32:21 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Maintain current queue system for fairness and simplicity, and to avoid complications from rationing.[0m
+[90m2026-05-14 06:32:21 [DEBUG   ] axioms.agent: Step 4: Agent 3 voted queue.[0m
+[90m2026-05-14 06:32:41 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:32:41 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:33:07 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Current pool is low (≈395 units); rationing ensures a fair share to all demanding agents and reduces the risk of some members getting nothing, supporting institutional stability and cooperative spirit.[0m
+[90m2026-05-14 06:33:07 [DEBUG   ] axioms.agent: Step 4: Agent 4 voted ration.[0m
+[90m2026-05-14 06:33:14 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:33:14 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:33:18 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue ensures timely access; my demand can be satisfied immediately, maximizing my fish catch before pool depletion.[0m
+[90m2026-05-14 06:33:18 [DEBUG   ] axioms.agent: Step 4: Agent 5 voted queue.[0m
+[90m2026-05-14 06:33:26 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:33:26 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:33:29 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: As verified by the Ostrom axiom check, I have the requisite power and permission to vote in the current institutional setting—therefore I am proceeding with the 'queue' allocation method.[0m
+[90m2026-05-14 06:33:29 [DEBUG   ] axioms.agent: Step 4: Agent 6 voted queue.[0m
+[94m2026-05-14 06:34:48 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Current policy (queue method) allocated 0 units to me; I therefore appropriate 0 units to comply with the institution’s rules.[0m
+[90m2026-05-14 06:34:48 [DEBUG   ] axioms.agent: Step 4: Agent 9 voted ration.[0m
+[94m2026-05-14 06:35:03 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: The pool is low and 10 members compete; ration guarantees each of us a fair share, ensuring my children receive some supplies even if I am not early in the queue.[0m
+[90m2026-05-14 06:35:03 [DEBUG   ] axioms.agent: Step 4: Agent 10 voted ration.[0m
+[90m2026-05-14 06:35:28 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:35:28 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:35:42 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Sticking with queue continues to encourage timely, fair consumption of the remaining resources. Since my own livelihood isn’t tied to the pool, I choose the method that preserves fairness and maintains my reputation within the group.[0m
+[90m2026-05-14 06:35:42 [DEBUG   ] axioms.agent: Step 4: Agent 11 voted queue.[0m
+[90m2026-05-14 06:35:55 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:35:55 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:36:06 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: I have verified that I have power and permission to demand resources. Based on prior rounds and my financial needs, I will request the same amount I previously requested—400 units—to maintain consistency and cover my essential expenses.[0m
+[90m2026-05-14 06:36:06 [DEBUG   ] axioms.agent: Step 4: Agent 0 demanded 400.0000.[0m
+[90m2026-05-14 06:36:06 [DEBUG   ] axioms.agent: Step 4: Agent 1 abstained from demand (10% abstention).[0m
+[90m2026-05-14 06:36:26 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:36:26 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:36:43 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Consistent with past demand patterns and no sanctions, aiming to secure a fair allocation under the queue method.[0m
+[90m2026-05-14 06:36:43 [DEBUG   ] axioms.agent: Step 4: Agent 2 demanded 100.0000.[0m
+[90m2026-05-14 06:36:43 [DEBUG   ] axioms.agent: Step 4: Agent 3 abstained from demand (10% abstention).[0m
+[90m2026-05-14 06:36:52 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:36:52 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:37:17 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: A modest demand keeps the pool from depleting while staying compliant and encourages cooperative use of the resource.[0m
+[90m2026-05-14 06:37:17 [DEBUG   ] axioms.agent: Step 4: Agent 4 demanded 5.0000.[0m
+[90m2026-05-14 06:37:31 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:37:31 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:37:43 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: With no sanctions and a pool of 395 under queue allocation, a moderate demand of 200 balances the need to support the family while staying within realistic limits to avoid overconsumption and potential future sanctions.[0m
+[90m2026-05-14 06:37:43 [DEBUG   ] axioms.agent: Step 4: Agent 5 demanded 200.0000.[0m
+[90m2026-05-14 06:38:15 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:38:15 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:38:27 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Permitted to demand; testing higher demand to observe allocation[0m
+[90m2026-05-14 06:38:27 [DEBUG   ] axioms.agent: Step 4: Agent 6 demanded 800.0000.[0m
+[90m2026-05-14 06:38:31 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:38:31 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:38:48 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: I have power and permission to demand resources, and as the head and union representative I will demand my full entitlement of 100 units to uphold fairness and collective discipline.[0m
+[90m2026-05-14 06:38:48 [DEBUG   ] axioms.agent: Step 4: Agent 9 demanded 100.0000.[0m
+[90m2026-05-14 06:38:57 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:38:57 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:39:12 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I need enough to cover basic expenses for my three children, but I keep the demand moderate (200 units) to avoid over‑exploiting the pool and risking collapse.[0m
+[90m2026-05-14 06:39:12 [DEBUG   ] axioms.agent: Step 4: Agent 10 demanded 200.0000.[0m
+[90m2026-05-14 06:39:15 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:39:15 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:39:23 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I am a hobbyist whose livelihood does not depend on the pool, and I value reputation over exploitation. Releasing a modest amount keeps the resource available for others while maintaining a good standing in the group.[0m
+[90m2026-05-14 06:39:23 [DEBUG   ] axioms.agent: Step 4: Agent 11 demanded 50.0000.[0m
+[90m2026-05-14 06:39:51 [DEBUG   ] axioms.engine: action=allocate verdict=NO_POWER principles=[2] | pow(C, allocate) requires demanded(A,I)=R with R>0. Target has not made a demand.[0m
+[94m2026-05-14 06:39:51 [INFO    ] axioms.llm: Axiom tool result: action=allocate verdict=NO_POWER[0m
+[94m2026-05-14 06:40:13 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: Queue allocation: distribute available 395 units starting with the first agent in the queue (Agent 0). The pool is exhausted, so all following agents receive zero.[0m
+[90m2026-05-14 06:40:13 [DEBUG   ] axioms.agent.head: Step 4: Head (LLM) allocated to 10 agents.[0m
+[94m2026-05-14 06:40:28 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: Appropriate exactly the allocated amount; with no evidence of permission to draw more, following the rule to stay within allocation.[0m
+[90m2026-05-14 06:40:38 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:40:38 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:40:40 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: Allocated 0, so appropriating 0 is permissible and compliant with the allocation rule.[0m
+[90m2026-05-14 06:40:45 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:40:45 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:40:50 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: I have been allocated 0 units, so I stay within my allocation and avoid any excess appropriation.[0m
+[90m2026-05-14 06:40:53 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 50.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:40:53 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:40:57 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: NO_PERMISSION: can only appropriate what was allocated, which is 0.[0m
+[94m2026-05-14 06:41:03 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: No allocation has been granted, so according to Ostrom axioms I have no permission to appropriate any resources.[0m
+[90m2026-05-14 06:41:18 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:41:18 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:41:27 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: No allocation was granted (allocated 0), so you may only appropriate 0 units. The check_ostrom_axiom confirms this is permitted.[0m
+[90m2026-05-14 06:41:38 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 10.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:41:38 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:41:42 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: Allocation is zero so per prohibits any appropriation beyond it; must appropriate only what was allocated.[0m
+[90m2026-05-14 06:41:52 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:41:52 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:41:59 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: No resources were allocated, so only a 0 appropriation is permitted and compliant with the institutional rules.[0m
+[94m2026-05-14 06:42:06 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: Allocated 0 units, so no resources may be appropriated beyond the allocation.[0m
+[90m2026-05-14 06:42:11 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:42:11 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:42:23 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: Allocated resources are 0.0, so any appropriation must also be 0.0 to satisfy the allocation constraint and avoid sanctions.[0m
+[90m2026-05-14 06:42:23 [DEBUG   ] axioms.agent.monitor: Step 4: Monitor sampling agent 5 — appropriated=0.00 allocated=0.00[0m
+[94m2026-05-14 06:42:26 [INFO    ] axioms.llm: Agent 10 [report→agent_5] reasoning: Agent 5's appropriation (0.0) does not exceed its allocation (0.0); no violation.[0m
+[90m2026-05-14 06:42:26 [DEBUG   ] axioms.agent.monitor: Step 4: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 06:42:26 [INFO    ] axioms.model: Step    4 | pool=  395.0 | members=10 | violations=0 | noncompliance_rate=0.00 | ra=queue
+[94m2026-05-14 06:42:35 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Queue ensures that as a demanding agent, I can receive my full request while others arrive later, which is preferable given my urgent need and the small pool size. Ration would halve my allocation regardless of demand timing, reducing my ability to meet my family's basic needs.[0m
+[90m2026-05-14 06:42:35 [DEBUG   ] axioms.agent: Step 5: Agent 0 voted queue.[0m
+[94m2026-05-14 06:42:47 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: I prefer a fair, predictable distribution that limits waste and maintains group cohesion; rationing ensures every demanding agent gets a similar share regardless of early demand, which aligns with my focus on reputation over personal resource gain.[0m
+[90m2026-05-14 06:42:47 [DEBUG   ] axioms.agent: Step 5: Agent 1 voted ration.[0m
+[90m2026-05-14 06:42:59 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:42:59 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:43:04 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue keeps the traditional early‑demand fairness we trust. It ensures that when the pool is low, those who act quickly still receive a full allocation, reducing uncertainty for farmers like me.[0m
+[90m2026-05-14 06:43:04 [DEBUG   ] axioms.agent: Step 5: Agent 2 voted queue.[0m
+[94m2026-05-14 06:43:10 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: I have the power to vote, and queue ensures deterministic ordering and prevents accidental over-allocation when the pool is low.[0m
+[90m2026-05-14 06:43:10 [DEBUG   ] axioms.agent: Step 5: Agent 3 voted queue.[0m
+[90m2026-05-14 06:43:18 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:43:18 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:43:24 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: The current method is queue and the pool is low (395/1000). Using queue ensures that even with a small remainder each early demander gets at least some resources, keeping participation high and avoiding discouragement that could lead to free‑riding or collapse. Rationing with such a low pool would yield zero allocations for many, potentially reducing member engagement. Thus, voting to keep the queue method promotes fairness and institutional stability.[0m
+[90m2026-05-14 06:43:24 [DEBUG   ] axioms.agent: Step 5: Agent 4 voted queue.[0m
+[90m2026-05-14 06:43:52 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:43:52 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:43:55 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: I have power and permission to vote, and the queue method aligns with my strategy to secure a larger share early on.[0m
+[90m2026-05-14 06:43:55 [DEBUG   ] axioms.agent: Step 5: Agent 5 voted queue.[0m
+[94m2026-05-14 06:43:59 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Maintaining queue preserves fairness and allows us to study how demand timing affects allocation.[0m
+[90m2026-05-14 06:43:59 [DEBUG   ] axioms.agent: Step 5: Agent 6 voted queue.[0m
+[90m2026-05-14 06:44:03 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:44:03 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:44:28 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: The pool is low and uneven distribution under queue would leave many with nothing while early demanders hoard resources. Rationing guarantees a fair share for all members and aligns with the union’s commitment to collective discipline and resource protection.[0m
+[90m2026-05-14 06:44:28 [DEBUG   ] axioms.agent: Step 5: Agent 9 voted ration.[0m
+[94m2026-05-14 06:44:56 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: The pool is low (395 units with 10 agents). Rationing distributes the available resources fairly (about 39.5 units each) and prevents rapid depletion that could collapse the institution. Choosing queue could lead to most demands exceeding the remaining pool and risk hitting zero, endangering everyone’s survival.[0m
+[90m2026-05-14 06:44:56 [DEBUG   ] axioms.agent: Step 5: Agent 10 voted ration.[0m
+[90m2026-05-14 06:45:11 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:45:11 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:45:14 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: I have the power, permission, and no obligation preventing me from choosing the queue method.[0m
+[90m2026-05-14 06:45:14 [DEBUG   ] axioms.agent: Step 5: Agent 11 voted queue.[0m
+[90m2026-05-14 06:45:19 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:45:19 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:45:35 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: I need enough to cover school supplies, groceries, and rent for my three children. The last round I demanded 400 and successfully appropriated 395 from the pool, which keeps me compliant while meeting my family's needs.[0m
+[90m2026-05-14 06:45:35 [DEBUG   ] axioms.agent: Step 5: Agent 0 demanded 400.0000.[0m
+[90m2026-05-14 06:45:54 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:45:54 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:46:21 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Past violation occurred when demanding 100 with a low pool; a moderate demand keeps us within likely allocation limits and preserves reputation.[0m
+[90m2026-05-14 06:46:21 [DEBUG   ] axioms.agent: Step 5: Agent 1 demanded 50.0000.[0m
+[90m2026-05-14 06:46:24 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:46:24 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:46:41 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: PERMITTED to demand and I will submit a full allocation request of 100 units, keeping consistent with past usage and respecting the pool’s limits.[0m
+[90m2026-05-14 06:46:41 [DEBUG   ] axioms.agent: Step 5: Agent 2 demanded 100.0000.[0m
+[90m2026-05-14 06:46:56 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:46:56 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:47:05 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: Low pool but still healthy; moderate request to support growth while maintaining reputation under queue method.[0m
+[90m2026-05-14 06:47:05 [DEBUG   ] axioms.agent: Step 5: Agent 3 demanded 30.0000.[0m
+[90m2026-05-14 06:47:05 [DEBUG   ] axioms.agent: Step 5: Agent 4 abstained from demand (10% abstention).[0m
+[90m2026-05-14 06:47:19 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:47:19 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:47:39 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: With the pool at 395 units and sanctions at zero, I am permitted to demand as much as I want. To maximize my harvest for the family, I request the entire remaining pool.  [0m
+[90m2026-05-14 06:47:39 [DEBUG   ] axioms.agent: Step 5: Agent 5 demanded 395.0000.[0m
+[90m2026-05-14 06:47:54 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:47:54 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:48:16 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Permitted to demand; testing how a high demand is allocated given current pool size.[0m
+[90m2026-05-14 06:48:16 [DEBUG   ] axioms.agent: Step 5: Agent 6 demanded 500.0000.[0m
+[90m2026-05-14 06:48:27 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:48:27 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:48:39 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: A fair share of the 395 units with 10 members is 39.5; demanding more risks zero allocation and violates the institution’s distributive principles.[0m
+[90m2026-05-14 06:48:39 [DEBUG   ] axioms.agent: Step 5: Agent 9 demanded 39.5000.[0m
+[90m2026-05-14 06:48:44 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:48:44 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:48:56 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I need enough resources to cover school supplies, groceries and rent for my three children. With the pool at 395 and 10 members, demanding 200 maximizes my chance of receiving a meaningful allocation while staying within the institution’s rules.[0m
+[90m2026-05-14 06:48:56 [DEBUG   ] axioms.agent: Step 5: Agent 10 demanded 200.0000.[0m
+[90m2026-05-14 06:49:01 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:49:01 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:49:12 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: No incentive to demand resources; maintaining group harmony and avoiding conflict.[0m
+[90m2026-05-14 06:49:12 [DEBUG   ] axioms.agent: Step 5: Agent 11 demanded 0.0000.[0m
+[90m2026-05-14 06:49:23 [DEBUG   ] axioms.engine: action=allocate verdict=NO_POWER principles=[2] | pow(C, allocate) requires demanded(A,I)=R with R>0. Target has not made a demand.[0m
+[94m2026-05-14 06:49:23 [INFO    ] axioms.llm: Axiom tool result: action=allocate verdict=NO_POWER[0m
+[94m2026-05-14 06:50:10 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: Institutional rule prohibits allocation authority in this round (NO_POWER), so no resources are distributed.[0m
+[90m2026-05-14 06:50:10 [DEBUG   ] axioms.agent.head: Step 5: Head (LLM) allocated to 12 agents.[0m
+[90m2026-05-14 06:50:15 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 395.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:50:15 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:50:23 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: The allocation for this round is 0 units, and the institutional rules (Principle 2) prohibit appropriating more than the allocated amount. Therefore no resource can be taken.[0m
+[94m2026-05-14 06:50:33 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: Allocated zero this round – can only appropriate what was allocated, so I must appropriate 0 to remain compliant.[0m
+[90m2026-05-14 06:50:47 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:50:47 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:50:52 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: No allocation received, so I must appropriate 0.[0m
+[90m2026-05-14 06:50:56 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 30.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:50:56 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:50:59 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: No permission to appropriate beyond our 0 allocation; per is bounded by allocation.[0m
+[94m2026-05-14 06:51:06 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: No allocation received in this round, so only the zero allocation can be taken in compliance with the institutional rules.[0m
+[94m2026-05-14 06:51:11 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: I have not been allocated any share in this cycle, so per the institutional rules I am permitted to appropriate only my allocated amount, which is zero.[0m
+[90m2026-05-14 06:51:22 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 500.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:51:22 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:51:25 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: Permission limited to allocated amount, which is zero in this round.[0m
+[90m2026-05-14 06:51:35 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 39.5 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 06:51:35 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 06:51:40 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: No permission to appropriate beyond allocation of 0[0m
+[94m2026-05-14 06:51:50 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: Allocated 0 units, so check_ostrom_axiom will return NO_PERMISSION. Must stay within allocation.[0m
+[90m2026-05-14 06:51:56 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:51:56 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:52:02 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: Allocated 0 units, so cannot appropriate any resources.[0m
+[90m2026-05-14 06:52:02 [DEBUG   ] axioms.agent.monitor: Step 5: Monitor sampling agent 4 — appropriated=0.00 allocated=0.00[0m
+[94m2026-05-14 06:52:14 [INFO    ] axioms.llm: Agent 10 [report→agent_4] reasoning: Agent 4 appropriated 0.0, allocated 0.0 – no violation, as appropriated is not greater than allocated.[0m
+[90m2026-05-14 06:52:14 [DEBUG   ] axioms.agent.monitor: Step 5: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 06:52:14 [INFO    ] axioms.model: Step    5 | pool=  790.0 | members=10 | violations=0 | noncompliance_rate=0.00 | ra=queue
+[90m2026-05-14 06:52:23 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:52:23 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:52:27 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: You have power to vote in this institution; voting for queue is permitted and not disallowed by any rule.[0m
+[90m2026-05-14 06:52:27 [DEBUG   ] axioms.agent: Step 6: Agent 0 voted queue.[0m
+[90m2026-05-14 06:52:47 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:52:47 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:52:56 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue allows early demanding agents (including us, who plan to demand early) to receive full allocations, supporting efficient and fair use of the pool while maintaining a strong reputation for responsible participation.[0m
+[90m2026-05-14 06:52:56 [DEBUG   ] axioms.agent: Step 6: Agent 1 voted queue.[0m
+[90m2026-05-14 06:53:20 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:53:20 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:53:29 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: First‑come, first‑served is our preferred method because it rewards timely demand and keeps the allocation simple and transparent during uncertain refill periods.[0m
+[90m2026-05-14 06:53:29 [DEBUG   ] axioms.agent: Step 6: Agent 2 voted queue.[0m
+[90m2026-05-14 06:53:41 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:53:41 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:53:42 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: I have the power and permission to vote, and queue keeps the current allocation method consistent with past rounds.[0m
+[90m2026-05-14 06:53:42 [DEBUG   ] axioms.agent: Step 6: Agent 3 voted queue.[0m
+[94m2026-05-14 06:53:45 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Queue preserves order and discourages free‑riding by rewarding early correct claims[0m
+[90m2026-05-14 06:53:45 [DEBUG   ] axioms.agent: Step 6: Agent 4 voted queue.[0m
+[90m2026-05-14 06:53:53 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:53:53 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:53:56 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue gives priority to early demand, allowing me to secure a larger share when the pool is low; it's a fair, transparent method and aligns with my power to vote.[0m
+[90m2026-05-14 06:53:56 [DEBUG   ] axioms.agent: Step 6: Agent 5 voted queue.[0m
+[90m2026-05-14 06:54:07 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:54:07 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:54:19 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Intentionally testing a fair distribution to observe system response[0m
+[90m2026-05-14 06:54:19 [DEBUG   ] axioms.agent: Step 6: Agent 6 voted ration.[0m
+[94m2026-05-14 06:54:27 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: I believe rationing offers the most just allocation when the pool is limited, ensuring each demanding agent receives an equal share rather than allowing early demanders to deplete the resource.[0m
+[90m2026-05-14 06:54:27 [DEBUG   ] axioms.agent: Step 6: Agent 9 voted ration.[0m
+[90m2026-05-14 06:54:37 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 06:54:37 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 06:54:42 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Queue prioritizes early demands and allows me to secure a sizable allocation now before the pool depletes further.[0m
+[90m2026-05-14 06:54:42 [DEBUG   ] axioms.agent: Step 6: Agent 10 voted queue.[0m
+[94m2026-05-14 06:54:55 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Voting for ration promotes fairness, preventing others from getting nothing when the pool is low, and helps maintain my reputation in the group.[0m
+[90m2026-05-14 06:54:55 [DEBUG   ] axioms.agent: Step 6: Agent 11 voted ration.[0m
+[90m2026-05-14 06:54:55 [DEBUG   ] axioms.agent: Step 6: Agent 0 abstained from demand (10% abstention).[0m
+[90m2026-05-14 06:54:55 [DEBUG   ] axioms.agent: Step 6: Agent 1 abstained from demand (10% abstention).[0m
+[90m2026-05-14 06:54:55 [DEBUG   ] axioms.agent: Step 6: Agent 2 abstained from demand (10% abstention).[0m
+[94m2026-05-14 06:55:06 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: Previous 30‑unit demands were compliant and received no sanction; safe to repeat.[0m
+[90m2026-05-14 06:55:06 [DEBUG   ] axioms.agent: Step 6: Agent 3 demanded 30.0000.[0m
+[90m2026-05-14 06:55:16 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:55:16 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:55:27 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Sustainable extraction to maintain a healthy pool and encourage collective participation.[0m
+[90m2026-05-14 06:55:27 [DEBUG   ] axioms.agent: Step 6: Agent 4 demanded 10.0000.[0m
+[90m2026-05-14 06:55:41 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:55:41 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:56:20 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I have permission to demand and monitoring is low; risking a moderate ask lets me secure a share while keeping my compliance. A demand of 200 units is a cautious approach to get something from the 790 pool.[0m
+[90m2026-05-14 06:56:20 [DEBUG   ] axioms.agent: Step 6: Agent 5 demanded 200.0000.[0m
+[90m2026-05-14 06:56:36 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:56:36 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:56:43 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I confirmed I have power and permission to demand, and I want to test how the system handles a demand close to the pool's capacity while remaining cooperative by default.[0m
+[90m2026-05-14 06:56:43 [DEBUG   ] axioms.agent: Step 6: Agent 6 demanded 900.0000.[0m
+[90m2026-05-14 06:56:56 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:56:56 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:57:10 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: I demand one‑tenth of the remaining pool—my fair share given ten members and the current stock.[0m
+[90m2026-05-14 06:57:10 [DEBUG   ] axioms.agent: Step 6: Agent 9 demanded 79.0000.[0m
+[90m2026-05-14 06:57:20 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:57:20 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:57:27 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Maintain consistency with prior demands to avoid any trigger for sanctions while still requesting enough for immediate needs[0m
+[90m2026-05-14 06:57:27 [DEBUG   ] axioms.agent: Step 6: Agent 10 demanded 200.0000.[0m
+[90m2026-05-14 06:57:30 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 06:57:30 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 06:57:39 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I have permission to demand; I choose a modest amount to preserve reputation and avoid depleting the pool.[0m
+[90m2026-05-14 06:57:39 [DEBUG   ] axioms.agent: Step 6: Agent 11 demanded 20.0000.[0m
+[90m2026-05-14 06:58:11 [DEBUG   ] axioms.engine: action=allocate verdict=NO_POWER principles=[2] | pow(C, allocate) requires demanded(A,I)=R with R>0. Target has not made a demand.[0m
+[94m2026-05-14 06:58:11 [INFO    ] axioms.llm: Axiom tool result: action=allocate verdict=NO_POWER[0m
+[94m2026-05-14 06:58:41 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: Pool insufficient to satisfy all demands; allocating by queue order, giving full demands to agents 0‑5, then allocating remaining 550 to agent 6. Remaining agents receive 0.[0m
+[90m2026-05-14 06:58:41 [DEBUG   ] axioms.agent.head: Step 6: Head (LLM) allocated to 12 agents.[0m
+[90m2026-05-14 06:58:53 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:58:53 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:58:57 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: Allocation is 0, so I can only appropriate 0 to remain compliant and avoid sanctions.[0m
+[90m2026-05-14 06:59:06 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:59:06 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:59:10 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: No allocation was granted, so appropriate only the allowed 0 units.[0m
+[94m2026-05-14 06:59:26 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: No allocation has been granted for this round, so the appropriate amount must be 0 to remain compliant with the institution's rules.[0m
+[90m2026-05-14 06:59:35 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 30.0 <= allocated 30.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:59:35 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:59:37 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: The institution permits the appropriation of 30.0 units, which equals my allocation and complies with principle 2, so I am allowed to take the full amount.[0m
+[90m2026-05-14 06:59:44 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 10.0 <= allocated 10.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:59:44 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:59:50 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: Permission granted to take the allocated 10.0 units – it matches the allocation rule and no obligation violation occurs.[0m
+[90m2026-05-14 06:59:53 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 200.0 <= allocated 200.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 06:59:53 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 06:59:57 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: Allocated amount is 200, and check_ostrom_axiom confirms appropriation of 200 is permitted.[0m
+[90m2026-05-14 07:00:12 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 900.0 > allocated 550.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:00:12 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:00:16 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: No permission to appropriate beyond the allocated amount; limited to the 550.0000 allocation.[0m
+[90m2026-05-14 07:00:24 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 790.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:00:24 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:00:27 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: No permission to appropriate beyond allocated resources[0m
+[90m2026-05-14 07:00:35 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:00:35 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:00:37 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: Appropriation of 0 is within the allocated amount, permitted by the institution.[0m
+[90m2026-05-14 07:00:43 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:00:43 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:00:46 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: Allocated 0, so only 0 can be appropriated.[0m
+[90m2026-05-14 07:00:46 [DEBUG   ] axioms.agent.monitor: Step 6: Monitor sampling agent 6 — appropriated=550.00 allocated=550.00[0m
+[90m2026-05-14 07:00:57 [DEBUG   ] axioms.engine: action=report_violation verdict=PERMITTED principles=[4] | pow(B, report(B,A,R,I)) holds: monitor reporting on a member's appropriation.[0m
+[94m2026-05-14 07:00:57 [INFO    ] axioms.llm: Axiom tool result: action=report_violation verdict=PERMITTED[0m
+[94m2026-05-14 07:01:01 [INFO    ] axioms.llm: Agent 10 [report→agent_6] reasoning: Agent 6 appropriated exactly what was allocated, so no violation.[0m
+[90m2026-05-14 07:01:01 [DEBUG   ] axioms.agent.monitor: Step 6: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 07:01:01 [INFO    ] axioms.model: Step    6 | pool=  395.0 | members=10 | violations=0 | noncompliance_rate=0.00 | ra=queue
+[94m2026-05-14 07:01:05 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: The queue method allows early claimers to obtain a full share when the pool is higher, which is best for my family’s immediate needs.[0m
+[90m2026-05-14 07:01:05 [DEBUG   ] axioms.agent: Step 7: Agent 0 voted queue.[0m
+[90m2026-05-14 07:01:27 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:01:27 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:01:31 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Sticking with the queue method maintains consistency and avoids complications with the new pool level. The current pool is 790/1000, so the queue will distribute what remains fairly based on the order of demand. Since I have no incentive to alter the allocation method, queue is the prudent choice.[0m
+[90m2026-05-14 07:01:31 [DEBUG   ] axioms.agent: Step 7: Agent 1 voted queue.[0m
+[90m2026-05-14 07:01:41 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:01:41 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:01:49 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: I vote queue because it allows agents who demand early to secure their allocations when the pool is low, ensuring that those who need resources promptly can receive them before the pool possibly runs out.[0m
+[90m2026-05-14 07:01:49 [DEBUG   ] axioms.agent: Step 7: Agent 2 voted queue.[0m
+[90m2026-05-14 07:02:01 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:02:01 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:02:15 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Maintaining queue preserves early-demand priority and ensures we secure our full requested allocation before the pool is depleted.[0m
+[90m2026-05-14 07:02:15 [DEBUG   ] axioms.agent: Step 7: Agent 3 voted queue.[0m
+[90m2026-05-14 07:02:24 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:02:24 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:02:27 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: I have power and permission to vote; choosing queue to favor early demanders and align with my cooperative strategy[0m
+[90m2026-05-14 07:02:27 [DEBUG   ] axioms.agent: Step 7: Agent 4 voted queue.[0m
+[94m2026-05-14 07:02:31 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Queue allows me to receive the full amount I request before the pool runs out, which is crucial given low resources.[0m
+[90m2026-05-14 07:02:31 [DEBUG   ] axioms.agent: Step 7: Agent 5 voted queue.[0m
+[94m2026-05-14 07:02:40 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Queue ensures orderly consumption and prevents large lumps that could destabilize the pool during low levels.[0m
+[90m2026-05-14 07:02:40 [DEBUG   ] axioms.agent: Step 7: Agent 6 voted queue.[0m
+[90m2026-05-14 07:03:03 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:03:03 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:03:13 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: I have power and permission to vote; I prefer the first‑come, first‑served method to enforce rapid and disciplined resource claim and avoid slow rationing, maintaining order and clarity for all agents.[0m
+[90m2026-05-14 07:03:13 [DEBUG   ] axioms.agent: Step 7: Agent 9 voted queue.[0m
+[94m2026-05-14 07:03:27 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Queue guarantees that I can secure the 200 units I need when the pool is low, protecting my family’s financial stability. Rationing would dilute the allocation among all demanding agents and could leave me insufficient supplies.[0m
+[90m2026-05-14 07:03:27 [DEBUG   ] axioms.agent: Step 7: Agent 10 voted queue.[0m
+[94m2026-05-14 07:03:36 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Prefer first‑come, first‑served to maintain an orderly, easy‑to‑understand process and avoid any perception of bias that might arise from rationing.[0m
+[90m2026-05-14 07:03:36 [DEBUG   ] axioms.agent: Step 7: Agent 11 voted queue.[0m
+[90m2026-05-14 07:03:43 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:03:43 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:04:06 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: I need as many resources as possible for my children's essential needs and demand is permitted; requesting the full remaining pool maximizes my available funds this round.[0m
+[90m2026-05-14 07:04:06 [DEBUG   ] axioms.agent: Step 7: Agent 0 demanded 395.0000.[0m
+[90m2026-05-14 07:04:15 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:04:15 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:04:29 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Demanding a small amount keeps me looking modest and cooperative while still testing whether the queue method will allocate some resources.[0m
+[90m2026-05-14 07:04:29 [DEBUG   ] axioms.agent: Step 7: Agent 1 demanded 10.0000.[0m
+[90m2026-05-14 07:04:46 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:04:46 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:04:57 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Per the Ostrom axiom check, I have power and permission to demand. To ensure an allocation and avoid over-demanding beyond the current pool (395 units for 10 members), I propose a safe 39.5-unit demand, roughly one-tenth of the pool, so I can receive my share in a queue method allocation.[0m
+[90m2026-05-14 07:04:57 [DEBUG   ] axioms.agent: Step 7: Agent 2 demanded 39.5000.[0m
+[90m2026-05-14 07:04:57 [DEBUG   ] axioms.agent: Step 7: Agent 3 abstained from demand (10% abstention).[0m
+[90m2026-05-14 07:04:57 [DEBUG   ] axioms.agent: Step 7: Agent 4 abstained from demand (10% abstention).[0m
+[90m2026-05-14 07:05:08 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:05:08 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:05:26 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: Past round with 200 demanded yielded full allocation and compliance. No sanction risk now; safe to maintain this level to support family.[0m
+[90m2026-05-14 07:05:26 [DEBUG   ] axioms.agent: Step 7: Agent 5 demanded 200.0000.[0m
+[90m2026-05-14 07:05:44 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:05:44 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:05:54 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Permitted to demand; testing higher demand against current pool.[0m
+[90m2026-05-14 07:05:54 [DEBUG   ] axioms.agent: Step 7: Agent 6 demanded 1000.0000.[0m
+[90m2026-05-14 07:06:06 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:06:06 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:06:17 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Demanding my fair share of 39.5 units—the pool holds 395 and there are 10 members, so a equal portion is 39.5. This follows the queue method and maintains the principle of equal entitlement.[0m
+[90m2026-05-14 07:06:17 [DEBUG   ] axioms.agent: Step 7: Agent 9 demanded 39.5000.[0m
+[90m2026-05-14 07:06:36 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:06:36 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:06:43 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I am a single mother with three children, and I need to cover school supplies, groceries, and rent. A 200-unit demand is consistent with past behavior and matches the current institutional rules, as confirmed by the PERMITTED verdict.[0m
+[90m2026-05-14 07:06:43 [DEBUG   ] axioms.agent: Step 7: Agent 10 demanded 200.0000.[0m
+[90m2026-05-14 07:06:47 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:06:47 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:06:50 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I want to maintain a low profile and keep my reputation clean; a small demand is unlikely to trigger sanctions and respects the shared resource limits.[0m
+[90m2026-05-14 07:06:50 [DEBUG   ] axioms.agent: Step 7: Agent 11 demanded 5.0000.[0m
+[90m2026-05-14 07:07:00 [DEBUG   ] axioms.engine: action=allocate verdict=NO_POWER principles=[2] | pow(C, allocate) requires demanded(A,I)=R with R>0. Target has not made a demand.[0m
+[94m2026-05-14 07:07:00 [INFO    ] axioms.llm: Axiom tool result: action=allocate verdict=NO_POWER[0m
+[94m2026-05-14 07:07:23 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: In a queue‑based allocation, the first agent in line (agent_0) demanded the full remaining pool (395). The pool contains exactly 395 units, so all resources are allocated to agent_0. No remaining units are left for subsequent agents. All other agents receive zero.[0m
+[90m2026-05-14 07:07:23 [DEBUG   ] axioms.agent.head: Step 7: Head (LLM) allocated to 10 agents.[0m
+[90m2026-05-14 07:07:27 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 395.0 <= allocated 395.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:07:27 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:07:30 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: Sanction level 0 and allocation equals 395.0, so appropriation of 395.0 is fully permitted.[0m
+[90m2026-05-14 07:07:35 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:07:35 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:07:40 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: Per the institutional rules (Principle 2), I may only appropriate up to my allocation, which is 0.0. The check_ostrom_axiom confirmed that appropriating 0.0 is permitted.[0m
+[90m2026-05-14 07:07:43 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:07:43 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:07:45 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: Permitted to appropriate exactly the allocated amount, which is zero.[0m
+[90m2026-05-14 07:07:53 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 30.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:07:53 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:07:57 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: No permission to appropriate more than the allocated amount; allocation is 0, so we can only take 0 units.[0m
+[90m2026-05-14 07:08:02 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:08:02 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:08:04 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: No allocation has been granted; thus appropriate 0 units is permitted and compliant with the allocation rule.[0m
+[94m2026-05-14 07:08:13 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: No allocation was granted in this round, so the only amount that can be appropriated is the zero allocation—taking more would violate the institution’s appropriation rule.[0m
+[90m2026-05-14 07:08:22 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:08:22 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:08:27 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: Allocated 0, so no resources available to appropriate. No violation.[0m
+[90m2026-05-14 07:08:31 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:08:31 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:08:36 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: Allocation is zero, so approaching zero is the only permitted move.[0m
+[90m2026-05-14 07:08:47 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:08:47 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[90m2026-05-14 07:08:57 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 200.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:08:57 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:09:01 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: Allocation is 0.0, so we have no permission to appropriate any amount beyond that.[0m
+[90m2026-05-14 07:09:08 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 5.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:09:08 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:09:12 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: No allocation granted (0.0000), so the institutional rules disallow any appropriation.[0m
+[90m2026-05-14 07:09:12 [DEBUG   ] axioms.agent.monitor: Step 7: Monitor sampling agent 3 — appropriated=0.00 allocated=0.00[0m
+[94m2026-05-14 07:09:24 [INFO    ] axioms.llm: Agent 10 [report→agent_3] reasoning: Agent 3 appropriated 0.0, which is not greater than the 0.0 allocated, so no violation warrants reporting.[0m
+[90m2026-05-14 07:09:24 [DEBUG   ] axioms.agent.monitor: Step 7: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 07:09:24 [INFO    ] axioms.model: Step    7 | pool=  395.0 | members=10 | violations=0 | noncompliance_rate=0.00 | ra=queue
+[94m2026-05-14 07:09:29 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Keeping the current FIFO queue preserves simplicity and fairness given our limited reserves; it ensures that agents who need resources early can secure them before the pool depletes, which is crucial for my family's immediate financial stability.[0m
+[90m2026-05-14 07:09:29 [DEBUG   ] axioms.agent: Step 8: Agent 0 voted queue.[0m
+[94m2026-05-14 07:09:51 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: With the pool low, queue allows agents to claim resources incrementally and prevents wasteful over-allocation that could happen with rationing in a tight resource situation. It gives a fair chance to each agent depending on demand timing, which aligns with the group's emphasis on reputation and fair treatment.[0m
+[90m2026-05-14 07:09:51 [DEBUG   ] axioms.agent: Step 8: Agent 1 voted queue.[0m
+[90m2026-05-14 07:10:02 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:10:02 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:10:06 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Consistent with previous decisions and institution rules[0m
+[90m2026-05-14 07:10:06 [DEBUG   ] axioms.agent: Step 8: Agent 2 voted queue.[0m
+[90m2026-05-14 07:10:17 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:10:17 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:10:22 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: Choosing queue maintains consistency with current allocation method and ensures predictable demand ordering; it also aligns with the institution's preference for orderly resource distribution in this round.[0m
+[90m2026-05-14 07:10:22 [DEBUG   ] axioms.agent: Step 8: Agent 3 voted queue.[0m
+[94m2026-05-14 07:10:27 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Using the queue method guarantees that early requests are served first, which helps prevent a sudden depletion of the limited pool and maintains fairness when amounts are scarce.[0m
+[90m2026-05-14 07:10:27 [DEBUG   ] axioms.agent: Step 8: Agent 4 voted queue.[0m
+[94m2026-05-14 07:10:54 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: I want to maintain the first‑come first‑served rule so that if I demand early, I can claim the full amount left in the pool. Rationing would split a small balance among many, reducing my share further.[0m
+[90m2026-05-14 07:10:54 [DEBUG   ] axioms.agent: Step 8: Agent 5 voted queue.[0m
+[90m2026-05-14 07:11:17 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:11:17 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:11:21 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: I have power and permission to vote, and the queue method will allow me to get my full amount if the pool allows it.[0m
+[90m2026-05-14 07:11:21 [DEBUG   ] axioms.agent: Step 8: Agent 6 voted queue.[0m
+[94m2026-05-14 07:11:46 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Prefers equal shares to prevent early-done members from monopolizing a dwindling pool; aligns with union’s stance on fairness and collective discipline.[0m
+[90m2026-05-14 07:11:46 [DEBUG   ] axioms.agent: Step 8: Agent 9 voted ration.[0m
+[94m2026-05-14 07:11:59 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Queue ensures a predictable, first‑come, first‑served allocation that helps me secure the resources needed for my children before the pool depletes, maintaining stability during scarcity.[0m
+[90m2026-05-14 07:11:59 [DEBUG   ] axioms.agent: Step 8: Agent 10 voted queue.[0m
+[94m2026-05-14 07:12:11 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Choosing 'ration' promotes fairness among participants, which aligns with a reputation‑focused approach and helps maintain a stable, cooperative institution when the pool is low.[0m
+[90m2026-05-14 07:12:11 [DEBUG   ] axioms.agent: Step 8: Agent 11 voted ration.[0m
+[90m2026-05-14 07:12:20 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:12:20 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:12:29 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: The pool contains 395 units, and I have permission to demand all remaining resources in this round.[0m
+[90m2026-05-14 07:12:29 [DEBUG   ] axioms.agent: Step 8: Agent 0 demanded 395.0000.[0m
+[90m2026-05-14 07:12:33 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:12:33 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:12:47 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Maintain reputation as a frugal, cooperative participant while the pool is highly constrained; a modest demand shows respect for scarcity.[0m
+[90m2026-05-14 07:12:47 [DEBUG   ] axioms.agent: Step 8: Agent 1 demanded 5.0000.[0m
+[90m2026-05-14 07:13:10 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:13:10 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:13:15 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Pool is 395/1000, so requesting 39.5 (1/10 of pool) keeps my demand proportional to remaining resource and maintains compliance.[0m
+[90m2026-05-14 07:13:15 [DEBUG   ] axioms.agent: Step 8: Agent 2 demanded 39.5000.[0m
+[90m2026-05-14 07:13:23 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:13:23 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:13:37 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: I am permitted to demand resources, so I will keep my usual request to support growth while maintaining fairness.[0m
+[90m2026-05-14 07:13:37 [DEBUG   ] axioms.agent: Step 8: Agent 3 demanded 30.0000.[0m
+[94m2026-05-14 07:14:02 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: I have power to demand and will take a moderate amount, maintaining the pool and avoiding sanctions.[0m
+[90m2026-05-14 07:14:02 [DEBUG   ] axioms.agent: Step 8: Agent 4 demanded 5.0000.[0m
+[90m2026-05-14 07:14:19 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:14:19 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:14:32 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I have power and permission to demand resources. With a low pool and past experience, demanding the same amount as last round (200) keeps me within a consistent strategy while hoping for a refill that will allow me to get an allocation. Keeping the demand steady also mitigates suspicion in a low‑sanction environment.[0m
+[90m2026-05-14 07:14:32 [DEBUG   ] axioms.agent: Step 8: Agent 5 demanded 200.0000.[0m
+[90m2026-05-14 07:15:01 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:15:01 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:15:09 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I am allowed to demand and want to test how the allocation behaves when the pool is low (395). 300 is a moderate amount that should trigger some allocation while still demonstrating boundary testing.[0m
+[90m2026-05-14 07:15:09 [DEBUG   ] axioms.agent: Step 8: Agent 6 demanded 300.0000.[0m
+[90m2026-05-14 07:15:46 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:15:46 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:15:53 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: I have permission to demand, and I will demand my allocated share of the pool, consistent with previous rounds.[0m
+[90m2026-05-14 07:15:53 [DEBUG   ] axioms.agent: Step 8: Agent 9 demanded 39.5000.[0m
+[90m2026-05-14 07:16:09 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:16:09 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:16:30 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I have the institutional power and permission to demand resources, and 200 units are needed to cover my children's basic expenses (school supplies, groceries, rent).[0m
+[90m2026-05-14 07:16:30 [DEBUG   ] axioms.agent: Step 8: Agent 10 demanded 200.0000.[0m
+[90m2026-05-14 07:16:38 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:16:38 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:16:49 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Request a modest amount to avoid depleting the already low pool and to maintain a cooperative image in the group.[0m
+[90m2026-05-14 07:16:49 [DEBUG   ] axioms.agent: Step 8: Agent 11 demanded 5.0000.[0m
+[90m2026-05-14 07:17:24 [DEBUG   ] axioms.engine: action=allocate verdict=NO_POWER principles=[2] | pow(C, allocate) requires demanded(A,I)=R with R>0. Target has not made a demand.[0m
+[94m2026-05-14 07:17:24 [INFO    ] axioms.llm: Axiom tool result: action=allocate verdict=NO_POWER[0m
+[94m2026-05-14 07:17:54 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: Queue method: the first demand in line is Agent 0 for 395, which equals the full pool. The pool cannot exceed its capacity, so the remaining agents receive 0. All allocations sum to the available 395 units, respecting institutional limits.[0m
+[90m2026-05-14 07:17:54 [DEBUG   ] axioms.agent.head: Step 8: Head (LLM) allocated to 12 agents.[0m
+[94m2026-05-14 07:18:04 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: I have no permission to take more than the allocated 395 units, so I will only appropriate my allocation.[0m
+[90m2026-05-14 07:18:18 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:18:18 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:18:24 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: Allocated 0.0, so only 0.0 may be appropriated. The institutional rule permits appropriating up to the allocated amount, which is 0.0 in this round.[0m
+[90m2026-05-14 07:18:35 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:18:35 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:18:38 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: No allocation was given, so appropriate only the allocated amount (0), which is permitted by the institutional rules.[0m
+[94m2026-05-14 07:19:07 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: I was allocated 30 units this round (from the queue method), and that is the amount I intend to appropriate to remain compliant with the institution’s rules.[0m
+[91m2026-05-14 07:19:07 [WARNING ] axioms.agent: Step 8: Agent 3 over-appropriated: took=30.0000 allocated=0.0000.[0m
+[90m2026-05-14 07:19:19 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:19:19 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:19:36 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: I was allocated 0 units this round, so I can only appropriate 0 (permitted by the allocation rule).[0m
+[94m2026-05-14 07:19:52 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: No permission to appropriate beyond the 0 allocation I received.[0m
+[90m2026-05-14 07:20:00 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 100.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:20:00 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:20:03 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: No permission to appropriate beyond the allocated amount; allocation is zero.[0m
+[94m2026-05-14 07:20:16 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: No allocation was granted in this round, so only the allocated amount (zero in this case) can be appropriated.[0m
+[94m2026-05-14 07:20:28 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: Allocated 0 units, so no resources may be appropriated under the institutional rules.[0m
+[94m2026-05-14 07:20:39 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: Allocated 0 so no resources to appropriate.[0m
+[90m2026-05-14 07:20:39 [DEBUG   ] axioms.agent.monitor: Step 8: Monitor sampling agent 6 — appropriated=0.00 allocated=0.00[0m
+[90m2026-05-14 07:20:48 [DEBUG   ] axioms.engine: action=report_violation verdict=PERMITTED principles=[4] | pow(B, report(B,A,R,I)) holds: monitor reporting on a member's appropriation.[0m
+[94m2026-05-14 07:20:48 [INFO    ] axioms.llm: Axiom tool result: action=report_violation verdict=PERMITTED[0m
+[94m2026-05-14 07:20:53 [INFO    ] axioms.llm: Agent 10 [report→agent_6] reasoning: Agent 6 appropriated 0.0 units, which is not greater than the allocated 0.0 units; no violation.[0m
+[90m2026-05-14 07:20:53 [DEBUG   ] axioms.agent.monitor: Step 8: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 07:20:53 [INFO    ] axioms.model: Step    8 | pool=  365.0 | members=10 | violations=1 | noncompliance_rate=0.00 | ra=queue
+[91m2026-05-14 07:20:53 [WARNING ] axioms.model: Step 8: 1 violation(s) detected this step.[0m
+[90m2026-05-14 07:21:02 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:21:02 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:21:15 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Rationing distributes resources fairly among all members, reducing the risk of depleting the pool quickly and ensuring that future rounds still provide for my family’s needs.[0m
+[90m2026-05-14 07:21:15 [DEBUG   ] axioms.agent: Step 9: Agent 0 voted ration.[0m
+[90m2026-05-14 07:21:20 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:21:20 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:21:30 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Queue preserves early demand advantage and aligns with the current system; no incentive to change to ration.[0m
+[90m2026-05-14 07:21:30 [DEBUG   ] axioms.agent: Step 9: Agent 1 voted queue.[0m
+[90m2026-05-14 07:21:38 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:21:38 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:21:42 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Previous analysis shows I have the power and permission to vote. I have voted queue in prior rounds, so I maintain that choice. Maintaining consistent voting maximises predictability and helps manage risk under the current low pool level.[0m
+[90m2026-05-14 07:21:42 [DEBUG   ] axioms.agent: Step 9: Agent 2 voted queue.[0m
+[94m2026-05-14 07:22:00 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: We previously used the queue method to secure allocations and it has served us well. Sticking with queue maximizes the amount we can take when resources are low while keeping us within the sanction limits.[0m
+[90m2026-05-14 07:22:00 [DEBUG   ] axioms.agent: Step 9: Agent 3 voted queue.[0m
+[94m2026-05-14 07:22:12 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Maintaining queue preserves the incentive for agents to plan demands early and ensures full allocation before the pool depletes, aligning with the cooperative's goal of avoiding free‑riding.[0m
+[90m2026-05-14 07:22:12 [DEBUG   ] axioms.agent: Step 9: Agent 4 voted queue.[0m
+[90m2026-05-14 07:22:24 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:22:24 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:22:29 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Maintains current method and avoids the reduction in allocation that ration would cause[0m
+[90m2026-05-14 07:22:29 [DEBUG   ] axioms.agent: Step 9: Agent 5 voted queue.[0m
+[94m2026-05-14 07:22:39 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Prefer queue to keep allocation simple and fair; first-come-first-serve ensures early demanders receive full amounts when possible.[0m
+[90m2026-05-14 07:22:39 [DEBUG   ] axioms.agent: Step 9: Agent 6 voted queue.[0m
+[94m2026-05-14 07:22:51 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue preserves fairness by ensuring larger demands get priority until resources run out; it aligns with my commitment to strict discipline and equitable access for all.[0m
+[90m2026-05-14 07:22:51 [DEBUG   ] axioms.agent: Step 9: Agent 9 voted queue.[0m
+[94m2026-05-14 07:22:59 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Per Ostrom’s power axiom, I have the right to vote, and I prefer the queue method to ensure timely access to needed resources.[0m
+[90m2026-05-14 07:22:59 [DEBUG   ] axioms.agent: Step 9: Agent 10 voted queue.[0m
+[90m2026-05-14 07:23:15 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:23:15 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:23:33 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: The pool is currently low (365), so a rationing method ensures a more equitable share among all demanding agents, reducing the chance of anyone being completely denied resources while still maintaining fairness in a low‑resource context.[0m
+[90m2026-05-14 07:23:33 [DEBUG   ] axioms.agent: Step 9: Agent 11 voted ration.[0m
+[90m2026-05-14 07:23:41 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:23:41 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:23:58 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Pool is 365 units and we previously drew the entire pool each round. To cover groceries, school supplies, and rent for three children, we need the full available resources this round.[0m
+[90m2026-05-14 07:23:58 [DEBUG   ] axioms.agent: Step 9: Agent 0 demanded 365.0000.[0m
+[90m2026-05-14 07:24:11 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:24:11 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:24:22 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: I will demand a moderate amount to stay within rules and maintain a good reputation, avoiding over‑exertion while respecting the low pool level.[0m
+[90m2026-05-14 07:24:22 [DEBUG   ] axioms.agent: Step 9: Agent 1 demanded 5.0000.[0m
+[90m2026-05-14 07:24:32 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:24:32 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:24:43 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Conservative demand given low pool, to maintain sustainability.[0m
+[90m2026-05-14 07:24:43 [DEBUG   ] axioms.agent: Step 9: Agent 2 demanded 35.0000.[0m
+[90m2026-05-14 07:24:57 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:24:57 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:25:24 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: Modest demand to support growth while minimizing risk of violation given the low pool level.[0m
+[90m2026-05-14 07:25:24 [DEBUG   ] axioms.agent: Step 9: Agent 3 demanded 5.0000.[0m
+[90m2026-05-14 07:25:38 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:25:38 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:26:01 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: I am permitted to demand; a moderate demand of 10 units keeps the pool from dropping too low while ensuring my share and supporting the institution’s sustainability.[0m
+[90m2026-05-14 07:26:01 [DEBUG   ] axioms.agent: Step 9: Agent 4 demanded 10.0000.[0m
+[90m2026-05-14 07:26:20 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:26:20 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:26:39 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: The pool is very low (≈365 units). In queue mode only the pool divided by the number of members is actually allocated. With 10 members each gets about 36.5 units. Demanding a small amount near my share lets me receive something without triggering sanctions. Given the low sanction level, a modest demand is the safest approach.[0m
+[90m2026-05-14 07:26:39 [DEBUG   ] axioms.agent: Step 9: Agent 5 demanded 40.0000.[0m
+[90m2026-05-14 07:26:43 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:26:43 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:27:02 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: I have permission to demand; to test how the queue method allocates when I request the full remaining pool.[0m
+[90m2026-05-14 07:27:02 [DEBUG   ] axioms.agent: Step 9: Agent 6 demanded 365.0000.[0m
+[90m2026-05-14 07:27:26 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:27:26 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:27:33 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Fair share of remaining pool – 10 members × 36.5 = 365, consistent with our union’s strict but equitable stance.[0m
+[90m2026-05-14 07:27:33 [DEBUG   ] axioms.agent: Step 9: Agent 9 demanded 36.5000.[0m
+[90m2026-05-14 07:27:44 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:27:44 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:27:59 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Maintaining a consistent 200-unit demand covers essential household needs for groceries, school supplies, and rent, while prior history shows this amount was permissible and compliant.[0m
+[90m2026-05-14 07:27:59 [DEBUG   ] axioms.agent: Step 9: Agent 10 demanded 200.0000.[0m
+[90m2026-05-14 07:27:59 [DEBUG   ] axioms.agent: Step 9: Agent 11 abstained from demand (10% abstention).[0m
+[94m2026-05-14 07:28:12 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: Using the queue allocation method, agents receive resources in numerical order until the pool is exhausted; Agent 0’s demand fills the entire pool (365), leaving zero for all subsequent agents.[0m
+[90m2026-05-14 07:28:12 [DEBUG   ] axioms.agent.head: Step 9: Head (LLM) allocated to 10 agents.[0m
+[90m2026-05-14 07:28:23 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 365.0 <= allocated 365.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:28:23 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:28:28 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: Appropriation within allocated amount; permitted under Ostrom’s Principle 2 (allocation rule).[0m
+[90m2026-05-14 07:28:45 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:28:45 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:28:52 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: You have no allocation to draw from, so appropriating any resources would violate the allocation rule.[0m
+[90m2026-05-14 07:28:55 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:28:55 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:28:59 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: The allocation is 0, so appropriating 0 is fully permissible under the allocation rule.[0m
+[90m2026-05-14 07:29:23 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:29:23 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:29:29 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: No allocation received; cannot appropriate beyond allocated resources.[0m
+[90m2026-05-14 07:29:38 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:29:38 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:29:41 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: Allocated amount is 0, so I should appropriate 0 to remain compliant.[0m
+[90m2026-05-14 07:29:52 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 40.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:29:52 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:29:55 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: No permission to appropriate beyond allocated 0; must comply with allocation.[0m
+[90m2026-05-14 07:30:02 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 365.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:30:02 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:30:05 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: No permission to appropriate beyond the zero allocation; adhering to institutional rule.[0m
+[94m2026-05-14 07:30:14 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: The allocated amount for this round is 0, so there is nothing to appropriate beyond that.[0m
+[90m2026-05-14 07:30:54 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:30:54 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:30:59 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: Allocation is zero; can only appropriate what was allocated, so appropriate $0.[0m
+[90m2026-05-14 07:31:14 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 0.0 <= allocated 0.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:31:14 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:31:24 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: I cannot take more than my allocation of 0. Staying compliant maintains my reputation.[0m
+[90m2026-05-14 07:31:24 [DEBUG   ] axioms.agent.monitor: Step 9: Monitor sampling agent 4 — appropriated=0.00 allocated=0.00[0m
+[94m2026-05-14 07:31:29 [INFO    ] axioms.llm: Agent 10 [report→agent_4] reasoning: Agent 4 appropriated 0.0, allocated 0.0 → no excess appropriation; not a violation.[0m
+[90m2026-05-14 07:31:29 [DEBUG   ] axioms.agent.monitor: Step 9: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 07:31:29 [INFO    ] axioms.model: Step    9 | pool=  395.0 | members=10 | violations=0 | noncompliance_rate=0.00 | ra=queue
+[94m2026-05-14 07:31:37 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: Favors getting full needed resources to support children[0m
+[90m2026-05-14 07:31:37 [DEBUG   ] axioms.agent: Step 10: Agent 0 voted queue.[0m
+[94m2026-05-14 07:31:40 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Continuing with queue ensures early demands are honored, maximizing resource use when pool is low and maintaining fair priority in this institution.[0m
+[90m2026-05-14 07:31:40 [DEBUG   ] axioms.agent: Step 10: Agent 1 voted queue.[0m
+[90m2026-05-14 07:31:43 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:31:43 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:31:54 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue allows early-demanding agents to secure their full allocation, ensuring stable, predictable extraction that aligns with my experience and maintains the community's established trust. Rationing could reduce my guaranteed amount and may lead to uncertainty about when resources are needed, which could destabilize long-term planning.[0m
+[90m2026-05-14 07:31:54 [DEBUG   ] axioms.agent: Step 10: Agent 2 voted queue.[0m
+[90m2026-05-14 07:32:07 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:32:07 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:32:13 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: I want to avoid another queue violation. Rationing guarantees at least one unit per agent, so I can demand without exceeding my allocation.[0m
+[90m2026-05-14 07:32:13 [DEBUG   ] axioms.agent: Step 10: Agent 3 voted ration.[0m
+[94m2026-05-14 07:32:28 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Supports collective fairness and ensures every member receives a share, promoting long‑term sustainability of the pool.[0m
+[90m2026-05-14 07:32:28 [DEBUG   ] axioms.agent: Step 10: Agent 4 voted ration.[0m
+[94m2026-05-14 07:32:43 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: The queue method ensures that agents demanding early get their full allocation, which can help maintain fairness when the pool is low. It also aligns with the current method already in place and respects the established protocol for resource distribution.[0m
+[90m2026-05-14 07:32:43 [DEBUG   ] axioms.agent: Step 10: Agent 5 voted queue.[0m
+[90m2026-05-14 07:32:46 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:32:46 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:32:50 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: I vote for queue because it ensures first-come, first-served allocation, allowing me to test early-demand strategy while remaining compliant with the institution’s rules.[0m
+[90m2026-05-14 07:32:50 [DEBUG   ] axioms.agent: Step 10: Agent 6 voted queue.[0m
+[94m2026-05-14 07:33:00 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue ensures early demanders receive full allocation before the pool depletes, maintaining consistency with prior voting and preventing late entrants from receiving disproportionately small shares when the pool is low.[0m
+[90m2026-05-14 07:33:00 [DEBUG   ] axioms.agent: Step 10: Agent 9 voted queue.[0m
+[94m2026-05-14 07:33:09 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Queue ensures early demanders get priority, maximizing chance of obtaining needed resources before the pool depletes.[0m
+[90m2026-05-14 07:33:09 [DEBUG   ] axioms.agent: Step 10: Agent 10 voted queue.[0m
+[94m2026-05-14 07:33:13 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Stick with queue to ensure fair priority and avoid diluting shares when the pool is low.[0m
+[90m2026-05-14 07:33:13 [DEBUG   ] axioms.agent: Step 10: Agent 11 voted queue.[0m
+[90m2026-05-14 07:33:28 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:33:28 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:33:49 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Need sufficient resources for the children while leaving some in the pool to keep the institution functioning. Taking all 395 would deplete the pool and risk collapse.[0m
+[90m2026-05-14 07:33:49 [DEBUG   ] axioms.agent: Step 10: Agent 0 demanded 300.0000.[0m
+[90m2026-05-14 07:34:01 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:34:01 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:34:09 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Maintain low, consistent demand to preserve reputation and support the common-pool resource without risking sanctions.[0m
+[90m2026-05-14 07:34:09 [DEBUG   ] axioms.agent: Step 10: Agent 1 demanded 5.0000.[0m
+[90m2026-05-14 07:34:25 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:34:25 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:34:53 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: Following the prior pattern for the queue method, where each agent demanded pool/10 (~39.5 when pool is 395), and to remain compliant with institutional rules.[0m
+[90m2026-05-14 07:34:53 [DEBUG   ] axioms.agent: Step 10: Agent 2 demanded 39.5000.[0m
+[90m2026-05-14 07:35:01 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:35:01 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:35:17 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: Maintain compliance with minimal demand, avoiding previous violation while keeping some resources for startup.[0m
+[90m2026-05-14 07:35:17 [DEBUG   ] axioms.agent: Step 10: Agent 3 demanded 5.0000.[0m
+[90m2026-05-14 07:35:27 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:35:27 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:35:39 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: Maintain a moderate, cooperative demand that supports the community without risking sanctions; follows collective action principles.[0m
+[90m2026-05-14 07:35:39 [DEBUG   ] axioms.agent: Step 10: Agent 4 demanded 5.0000.[0m
+[90m2026-05-14 07:35:50 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:35:50 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:36:07 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: With sanction level 0 and no existing allocation, I will demand 200 units to try to secure part of the remaining pool. Previous demand of 200 received no allocation, but there is no penalty for over‑requesting at this point.[0m
+[90m2026-05-14 07:36:07 [DEBUG   ] axioms.agent: Step 10: Agent 5 demanded 200.0000.[0m
+[90m2026-05-14 07:36:26 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:36:26 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:36:34 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Testing boundaries: demand exceeds current pool (395) to observe allocation response.[0m
+[90m2026-05-14 07:36:34 [DEBUG   ] axioms.agent: Step 10: Agent 6 demanded 400.0000.[0m
+[90m2026-05-14 07:36:37 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:36:37 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:36:45 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Consistent, fair share based on previous allocations and queue method; maintain established entitlement.[0m
+[90m2026-05-14 07:36:45 [DEBUG   ] axioms.agent: Step 10: Agent 9 demanded 39.5000.[0m
+[90m2026-05-14 07:37:13 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:37:13 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:37:17 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: I have power and permission to demand; 200 units are sufficient for my children's expenses.[0m
+[90m2026-05-14 07:37:17 [DEBUG   ] axioms.agent: Step 10: Agent 10 demanded 200.0000.[0m
+[90m2026-05-14 07:37:25 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:37:25 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:37:28 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Permitted to demand as check_ostrom_axiom returned PERMITTED.[0m
+[90m2026-05-14 07:37:28 [DEBUG   ] axioms.agent: Step 10: Agent 11 demanded 5.0000.[0m
+[94m2026-05-14 07:37:46 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: Pool was 395. Allocated sequentially in queue order until depleted, giving each agent their full demand where possible. After giving Agent 5 the remainder, the pool was exhausted. This respects the limit and the institutional rule that total allocations must not exceed the pool.[0m
+[90m2026-05-14 07:37:46 [DEBUG   ] axioms.agent.head: Step 10: Head (LLM) allocated to 6 agents.[0m
+[90m2026-05-14 07:37:59 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 300.0 <= allocated 300.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:37:59 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:38:02 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: Per the check, 300 is within the allocated amount and permitted; appropriating more would violate the institutional rule.[0m
+[90m2026-05-14 07:38:19 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 5.0 <= allocated 5.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:38:19 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:38:23 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: Approved by institutional rule (Principle 2): appropriation ≤ allocated and no sanction pending – so take 5 units.[0m
+[90m2026-05-14 07:38:31 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 39.5 <= allocated 39.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:38:31 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:38:33 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: Per the Ostrom axiom check, appropriation of 39.5 units is within the allocated amount and permitted.[0m
+[90m2026-05-14 07:38:41 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 5.0 <= allocated 5.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:38:41 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:38:43 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: The check shows the appropriation is within the allocated amount and permitted by the institution's rules.[0m
+[90m2026-05-14 07:38:55 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 5.0 <= allocated 5.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:38:55 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:38:57 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: Permission granted, appropriation within allocated amount.[0m
+[90m2026-05-14 07:39:32 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 40.5 <= allocated 40.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:39:32 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:39:34 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: Approved to take the full allocated amount of 40.5 units; complies with the permission rule for the given allocation.[0m
+[94m2026-05-14 07:39:50 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: I have no allocation from this round, so the institutional rules do not permit me to appropriate any resources.[0m
+[90m2026-05-14 07:40:09 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 39.5 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:40:09 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:40:13 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: Only permitted to appropriate what is allocated, which is 0.0.[0m
+[94m2026-05-14 07:40:25 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: No allocation granted; cannot appropriate beyond allocated resources, so appropriate zero.[0m
+[94m2026-05-14 07:40:30 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: Allocated 0, so I cannot appropriate any resources under the current institutional rules.[0m
+[90m2026-05-14 07:40:30 [DEBUG   ] axioms.agent.monitor: Step 10: Monitor sampling agent 0 — appropriated=300.00 allocated=300.00[0m
+[94m2026-05-14 07:40:34 [INFO    ] axioms.llm: Agent 10 [report→agent_0] reasoning: Appropriation matches allocation; no violation detected.[0m
+[90m2026-05-14 07:40:34 [DEBUG   ] axioms.agent.monitor: Step 10: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 07:40:34 [INFO    ] axioms.model: Step   10 | pool=  345.0 | members=10 | violations=0 | noncompliance_rate=0.00 | ra=queue
+[94m2026-05-14 07:40:51 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: With the pool at only 345 units and 10 members, the queue method risks leaving me with nothing if others demand early. Rationing evenly guarantees I will receive a share (≈34.5 units) and helps maintain a more stable allocation for my family when resources are scarce.[0m
+[90m2026-05-14 07:40:51 [DEBUG   ] axioms.agent: Step 11: Agent 0 voted ration.[0m
+[90m2026-05-14 07:41:10 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:41:10 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:41:15 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: I prefer queue to maintain fairness and ensure each demand is met sequentially, reducing waste when the pool is low. The previous checks confirm I have the power and permission to vote.[0m
+[90m2026-05-14 07:41:15 [DEBUG   ] axioms.agent: Step 11: Agent 1 voted queue.[0m
+[90m2026-05-14 07:41:34 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:41:34 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:41:45 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: Queue provides a fair, first-come-first-served allocation that is consistent with the institution’s rules and my past compliance.[0m
+[90m2026-05-14 07:41:45 [DEBUG   ] axioms.agent: Step 11: Agent 2 voted queue.[0m
+[94m2026-05-14 07:42:00 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: With the pool at 345 units, rationing ensures a fair, proportional share for all demanding agents and reduces the risk of violations that can arise from over‑claiming in a queue system when resources are scarce.[0m
+[90m2026-05-14 07:42:00 [DEBUG   ] axioms.agent: Step 11: Agent 3 voted ration.[0m
+[90m2026-05-14 07:42:09 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:42:09 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:42:17 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Rationing gives each demanding agent an equal share, preventing early demands from depleting the pool and promoting fairness while keeping the resource sustainable.[0m
+[90m2026-05-14 07:42:17 [DEBUG   ] axioms.agent: Step 11: Agent 4 voted ration.[0m
+[94m2026-05-14 07:42:37 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Consistent with previous votes and maintaining the current allocation mechanism which has worked so far. Switching to ration may reduce overall allocation per demand when the pool is low. Keeping queue preserves the current strategy and avoids the risk of receiving a smaller share under ration.[0m
+[90m2026-05-14 07:42:37 [DEBUG   ] axioms.agent: Step 11: Agent 5 voted queue.[0m
+[94m2026-05-14 07:43:06 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Testing the ration method to see if equal distribution yields a better allocation when the pool is low; with 10 members and 345 units left, a fair share is about 34.5 units, so a substantial part of my demand can be satisfied.[0m
+[90m2026-05-14 07:43:06 [DEBUG   ] axioms.agent: Step 11: Agent 6 voted ration.[0m
+[90m2026-05-14 07:43:21 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:43:21 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:43:23 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: The queue method guarantees that early demanders receive their full share before the pool depletes, ensuring fairness and protecting the collective resource.[0m
+[90m2026-05-14 07:43:23 [DEBUG   ] axioms.agent: Step 11: Agent 9 voted queue.[0m
+[94m2026-05-14 07:43:41 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: Rationing guarantees that even with a depleted pool like the current 345 units, everyone—including my children—receives a small allocation (345/10 ≈ 34.5 units). The queue method would leave me empty each round, forcing me to be excluded or take more than allowed.[0m
+[90m2026-05-14 07:43:41 [DEBUG   ] axioms.agent: Step 11: Agent 10 voted ration.[0m
+[90m2026-05-14 07:43:59 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:43:59 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:44:09 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Choosing ration promotes fairness and keeps the group’s reputation intact by ensuring an equal distribution, which aligns with my interest in social dynamics and consistency.[0m
+[90m2026-05-14 07:44:09 [DEBUG   ] axioms.agent: Step 11: Agent 11 voted ration.[0m
+2026-05-14 07:44:09 [INFO    ] axioms.model: Step 11: RA method changed queue → ration (votes: queue=4 ration=6)
+[90m2026-05-14 07:44:14 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:44:14 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:44:29 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Based on past successful strategy of demanding close to the pool's current value (~300 when pool was 395). This maintains consistency and ensures adequate resources for children while staying within permitted limits.[0m
+[90m2026-05-14 07:44:29 [DEBUG   ] axioms.agent: Step 11: Agent 0 demanded 300.0000.[0m
+[90m2026-05-14 07:44:39 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:44:39 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:44:46 [INFO    ] axioms.llm: Agent 1 [demand] reasoning: Demanding 5 units keeps us consistent with past rounds, demonstrates reliability, and maintains a good reputation in the group.[0m
+[90m2026-05-14 07:44:46 [DEBUG   ] axioms.agent: Step 11: Agent 1 demanded 5.0000.[0m
+[90m2026-05-14 07:44:54 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:44:54 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:45:06 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: The pool is very low (345 units), so to avoid depleting the commons, I will demand nothing this round and wait for replenishment.[0m
+[90m2026-05-14 07:45:06 [DEBUG   ] axioms.agent: Step 11: Agent 2 demanded 0.0000.[0m
+[90m2026-05-14 07:45:21 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:45:21 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:45:32 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: I am permitted to demand and want a safe, conservative amount to support growth while avoiding sanctions—5 matches previous successful demands when ration was chosen.[0m
+[90m2026-05-14 07:45:32 [DEBUG   ] axioms.agent: Step 11: Agent 3 demanded 5.0000.[0m
+[90m2026-05-14 07:45:54 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:45:54 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:46:02 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: I have permission to demand and want a realistic share that is likely to be allocated; 5 units aligns with prior successful ration demands and helps keep the pool from draining.[0m
+[90m2026-05-14 07:46:02 [DEBUG   ] axioms.agent: Step 11: Agent 4 demanded 5.0000.[0m
+[94m2026-05-14 07:46:14 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: I have power to demand as the institution is stable and me having no sanctions. I plan to appropriate a similar amount to past compliant behavior.[0m
+[90m2026-05-14 07:46:14 [DEBUG   ] axioms.agent: Step 11: Agent 5 demanded 200.0000.[0m
+[90m2026-05-14 07:46:42 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:46:42 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:46:57 [INFO    ] axioms.llm: Agent 6 [demand] reasoning: Demanding the full remaining pool to observe how the rationing method allocates resources.[0m
+[90m2026-05-14 07:46:57 [DEBUG   ] axioms.agent: Step 11: Agent 6 demanded 345.0000.[0m
+[90m2026-05-14 07:47:24 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:47:24 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:47:33 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: As a union representative with power and permission to demand, I need a fair share of the remaining pool. With 10 members and 345 units left, a proportional demand of roughly 34.5 units (≈10%) is justified.[0m
+[90m2026-05-14 07:47:33 [DEBUG   ] axioms.agent: Step 11: Agent 9 demanded 34.5000.[0m
+[90m2026-05-14 07:47:53 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:47:53 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:48:03 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Maintaining the same demand (200) keeps my request within the institution’s allowed limits and builds a predictable pattern for the monitor. With no sanctions and proven power and permission to demand, 200 units should be sufficient to try and secure the necessary supplies for my children while minimizing risk.[0m
+[90m2026-05-14 07:48:03 [DEBUG   ] axioms.agent: Step 11: Agent 10 demanded 200.0000.[0m
+[90m2026-05-14 07:48:13 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:48:13 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:48:25 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: I have permission to demand; consistent with past behaviour and I wish to maintain a fair reputation.[0m
+[90m2026-05-14 07:48:25 [DEBUG   ] axioms.agent: Step 11: Agent 11 demanded 5.0000.[0m
+[94m2026-05-14 07:48:43 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: According to the ration method, the 345 units are divided equally among the 10 participating agents, yielding 34.5 units each. This allocation respects the pool capacity and ensures every agent receives an equal share, consistent with the stated method.[0m
+[90m2026-05-14 07:48:43 [DEBUG   ] axioms.agent.head: Step 11: Head (LLM) allocated to 10 agents.[0m
+[94m2026-05-14 07:48:58 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: You are only allowed to appropriate up to your allocated amount. Taking more would violate the collective‑resource rules and could trigger sanctions.[0m
+[90m2026-05-14 07:49:07 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 5.0 <= allocated 34.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:49:07 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:49:14 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: Permitted to appropriate full requested amount; allocation >5.[0m
+[90m2026-05-14 07:49:18 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 34.5 <= allocated 34.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:49:18 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:49:22 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: Appropriation equals allocation; PERMITTED by Ostrom axioms.[0m
+[90m2026-05-14 07:49:29 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 34.5 <= allocated 34.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:49:29 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:49:33 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: Permitted to appropriate full allocation; no penalties.[0m
+[90m2026-05-14 07:50:06 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 34.5 <= allocated 34.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:50:06 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:50:14 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: The check_ostrom_axiom returned PERMITTED for appropriating 34.5 units, which equals our allocated amount. Appropriating the full allocation stays within the institutional rules and satisfies our entitlement.[0m
+[94m2026-05-14 07:50:23 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: Sticking to the approved allocation avoids violating institutional rules and potential sanctions.[0m
+[90m2026-05-14 07:50:30 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 34.5 <= allocated 34.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:50:30 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:50:32 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: The institution permits appropriate up to the allocation; 34.5 is within the allocation and thus allowed.[0m
+[90m2026-05-14 07:50:38 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 34.5 <= allocated 34.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:50:38 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:50:40 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: The appropriation is exactly the allocated amount, so it complies with the allocation rule and is permitted.[0m
+[90m2026-05-14 07:50:49 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 34.5 <= allocated 34.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:50:49 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:50:52 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: Appropriation matches my allocation and is permitted.[0m
+[90m2026-05-14 07:51:03 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 34.5 <= allocated 34.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:51:03 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:51:06 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: I have permission to appropriate my allocated amount under Principle 2.[0m
+[90m2026-05-14 07:51:06 [DEBUG   ] axioms.agent.monitor: Step 11: Monitor sampling agent 10 — appropriated=34.50 allocated=34.50[0m
+[94m2026-05-14 07:51:12 [INFO    ] axioms.llm: Agent 10 [report→agent_10] reasoning: Appropriated amount equals allocated amount (34.5 units), so no violation occurs.[0m
+[90m2026-05-14 07:51:12 [DEBUG   ] axioms.agent.monitor: Step 11: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 07:51:12 [INFO    ] axioms.model: Step   11 | pool=  374.5 | members=10 | violations=0 | noncompliance_rate=0.00 | ra=ration
+[94m2026-05-14 07:51:22 [INFO    ] axioms.llm: Agent 0 [vote] reasoning: I can exercise voting power, and the queue mechanism gives me priority to receive a larger share of a low pool. Rationing previously yielded only 34.5 units even though I demanded 300, which leaves my family short. Choosing queue maximizes my children’s chances of enough resources in this scarce period.[0m
+[90m2026-05-14 07:51:22 [DEBUG   ] axioms.agent: Step 12: Agent 0 voted queue.[0m
+[94m2026-05-14 07:51:46 [INFO    ] axioms.llm: Agent 1 [vote] reasoning: Choosing the ration method ensures each demanding agent receives a larger share of the current pool (e.g., 34.5 units when the pool is 345.0) compared to the queue method’s fixed 5.0 units per agent. This maximizes the benefits from each round while maintaining compliance with the institutional rules.[0m
+[90m2026-05-14 07:51:46 [DEBUG   ] axioms.agent: Step 12: Agent 1 voted ration.[0m
+[90m2026-05-14 07:51:59 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:51:59 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:52:02 [INFO    ] axioms.llm: Agent 2 [vote] reasoning: I choose queue because it rewards timely demand and prevents the tragedy of the commons by ensuring I get my full allocation before the pool depletes.[0m
+[90m2026-05-14 07:52:02 [DEBUG   ] axioms.agent: Step 12: Agent 2 voted queue.[0m
+[94m2026-05-14 07:52:15 [INFO    ] axioms.llm: Agent 3 [vote] reasoning: To guarantee a full allocation early in this low‑pool scenario, queue rewards early demands, allowing me to secure the needed resources for growth even when supplies are scarce.[0m
+[90m2026-05-14 07:52:15 [DEBUG   ] axioms.agent: Step 12: Agent 3 voted queue.[0m
+[90m2026-05-14 07:52:29 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:52:29 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:52:42 [INFO    ] axioms.llm: Agent 4 [vote] reasoning: Choosing ration distributes remaining water fairly among all demanders, discouraging hoarding and promoting collective sustainability.[0m
+[90m2026-05-14 07:52:42 [DEBUG   ] axioms.agent: Step 12: Agent 4 voted ration.[0m
+[90m2026-05-14 07:52:50 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:52:50 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:52:56 [INFO    ] axioms.llm: Agent 5 [vote] reasoning: Voting for queue is permitted and offers the best chance to secure a relatively larger allocation when the pool is low, as early demanders get their full share before others.[0m
+[90m2026-05-14 07:52:56 [DEBUG   ] axioms.agent: Step 12: Agent 5 voted queue.[0m
+[94m2026-05-14 07:53:06 [INFO    ] axioms.llm: Agent 6 [vote] reasoning: Switching to queue will let us observe how early demands are prioritized when the pool is low.[0m
+[90m2026-05-14 07:53:06 [DEBUG   ] axioms.agent: Step 12: Agent 6 voted queue.[0m
+[94m2026-05-14 07:53:15 [INFO    ] axioms.llm: Agent 9 [vote] reasoning: Queue ensures that early demanders receive their full allotment, preventing waste from over-demand and aligning with the union’s emphasis on disciplined, fair distribution. It also reduces the chance of the pool being depleted before everyone gets an appropriate share.[0m
+[90m2026-05-14 07:53:15 [DEBUG   ] axioms.agent: Step 12: Agent 9 voted queue.[0m
+[94m2026-05-14 07:53:30 [INFO    ] axioms.llm: Agent 10 [vote] reasoning: I need a full allocation for my family’s essential needs; voting queue gives the best chance to secure the 200 units when I demand early.[0m
+[90m2026-05-14 07:53:30 [DEBUG   ] axioms.agent: Step 12: Agent 10 voted queue.[0m
+[90m2026-05-14 07:53:33 [DEBUG   ] axioms.engine: action=vote verdict=PERMITTED principles=[3] | pow(A, vote) holds: ballot open, agent is member, not yet voted.[0m
+[94m2026-05-14 07:53:33 [INFO    ] axioms.llm: Axiom tool result: action=vote verdict=PERMITTED[0m
+[94m2026-05-14 07:53:41 [INFO    ] axioms.llm: Agent 11 [vote] reasoning: Choosing ration promotes fairness and cooperation, which aligns with my reputation for being a cooperative member and helps maintain group harmony.[0m
+[90m2026-05-14 07:53:41 [DEBUG   ] axioms.agent: Step 12: Agent 11 voted ration.[0m
+2026-05-14 07:53:41 [INFO    ] axioms.model: Step 12: RA method changed ration → queue (votes: queue=7 ration=3)
+[90m2026-05-14 07:53:56 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:53:56 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:54:05 [INFO    ] axioms.llm: Agent 0 [demand] reasoning: Needed to cover children’s basic needs and permissible to demand 300 units with our current status.[0m
+[90m2026-05-14 07:54:05 [DEBUG   ] axioms.agent: Step 12: Agent 0 demanded 300.0000.[0m
+[90m2026-05-14 07:54:05 [DEBUG   ] axioms.agent: Step 12: Agent 1 abstained from demand (10% abstention).[0m
+[94m2026-05-14 07:54:21 [INFO    ] axioms.llm: Agent 2 [demand] reasoning: The current allocation method is ration, matching previous rounds where a demand of zero was made and complied with. To maintain compliance and avoid sanctions, I will demand nothing this round.[0m
+[90m2026-05-14 07:54:21 [DEBUG   ] axioms.agent: Step 12: Agent 2 demanded 0.0000.[0m
+[90m2026-05-14 07:54:24 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:54:24 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:54:34 [INFO    ] axioms.llm: Agent 3 [demand] reasoning: I have power and permission to demand resources; given the current low pool level (374.5/1000) I choose to demand the standard safe amount of 5 units, similar to previous rounds, to avoid potential sanctions while maintaining growth ambitions.[0m
+[90m2026-05-14 07:54:34 [DEBUG   ] axioms.agent: Step 12: Agent 3 demanded 5.0000.[0m
+[90m2026-05-14 07:54:44 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:54:44 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:54:56 [INFO    ] axioms.llm: Agent 4 [demand] reasoning: I have verified power to demand and choose a modest, consistent demand to support collective sustainability.[0m
+[90m2026-05-14 07:54:56 [DEBUG   ] axioms.agent: Step 12: Agent 4 demanded 5.0000.[0m
+[90m2026-05-14 07:55:08 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:55:08 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:55:30 [INFO    ] axioms.llm: Agent 5 [demand] reasoning: A demand of 200 has previously resulted in a consistent allocation of about pool/10 with zero sanctions. With sanction level 0 and the risk of resource depletion low, demanding 200 remains a safe, compliant strategy to secure the expected share.[0m
+[90m2026-05-14 07:55:30 [DEBUG   ] axioms.agent: Step 12: Agent 5 demanded 200.0000.[0m
+[90m2026-05-14 07:55:30 [DEBUG   ] axioms.agent: Step 12: Agent 6 abstained from demand (10% abstention).[0m
+[90m2026-05-14 07:55:57 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:55:57 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:56:17 [INFO    ] axioms.llm: Agent 9 [demand] reasoning: Fair share of current pool (374.5/10)[0m
+[90m2026-05-14 07:56:17 [DEBUG   ] axioms.agent: Step 12: Agent 9 demanded 37.4500.[0m
+[90m2026-05-14 07:56:24 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:56:24 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:56:40 [INFO    ] axioms.llm: Agent 10 [demand] reasoning: Previous demand of 200 was allowed (PERMITTED) and resulted in compliance. With no sanctions and the institution still functioning, demand 200 again to meet ongoing needs.[0m
+[90m2026-05-14 07:56:40 [DEBUG   ] axioms.agent: Step 12: Agent 10 demanded 200.0000.[0m
+[90m2026-05-14 07:56:46 [DEBUG   ] axioms.engine: action=demand verdict=PERMITTED principles=[2] | pow(A, demand) holds: member, not yet demanded, not sanctioned.[0m
+[94m2026-05-14 07:56:46 [INFO    ] axioms.llm: Axiom tool result: action=demand verdict=PERMITTED[0m
+[94m2026-05-14 07:56:57 [INFO    ] axioms.llm: Agent 11 [demand] reasoning: Continue to demand a modest, consistent amount that preserves fairness and keeps reputation spotless in a rationing setting.[0m
+[90m2026-05-14 07:56:57 [DEBUG   ] axioms.agent: Step 12: Agent 11 demanded 5.0000.[0m
+[94m2026-05-14 07:57:21 [INFO    ] axioms.llm: Agent 9 [allocation] reasoning: Using the queue method, all demands up to the available pool of 374 units were satisfied in order of agent identifiers, ensuring total allocation (352.5) does not exceed pool capacity. All allocations adhere to the institution’s fairness rules.[0m
+[90m2026-05-14 07:57:21 [DEBUG   ] axioms.agent.head: Step 12: Head (LLM) allocated to 10 agents.[0m
+[94m2026-05-14 07:57:40 [INFO    ] axioms.llm: Agent 0 [appropriate] reasoning: The last round used the queue method, which historically distributes the full 300 units of a demand when the pool allows it. check_ostrom_axiom indicates this amount is permitted for appropriation.[0m
+[94m2026-05-14 07:57:59 [INFO    ] axioms.llm: Agent 1 [appropriate] reasoning: No allocation has been specified yet and the pool is low; to remain compliant and preserve reputation, I will appropriate 0.[0m
+[94m2026-05-14 07:58:25 [INFO    ] axioms.llm: Agent 2 [appropriate] reasoning: I have been allocated 34.5 units (based on the ration method) and, according to the institutional rules, I am authorized to appropriate this full amount.[0m
+[91m2026-05-14 07:58:25 [WARNING ] axioms.agent: Step 12: Agent 2 over-appropriated: took=34.5000 allocated=0.0000.[0m
+[90m2026-05-14 07:58:31 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 5.0 <= allocated 5.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:58:31 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:58:36 [INFO    ] axioms.llm: Agent 3 [appropriate] reasoning: Permitted to appropriate the full allocated amount as per institutional rules.[0m
+[90m2026-05-14 07:58:41 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 5.0 <= allocated 5.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:58:41 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:58:45 [INFO    ] axioms.llm: Agent 4 [appropriate] reasoning: Within allocated amount and permitted by institutional rules.[0m
+[90m2026-05-14 07:58:55 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 200.0 <= allocated 200.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:58:55 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:59:00 [INFO    ] axioms.llm: Agent 5 [appropriate] reasoning: Appropriation of 200 units is permitted because it matches the allocation and does not violate any institutional rules.[0m
+[90m2026-05-14 07:59:18 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 100.0 > allocated 0.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 07:59:18 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 07:59:21 [INFO    ] axioms.llm: Agent 6 [appropriate] reasoning: No permission to appropriate beyond allocated amount (0)[0m
+[90m2026-05-14 07:59:37 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 37.5 <= allocated 37.5. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:59:37 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 07:59:45 [INFO    ] axioms.llm: Agent 9 [appropriate] reasoning: Appropriation equals the allocated amount and is permitted by the institutional rules.[0m
+[90m2026-05-14 07:59:58 [DEBUG   ] axioms.engine: action=appropriate verdict=PERMITTED principles=[2] | Appropriation 200.0 <= allocated 200.0. Congruent with allocation rule (Principle 2).[0m
+[94m2026-05-14 07:59:58 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=PERMITTED[0m
+[94m2026-05-14 08:00:02 [INFO    ] axioms.llm: Agent 10 [appropriate] reasoning: The institutional rules permit appropriate up to the allocated amount, and we have permission to take the full 200.[0m
+[90m2026-05-14 08:00:11 [DEBUG   ] axioms.engine: action=appropriate verdict=NO_PERMISSION principles=[2] | Physical capability exists (no pow restriction) but per is implicitly bounded by allocation. Planned appropriation 34.5 > allocated 5.0. This violates Principle 2 (congruence) and will be detected by monitor.[0m
+[94m2026-05-14 08:00:11 [INFO    ] axioms.llm: Axiom tool result: action=appropriate verdict=NO_PERMISSION[0m
+[94m2026-05-14 08:00:14 [INFO    ] axioms.llm: Agent 11 [appropriate] reasoning: Cannot appropriate more than the allocated 5.0 – permission is limited to the allocation.[0m
+[90m2026-05-14 08:00:14 [DEBUG   ] axioms.agent.monitor: Step 12: Monitor sampling agent 6 — appropriated=0.00 allocated=0.00[0m
+[94m2026-05-14 08:00:21 [INFO    ] axioms.llm: Agent 10 [report→agent_6] reasoning: Agent 6 appropriated 0.0 which is not greater than its allocation of 0.0, so no violation exists.[0m
+[90m2026-05-14 08:00:21 [DEBUG   ] axioms.agent.monitor: Step 12: Monitor sampled 1 members, found 0 violations (noncompliance_rate=0.000).[0m
+2026-05-14 08:00:21 [INFO    ] axioms.model: Step   12 | pool=  -67.5 | members=10 | violations=1 | noncompliance_rate=0.00 | ra=queue
+[91m2026-05-14 08:00:21 [WARNING ] axioms.model: Step 12: 1 violation(s) detected this step.[0m
+[91m2026-05-14 08:00:21 [WARNING ] axioms.model: Resource pool depleted at step 12. Simulation ending.[0m
+2026-05-14 08:00:21 [INFO    ] axioms.model: Simulation complete: lifespan=12 final_pool=-67.5 final_members=10
+2026-05-14 08:00:21 [INFO    ] axioms:   Lifespan 12 | Pool -68 | Members 10
+2026-05-14 08:00:21 [INFO    ] axioms.plot: Plot saved to /app/data/simulation_results.png
